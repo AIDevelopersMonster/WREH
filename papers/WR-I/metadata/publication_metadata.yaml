@@ -1,0 +1,51 @@
+programme:
+  code: WREH
+  name: "World Realizability & Epistemic Horizons"
+  role: "Research Programme & Community"
+
+work:
+  code: WR-I
+  title: "Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations"
+  document_type: "technical preprint"
+  version: "0.2"
+  status: "REVIEWED_CLEAN"
+  date: "2026-10-07"
+  language: "English"
+
+creator:
+  name: "A. A. Malachevsky"
+  orcid: "0009-0008-6009-3196"
+
+discovery:
+  keywords:
+    - "world realizability"
+    - "response-defined world spaces"
+    - "response equivalence"
+    - "identifiability"
+    - "finite resolution"
+    - "gauge redundancy"
+    - "inverse problems"
+    - "epistemic horizons"
+    - "global realizations"
+
+lineage:
+  methodological_precursor:
+    code: "BC-XI"
+    title: "Boundary Compensation XI: The Inverse Isotypic Gap Problem and Finite-Resolution Response Equivalence Classes"
+    doi: "10.5281/zenodo.20748061"
+    relation: "methodological precursor; no automatic physical or ontological import"
+  downstream:
+    code: "WR-II"
+    title: "Finite Consistency and Global World Realizability"
+    relation: "planned downstream technical paper"
+
+publication:
+  repository_url: "pending"
+  doi: "pending"
+  license: "pending author decision"
+
+claim_ceiling:
+  - "No claim that response-equivalent realizations are ontologically identical."
+  - "No claim that observations create or select a physical world."
+  - "No claim that protocol refinement is physical time, dynamics, or RG flow."
+  - "No claim that mathematical admissibility implies physical existence."

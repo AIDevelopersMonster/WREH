@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use or discuss WR-I, please cite this manuscript. DOI and repository URL will be added after public release."
+title: "Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations"
+type: article
+authors:
+  - family-names: "Malachevsky"
+    given-names: "A. A."
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+version: "0.2"
+date-released: 2026-10-07
+abstract: >-
+  WR-I develops the mathematical entry point of the World Realizability &
+  Epistemic Horizons (WREH) programme. It studies admissible global
+  realizations through families of observation protocols and their response
+  maps, separating exact response equivalence, identifiability, protocol
+  refinement, gauge redundancy, finite-resolution separation, and
+  finite-tolerance indistinguishability.
+keywords:
+  - WREH
+  - world realizability
+  - response equivalence
+  - identifiability
+  - finite resolution
+  - gauge redundancy
+  - inverse problems
+  - epistemic horizons
