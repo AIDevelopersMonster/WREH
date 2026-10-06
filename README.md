@@ -36,26 +36,26 @@ WREH develops a mathematically explicit language for response-defined world spac
 
 ## Core mathematical idea
 
-For a declared class of admissible global realizations \(\mathcal W\), a family of admissible protocols \(\mathcal P\), and response maps
+For a declared class of admissible global realizations `\mathcal W`, a family of admissible protocols `\mathcal P`, and response maps
 
-\[
+$$
 R_P:\mathcal W\to\mathcal Y_P,
-\]
+$$
 
-a protocol family \(\mathcal A\subseteq\mathcal P\) induces exact response equivalence
+a protocol family `\mathcal A\subseteq\mathcal P` induces exact response equivalence
 
-\[
+$$
 W_1\sim_{\mathcal A}W_2
 \quad\Longleftrightarrow\quad
 R_P(W_1)=R_P(W_2)
 \quad\text{for every }P\in\mathcal A.
-\]
+$$
 
 The corresponding response-defined world space is
 
-\[
+$$
 \mathcal Q_{\mathcal A}=\mathcal W/\!\sim_{\mathcal A}.
-\]
+$$
 
 WREH does **not** infer from this construction that response-equivalent realizations are ontologically identical.
 
