@@ -1,0 +1,925 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\definecolor{wrehblue}{RGB}{24,86,128}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{example}[definition]{Example}
+\newtheorem{remark}[definition]{Remark}
+
+\newcommand{\W}{\mathcal W}
+\newcommand{\Pcal}{\mathcal P}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\Bcal}{\mathcal B}
+\newcommand{\Qcal}{\mathcal Q}
+\newcommand{\QA}{\mathcal Q_{\mathcal A}}
+\newcommand{\RA}{R_{\mathcal A}}
+
+\title{\textbf{WR-I Preprint Candidate v0.3}\\[4pt]
+\large Response-Defined World Spaces:\\
+Finite-Resolution Equivalence and Identifiability of Global Realizations}
+\author{A. A. Malachevsky\\
+ORCID: 0009-0008-6009-3196\\
+World Realizability \& Epistemic Horizons (WREH)\\
+Research Programme \& Community}
+\date{7 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We formulate a response-based framework for studying admissible global
+realizations that are indistinguishable under a declared family of observation
+protocols. A world-response structure consists of a class of admissible global
+realizations, a family of admissible protocols, and the corresponding response
+maps. Exact response equality induces a quotient world space. Identifiable
+quantities are precisely those that factor through this quotient, protocol
+refinement induces canonical quotient maps, and a gauge-completeness criterion
+separates representational redundancy from residual response
+non-identifiability. For metric gauge quotients we prove a localized
+finite-resolution separation result: on any compact admissible domain, joint
+point separation by a continuous protocol family implies finite protocol
+separation with a uniform positive response margin at every fixed nonzero
+resolution. We also show why ordinary finite-tolerance indistinguishability is
+not generally an equivalence relation. Examples illustrate finite refinement,
+gauge reduction, infinite-dimensional response fibres, and the dependence of
+identifiability on admissibility assumptions. The framework is ontologically
+neutral. It does not identify response equivalence with physical identity, and
+it makes no claim that observation creates, selects, or modifies a world.
+\end{abstract}
+
+\section{Introduction}
+
+Inverse problems rarely begin with an unconstrained question of what reality
+``is.'' They begin with a declared model class, a declared mode of access, and
+a map from candidate structures to observable data. When that map is not
+injective, the data determine an equivalence class rather than a unique hidden
+object. This elementary fact appears in mature theories of statistical and
+structural identifiability, in inverse boundary problems, and in results on
+observationally indistinguishable spacetimes
+\cite{Rothenberg1971,Saccomani2003,Bellu2007,Villaverde2016,MeshkatSullivant2014,Manchak2009}.
+
+WR-I asks for a framework in which the compared objects are not merely
+parameters or coefficients but \emph{admissible global realizations}. The word
+``world'' is used only as shorthand for an element of such a declared class.
+The basic question is:
+\begin{quote}
+Given a class of admissible global realizations and a family of physically
+admissible protocols, which distinctions between realizations are actually
+resolved by their responses?
+\end{quote}
+The answer is encoded by a response quotient. The quotient itself is standard
+mathematics; the purpose of WR-I is to make it the controlled interface between
+three layers that are often conflated: exact response identifiability, gauge
+redundancy, and finite-resolution distinguishability.
+
+\subsection*{Methodological precursor: from BC-XI to WREH}
+
+The response-first viewpoint used here has a direct methodological precursor in
+\emph{Boundary Compensation XI: The Inverse Isotypic Gap Problem and
+Finite-Resolution Response Equivalence Classes} (BC-XI)
+\cite{MalachevskyBCXI}. In BC-XI, a finite-resolution inverse response map could
+be non-injective on hidden operator structures, so the inverse object was
+naturally a response-equivalence class rather than a uniquely reconstructed
+hidden representative.
+
+WR-I retains that methodological lesson but changes the mathematical carrier.
+The objects being compared are no longer hidden operators or finite-dimensional
+realizations inside Boundary Compensation. They are admissible global
+realizations $W\in\W$, compared through a declared family of admissible
+protocols. Schematically,
+\[
+\begin{aligned}
+\text{hidden structures}
+&\xrightarrow{\text{BC-XI}}
+\text{finite-resolution response classes},\\
+\text{response classes}
+&\xrightarrow{\text{WR-I}}
+\text{classes of admissible global realizations}.
+\end{aligned}
+\]
+This is a bridge, not an identification of programmes. No BC-XI theorem is
+silently promoted into a statement about global worlds, spacetime, cosmology,
+or ontology.
+
+The distinction can be summarized in two questions:
+\begin{quote}
+BC-XI asks what a finite-resolution response determines about a hidden object.
+WR-I asks what a family of admissible responses determines about a possible
+global realization.
+\end{quote}
+
+\subsection*{Contributions and claim ceiling}
+
+The paper makes five controlled framework contributions.
+\begin{enumerate}[label=(\roman*)]
+\item It defines a world-response structure $(\W,\Pcal,\{R_P\})$ and the exact
+response quotient generated by a protocol bundle.
+\item It characterizes identifiable quantities by factorization through that
+quotient and organizes protocol refinement by canonical surjections between
+quotients.
+\item It separates gauge redundancy from residual response
+non-identifiability and gives an exact gauge-completeness criterion.
+\item It proves a localized finite-resolution separation proposition on
+compact admissible domains, avoiding any global compactness assumption on the
+entire physical state space.
+\item It separates exact response equivalence from finite-tolerance
+indistinguishability, which is generally non-transitive.
+\end{enumerate}
+
+The elementary factorization statements are not presented as new mathematical
+theorems. The finite-resolution proposition is a compactness consequence
+proved here for the WREH architecture; no historical priority claim is made for
+that abstract topological statement. Recent domain-specific work also combines
+exact observational quotients, monotone refinement, and explicitly
+non-transitive finite-resolution ambiguity \cite{SimonsWashburn2026}. The
+proposed novelty of WR-I is therefore architectural and programme-level, not a
+claim to have invented observational equivalence, quotient spaces, structural
+identifiability, gauge ambiguity, refinement of exact observational classes, or
+the non-transitivity of finite-resolution ambiguity.
+
+WR-I does \emph{not} claim that response-equivalent realizations are
+ontologically identical, that underlying reality does not exist, that
+measurement creates a world, that experiment rewrites the past, that the
+Universe branches, or that a response quotient is a spacetime or cosmological
+object.
+
+\section{Relation to prior work}
+
+\subsection{Structural identifiability}
+
+Rothenberg's classical formulation of identification studies whether distinct
+underlying structures induce the same observable probability law
+\cite{Rothenberg1971}. In dynamical systems, structural identifiability asks
+whether unknown parameters are uniquely recoverable from ideal input-output
+data. Differential-algebraic approaches, global identifiability tests, and
+identifiable reparametrizations form a mature literature
+\cite{Saccomani2003,Bellu2007,Villaverde2016,MeshkatSullivant2014}.
+WR-I therefore makes no novelty claim for input-output indistinguishability,
+recoverable parameter combinations, or reparametrization as such.
+
+A particularly close recent neighbour is Zhang's \emph{Mathematical
+Identifiability Geometry}, which explicitly treats structures with identical
+observation data as equivalence classes and studies geometric invariants of the
+resulting space \cite{Zhang2026}. Simons and Washburn's 2026 spectroscopy
+preprint gives an even closer domain-specific control: equality of observation
+laws defines exact quotient classes, added modalities refine those classes,
+and finite-resolution ambiguity is explicitly non-transitive
+\cite{SimonsWashburn2026}. Consequently, WR-I does not claim novelty for any
+of those ingredients individually. Its narrower target is the package
+consisting of an admissible global-realization carrier, an explicit admissible
+protocol family, separation of gauge orbits from residual response fibres, a
+compact-domain finite-separation statement in a declared state-space metric,
+and a handoff to a distinct global-realizability problem.
+
+\subsection{Gauge ambiguity in inverse problems}
+
+Inverse boundary problems provide concrete examples in which the observation
+map is invariant under a known transformation group. In the anisotropic
+Calder\'on problem, boundary measurements determine the interior geometry only
+up to boundary-fixing changes of coordinates in the appropriate setting
+\cite{LassasLiimatainenSalo2020}. This is a domain-specific benchmark for the
+difference between representational redundancy and additional response
+non-identifiability.
+
+\subsection{Global spacetime underdetermination}
+
+Manchak showed that global spacetime structure in classical general relativity
+can remain observationally underdetermined in a robust sense
+\cite{Manchak2009}. Cinti and Fano later argued that the physical
+reasonableness of candidate indistinguishable spacetimes matters to the force
+of such conclusions \cite{CintiFano2021}. For WR-I this is not a dispute to be
+resolved but a structural lesson: the admissible realization class must be
+part of the mathematical input. One cannot infer a physically meaningful
+non-identifiability result from an unrestricted class of formally constructible
+objects.
+
+\subsection{Global-section obstructions}
+
+Abramsky and Brandenburger formulate contextuality and non-locality through
+obstructions to global sections of compatible empirical data
+\cite{AbramskyBrandenburger2011}. Their work is a major predecessor for the
+future WR-II question of whether locally or finitely compatible information
+admits a global realization. WR-I does not identify a global section of a
+measurement scenario with a global world realization; that bridge, if useful,
+must be formulated explicitly.
+
+\section{World-response structures}
+
+\begin{definition}[World-response structure]
+A \emph{world-response structure} is a triple
+\[
+\mathbf W=(\W,\Pcal,\{R_P\}_{P\in\Pcal}),
+\]
+where $\W$ is a declared class of \emph{admissible global realizations},
+$\Pcal$ is a family of admissible observation protocols, and each protocol
+$P$ has a response map
+\[
+R_P:\W\to Y_P
+\]
+into a protocol-dependent response space $Y_P$.
+\end{definition}
+
+\begin{remark}[Admissibility is part of the model]
+The set $\W$ is not the class of all mathematically describable objects, and
+$\Pcal$ is not the class of all mathematically definable readouts. Both are
+inputs whose physical or modelling justification must be supplied by an
+application.
+\end{remark}
+
+\begin{definition}[Protocol bundle and joint response]
+For $\Acal\subseteq\Pcal$, define
+\[
+Y_{\Acal}:=\prod_{P\in\Acal}Y_P,
+\qquad
+R_{\Acal}(W):=(R_P(W))_{P\in\Acal}.
+\]
+For the empty bundle, $Y_{\varnothing}$ is the one-point set.
+\end{definition}
+
+\begin{definition}[Exact response equivalence]
+For a protocol bundle $\Acal$, define
+\[
+W_1\sim_{\Acal}W_2
+\quad\Longleftrightarrow\quad
+R_{\Acal}(W_1)=R_{\Acal}(W_2).
+\]
+\end{definition}
+
+\begin{definition}[Response-defined world space]
+The response-defined world space for $\Acal$ is
+\[
+\QA:=\W/\!\sim_{\Acal},
+\]
+with quotient map
+\[
+q_{\Acal}:\W\to\QA,
+\qquad
+q_{\Acal}(W)=[W]_{\Acal}.
+\]
+\end{definition}
+
+\section{Exact response quotient and identifiable quantities}
+
+\begin{proposition}[Response quotient representation]\label{prop:quotient}
+The relation $\sim_{\Acal}$ is an equivalence relation, and there is a unique
+bijection
+\[
+\overline R_{\Acal}:\QA\longrightarrow\operatorname{Im}R_{\Acal}
+\]
+such that
+\[
+R_{\Acal}=\overline R_{\Acal}\circ q_{\Acal}.
+\]
+\end{proposition}
+
+\begin{proof}
+The relation is the kernel equivalence relation of $R_{\Acal}$. Define
+$\overline R_{\Acal}([W]_{\Acal})=R_{\Acal}(W)$. Equality of classes is exactly
+what makes this definition well posed and injective; surjectivity onto the
+image and uniqueness follow from the definitions.
+\end{proof}
+
+\begin{remark}
+As a bare set, $\QA$ contains exactly the distinctions present in the joint
+response image. A topology, metric, smooth structure, measure, stratification,
+or physical interpretation on $\QA$ requires additional assumptions.
+\end{remark}
+
+\begin{definition}[Identifiable quantity]
+A map $F:\W\to Z$ is \emph{$\Acal$-identifiable} if
+\[
+W_1\sim_{\Acal}W_2
+\quad\Longrightarrow\quad
+F(W_1)=F(W_2).
+\]
+\end{definition}
+
+\begin{proposition}[Identifiability factorization]\label{prop:identifiable}
+A map $F:\W\to Z$ is $\Acal$-identifiable if and only if there exists a unique
+map
+\[
+\overline F:\QA\to Z
+\]
+such that
+\[
+F=\overline F\circ q_{\Acal}.
+\]
+\end{proposition}
+
+\begin{proof}
+An $\Acal$-identifiable map is constant on the fibres of $q_{\Acal}$, so
+$\overline F([W]_{\Acal})=F(W)$ is well defined. The converse is immediate from
+the factorization, and uniqueness follows from surjectivity of $q_{\Acal}$.
+\end{proof}
+
+\section{Protocol refinement}
+
+\begin{definition}[Refinement order]
+For protocol bundles $\Acal,\Bcal\subseteq\Pcal$, write
+\[
+\Acal\preceq\Bcal
+\quad\Longleftrightarrow\quad
+\Acal\subseteq\Bcal.
+\]
+\end{definition}
+
+\begin{proposition}[Refinement monotonicity]\label{prop:refinement}
+If $\Acal\subseteq\Bcal$, then
+\[
+[W]_{\Bcal}\subseteq[W]_{\Acal}
+\qquad\text{for every }W\in\W.
+\]
+Moreover, there is a unique surjection
+\[
+\pi_{\Bcal\Acal}:\mathcal Q_{\Bcal}\twoheadrightarrow\mathcal Q_{\Acal},
+\qquad
+[W]_{\Bcal}\mapsto[W]_{\Acal},
+\]
+satisfying
+\[
+q_{\Acal}=\pi_{\Bcal\Acal}\circ q_{\Bcal}.
+\]
+For $\Acal\subseteq\Bcal\subseteq\mathcal C$,
+\[
+\pi_{\mathcal C\Acal}
+=
+\pi_{\Bcal\Acal}\circ\pi_{\mathcal C\Bcal}.
+\]
+\end{proposition}
+
+\begin{proof}
+Equality of all responses in $\Bcal$ implies equality of the subfamily indexed
+by $\Acal$. The stated quotient map is therefore well defined and surjective;
+the commuting and composition identities follow directly.
+\end{proof}
+
+\begin{remark}
+The directed hierarchy of response quotients is the interface to WR-II. WR-I
+does not yet infer global existence from a refinement chain and does not assign
+physical time or dynamics to the refinement parameter.
+\end{remark}
+
+\section{Gauge redundancy and residual non-identifiability}
+
+\begin{definition}[Response-invariant gauge action]
+Let a group $G$ act on $\W$. The action is response-invariant for $\Acal$ if
+\[
+R_P(g\cdot W)=R_P(W)
+\]
+for every $g\in G$, $W\in\W$, and $P\in\Acal$.
+\end{definition}
+
+\begin{proposition}[Gauge factorization]\label{prop:gauge-factor}
+If the $G$-action is response-invariant for $\Acal$, then
+\[
+G\cdot W\subseteq[W]_{\Acal}
+\]
+for every $W\in\W$, and $R_{\Acal}$ factors uniquely through the orbit quotient:
+\[
+\W\xrightarrow{\pi_G}\W/G
+\xrightarrow{\widetilde R_{\Acal}}Y_{\Acal}.
+\]
+\end{proposition}
+
+\begin{proof}
+Response invariance gives $R_{\Acal}(g\cdot W)=R_{\Acal}(W)$, so each orbit lies
+inside one response class. Thus
+$\widetilde R_{\Acal}(G\cdot W):=R_{\Acal}(W)$ is well defined and gives the
+required factorization.
+\end{proof}
+
+\begin{proposition}[Gauge-completeness criterion]\label{prop:gauge-complete}
+Assume the $G$-action is response-invariant for $\Acal$. The following are
+equivalent:
+\begin{enumerate}[label=(\alph*)]
+\item $[W]_{\Acal}=G\cdot W$ for every $W\in\W$;
+\item the induced map
+\[
+\widetilde R_{\Acal}:\W/G\to Y_{\Acal}
+\]
+is injective.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+If every response class is exactly one orbit, equal induced responses imply
+equal orbits. Conversely, Proposition~\ref{prop:gauge-factor} gives
+$G\cdot W\subseteq[W]_{\Acal}$; injectivity on $\W/G$ forces any
+$W'\in[W]_{\Acal}$ to belong to the same orbit as $W$.
+\end{proof}
+
+\begin{remark}
+When Proposition~\ref{prop:gauge-complete}(b) fails, the observation system
+leaves distinct gauge orbits unresolved. WR-I calls this \emph{residual response
+non-identifiability}; no ontological conclusion follows from that label alone.
+\end{remark}
+
+\section{Localized finite-resolution separation}
+
+Global compactness of $X=\W/G$ is unnecessarily strong for the finite-resolution
+question. Experimental design normally concerns a bounded or otherwise
+controlled admissible domain. We therefore localize the argument.
+
+Assume that the full protocol family $\Pcal$ is $G$-invariant, so every
+response descends to the orbit quotient. Assume further that $X=\W/G$ is a
+metric space with metric $d_X$. Let $K\subseteq X$ be a compact admissible
+domain. Suppose each descended protocol response is continuous,
+\[
+\widetilde R_P:X\to(Y_P,d_P),
+\]
+and that the full admissible family separates points of $K$:
+\[
+x\neq y,
+\quad x,y\in K
+\quad\Longrightarrow\quad
+\exists P\in\Pcal:
+\widetilde R_P(x)\neq\widetilde R_P(y).
+\]
+
+\begin{proposition}[Localized finite-resolution separation]\label{prop:finite-resolution}
+For every $\delta>0$ there exists a finite protocol bundle
+\[
+\Acal_{K,\delta}=\{P_1,\dots,P_m\}\subseteq\Pcal
+\]
+and, whenever
+\[
+K^{(2)}_{\delta}
+:=
+\{(x,y)\in K\times K:d_X(x,y)\ge\delta\}
+\]
+is nonempty, a constant $\eta_{K,\delta}>0$ such that
+\[
+x,y\in K,
+\qquad
+d_X(x,y)\ge\delta
+\]
+implies
+\[
+\max_{1\le j\le m}
+ d_{P_j}\!\left(
+ \widetilde R_{P_j}(x),
+ \widetilde R_{P_j}(y)
+ \right)
+\ge\eta_{K,\delta}.
+\]
+If $K^{(2)}_{\delta}$ is empty, the separation statement is vacuous.
+\end{proposition}
+
+\begin{proof}
+The set $K^{(2)}_{\delta}$ is closed in the compact space $K\times K$, hence
+compact. For every $P\in\Pcal$ define
+\[
+U_P
+=
+\{(x,y)\in K^{(2)}_{\delta}:
+ d_P(\widetilde R_P(x),\widetilde R_P(y))>0\}.
+\]
+Continuity makes $U_P$ open in $K^{(2)}_{\delta}$. Point separation implies
+that the family $\{U_P\}_{P\in\Pcal}$ covers $K^{(2)}_{\delta}$. Compactness
+therefore yields a finite subcover $U_{P_1},\dots,U_{P_m}$.
+
+Define
+\[
+h(x,y)
+=
+\max_{1\le j\le m}
+ d_{P_j}(\widetilde R_{P_j}(x),\widetilde R_{P_j}(y)).
+\]
+The function $h$ is continuous and strictly positive on
+$K^{(2)}_{\delta}$. Hence it attains a positive minimum,
+\[
+\eta_{K,\delta}
+:=
+\min_{(x,y)\in K^{(2)}_{\delta}}h(x,y)>0.
+\]
+\end{proof}
+
+\begin{remark}[What compactness is actually needed]
+The proof only requires compactness of the separated-pair set
+$K^{(2)}_{\delta}$, not compactness of the whole physical state space $X$.
+Local compactness of $X$ alone does not produce the finite subcover needed for
+a global statement; one must still select a compact domain or otherwise prove
+compactness of the relevant pair set.
+\end{remark}
+
+\begin{remark}[Resolution dependence]
+The proposition is not a finite exact-reconstruction theorem. As
+$\delta\downarrow0$, the required bundle size may grow and
+$\eta_{K,\delta}$ may tend to zero. The chosen metric, compact domain,
+continuity assumptions, and protocol admissibility are all application-level
+inputs.
+\end{remark}
+
+\section{Finite tolerance is not an equivalence relation in general}
+
+Suppose each response space $Y_P$ carries a metric $d_P$, and choose positive
+weights $w_P$ for which
+\[
+d_{\Acal}(W_1,W_2)
+=
+\sup_{P\in\Acal}w_P d_P(R_P(W_1),R_P(W_2))
+\]
+is finite on the pairs under consideration. For $\varepsilon>0$, define
+\[
+W_1\approx_{\Acal,\varepsilon}W_2
+\quad\Longleftrightarrow\quad
+ d_{\Acal}(W_1,W_2)\le\varepsilon.
+\]
+
+\begin{proposition}[Failure of transitivity]\label{prop:tolerance}
+The relation $\approx_{\Acal,\varepsilon}$ is generally not transitive and
+therefore does not generally define a quotient.
+\end{proposition}
+
+\begin{proof}
+For one scalar response choose
+\[
+R(W_0)=0,
+\qquad
+R(W_1)=\frac34\varepsilon,
+\qquad
+R(W_2)=\frac32\varepsilon.
+\]
+Then $W_0\approx_\varepsilon W_1$ and
+$W_1\approx_\varepsilon W_2$, but
+$W_0\not\approx_\varepsilon W_2$.
+\end{proof}
+
+\begin{remark}
+WR-I therefore reserves ``equivalence class'' for exact response equality
+unless an explicit equivalence closure or another justified coarse relation is
+introduced. Finite-precision objects are instead called tolerance fibres,
+response neighbourhoods, or uncertainty regions.
+\end{remark}
+
+\section{Examples}
+
+\begin{example}[Finite binary realization with gauge and hidden physical content]
+Let
+\[
+\W=\{0,1\}^4,
+\qquad
+W=(a,b,g,h).
+\]
+Let $G=\mathbb Z_2$ flip the label $g$ and leave $(a,b,h)$ fixed. Define
+\[
+R_a(W)=a,
+\qquad
+R_b(W)=b,
+\qquad
+R_h(W)=a\oplus h.
+\]
+With only $R_a$, there are two response classes of size eight. With
+$(R_a,R_b)$, there are four classes of size four and the physical variable $h$
+remains unresolved. With $(R_a,R_b,R_h)$, there are eight classes of size two,
+and each class is exactly one gauge orbit. Thus the induced response map is
+injective on $\W/G$.
+
+An artificial readout $R_g(W)=g$ breaks gauge invariance and would make
+representatives distinguishable. The example illustrates why admissible
+protocols must be part of the model definition rather than an arbitrary set of
+mathematical readouts.
+\end{example}
+
+\begin{example}[Smooth refinement from genuine ambiguity to pure gauge]
+Let
+\[
+\W=S^1_x\times S^1_g,
+\]
+with gauge group $G=S^1$ acting by
+\[
+\alpha\cdot(x,g)=(x,g+\alpha).
+\]
+Then $\W/G\cong S^1_x$. Consider
+\[
+R_c(x,g)=\cos x,
+\qquad
+R_s(x,g)=\sin x.
+\]
+For $\Acal=\{R_c\}$, the induced map
+$x\mapsto\cos x$ is non-injective, so generic response fibres contain two
+distinct gauge orbits. For
+$\Bcal=\{R_c,R_s\}$, the induced map
+\[
+x\mapsto(\cos x,\sin x)
+\]
+is injective, and the remaining response classes are exactly the gauge orbits.
+Thus protocol refinement removes residual non-identifiability without removing
+gauge redundancy.
+\end{example}
+
+\begin{example}[Continuous histories, dense observations, and admissibility]
+Let
+\[
+\W=C([0,1],\mathbb R),
+\]
+and for each $t\in[0,1]$ let $P_t$ denote the evaluation protocol with
+\[
+R_{P_t}(f)=f(t).
+\]
+For a finite sampling bundle $\Acal=\{P_{t_1},\ldots,P_{t_n}\}$,
+\[
+[f]_{\Acal}
+=
+\{g\in C([0,1]):g(t_i)=f(t_i),\ i=1,\ldots,n\}
+=
+f+V_{\Acal},
+\]
+where
+\[
+V_{\Acal}
+=
+\{u\in C([0,1]):u(t_i)=0\text{ for all }i\}.
+\]
+The space $V_{\Acal}$ is infinite-dimensional, so every finite sampling bundle
+leaves an infinite-dimensional response fibre.
+
+Let $D\subset[0,1]$ be countable and dense. If two continuous histories agree
+on every point of $D$, continuity forces them to agree everywhere. Thus the countable protocol family $\{P_t:t\in D\}$ is jointly injective on
+this admissible realization class.
+
+The conclusion fails after enlarging the admissible class. Choose
+$t_0\in[0,1]\setminus D$, let
+\[
+f(t)=0,
+\]
+and define the bounded discontinuous history
+\[
+g(t)=
+\begin{cases}
+1,&t=t_0,\\
+0,&t\neq t_0.
+\end{cases}
+\]
+Then $f$ and $g$ agree on every protocol in the dense family $D$ but are not the
+same global realization. Thus the same protocol family can be identifying on
+one admissible class and non-identifying on a larger one.
+\end{example}
+
+\section{Calder\'on problem as a gauge benchmark}
+
+The anisotropic Calder\'on problem supplies a concrete benchmark for
+Propositions~\ref{prop:gauge-factor}--\ref{prop:gauge-complete}. Boundary
+voltage-current data are invariant under the appropriate boundary-fixing
+coordinate transformations, and uniqueness results are therefore formulated
+up to that invariance \cite{LassasLiimatainenSalo2020}. In the language of
+WR-I, the known transformation orbit lies inside the response fibre; the
+substantive inverse problem is whether any additional ambiguity remains after
+passing to the quotient by that orbit.
+
+This analogy is deliberately limited. WR-I does not claim that every gauge
+problem is a Calder\'on problem or that the abstract group $G$ has a universal
+physical meaning. The example serves only to calibrate the distinction between
+representational redundancy and residual non-identifiability.
+
+\section{Prior-art and novelty ledger}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.20\textwidth}
+                  >{\raggedright\arraybackslash}p{0.36\textwidth}
+                  >{\raggedright\arraybackslash}p{0.34\textwidth}}
+\toprule
+\textbf{Prior line} & \textbf{Established idea} & \textbf{WR-I boundary} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Prior line} & \textbf{Established idea} & \textbf{WR-I boundary} \\
+\midrule
+\endhead
+
+Rothenberg (1971) &
+Identification and observational equivalence in parametric stochastic models. &
+No novelty claim for observational equivalence or identification as such. \\[5pt]
+
+Saccomani et al. (2003); Bellu et al. (2007); Villaverde et al. (2016) &
+Structural identifiability of dynamical models from ideal input-output data,
+including differential-algebraic and computational tests. &
+WR-I does not relabel standard parameter identifiability as world
+identifiability; it changes the carrier to an explicitly declared class of
+global realizations and an explicit protocol family. \\[5pt]
+
+Meshkat--Sullivant (2014) &
+Identifiable reparametrizations and parameter combinations using algebraic and
+graph-theoretic structure. &
+Factorization through identifiable combinations is prior art; WR-I uses a
+quotient language at the global-realization level. \\[5pt]
+
+Zhang (2026) &
+Geometric treatment of observation-equivalence classes, including
+indistinguishability strata and unique-identification points. &
+WR-I does not claim that geometry of observation classes is new. \\[5pt]
+
+Simons--Washburn (2026) &
+A physical measurement-design framework with exact observation-law quotients,
+monotone refinement under added modalities, and explicitly non-transitive
+finite-resolution ambiguity. &
+These ingredients are prior art in a domain-specific finite-resolution setting.
+WR-I's remaining distinction is the global-realization carrier, explicit gauge
+separation, compact-domain finite separation in a state-space metric, and the
+WR-II global-realizability handoff. \\[5pt]
+
+BC-XI (2026) &
+Finite-resolution response equivalence as the inverse object when hidden
+operator structures are not uniquely reconstructed. &
+Methodological and historical precursor. WR-I changes the carrier from hidden
+operator structures to admissible global realizations; no physical or
+ontological BC claim is imported. \\[5pt]
+
+Manchak (2009) &
+Observational underdetermination of global spacetime structure in classical
+GR. &
+Domain-specific predecessor for global-world underdetermination; WR-I abstracts
+the observation mechanism into a declared protocol family. \\[5pt]
+
+Cinti--Fano (2021) &
+Critique stressing physical reasonableness of observationally indistinguishable
+spacetimes. &
+Supports treating $\W_{\mathrm{admissible}}$ as part of the formal input. \\[5pt]
+
+Abramsky--Brandenburger (2011) &
+Contextuality/non-locality as obstruction to global sections of local empirical
+data. &
+Major predecessor for WR-II. WR-I does not equate global sections with global
+world realizations. \\[5pt]
+
+Anisotropic Calder\'on inverse problem &
+Boundary response invariance under boundary-fixing coordinate changes and
+uniqueness up to the corresponding gauge in suitable settings. &
+Benchmark for gauge factorization and the question whether response fibres are
+strictly larger than gauge orbits. \\
+\bottomrule
+\end{longtable}
+
+The defensible novelty claim at v0.3 is therefore architectural:
+\begin{quote}
+WR-I formulates a protocol-indexed framework whose primary carrier is a
+declared class of admissible global realizations, explicitly distinguishes
+known gauge orbits from residual response fibres, and proves that joint
+point-separation on a compact admissible domain yields a finite protocol family
+with a uniform positive response margin for every fixed nonzero separation in
+the declared state-space metric. These objects are organized as the input
+language for a distinct global-realizability problem rather than as a claim to
+a preferred ontology.
+\end{quote}
+
+The claim remains subject to continuing literature audit. In particular, no
+priority claim is attached to the elementary quotient factorization statements
+or to the general use of compactness in finite subcover arguments.
+
+\section{Discussion: three levels that must remain distinct}
+
+The framework separates three questions.
+
+\paragraph{Exact response identifiability.}
+For a fixed protocol bundle, exact equality of responses produces a genuine
+equivalence relation and quotient. This is an idealized structural question.
+
+\paragraph{Gauge-reduced identifiability.}
+If a declared gauge group acts response-invariantly, one must first determine
+whether the observation system distinguishes gauge orbits. Failure of
+injectivity on $\W/G$ is stronger than mere representational redundancy.
+
+\paragraph{Finite-resolution distinguishability.}
+Real experiments have finite accuracy and operate on controlled domains. The
+localized finite-resolution result therefore concerns a compact admissible
+region $K$ and a nonzero resolution scale $\delta$, not a global exact
+reconstruction claim.
+
+These distinctions are also a claim firewall. Neither persistent response
+multiplicity nor finite-resolution ambiguity implies that multiple worlds are
+physically instantiated. Conversely, a unique point of a declared quotient is
+uniqueness relative to the chosen realization class and protocol family; it is
+not automatically uniqueness of ontology.
+
+\section{Handoff to WR-II}
+
+WR-I ends where a new mathematical question begins. Suppose progressively richer
+finite protocol bundles produce compatible response constraints. Even if every
+finite stage is nonempty, one may ask whether there exists any admissible global
+realization satisfying all stages simultaneously.
+
+Schematically, refinement gives
+\[
+\mathcal Q_1
+\longleftarrow
+\mathcal Q_2
+\longleftarrow
+\mathcal Q_3
+\longleftarrow\cdots.
+\]
+WR-II will study the distinction between
+\[
+\text{finite compatibility}
+\qquad\text{and}\qquad
+\text{global realizability}.
+\]
+Potential tools include compactness principles, inverse/projective limits,
+extension theorems, explicit counterexamples, and comparison with
+sheaf-theoretic global-section obstructions. None of these is assumed by WR-I.
+In particular, protocol refinement is not physical time, and failure of global
+realizability is not interpreted as destruction or nonexistence of the physical
+Universe without a separate bridge.
+
+\section*{Conclusion}
+
+WR-I provides a deliberately modest mathematical interface. Responses define
+which distinctions survive a declared observation system; gauge structure
+identifies a known class of redundant distinctions; compact-domain separation
+relates ideal point separation to finite experimental design; and admissibility
+controls what counts as a candidate global realization in the first place.
+
+The intellectual route from BC-XI to WR-I is therefore continuous but not
+identical: BC-XI established a response-first inverse viewpoint for hidden
+finite-resolution structures, whereas WR-I lifts the question to classes of
+admissible global realizations. The next step is not a stronger ontological
+claim but the mathematical question of global completion.
+
+\begin{thebibliography}{99}
+
+\bibitem{Rothenberg1971}
+T. J. Rothenberg,
+\emph{Identification in Parametric Models},
+Econometrica 39(3) (1971), 577--591.
+DOI: 10.2307/1913267.
+
+\bibitem{Saccomani2003}
+M. P. Saccomani, S. Audoly, and L. D'Angi\`o,
+\emph{Parameter identifiability of nonlinear systems: the role of initial conditions},
+Automatica 39(4) (2003), 619--632.
+DOI: 10.1016/S0005-1098(02)00302-3.
+
+\bibitem{Bellu2007}
+G. Bellu, M. P. Saccomani, S. Audoly, and L. D'Angi\`o,
+\emph{DAISY: a new software tool to test global identifiability of biological
+and physiological systems},
+Computer Methods and Programs in Biomedicine 88(1) (2007), 52--61.
+DOI: 10.1016/j.cmpb.2007.07.002.
+
+\bibitem{Villaverde2016}
+A. F. Villaverde, A. Barreiro, and A. Papachristodoulou,
+\emph{Structural Identifiability of Dynamic Systems Biology Models},
+PLOS Computational Biology 12(10) (2016), e1005153.
+DOI: 10.1371/journal.pcbi.1005153.
+
+\bibitem{MeshkatSullivant2014}
+N. Meshkat and S. Sullivant,
+\emph{Identifiable reparametrizations of linear compartment models},
+Journal of Symbolic Computation 63 (2014), 46--67.
+DOI: 10.1016/j.jsc.2013.11.002.
+
+\bibitem{Zhang2026}
+J. Zhang,
+\emph{Mathematical Identifiability Geometry},
+Zenodo preprint (2026).
+DOI: 10.5281/zenodo.22023251.
+
+
+\bibitem{SimonsWashburn2026}
+M. Simons and J. Washburn,
+\emph{Finite-Resolution Identifiability and Measurement Design for Molecular
+Conformer Spectroscopy},
+arXiv:2608.02637 (2026).
+
+\bibitem{MalachevskyBCXI}
+A. A. Malachevsky,
+\emph{Boundary Compensation XI: The Inverse Isotypic Gap Problem and
+Finite-Resolution Response Equivalence Classes},
+Zenodo (2026).
+DOI: 10.5281/zenodo.20748061.
+
+\bibitem{Manchak2009}
+J. B. Manchak,
+\emph{Can we know the global structure of spacetime?},
+Studies in History and Philosophy of Modern Physics 40(1) (2009), 53--56.
+DOI: 10.1016/j.shpsb.2008.07.004.
+
+\bibitem{CintiFano2021}
+E. Cinti and V. Fano,
+\emph{Careful with those scissors, Eugene! Against the observational
+indistinguishability of spacetimes},
+Studies in History and Philosophy of Science 89 (2021), 103--113.
+DOI: 10.1016/j.shpsa.2021.07.007.
+
+\bibitem{AbramskyBrandenburger2011}
+S. Abramsky and A. Brandenburger,
+\emph{The Sheaf-Theoretic Structure of Non-Locality and Contextuality},
+New Journal of Physics 13 (2011), 113036.
+DOI: 10.1088/1367-2630/13/11/113036.
+
+\bibitem{LassasLiimatainenSalo2020}
+M. Lassas, T. Liimatainen, and M. Salo,
+\emph{The Poisson embedding approach to the Calder\'on problem},
+Mathematische Annalen 377 (2020), 19--67.
+DOI: 10.1007/s00208-019-01818-3.
+
+\end{thebibliography}
+
+\end{document}
