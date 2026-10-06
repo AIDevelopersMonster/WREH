@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use materials from the WREH programme, please cite the relevant WREH paper and this repository where appropriate."
+title: "World Realizability & Epistemic Horizons (WREH)"
+version: "0.1.0"
+authors:
+  - family-names: "Malachevsky"
+    given-names: "A. A."
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+repository-code: "https://github.com/AIDevelopersMonster/WREH"
+url: "https://github.com/AIDevelopersMonster/WREH"
+keywords:
+  - world realizability
+  - epistemic horizons
+  - response equivalence
+  - global realizations
+  - identifiability
+  - inverse problems
+  - mathematical physics
+  - foundations of physics
+abstract: >-
+  World Realizability & Epistemic Horizons (WREH) is an interdisciplinary
+  research programme and community studying how physically admissible
+  observations constrain classes of possible global realizations. The
+  programme develops response-defined world spaces, global realizability,
+  refinement, non-identifiability, and epistemic horizons while maintaining
+  explicit mathematical and physical claim boundaries.
