@@ -1,39 +1,121 @@
 # World Realizability & Epistemic Horizons (WREH)
 
-**World Realizability & Epistemic Horizons (WREH)** is an interdisciplinary research programme and community studying how observations constrain the space of possible worlds.
+**World Realizability & Epistemic Horizons (WREH)** is an interdisciplinary research programme and research community studying how physically admissible observations constrain classes of possible global realizations.
 
-WREH focuses on response-defined equivalence, global realizability, model non-uniqueness, refinement of knowledge, and epistemic horizons. The programme distinguishes observable response structure from claims about a unique underlying ontology.
+> **Founding principle:** Responses constrain worlds; they do not automatically identify one.
 
-## Founding principle
+WREH develops a mathematically explicit language for response-defined world spaces, identifiability, refinement, global realizability, model non-uniqueness, and epistemic horizons while maintaining strict separation between theorem, model, physical hypothesis, interpretation, and open question.
 
-> Responses constrain worlds; they do not automatically identify one.
+## Current status
 
-## Current programme state
+- **Programme:** ACTIVE
+- **Repository:** public programme repository
+- **Founding document:** WREH-00 — *Manifesto and Research Programme*
+- **Current technical work:** WR-I v0.2 — **REVIEWED_CLEAN**
+- **Next publication gate:** final novelty/bibliography audit, render audit, licence decision, and release metadata
+- **WR-II:** downstream; not opened automatically as a publication until the WR-I handoff is frozen
 
-- **WREH-00** — *Manifesto and Research Programme* — founding document.
-- **WR-I** — *Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations* — active first technical paper.
-- **WR-II** and later papers remain downstream and are not opened automatically.
+## Quick navigation
 
-## Repository structure
+### Founding documents
 
-- `docs/WREH-00/` — founding manifesto in Russian and English.
-- `papers/WR-I/` — mathematical spine and future manuscript sources for WR-I.
-- `demos/WR-I/` — interactive HTML demonstrations supporting WR-I.
-- `registry/` — programme status and claim firewalls.
+- [WREH-00 manifesto](docs/WREH-00/)
+- [Programme register](registry/PROGRAMME_REGISTER.md)
+- [Claim firewalls](registry/CLAIM_FIREWALLS.md)
 
-## Programme / community
+### WR-I — Response-Defined World Spaces
 
-**World Realizability & Epistemic Horizons (WREH)** is both the research programme and the research community.
+**Full title:** *Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations*
 
-Related predecessor programme: **Boundary Compensation (BC)**. Concepts may be transferred from BC to WREH only through an explicit mathematical bridge; BC finite-dimensional walls, gaps, parameter flows, and fibres are not automatically physical spacetime, energy, time, or cosmological structures.
+- [WR-I project page](papers/WR-I/README.md)
+- [LaTeX source v0.2](papers/WR-I/WREH_WR-I_Preprint_Draft_v0.2.tex)
+- [PDF draft v0.2](papers/WR-I/WREH_WR-I_Preprint_Draft_v0.2.pdf)
+- [WR-I changelog](papers/WR-I/CHANGELOG.md)
+- [Publication metadata](papers/WR-I/metadata/publication_metadata.yaml)
+- [Interactive demo](demos/WR-I/WREH_WR-I_Response_Defined_Worlds_Demo_v0.1.html)
+
+## Core mathematical idea
+
+For a declared class of admissible global realizations \(\mathcal W\), a family of admissible protocols \(\mathcal P\), and response maps
+
+\[
+R_P:\mathcal W\to\mathcal Y_P,
+\]
+
+a protocol family \(\mathcal A\subseteq\mathcal P\) induces exact response equivalence
+
+\[
+W_1\sim_{\mathcal A}W_2
+\quad\Longleftrightarrow\quad
+R_P(W_1)=R_P(W_2)
+\quad\text{for every }P\in\mathcal A.
+\]
+
+The corresponding response-defined world space is
+
+\[
+\mathcal Q_{\mathcal A}=\mathcal W/\!\sim_{\mathcal A}.
+\]
+
+WREH does **not** infer from this construction that response-equivalent realizations are ontologically identical.
+
+## Methodological lineage
+
+A direct methodological precursor is:
+
+**A. A. Malachevsky,** *Boundary Compensation XI: The Inverse Isotypic Gap Problem and Finite-Resolution Response Equivalence Classes*, Zenodo (2026). DOI: **10.5281/zenodo.20748061**.
+
+The bridge is methodological:
+
+```text
+hidden structures
+    -> BC-XI: finite-resolution response-equivalence classes
+    -> WR-I: response-defined classes of admissible global realizations
+```
+
+Boundary Compensation (BC) and WREH remain distinct programmes. No finite-dimensional BC gap, wall, fibre, atlas, or parameter flow is automatically interpreted as physical energy, spacetime, cosmological structure, time, or dynamics.
+
+## Planned technical sequence
+
+1. **WR-I** — Response-Defined World Spaces
+2. **WR-II** — Finite Consistency and Global World Realizability
+3. **WR-III** — Geometry of Admissible World Fibres
+4. **WR-IV** — Response-Conditioned Global Completion and the Status of the Past
+5. **WR-V** — Experiment and Realization Selection
+6. **WR-VI** — The Aquarium Bounds
+7. **WR-VII** — Energy-Time Frontiers of World Realizability
+8. **WR-VIII** — The Cosmological Fibre
+9. **WR-IX** — Epistemic Horizons
+
+The sequence is obligation-driven. Numbering does not by itself authorize a new paper or claim.
+
+## Contribution discipline
+
+WREH welcomes critical and constructive contributions, including negative results. Contributions should identify their status explicitly as one of:
+
+- **THEOREM**
+- **MODEL**
+- **NUMERICAL EVIDENCE**
+- **PHYSICAL HYPOTHESIS**
+- **INTERPRETATION**
+- **OPEN QUESTION**
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the working rules.
 
 ## Author
 
-A. A. Malachevsky  
-ORCID: 0009-0008-6009-3196
+**A. A. Malachevsky**  
+ORCID: **0009-0008-6009-3196**
 
-## Status
+## Citation
 
-Founding repository seed, v0.1 — 2026-10-06.
+Repository-level citation metadata are provided in [CITATION.cff](CITATION.cff). Individual papers maintain their own citation metadata in their paper directories.
 
-No software or content license has yet been assigned. Do not infer a license from repository visibility.
+## Licence status
+
+No software or content licence has yet been assigned. Public repository visibility does **not** imply permission to reuse, modify, or redistribute the contents beyond rights provided by applicable law.
+
+---
+
+**Repository:** https://github.com/AIDevelopersMonster/WREH  
+**State:** ACTIVE — 2026-10-07
