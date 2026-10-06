@@ -6,7 +6,8 @@
 **ORCID:** 0009-0008-6009-3196  
 **Current draft:** v0.2  
 **Status:** REVIEWED_CLEAN  
-**Date:** 2026-10-07
+**Date:** 2026-10-07  
+**Repository:** https://github.com/AIDevelopersMonster/WREH
 
 ## Purpose
 
@@ -53,8 +54,6 @@ WR-I does **not** claim that:
 
 ## Current files
 
-Expected paper files in this directory:
-
 ```text
 WREH_WR-I_Preprint_Draft_v0.2.tex
 WREH_WR-I_Preprint_Draft_v0.2.pdf
@@ -66,19 +65,17 @@ figures/
 demo/
 ```
 
-The current interactive demonstrator remains canonically stored at:
+The executable interactive demonstrator has a single source of truth at:
 
 ```text
 ../../demos/WR-I/WREH_WR-I_Response_Defined_Worlds_Demo_v0.1.html
 ```
 
-The `demo/` directory in this paper folder contains only a pointer README so that the executable demo has a single source of truth.
+The local `demo/` directory contains only a pointer README.
 
 ## Relationship to WR-II
 
 WR-I defines the objects and maps needed by WR-II. WR-II may then ask when finite or local compatibility data admit a globally compatible realization.
-
-The handoff is deliberately one-way:
 
 ```text
 WR-I: response-defined realization classes and refinement
@@ -94,8 +91,8 @@ WR-I does not assume the existence of a global inverse/projective limit and does
 The v0.2 draft has incorporated the first formal review round. Before public release/freeze, remaining publication tasks are:
 
 1. final novelty and bibliography audit;
-2. final render audit after repository integration;
+2. final render audit from the repository source;
 3. author decision on licence;
-4. repository URL insertion after GitHub remote creation;
-5. DOI insertion after deposition/publication.
+4. DOI insertion after deposition/publication.
 
+No release tag should be interpreted as a scientific publication until the publication gate is explicitly closed.
