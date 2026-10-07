@@ -3,7 +3,8 @@
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
 **Upstream:** WR-I — DOI: 10.5281/zenodo.23210258  
 **Current version:** v0.5  
-**Status:** PUBLICATION_READY / DOI PENDING  
+**DOI:** https://doi.org/10.5281/zenodo.23224154  
+**Status:** PUBLISHED / FROZEN  
 **Canonical language:** English  
 **Russian version:** full scientific translation  
 **Content licence:** CC BY 4.0
@@ -76,4 +77,4 @@ The v0.5 publication package contains:
 - CC BY 4.0 licence statement;
 - SHA-256 integrity file.
 
-Both PDFs have passed render/preflight audit. DOI remains pending until deposition.
+Both DOI-stamped PDFs have passed render/preflight audit. The Zenodo record is the archival publication record.
