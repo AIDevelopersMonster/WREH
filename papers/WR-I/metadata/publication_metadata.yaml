@@ -48,12 +48,13 @@ lineage:
 
 publication:
   doi: "pending"
-  license: "pending author decision"
+  license_content: "CC-BY-4.0"
+  license_software_demo: "MIT"
   candidate_pdf_render_audit: "passed"
   candidate_pdf_pages: 12
   candidate_pdf_sha256: "c7d095e8db697ef21fb5e18e1b14eeddedae982929e69a500043fb4e3be4f063"
   candidate_pdf_git_blob: "00eb102cf1d0a734f99f79688190ce1f5f732d27"
-  release_status: "not yet frozen"
+  release_status: "publication set prepared; freeze pending DOI deposition"
 
 claim_ceiling:
   - "No claim that response-equivalent realizations are ontologically identical."
