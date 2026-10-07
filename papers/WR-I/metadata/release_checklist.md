@@ -21,14 +21,21 @@
 - [x] Current date recorded: 2026-10-07.
 - [x] Licence selected: CC BY 4.0 for research content; MIT for software and executable demos.
 - [x] GitHub repository URL inserted.
-- [ ] Release tag created.
-- [ ] Zenodo / repository DOI inserted after deposition.
+- [ ] GitHub release tag created after PR merge.
+- [x] Zenodo DOI assigned and inserted: `10.5281/zenodo.23210258`.
 - [x] Candidate PDF render audit completed: 12 pages, visually clean, metadata embedded.
 - [x] English and Russian publication PDFs rendered and visually audited.
-- [ ] Final post-DOI render audit after DOI insertion.
+- [x] Post-DOI English and Russian PDFs rendered and visually audited.
 
 ## Reproducibility / companion material
 
 - [x] Interactive WR-I demo exists.
 - [x] Demo kept as a single source of truth under `demos/WR-I/`.
 - [ ] Add figures only when they carry scientific information not already represented by the demo or equations.
+
+## Publication closure
+
+- [x] WR-I v0.3 scientific content frozen.
+- [x] Zenodo DOI assigned: `10.5281/zenodo.23210258`.
+- [x] English and Russian DOI-stamped author copies generated.
+- [x] WR-II development gate opened; WR-II results remain unestablished until independently proved.
