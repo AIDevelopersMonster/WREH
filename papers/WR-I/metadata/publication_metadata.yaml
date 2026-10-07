@@ -5,7 +5,7 @@ programme:
 
 work:
   code: WR-I
-  title: "Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations"
+  title: "Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations"
   document_type: "technical preprint candidate"
   version: "0.3-candidate"
   status: "REVIEWED_CLEAN_PENDING_RENDER_FREEZE"
@@ -51,6 +51,8 @@ publication:
   license: "pending author decision"
   candidate_pdf_render_audit: "passed"
   candidate_pdf_pages: 12
+  candidate_pdf_sha256: "c7d095e8db697ef21fb5e18e1b14eeddedae982929e69a500043fb4e3be4f063"
+  candidate_pdf_git_blob: "00eb102cf1d0a734f99f79688190ce1f5f732d27"
   release_status: "not yet frozen"
 
 claim_ceiling:
