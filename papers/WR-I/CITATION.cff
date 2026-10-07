@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "WR-I is a preprint candidate. Cite the repository version until a publication DOI is assigned."
-title: "Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations"
+title: "Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations"
 type: article
 authors:
   - family-names: "Malachevsky"
