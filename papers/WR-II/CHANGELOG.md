@@ -1,5 +1,19 @@
 # WR-II Changelog
 
+## v0.4 — 2026-10-07
+
+Status: REVIEWABLE_DRAFT pending proof check of the new application section.
+
+- added sparse moment / finite-atomic reconstruction benchmark;
+- proved exact finite consistency for Gaussian moments;
+- proved absence of exact finite-atomic global realization;
+- exhibited three calibration regimes: infinite radius, finite positive gap, and zero-radius nonattainment;
+- clarified that protocol scales define data-fidelity geometry, not Tikhonov regularization;
+- clarified that Hausdorffness is not required for finite-projection closure;
+- added continuity-to-lower-semicontinuity remark;
+- retained sup-over-protocols as uniform feasibility and deferred Lq/covariance aggregation to a separate extension.
+
+
 ## v0.3 — 2026-10-07
 
 Status: REVIEWED_CLEAN
