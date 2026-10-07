@@ -186,3 +186,41 @@ The WR-II noisy construction is **not** called an approximate inverse system.
 - classical approximate inverse-system theory instead relaxes the bonding-map commutativity itself.
 
 Quantitative contextuality is also prior art in context-restricted probabilistic models. WR-II does not claim novelty for robustness measures of contextuality.
+
+
+## Sparse moment reconstruction benchmark
+
+### R21 — Exact finite moment consistency
+
+For the class of finitely supported probability measures on R and Gaussian target moments, every finite protocol bundle is matched exactly.
+
+Status: PROVED.
+
+### R22 — No exact global sparse realization
+
+No finitely supported probability measure reproduces the full Gaussian moment sequence.
+
+Status: PROVED.
+
+### R23 — Raw calibration divergence
+
+For sigma_n = 1,
+delta_fin = 0 while delta_glob = infinity.
+
+Status: PROVED.
+
+### R24 — Relative calibration positive gap
+
+For sigma_n = max(1, |y_n|),
+delta_fin = 0, delta_glob = 1, and Gamma = 1.
+
+Status: PROVED.
+
+### R25 — Factorial calibration nonattainment
+
+For sigma_n = n!,
+delta_fin = delta_glob = 0, but no exact global sparse realization exists.
+
+Status: PROVED.
+
+Interpretation: the same exact model-class mismatch can appear as infinite global error, finite positive stability gap, or zero-distance nonattainment under non-uniformly equivalent response calibrations.
