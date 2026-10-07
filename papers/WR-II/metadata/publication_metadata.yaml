@@ -38,3 +38,10 @@ publication:
   russian_pdf_pages: 24
   english_pdf_sha256: "b1e3166de99faa32a101134ff622061a3059bfa9dbd712b9de140f833b7f9b56"
   russian_pdf_sha256: "817339e1b582eacd13b19a464de4e3b6dd49800a92d9e94e3cfb1aee2b38fc8f"
+
+
+companion_media:
+  - type: "video"
+    platform: "YouTube"
+    url: "https://youtu.be/_wyIDHUTvgw"
+    relation: "explanatory companion material; non-canonical relative to the published manuscript"
