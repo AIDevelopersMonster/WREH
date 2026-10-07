@@ -2,7 +2,7 @@
 
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
 **Upstream:** WR-I v0.3 — DOI: 10.5281/zenodo.23210258  
-**Status:** ACTIVE / MATHEMATICAL SPINE v0.1
+**Status:** REVIEWED_CLEAN / PREPRINT DRAFT v0.3
 
 ## New mathematical target
 
@@ -74,7 +74,7 @@ WREH architecture: admissible global realizations, finite response images,
 canonical embedding of the full response quotient into the finite-consistency
 inverse limit, and the resulting model-relative global-realizability defect.
 
-## Current work package
+## Current preprint state
 
 1. Formalize the finite-consistency inverse system.
 2. Prove the canonical embedding of the WR-I full-response quotient.
@@ -83,3 +83,26 @@ inverse limit, and the resulting model-relative global-realizability defect.
 5. Prove a countable shrinking-fibre uniqueness criterion.
 6. Build explicit positive and negative examples.
 7. Audit against compactness, extension, contextuality, and local-to-global literature.
+
+
+## v0.3 quantitative layer
+
+For a target profile y, WR-II defines the finite fitting radius and global one-world fitting radius. Their difference is the finite-to-global stability gap.
+
+The v0.3 draft proves:
+- finite/global residual inequality;
+- quantitative finite-family collapse;
+- compact globalization with attainment;
+- compact-core/coercivity globalization;
+- stability under uniformly equivalent protocol scales;
+- positive-gap and zero-radius-nonattainment counterexamples.
+
+The quantitative layer is not an "approximate inverse system": the response inverse system remains exact. Approximation enters only through response-space residuals and declared protocol scales.
+
+## Current gate
+
+Before WR-II can be frozen for publication, the required next steps are:
+1. independent external proof review;
+2. at least one non-toy application;
+3. final source/bibliography audit;
+4. bilingual publication package and DOI deposition.
