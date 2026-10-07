@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "WR-II is a research preprint draft. Cite WR-I for the published upstream framework and this repository version when discussing WR-II."
+title: "Finite Consistency and Global World Realizability"
+type: article
+authors:
+  - family-names: "Malachevsky"
+    given-names: "A. A."
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+version: "0.3"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/AIDevelopersMonster/WREH"
+keywords:
+  - WREH
+  - world realizability
+  - finite consistency
+  - inverse limits
+  - global realizability
+  - stability gap
+  - epistemic horizons
