@@ -1,108 +1,79 @@
 # WR-II — Finite Consistency and Global World Realizability
 
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
-**Upstream:** WR-I v0.3 — DOI: 10.5281/zenodo.23210258  
-**Status:** REVIEWED_CLEAN / PREPRINT DRAFT v0.3
+**Upstream:** WR-I — DOI: 10.5281/zenodo.23210258  
+**Current version:** v0.5  
+**Status:** PUBLICATION_READY / DOI PENDING  
+**Canonical language:** English  
+**Russian version:** full scientific translation  
+**Content licence:** CC BY 4.0
 
-## New mathematical target
+## Core question
 
-WR-II studies a question not answered by WR-I:
+WR-II asks whether a response profile whose every finite restriction is realizable by some admissible world must be realized by one admissible global realization.
 
-> If every finite bundle of admissible responses is realizable by at least one
-> admissible global realization, must there exist one admissible global
-> realization realizing all responses simultaneously?
+The paper distinguishes:
 
-The answer is generally **no** without additional hypotheses.
+1. finite obstruction;
+2. finitely consistent but globally unrealized response profiles;
+3. globally realized response profiles.
 
-WR-II therefore distinguishes:
+## Core objects
 
-1. **finite obstruction** — some finite response bundle is already unrealizable;
-2. **global completion defect** — every finite bundle is realizable and compatible, but no single admissible global realization realizes all of them;
-3. **global realizability** — one admissible global realization realizes the entire response profile.
-
-## Core object
-
-For the WR-I world-response structure
-\[
-\mathbf W=(\mathcal W,\mathcal P,\{R_P\}_{P\in\mathcal P}),
-\]
-let \(\operatorname{Fin}(\mathcal P)\) be the directed set of finite protocol bundles. For each finite
-bundle \(\mathcal A\), define the realizable finite-response image
-\[
-E_{\mathcal A} := R_{\mathcal A}(\mathcal W).
-\]
-
-Restriction maps make \((E_{\mathcal A})\) an inverse system. Its inverse limit
-\[
+For the WR-I world-response structure, finite response images
+[
+E_{\mathcal A}=R_{\mathcal A}(\mathcal W)
+]
+form an inverse system. Its inverse limit
+[
 \mathfrak C_{\mathrm{fin}}(\mathbf W)
 =
-\varprojlim_{\mathcal A\in\operatorname{Fin}(\mathcal P)} E_{\mathcal A}
-\]
-is the **finite-consistency space**.
+\varprojlim_{\mathcal A\in\operatorname{Fin}(\mathcal P)}E_{\mathcal A}
+]
+is the finite-consistency space.
 
-The full WR-I response quotient
-\[
-\mathcal Q_{\mathcal P}=\mathcal W/\!\sim_{\mathcal P}
-\]
-embeds canonically into \(\mathfrak C_{\mathrm{fin}}\). WR-II defines the
-**global realizability defect** as the complement of that embedded image.
+The full WR-I response quotient embeds canonically into this space. The complement of its image is the model-relative global realizability defect.
+
+## Quantitative layer
+
+For noisy profiles WR-II defines finite and global fitting radii
+[
+\delta_{\mathrm{fin}}(y)
+\le
+\delta_{\mathrm{glob}}(y)
+]
+and the finite-to-global stability gap
+[
+\Gamma(y)=\delta_{\mathrm{glob}}(y)-\delta_{\mathrm{fin}}(y).
+]
+
+The paper proves equality and attainment under compactness or a finite compact-core/coercivity condition, and gives noncompact counterexamples.
+
+## Non-toy benchmark
+
+The v0.5 paper includes a sparse moment reconstruction benchmark:
+
+- every finite set of Gaussian moments is matched exactly by a finite atomic probability measure;
+- no finite atomic probability measure realizes the full Gaussian moment profile;
+- different non-uniformly equivalent protocol calibrations produce:
+  - infinite global residual;
+  - a finite positive stability gap;
+  - zero-distance nonattainment.
 
 ## Claim ceiling
 
-WR-II does **not** claim that:
+WR-II does not infer physical existence from mathematical completion, does not identify inverse-limit order with time or dynamics, and does not treat response calibration as model-space regularization.
 
-- a profile outside the declared world class is physically impossible;
-- mathematical finite consistency implies physical existence;
-- a global completion is unique unless uniqueness hypotheses are proved;
-- a failure of global realizability means that the physical Universe does not exist;
-- inverse-limit order is physical time or dynamics;
-- a formal completion point is itself a physical world.
+## Publication package
 
-## Prior-art boundary
+The v0.5 publication package contains:
 
-Finite-to-global extension is classical across many fields:
+- canonical English PDF and LaTeX source;
+- full Russian PDF and LaTeX translation;
+- `CITATION.cff`;
+- publication metadata;
+- Zenodo metadata;
+- CC BY 4.0 licence statement;
+- SHA-256 integrity file.
 
-- compactness in first-order logic;
-- inverse/projective limits and Mittag-Leffler conditions;
-- Kolmogorov extension of finite-dimensional probability laws;
-- Vorob'ev extension problems for consistent marginals;
-- sheaf-theoretic contextuality and global-section obstructions;
-- acyclicity criteria for global consistency in databases and positive semirings.
-
-WR-II does not claim novelty for these theorems. Its target is the specific
-WREH architecture: admissible global realizations, finite response images,
-canonical embedding of the full response quotient into the finite-consistency
-inverse limit, and the resulting model-relative global-realizability defect.
-
-## Current preprint state
-
-1. Formalize the finite-consistency inverse system.
-2. Prove the canonical embedding of the WR-I full-response quotient.
-3. Characterize global realizability as surjectivity / closedness.
-4. Prove compactness-based existence criteria.
-5. Prove a countable shrinking-fibre uniqueness criterion.
-6. Build explicit positive and negative examples.
-7. Audit against compactness, extension, contextuality, and local-to-global literature.
-
-
-## v0.3 quantitative layer
-
-For a target profile y, WR-II defines the finite fitting radius and global one-world fitting radius. Their difference is the finite-to-global stability gap.
-
-The v0.3 draft proves:
-- finite/global residual inequality;
-- quantitative finite-family collapse;
-- compact globalization with attainment;
-- compact-core/coercivity globalization;
-- stability under uniformly equivalent protocol scales;
-- positive-gap and zero-radius-nonattainment counterexamples.
-
-The quantitative layer is not an "approximate inverse system": the response inverse system remains exact. Approximation enters only through response-space residuals and declared protocol scales.
-
-## Current gate
-
-Before WR-II can be frozen for publication, the required next steps are:
-1. independent external proof review;
-2. at least one non-toy application;
-3. final source/bibliography audit;
-4. bilingual publication package and DOI deposition.
+Both PDFs have passed render/preflight audit. DOI remains pending until deposition.
