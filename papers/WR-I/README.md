@@ -1,11 +1,11 @@
 # WR-I — Response-Defined World Spaces
 
-**Full title:** *Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations*  
+**Full title:** *Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations*  
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
 **Author:** A. A. Malachevsky  
 **ORCID:** 0009-0008-6009-3196  
-**Current draft:** v0.2  
-**Status:** REVIEWED_CLEAN  
+**Current source:** v0.3 candidate  
+**Status:** REVIEWED_CLEAN / freeze pending  
 **Date:** 2026-10-07  
 **Repository:** https://github.com/AIDevelopersMonster/WREH
 
@@ -57,6 +57,7 @@ WR-I does **not** claim that:
 ```text
 WREH_WR-I_Preprint_Draft_v0.2.tex
 WREH_WR-I_Preprint_Draft_v0.2.pdf
+WREH_WR-I_Preprint_Candidate_v0.3.tex
 README.md
 CITATION.cff
 CHANGELOG.md
@@ -88,11 +89,10 @@ WR-I does not assume the existence of a global inverse/projective limit and does
 
 ## Publication state
 
-The v0.2 draft has incorporated the first formal review round. Before public release/freeze, remaining publication tasks are:
+The v0.3 candidate incorporates the first formal review and the final novelty audit. A 12-page candidate PDF has been compiled and visually audited. Remaining publication tasks are:
 
-1. final novelty and bibliography audit;
-2. final render audit from the repository source;
-3. author decision on licence;
-4. DOI insertion after deposition/publication.
+1. author decision on licence;
+2. freeze/tag after candidate source and PDF are synchronized in the repository;
+3. DOI insertion after deposition/publication.
 
 No release tag should be interpreted as a scientific publication until the publication gate is explicitly closed.
