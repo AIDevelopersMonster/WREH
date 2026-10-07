@@ -1,13 +1,14 @@
 cff-version: 1.2.0
-message: "If you use or discuss WR-I, please cite this manuscript. DOI and repository URL will be added after public release."
+message: "WR-I is a preprint candidate. Cite the repository version until a publication DOI is assigned."
 title: "Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations"
 type: article
 authors:
   - family-names: "Malachevsky"
     given-names: "A. A."
     orcid: "https://orcid.org/0009-0008-6009-3196"
-version: "0.2"
-date-released: 2026-10-07
+version: "0.3-candidate"
+repository-code: "https://github.com/AIDevelopersMonster/WREH"
+url: "https://github.com/AIDevelopersMonster/WREH/tree/main/papers/WR-I"
 abstract: >-
   WR-I develops the mathematical entry point of the World Realizability &
   Epistemic Horizons (WREH) programme. It studies admissible global
