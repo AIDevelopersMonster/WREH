@@ -1,15 +1,20 @@
 programme:
   code: WREH
   name: "World Realizability & Epistemic Horizons"
+  role: "Research Programme & Community"
 
 work:
   code: WR-II
-  title: "Finite Consistency and Global World Realizability"
-  document_type: "technical preprint draft"
-  version: "0.3"
-  status: "REVIEWED_CLEAN"
+  title_en: "Finite Consistency and Global World Realizability"
+  title_ru: "Конечная согласованность и глобальная реализуемость мира"
+  document_type: "technical preprint"
+  version: "0.5"
+  status: "PUBLICATION_READY"
   date: "2026-10-07"
-  language: "English"
+  canonical_language: "English"
+  translations:
+    - language: "Russian"
+      status: "full scientific translation"
 
 creator:
   name: "A. A. Malachevsky"
@@ -24,23 +29,11 @@ repository:
   branch: "paper-wr-ii-v0.1-spine"
   paper_path: "papers/WR-II"
 
-core_objects:
-  - "finite-consistency inverse limit"
-  - "global realizability defect"
-  - "context-consistency space"
-  - "finite/global residual radii"
-  - "finite-to-global stability gap"
-  - "compact-core globalization criterion"
-
 publication:
   doi: "pending"
   license_content: "CC-BY-4.0"
-  release_status: "draft; external proof review and non-toy application pending"
-  rendered_pdf_pages: 16
-  rendered_pdf_sha256: "71f8f317a183fe4cb735b4def6d5d65a6275b87a0eca222380c5d32a360f1811"
-
-claim_ceiling:
-  - "No claim that mathematical finite consistency implies physical existence."
-  - "No claim that a completion point is itself a physical world."
-  - "No claim that protocol refinement is physical time or dynamics."
-  - "No claim that quantitative gaps are physically meaningful without justified calibration."
+  release_status: "publication package prepared; Zenodo DOI deposition pending"
+  english_pdf_pages: 20
+  russian_pdf_pages: 24
+  english_pdf_sha256: "7e7f4e8f7404a72246feec9d4fd0f64d8d79a5eee2e051aeddd4f869c8f198d0"
+  russian_pdf_sha256: "de751a75f2c8195f192a135831c442fe016448f773a50c2f0bf3b0768dfa8ea6"
