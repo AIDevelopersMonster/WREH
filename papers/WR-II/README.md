@@ -78,3 +78,10 @@ The v0.5 publication package contains:
 - SHA-256 integrity file.
 
 Both DOI-stamped PDFs have passed render/preflight audit. The Zenodo record is the archival publication record.
+
+
+## Companion media
+
+- **WR-II video overview:** https://youtu.be/_wyIDHUTvgw
+
+The video is explanatory companion material and does not replace the published manuscript or its DOI record.
