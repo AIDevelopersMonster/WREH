@@ -19,12 +19,13 @@
 - [x] ORCID recorded: 0009-0008-6009-3196.
 - [x] Candidate version recorded: v0.3-candidate.
 - [x] Current date recorded: 2026-10-07.
-- [ ] Licence selected by author.
+- [x] Licence selected: CC BY 4.0 for research content; MIT for software and executable demos.
 - [x] GitHub repository URL inserted.
 - [ ] Release tag created.
 - [ ] Zenodo / repository DOI inserted after deposition.
 - [x] Candidate PDF render audit completed: 12 pages, visually clean, metadata embedded.
-- [ ] Final PDF render audit after freeze.
+- [x] English and Russian publication PDFs rendered and visually audited.
+- [ ] Final post-DOI render audit after DOI insertion.
 
 ## Reproducibility / companion material
 
