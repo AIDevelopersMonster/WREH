@@ -6,9 +6,9 @@ programme:
 work:
   code: WR-I
   title: "Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations"
-  document_type: "technical preprint"
-  version: "0.2"
-  status: "REVIEWED_CLEAN"
+  document_type: "technical preprint candidate"
+  version: "0.3-candidate"
+  status: "REVIEWED_CLEAN_PENDING_RENDER_FREEZE"
   date: "2026-10-07"
   language: "English"
 
@@ -18,7 +18,7 @@ creator:
 
 repository:
   url: "https://github.com/AIDevelopersMonster/WREH"
-  branch: "main"
+  branch: "paper-wr-i-v0.3-candidate"
   paper_path: "papers/WR-I"
 
 discovery:
@@ -39,6 +39,8 @@ lineage:
     title: "Boundary Compensation XI: The Inverse Isotypic Gap Problem and Finite-Resolution Response Equivalence Classes"
     doi: "10.5281/zenodo.20748061"
     relation: "methodological precursor; no automatic physical or ontological import"
+  close_prior_art:
+    - "Simons & Washburn (2026), arXiv:2608.02637: exact observation-law quotients, monotone refinement, non-transitive finite-resolution ambiguity"
   downstream:
     code: "WR-II"
     title: "Finite Consistency and Global World Realizability"
@@ -47,6 +49,8 @@ lineage:
 publication:
   doi: "pending"
   license: "pending author decision"
+  candidate_pdf_render_audit: "passed"
+  candidate_pdf_pages: 12
   release_status: "not yet frozen"
 
 claim_ceiling:
