@@ -494,7 +494,7 @@ F_1(y)\supseteq F_2(y)\supseteq\cdots
 and every $F_n(y)$ is nonempty.
 
 \begin{proposition}[Compact nested-fibre existence]
-If $\W$ is compact Hausdorff and every $R_P$ is continuous, then
+Assume $\W$ is compact and every fibre $F_n(y)$ is closed in $\W$. Then
 \[
 \bigcap_{n=1}^{\infty}F_n(y)\neq\varnothing.
 \]
@@ -502,9 +502,24 @@ Every point in this intersection globally realizes $y$.
 \end{proposition}
 
 \begin{proof}
-Each $F_n(y)$ is closed and nonempty, and the family is nested. Compactness
-gives a nonempty intersection. Agreement on every $\Acal_n$ implies agreement
-on every protocol.
+The sets $F_n(y)$ are nonempty, closed, and nested. Compactness gives a
+nonempty intersection. Agreement on every $\Acal_n$ implies agreement on every
+protocol.
+\end{proof}
+
+\begin{corollary}[Continuous Hausdorff-response version]
+If $\W$ is compact, every $Y_P$ is Hausdorff, and every response
+$R_P:\W\to Y_P$ is continuous, then every finitely consistent profile for a
+countable protocol family has at least one global realization.
+\end{corollary}
+
+\begin{proof}
+For each $n$, the target point $\pi_{\Acal_n}(y)$ is closed in the finite
+Hausdorff product $Y_{\Acal_n}$. Hence
+\[
+F_n(y)=R_{\Acal_n}^{-1}\!\left(\{\pi_{\Acal_n}(y)\}\right)
+\]
+is closed. Apply the preceding proposition.
 \end{proof}
 
 \begin{theorem}[Metric shrinking-fibre uniqueness]\label{thm:shrinking}
@@ -552,9 +567,53 @@ $C\in\mathfrak C$, define
 \[
 E_C:=R_C(\W).
 \]
-A compatible family $(e_C)_{C\in\mathfrak C}$ is \emph{context-locally
-realizable} if $e_C\in E_C$ for every context and restrictions agree on
-overlaps.
+\end{definition}
+
+The inclusion order and coordinate restrictions form a diagram of local
+response images even when $\mathfrak C$ is not directed.
+
+\begin{definition}[Context-consistency space]
+Define
+\[
+\mathfrak C_{\mathrm{ctx}}(\mathbf W,\mathfrak C)
+:=
+\varprojlim_{C\in\mathfrak C}E_C,
+\]
+that is, the set of families $(e_C)_{C\in\mathfrak C}$ satisfying
+\[
+e_C\in E_C
+\]
+and agreeing under every restriction $D\subseteq C$ in $\mathfrak C$.
+\end{definition}
+
+Because $\mathfrak C$ covers $\Pcal$, there is a canonical map
+\[
+J_{\mathfrak C}:\mathcal Q_{\Pcal}
+\longrightarrow
+\mathfrak C_{\mathrm{ctx}}(\mathbf W,\mathfrak C)
+\]
+sending a world class to all of its contextual responses.
+
+\begin{proposition}[Context embedding]
+If $\mathfrak C$ covers $\Pcal$ and is closed under subsets, then
+$J_{\mathfrak C}$ is injective.
+\end{proposition}
+
+\begin{proof}
+If two world classes have the same contextual family, then for every
+$P\in\Pcal$ their responses agree on the singleton context $\{P\}$.
+Hence they are equivalent under the full protocol family.
+\end{proof}
+
+\begin{definition}[Contextual global-realizability defect]
+The context-relative defect is
+\[
+\mathfrak D_{\mathrm{ctx}}(\mathbf W,\mathfrak C)
+:=
+\mathfrak C_{\mathrm{ctx}}(\mathbf W,\mathfrak C)
+\setminus
+J_{\mathfrak C}(\mathcal Q_{\Pcal}).
+\]
 \end{definition}
 
 \begin{example}[Finite contextual completion defect]
