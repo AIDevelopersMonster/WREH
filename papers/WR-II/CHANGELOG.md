@@ -2,7 +2,7 @@
 
 ## v0.5 — 2026-10-07
 
-Status: PUBLICATION_READY / DOI PENDING
+Status: PUBLISHED_FROZEN
 
 - completed two independent AI review rounds after v0.4;
 - strengthened the factorial-calibration proof with an explicit uniform tail estimate;
@@ -14,7 +14,9 @@ Status: PUBLICATION_READY / DOI PENDING
 - prepared canonical English publication version;
 - prepared full Russian scientific translation;
 - completed PDF render and preflight audit;
-- prepared bilingual publication/Zenodo package.
+- prepared bilingual publication/Zenodo package;
+- publication DOI assigned: `10.5281/zenodo.23224154`;
+- generated DOI-stamped English and Russian author copies and froze v0.5.
 
 ## v0.4 — 2026-10-07
 
