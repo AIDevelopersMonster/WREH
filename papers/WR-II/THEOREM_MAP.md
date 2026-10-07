@@ -105,3 +105,84 @@ No result above implies that:
 - failure inside the declared world class is absolute physical nonexistence;
 - the inverse-limit index is time;
 - contextual nonextension proves a preferred interpretation of quantum theory.
+
+
+## Quantitative / noisy extension
+
+### R14 — Finite-to-global residual inequality
+
+For normalized residuals,
+[
+delta_{mathrm{fin}}(y)ledelta_{mathrm{glob}}(y).
+]
+
+Status: PROVED.
+
+### R15 — Compact finite-to-global residual identity
+
+If the world class is compact and protocol residuals are lower semicontinuous, then
+[
+delta_{mathrm{glob}}(y)=delta_{mathrm{fin}}(y),
+]
+and the global infimum is attained.
+
+Status: PROVED.
+
+### R16 — Tolerance globalization
+
+Under the compact hypotheses, if every finite bundle can be fitted within the declared protocol tolerances, then one world fits all protocols within those same tolerances.
+
+Status: PROVED.
+
+### R17 — Vanishing-noise exactification
+
+Under the same compact hypotheses,
+[
+delta_{mathrm{fin}}(y)=0
+]
+implies an exact global realization.
+
+Status: PROVED.
+
+### R18 — Compact-core residual identity
+
+Global compactness can be weakened: if one finite response bundle has a compact sublevel set above the finite residual radius, then
+[
+delta_{mathrm{glob}}(y)=delta_{mathrm{fin}}(y)
+]
+and the global infimum is attained.
+
+Status: PROVED.
+
+Interpretation: a finite protocol bundle can act as a coercive anchor preventing near-optimal witnesses from escaping to infinity.
+
+### R19 — Positive stability-gap example
+
+Finite-support binary worlds with the discrete metric and unit protocol scales satisfy
+[
+delta_{mathrm{fin}}=0,qquad delta_{mathrm{glob}}=1.
+]
+
+Status: PROVED COUNTEREXAMPLE.
+
+### R20 — Zero-margin nonattainment example
+
+For the same world class with scales (sigma_n=n),
+[
+delta_{mathrm{fin}}=delta_{mathrm{glob}}=0
+]
+but no exact global realization exists.
+
+Status: PROVED COUNTEREXAMPLE.
+
+Interpretation: zero residual radius does not imply exact realization unless attainment/compactness is available.
+
+## Terminology firewall for the noisy layer
+
+The WR-II noisy construction is **not** called an approximate inverse system.
+
+- the finite-response inverse system remains exactly commutative;
+- approximation enters only through target-response residuals and declared protocol scales;
+- classical approximate inverse-system theory instead relaxes the bonding-map commutativity itself.
+
+Quantitative contextuality is also prior art in context-restricted probabilistic models. WR-II does not claim novelty for robustness measures of contextuality.
