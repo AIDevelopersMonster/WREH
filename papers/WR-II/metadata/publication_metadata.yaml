@@ -9,8 +9,8 @@ work:
   title_ru: "Конечная согласованность и глобальная реализуемость мира"
   document_type: "technical preprint"
   version: "0.5"
-  status: "PUBLICATION_READY"
-  date: "2026-10-07"
+  status: "PUBLISHED_FROZEN"
+  date: "2026-10-08"
   canonical_language: "English"
   translations:
     - language: "Russian"
@@ -30,10 +30,11 @@ repository:
   paper_path: "papers/WR-II"
 
 publication:
-  doi: "pending"
+  doi: "10.5281/zenodo.23224154"
+  doi_url: "https://doi.org/10.5281/zenodo.23224154"
   license_content: "CC-BY-4.0"
-  release_status: "publication package prepared; Zenodo DOI deposition pending"
+  release_status: "published and frozen at v0.5"
   english_pdf_pages: 20
   russian_pdf_pages: 24
-  english_pdf_sha256: "7e7f4e8f7404a72246feec9d4fd0f64d8d79a5eee2e051aeddd4f869c8f198d0"
-  russian_pdf_sha256: "de751a75f2c8195f192a135831c442fe016448f773a50c2f0bf3b0768dfa8ea6"
+  english_pdf_sha256: "b1e3166de99faa32a101134ff622061a3059bfa9dbd712b9de140f833b7f9b56"
+  russian_pdf_sha256: "817339e1b582eacd13b19a464de4e3b6dd49800a92d9e94e3cfb1aee2b38fc8f"
