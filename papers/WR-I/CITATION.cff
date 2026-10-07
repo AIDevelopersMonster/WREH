@@ -7,6 +7,7 @@ authors:
     given-names: "A. A."
     orcid: "https://orcid.org/0009-0008-6009-3196"
 version: "0.3-candidate"
+license: "CC-BY-4.0"
 repository-code: "https://github.com/AIDevelopersMonster/WREH"
 url: "https://github.com/AIDevelopersMonster/WREH/tree/main/papers/WR-I"
 abstract: >-
