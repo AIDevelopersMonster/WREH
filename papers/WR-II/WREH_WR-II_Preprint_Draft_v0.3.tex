@@ -611,6 +611,32 @@ Taking the infimum over $W$ and then the supremum over finite $\Acal$ gives the
 claim.
 \end{proof}
 
+\begin{proposition}[Quantitative finite-family collapse]
+If $\Pcal$ is finite, then for every target profile $y$,
+\[
+\delta_{\mathrm{fin}}(y)
+=
+\delta_{\mathrm{glob}}(y).
+\]
+Hence a positive finite-to-global stability gap requires an infinite full
+protocol family, unless finite consistency is replaced by a restricted context
+family.
+\end{proposition}
+
+\begin{proof}
+When $\Pcal$ is finite, the bundle $\Acal=\Pcal$ occurs in the supremum defining
+$\delta_{\mathrm{fin}}$. For this bundle,
+\[
+\delta_{\Pcal}(y)
+=
+\inf_{W\in\W}
+\max_{P\in\Pcal}r_P(W;y)
+=
+\delta_{\mathrm{glob}}(y).
+\]
+Together with the general inequality, this gives equality.
+\end{proof}
+
 \begin{definition}[Finite-to-global stability gap]
 When both radii are finite, define
 \[
@@ -1190,11 +1216,24 @@ exchange methods surveyed by Hettich and Kortanek
 \cite{HettichKortanek1993}. &
 The noisy WR-II global residual is a response-space fitting functional and can
 be viewed as a semi-infinite min--max problem in suitable applications. WR-II
-does not claim priority for infinite-constraint optimization. \\
+does not claim priority for infinite-constraint optimization. \\[5pt]
+
+Approximate inverse systems &
+Classical approximate inverse systems relax exact commutativity of bonding maps
+in a controlled way \cite{MardesicRubin1989,MardesicSegal1989}. &
+WR-II keeps the finite-response inverse system exactly commutative. Its noisy
+layer perturbs target responses and residual tolerances instead. \\[5pt]
+
+Quantitative contextuality &
+The contextual fraction and related robustness constructions quantify
+contextuality for empirical probability models
+\cite{AbramskyBarbosaMansfield2017}. &
+WR-II does not claim novelty for robustness measures of contextuality. Its
+radii compare finite and one-world fits for a general response structure. \\
 \bottomrule
 \end{longtable}
 
-\section{Novelty claim permitted at v0.1}
+\section{Novelty claim permitted at v0.3}
 
 The defensible claim at this stage is architectural:
 
@@ -1203,29 +1242,37 @@ WR-II attaches to the WR-I world-response structure a canonical finite-response
 inverse system, identifies its inverse limit with the set of finitely realizable
 full response profiles, embeds the full response quotient into this completion,
 and names the residual complement as a model-relative global realizability
-defect. It then separates full finite consistency from context-restricted local
-consistency and records sufficient closed-image, compactness, and shrinking-fibre
-conditions under which the defect disappears.
+defect. It separates full finite consistency from context-restricted local
+consistency. For noisy profiles it introduces protocol-normalized finite and
+global fitting radii, proves equality and attainment under compactness or a
+finite compact-core condition, and isolates the finite-to-global stability gap
+that may remain in noncompact models.
 \end{quote}
 
 No priority claim is made for compactness, inverse limits, finite-intersection
-arguments, global-section obstructions, or extension theorems themselves.
+arguments, global-section obstructions, extension theorems, semi-infinite
+optimization, approximate inverse systems, or quantitative contextuality
+themselves.
 
 \section{Open obligations}
 
 The next obligations are:
 \begin{enumerate}
-\item determine whether finite-projection closure is the most useful canonical
-completion for WREH applications, or whether a uniform/metric completion is
-needed alongside it;
-\item study stability: approximate finite consistency under noisy responses;
-\item distinguish model-class failure from protocol incompatibility;
-\item formulate context families for physically incompatible measurements;
-\item identify useful obstruction certificates for $\Dfin\neq\varnothing$;
-\item determine when the completion defect survives admissible enlargement of
-$\W$;
-\item build computational examples where the defect is nontrivial but
-certifiable.
+\item identify computable obstruction certificates for
+$\Dfin\neq\varnothing$ and for a positive stability gap $\Gamma(y)$;
+\item determine how exact and quantitative defects change when the admissible
+world class $\W$ is enlarged or restricted;
+\item develop finite algorithms and exchange schemes for estimating
+$\delta_{\mathrm{glob}}$ from protocol subsets, with explicit error
+certificates;
+\item formulate physically justified protocol metrics and scale families
+$(\sigma_P)$ rather than treating calibration as arbitrary;
+\item develop a quantitative context-family layer and compare it explicitly
+with established robustness measures of contextuality;
+\item determine when physically motivated coercivity assumptions imply the
+compact-core hypothesis;
+\item test the framework on at least one non-toy inverse or reconstruction
+problem before making broader physical claims.
 \end{enumerate}
 
 \section*{Conclusion}
@@ -1243,11 +1290,16 @@ The mathematical lesson is deliberately weaker than an ontological one:
 \not\Rightarrow
 \text{global realization}
 \]
-without additional structure, while
+without additional structure. In the noisy layer,
 \[
-\text{compactness/closedness or shrinking fibres}
+\delta_{\mathrm{fin}}(y)
+\le
+\delta_{\mathrm{glob}}(y),
 \]
-can restore existence or uniqueness under explicit hypotheses.
+and the inequality can be strict in noncompact models. Compactness or a finite
+compact core forces equality and attainment, while shrinking exact fibres can
+restore uniqueness. None of these mathematical completion statements is, by
+itself, a claim of physical existence.
 
 \begin{thebibliography}{99}
 
