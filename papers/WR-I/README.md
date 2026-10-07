@@ -58,6 +58,7 @@ WR-I does **not** claim that:
 WREH_WR-I_Preprint_Draft_v0.2.tex
 WREH_WR-I_Preprint_Draft_v0.2.pdf
 WREH_WR-I_Preprint_Candidate_v0.3.tex
+WREH_WR-I_Preprint_Candidate_v0.3.pdf
 README.md
 CITATION.cff
 CHANGELOG.md
