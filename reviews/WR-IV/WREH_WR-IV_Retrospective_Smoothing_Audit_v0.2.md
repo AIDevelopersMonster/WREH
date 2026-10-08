@@ -37,3 +37,7 @@ With Gaussian observation noise, posterior support can remain full-dimensional. 
 Build one richer state-space example with multiple observations, or promote this benchmark into the main review preprint after source-level prior-art verification.
 
 Release status: REVIEWABLE_DRAFT
+
+## Historical snapshot notice
+
+This audit applies to v0.2. The independent v0.2 audit found additional qualifications, implemented in v0.3. The active review record is [WREH_WR-IV_Repair_Audit_v0.3.md](WREH_WR-IV_Repair_Audit_v0.3.md); the earlier PASS rows do not certify the original v0.2 for publication.

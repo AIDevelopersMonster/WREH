@@ -1,38 +1,58 @@
 # WR-IV — Response-Conditioned Global Completion and the Status of the Past
 
-**Programme:** World Realizability & Epistemic Horizons (WREH)  
-**Upstream:** WR-I DOI `10.5281/zenodo.23210258`; WR-II DOI `10.5281/zenodo.23224154`; WR-III DOI `10.5281/zenodo.23228682`  
-**Status:** ACTIVE / MATHEMATICAL SPINE v0.1
+**Programme and community:** World Realizability & Epistemic Horizons (WREH)  
+**Upstream:** WR-I DOI 10.5281/zenodo.23210258; WR-II DOI 10.5281/zenodo.23224154; WR-III DOI 10.5281/zenodo.23228682  
+**State:** ACTIVE / MATHEMATICAL SPINE v0.3  
+**Release status:** REVIEWABLE_DRAFT
 
-## New mathematical target
+## Current files
 
-WR-IV introduces an explicit history/completion projection layer. For current data D, let
+- [v0.3 LaTeX](WREH_WR-IV_Mathematical_Spine_v0.3.tex)
+- [v0.3 PDF](WREH_WR-IV_Mathematical_Spine_v0.3.pdf)
+- [Theorem and dependency map](THEOREM_MAP.md)
+- [Independent v0.2 audit](../../reviews/WR-IV/WREH_WR-IV_v0.2_Independent_Audit_RU.md)
+- [v0.3 repair and source audit](../../reviews/WR-IV/WREH_WR-IV_Repair_Audit_v0.3.md)
 
-\[\mathfrak C(D)=\{W\in\mathcal W:W\text{ is globally compatible with }D\}\]
+The v0.1/v0.2 sources and earlier audits are retained as dated snapshots.
 
-be the response-conditioned global-completion fibre. A declared temporal model supplies projections
+## Declared objects
 
-\[\pi_-:\mathcal W\to\mathcal H_-,\qquad \pi_0:\mathcal W\to\mathcal H_0,\qquad \pi_+:\mathcal W\to\mathcal H_+.\]
+\[
+\mathfrak C(D)=\{W\in\mathcal W:W\text{ is compatible with }D\},
+\qquad
+\mathfrak H_-(D)=\pi_-(\mathfrak C(D)).
+\]
 
-WR-IV studies
+WR-IV separates global-world multiplicity, hidden-past multiplicity and observable-record
+multiplicity. Hard-constraint refinement keeps the model, temporal cut and projection fixed.
 
-\[\mathfrak H_-(D):=\pi_-(\mathfrak C(D))\]
+## Benchmarks
 
-and asks when present data determine a unique past, a class of pasts, or only a response-equivalence class of historical records.
+The doubling-map fibre is a classical Cantor family of full pasts with a deterministic future.
+Gaussian smoothing and Brownian bridges are classical retrospective-inference benchmarks.
 
-## Core questions
+For an exact diffusion endpoint, the full pre-endpoint historical class is properly constrained.
+A fixed earlier fragment may retain the same compatibility set while its conditional variance
+decreases. Gaussian noisy endpoint data preserve path-measure support.
+A regular conditional kernel is constructed explicitly for every endpoint value.
 
-1. When does a present-compatible global completion determine a unique past?
-2. Can the past be rigid even when the full global world is not?
-3. Can a deterministic future coexist with an underdetermined past?
-4. What does additional evidence do mathematically: rewrite a history, or merely shrink the admissible completion set?
-5. How are exact past ambiguity and observable-past ambiguity different?
-6. How do inverse limits / natural extensions of noninvertible dynamics instantiate history ambiguity?
+## Claim ceiling and publication gate
 
-## Claim ceiling
+No past creation or rewriting, retrocausality, branching ontology, emergent time, or
+cosmological conclusion is claimed. The current results are elementary consequences
+and classical benchmarks organized within WREH; no new theorem priority is claimed.
 
-WR-IV does **not** claim that observation physically creates the past, experiment rewrites history, retrocausality occurs, the Universe literally branches, time is emergent, inverse-limit order is physical time, or mathematical completion equals physical existence.
+The manuscript is ready for renewed review, not publication clearance. Broader prior-art
+comparison and cross-manuscript duplication review remain open. No merge or WR-V transition
+is authorized by this repaired draft.
 
-## Anti-duplication boundary
+## Reproduce the PDF
 
-WR-IV must not repackage WR-II global-realizability existence/nonexistence, WR-III generic fibre geometry, or standard natural-extension / inverse-limit theory as new mathematics. Its new target is the historical projection of response-conditioned global completions and the distinction between full-world, hidden-past, and observable-past multiplicity.
+From this directory:
+
+~~~sh
+pdflatex -interaction=nonstopmode -halt-on-error WREH_WR-IV_Mathematical_Spine_v0.3.tex
+pdflatex -interaction=nonstopmode -halt-on-error WREH_WR-IV_Mathematical_Spine_v0.3.tex
+~~~
+
+Required packages include amsmath, amssymb, amsthm, geometry, hyperref and microtype.
