@@ -222,3 +222,78 @@ Rigidity loci are monotone under pullback by protocol refinement, whereas struct
 Status: PROVED as an organizational contrast by R11, R15, and R16.
 
 Claim ceiling: this is a WREH organizational theorem, not a priority claim over singularity theory or relative polar geometry.
+
+
+## Range-only localization benchmark
+
+### R18 — One-anchor circular ambiguity
+
+For one planar squared-range protocol, the fibre at range-squared u>0 is a circle of diameter
+[
+D_1(u)=2sqrt u,
+]
+while u=0 is a singleton structural wall.
+
+Status: PROVED.
+
+### R19 — Two-anchor exact fibre geometry
+
+For anchors (-a,0) and (a,0), the realizable response pair (u,v) satisfies
+[
+q(u,v)
+=
+rac{u+v}{2}-a^2-rac{(u-v)^2}{16a^2}
+ge0.
+]
+Interior fibres have two mirror-related points and
+[
+D_{12}(u,v)=2sqrt{q(u,v)}.
+]
+Boundary fibres q=0 are singletons.
+
+Status: PROVED.
+
+### R20 — Two-anchor fold wall
+
+The two-anchor structural wall is exactly
+[
+q(u,v)=0.
+]
+The Jacobian determinant is
+[
+8ay,
+]
+so the anchor baseline is the critical set and maps to the fold wall.
+
+Status: PROVED.
+
+### R21 — Conditional-rank realization in localization
+
+For the refinement from the first range to the second,
+[
+dr_2|_{ker dr_1}=0
+]
+exactly on the anchor baseline away from the inherited coarse singular point. Thus the conditional-rank mechanism reproduces the fold wall.
+
+Status: PROVED.
+
+### R22 — Three-anchor exact rigidity
+
+Adding a third noncollinear anchor makes the planar squared-range map an embedding into its intrinsic response image. Every fibre is a singleton and the intrinsic structural wall is empty.
+
+Status: PROVED.
+
+### R23 — Localization refinement ladder
+
+The standard range-only inverse problem exhibits
+[
+	ext{circle ambiguity}
+	o
+	ext{mirror-pair ambiguity with fold wall}
+	o
+	ext{exact localization with no intrinsic wall}.
+]
+
+Status: PROVED APPLICATION BENCHMARK.
+
+Prior-art note: the localization/trilateration facts are classical. The WREH contribution is their organization through fibre diameter, rigidity gain, conditional rank, and bifurcation-wall diagnostics.
