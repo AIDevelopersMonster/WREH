@@ -297,4 +297,4 @@ The demo is explanatory only. Formal claims remain in the manuscript.
 - stratified / semialgebraic extension;
 - computable bounds for rigidity gain in a useful model class.
 
-Current release state: **PUBLICATION_READY_PENDING_RENDER_AUDIT**.
+Current release state: **PUBLICATION_READY**. DOI/deposition pending.
