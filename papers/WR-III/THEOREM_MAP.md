@@ -1,4 +1,4 @@
-# WR-III theorem and dependency map — v0.1
+# WR-III theorem and dependency map — v0.6
 
 ## Upstream
 
@@ -7,7 +7,7 @@ WR-III inherits:
 - WR-I response maps, response equivalence, and response-defined quotients — DOI 10.5281/zenodo.23210258;
 - WR-II realizable response images, nonempty compatible fibres, and finite/global realizability discipline — DOI 10.5281/zenodo.23224154.
 
-WR-III starts only after realizability. Its new object is the variation of nonempty inverse fibres over response space.
+WR-II provides conditions under which a response-compatible inverse image is nonempty. WR-III assumes nonemptiness and studies the geometry and topology of that set.
 
 ## Core object
 
@@ -18,7 +18,9 @@ For a declared geometric realization carrier \(X\) and protocol bundle \(\mathca
 e\in E_{\mathcal A}=R_{\mathcal A}(X).
 \]
 
-## Result map
+The word *fibre* is used for this set-theoretic preimage before any fibre-bundle structure is assumed.
+
+## Core exact results
 
 ### R1 — Refinement inclusion
 
@@ -26,41 +28,95 @@ If \(\mathcal A\subseteq\mathcal B\), then
 \[
 \Phi_{\mathcal B}(e_{\mathcal B})
 \subseteq
-\Phi_{\mathcal A}(\rho_{\mathcal B\mathcal A}e_{\mathcal B}).
+\Phi_{\mathcal A}
+\bigl(\rho_{\mathcal B\mathcal A}(e_{\mathcal B})\bigr).
 \]
 
 Status: PROVED.
 
 ### R2 — Fibre-diameter monotonicity
 
-On a fixed metric realization carrier,
 \[
 D_{\mathcal B}(e_{\mathcal B})
 \le
-D_{\mathcal A}(\rho_{\mathcal B\mathcal A}e_{\mathcal B}).
+D_{\mathcal A}
+\bigl(\rho_{\mathcal B\mathcal A}(e_{\mathcal B})\bigr).
 \]
 
 Status: PROVED.
 
-### R3 — Refinement preserves exact and epsilon-rigidity
+### R3 — Pulled-back rigidity monotonicity
 
-A nonempty finer fibre contained in a singleton or sub-epsilon coarser fibre preserves the corresponding rigidity property.
+For every \(\varepsilon\ge0\),
+\[
+E_{\mathcal B}\cap
+\rho_{\mathcal B\mathcal A}^{-1}
+(\mathcal R_{\mathcal A}^{\varepsilon})
+\subseteq
+\mathcal R_{\mathcal B}^{\varepsilon}.
+\]
 
 Status: PROVED.
 
-### R4 — Compact-carrier upper hemicontinuity
+### R4 — Rigidity gain
 
-For a continuous surjection from compact \(X\) to Hausdorff response image \(E\), the inverse-fibre correspondence is compact-valued and upper hemicontinuous.
+\[
+G_{\mathcal B\mid\mathcal A}(e_{\mathcal B})
+=
+D_{\mathcal A}
+\bigl(\rho_{\mathcal B\mathcal A}(e_{\mathcal B})\bigr)
+-
+D_{\mathcal B}(e_{\mathcal B})
+\ge0.
+\]
+
+Status: DEFINED / NONNEGATIVITY PROVED.
+
+### R5 — Conditional-rank formula
+
+For a smooth refinement
+\[
+R_{\mathcal B}=(R_{\mathcal A},S)
+\]
+at a point where \(dR_{\mathcal A,x}\) is surjective,
+\[
+\operatorname{rank}dR_{\mathcal B,x}
+=
+\dim Y_{\mathcal A}
++
+\dim\bigl(dS_x(\ker dR_{\mathcal A,x})\bigr).
+\]
+
+The refined map is a submersion at \(x\) iff
+\[
+dS_x(\ker dR_{\mathcal A,x})=T_{S(x)}Z.
+\]
 
 Status: PROVED.
 
-### R5 — Openness criterion for lower hemicontinuity
+Prior-art note: related augmented-map critical loci are classical in relative polar geometry. No singularity-theory priority is claimed.
+
+### R6 — Container for refinement-created walls
+
+For a proper smooth refinement above a coarse regular value, every refined structural-wall value lies in the image of the conditional rank-defect set.
+
+Status: PROVED.
+
+## Set-valued and metric stability
+
+### R7 — Closed-map criterion
+
+For a surjection \(R:X\to E\), the inverse correspondence is upper hemicontinuous iff \(R\) is closed.
+
+Status: PROVED / STANDARD PRIOR ART.
+
+### R8 — Open-map criterion
 
 For a surjection \(R:X\to E\), the inverse correspondence is lower hemicontinuous iff \(R\) is open.
 
-Status: PROVED.
+Status: PROVED / STANDARD PRIOR ART.
 
-### R6 — Fibre-diameter upper semicontinuity
+### R9 — Diameter upper semicontinuity
 
 For compact metric \(X\), metric \(E\), and continuous surjective \(R\),
 \[
@@ -70,7 +126,7 @@ is upper semicontinuous.
 
 Status: PROVED.
 
-### R7 — Open finite-resolution rigidity loci
+### R10 — Open epsilon-rigidity loci
 
 For every \(\varepsilon>0\),
 \[
@@ -80,7 +136,7 @@ is open.
 
 Status: PROVED.
 
-### R8 — Exact rigidity is G-delta
+### R11 — Exact rigidity is \(G_\delta\)
 
 \[
 \{e:D(e)=0\}
@@ -90,210 +146,155 @@ Status: PROVED.
 
 Status: PROVED.
 
-### R9 — Proper smooth regularity
+### R12 — Hausdorff continuity under an open response map
 
-For a proper smooth response map between manifolds, realizable regular values are structurally regular by Ehresmann local triviality. The proof now explicitly establishes a response neighborhood contained in the image before applying Ehresmann.
+For compact metric \(X\), metric \(E\), and continuous open surjective \(R\), the compact fibres vary continuously in Hausdorff distance; consequently \(D(e)\) is continuous.
+
+Status: PROVED.
+
+## Structural regularity and walls
+
+### R13 — Proper smooth regularity
+
+For a proper smooth response map between manifolds, realizable regular values are structurally regular by Ehresmann local triviality.
 
 Status: PROVED / AUDIT REPAIRED.
 
-### R10 — Rigidity is not structural regularity
+### R14 — Rigidity is not structural regularity
 
-Sphere-height response gives singleton fibres exactly at singular wall points.
+Sphere-height response has singleton fibres at singular wall points.
 
 Status: PROVED EXAMPLE.
 
-## New wall vocabulary
-
-- **structural wall:** failure locus of local fibre triviality inside realizable response space;
-- **attainable-response boundary:** topological boundary of the realizable image in a declared ambient response space;
-- **realizability wall:** union of the two.
-
-All three are model-relative mathematical objects.
-
-## Open obligations
-
-- prior-art audit against set-valued analysis, singularity theory, stratified maps, and identifiability geometry;
-- proof audit of smooth/proper wall theorem;
-- useful invariants beyond diameter;
-- wall-distance and wall-stability notions;
-- refinement effects on walls;
-- non-toy inverse-problem benchmark;
-- interactive demo.
-
-
-## Audit consequence
-
-The phrase **structural wall** is WREH vocabulary for a standard bifurcation / atypical-value locus: failure of local fibre triviality. No theorem-priority claim is made for that object.
-
-The next genuinely programme-specific obligation is not another generic fibre theorem. It is to determine how **protocol refinement transforms rigidity and bifurcation loci**.
-
-Prior-art controls now explicitly include:
-- set-valued inverse maps and hemicontinuity;
-- Ehresmann and bifurcation sets;
-- Thom / stratified isotopy and Hardt semialgebraic triviality;
-- identifiability fibre geometry;
-- Reeb-type fibre topology summaries.
-
-
-## Refinement theorem layer
-
-### R11 — Pulled-back rigidity monotonicity
-
-For every epsilon >= 0,
-[
-E_{mathcal B}cap
-ho_{mathcal Bmathcal A}^{-1}(mathcal R_{mathcal A}^{epsilon})
-subseteq
-mathcal R_{mathcal B}^{epsilon}.
-]
-
-Status: PROVED.
-
-Interpretation: protocol refinement cannot destroy exact or finite-resolution rigidity already present at the coarser response.
-
-### R12 — Rigidity gain
-
-On a fixed metric realization carrier,
-[
-G_{mathcal Bmidmathcal A}
-=
-D_{mathcal A}circho_{mathcal Bmathcal A}
--
-D_{mathcal B}
-ge 0.
-]
-
-Status: DEFINED / NONNEGATIVITY PROVED.
-
-### R13 — Conditional-rank formula
-
-For a smooth refinement
-[
-R_{mathcal B}=(R_{mathcal A},S)
-]
-at a point where (dR_{mathcal A}) is surjective,
-[
-operatorname{rank}dR_{mathcal B}
-=
-dim Y_{mathcal A}
-+
-operatorname{rank}
-left(dS|_{ker dR_{mathcal A}}ight).
-]
-
-Status: PROVED.
-
-Prior-art note: in analytic/algebraic singularity theory, closely related critical loci of augmented maps are organized by relative polar varieties. No novelty claim is made for the underlying rank-defect object.
-
-### R14 — Container for refinement-created walls
-
-For a proper smooth refinement above a coarse regular value, every refined structural-wall value lies in the image of the conditional rank-defect set.
-
-Status: PROVED.
-
 ### R15 — Refinement can create a wall
 
-The map
-[
-(x,y)mapsto (x,y^3-xy)
-]
-refines the wall-free coarse map (x) and creates a semicubical cusp bifurcation set.
+\[
+(x,y)\mapsto(x,y^3-xy)
+\]
+refines the wall-free coarse response \(x\) and creates a semicubical cusp bifurcation set.
 
 Status: PROVED EXAMPLE.
 
 ### R16 — Refinement can resolve a wall
 
 The coarse map
-[
-(x,	heta)mapsto x^2
-]
-on ([-1,1]	imes S^1) has a branch wall at zero, while the refinement
-[
-(x,	heta)mapsto (x^2,x)
-]
-is globally a trivial (S^1)-bundle over its response image.
+\[
+(x,\theta)\mapsto x^2
+\]
+on \([-1,1]\times S^1\) has a branch wall at zero, while
+\[
+(x,\theta)\mapsto(x^2,x)
+\]
+is a globally trivial \(S^1\)-bundle over its intrinsic response image.
 
 Status: PROVED EXAMPLE.
 
 ### R17 — Refinement asymmetry
 
-Rigidity loci are monotone under pullback by protocol refinement, whereas structural bifurcation walls are not monotone: refinement can create or resolve them.
+Rigidity is monotone under protocol refinement after pullback, whereas structural bifurcation walls are not monotone: refinement can create or resolve them.
 
-Status: PROVED as an organizational contrast by R11, R15, and R16.
-
-Claim ceiling: this is a WREH organizational theorem, not a priority claim over singularity theory or relative polar geometry.
-
+Status: PROVED as an organizational contrast.
 
 ## Range-only localization benchmark
 
 ### R18 — One-anchor circular ambiguity
 
-For one planar squared-range protocol, the fibre at range-squared u>0 is a circle of diameter
-[
-D_1(u)=2sqrt u,
-]
-while u=0 is a singleton structural wall.
+For one planar squared-range protocol, the fibre at \(u>0\) is a circle of diameter
+\[
+D_1(u)=2\sqrt u,
+\]
+while \(u=0\) is a singleton structural wall.
 
 Status: PROVED.
 
 ### R19 — Two-anchor exact fibre geometry
 
-For anchors (-a,0) and (a,0), the realizable response pair (u,v) satisfies
-[
+For anchors \((-a,0)\) and \((a,0)\),
+\[
 q(u,v)
 =
-rac{u+v}{2}-a^2-rac{(u-v)^2}{16a^2}
-ge0.
-]
-Interior fibres have two mirror-related points and
-[
-D_{12}(u,v)=2sqrt{q(u,v)}.
-]
-Boundary fibres q=0 are singletons.
+\frac{u+v}{2}
+-a^2
+-\frac{(u-v)^2}{16a^2}.
+\]
+
+For \(q>0\), the fibre is the explicit two-point mirror pair and
+\[
+D_{12}(u,v)=2\sqrt{q(u,v)}.
+\]
+
+For \(q=0\), the fibre is a singleton.
 
 Status: PROVED.
 
 ### R20 — Two-anchor fold wall
 
 The two-anchor structural wall is exactly
-[
+\[
 q(u,v)=0.
-]
+\]
+
 The Jacobian determinant is
-[
+\[
 8ay,
-]
+\]
 so the anchor baseline is the critical set and maps to the fold wall.
 
 Status: PROVED.
 
 ### R21 — Conditional-rank realization in localization
 
-For the refinement from the first range to the second,
-[
-dr_2|_{ker dr_1}=0
-]
-exactly on the anchor baseline away from the inherited coarse singular point. Thus the conditional-rank mechanism reproduces the fold wall.
+For refinement from the first range to the second,
+\[
+dr_2(\tau)=4ay
+\]
+on a tangent direction \(\tau\) to the coarse circular fibre. Conditional rank is lost exactly on the baseline away from the inherited coarse singular point.
 
 Status: PROVED.
 
 ### R22 — Three-anchor exact rigidity
 
-Adding a third noncollinear anchor makes the planar squared-range map an embedding into its intrinsic response image. Every fibre is a singleton and the intrinsic structural wall is empty.
+Adding a third noncollinear anchor makes the planar squared-range response map an embedding into its intrinsic response image. Every fibre is a singleton and the intrinsic structural wall is empty.
 
 Status: PROVED.
 
 ### R23 — Localization refinement ladder
 
-The standard range-only inverse problem exhibits
-[
-	ext{circle ambiguity}
-	o
-	ext{mirror-pair ambiguity with fold wall}
-	o
-	ext{exact localization with no intrinsic wall}.
-]
+\[
+\text{circle ambiguity}
+\longrightarrow
+\text{mirror-pair ambiguity with fold wall}
+\longrightarrow
+\text{exact localization with no intrinsic wall}.
+\]
 
 Status: PROVED APPLICATION BENCHMARK.
 
-Prior-art note: the localization/trilateration facts are classical. The WREH contribution is their organization through fibre diameter, rigidity gain, conditional rank, and bifurcation-wall diagnostics.
+## Claim ceiling
+
+WR-III does not claim novelty for generic fibre geometry, hemicontinuity, Ehresmann/Hardt/Thom triviality, relative polar geometry, Reeb constructions, or trilateration formulas.
+
+The WREH contribution is the programme architecture connecting:
+- nonempty response fibres downstream of WR-I/WR-II;
+- protocol-refinement shrinkage;
+- metric rigidity and rigidity gain;
+- conditional rank of added observables along coarse fibres;
+- the monotone-rigidity / non-monotone-wall contrast.
+
+## Companion demo
+
+Official review companion:
+
+papers/WR-III/demo/WREH_WR-III_Interactive_Companion_v0.2.html
+
+The demo is explanatory only. Formal claims remain in the manuscript.
+
+## Remaining obligations
+
+- noisy / bounded-uncertainty extension of the localization benchmark;
+- useful monotone fibre invariants beyond diameter;
+- quantitative distance-to-bifurcation after a metric/regularity class is fixed;
+- stratified / semialgebraic extension;
+- computable bounds for rigidity gain in a useful model class.
+
+Current release state: **PUBLICATION_READY_PENDING_RENDER_AUDIT**.
