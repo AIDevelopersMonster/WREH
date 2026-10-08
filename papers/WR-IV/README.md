@@ -1,9 +1,11 @@
 # WR-IV — Response-Conditioned Global Completion and the Status of the Past
 
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
-**State:** ACTIVE / COMPLETE BILINGUAL PREPRINT v0.6  
-**Release status:** PUBLICATION_READY for an expository, unpeer-reviewed Zenodo preprint  
-**Deposit status:** Prepared; not published; no WR-IV DOI assigned.
+**State:** PUBLISHED / FROZEN v0.6
+**Publication:** 8 October 2026; expository, unpeer-reviewed preprint
+**Version DOI:** [10.5281/zenodo.23248138](https://doi.org/10.5281/zenodo.23248138).
+
+The two PDFs and HTML match the public record's size/MD5 values. See the [post-publication check](../../reviews/WR-IV/WREH_WR-IV_Post_Publication_Check_v0.6.md) for the source ZIP and metadata follow-ups. Frozen PDFs retain their original pre-deposit wording.
 
 ## Current files
 
@@ -45,7 +47,7 @@ PUBLICATION_READY refers to the complete, checked expository preprint and deposi
 
 Targeted source verification and comparison with the relevant deposited WR-I–III interfaces are completed. Originality of the wider classification is not certified. No physical past rewriting, retrocausality, branching ontology or emergence of time is inferred.
 
-The draft PR remains open and unmerged. WR-I–III remain frozen; WR-V remains planned.
+PR #5 is merged into `main`. WR-I–IV remain frozen; the author has authorized [WR-V](../WR-V/README.md) as the next mathematical review draft. This transition does not alter the WR-IV scientific text or its checksums.
 
 ## Validation and reuse
 

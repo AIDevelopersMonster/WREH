@@ -14,8 +14,8 @@
 1. **WR-I** — *Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations* — **PUBLISHED / FROZEN v0.3** — DOI: `10.5281/zenodo.23210258`.
 2. **WR-II** — *Finite Consistency and Global World Realizability* — **PUBLISHED / FROZEN v0.5** — DOI: `10.5281/zenodo.23224154`.
 3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23228682`.
-4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **ACTIVE / COMPLETE BILINGUAL PREPRINT v0.6 / PUBLICATION_READY (expository preprint; deposit prepared, unpublished)**.
-5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — PLANNED.
+4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23248138`.
+5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — **ACTIVE / MATHEMATICAL DRAFT v0.1 / REVIEWABLE_DRAFT**.
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — PLANNED.
 7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — PLANNED.
 8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — PLANNED.
@@ -23,13 +23,14 @@
 
 ## Current publication gate
 
-WR-I and WR-II are published and frozen.
+WR-I–IV are published and frozen. WR-V is open as a review draft after the author's explicit transition instruction on 8 October 2026.
 
 - WR-I DOI: `10.5281/zenodo.23210258`
 - WR-II DOI: `10.5281/zenodo.23224154`
 - WR-III DOI: `10.5281/zenodo.23228682`
+- WR-IV DOI: `10.5281/zenodo.23248138`
 
-WR-III is published and frozen. WR-IV development is now open after an anti-duplication and prior-art preflight.
+WR-IV PR #5 is merged into `main` at `a82ca16675a6b3f358d800963fa7ff0c4e5385bb`. The published PDFs/HTML match the merged source snapshot by size and published MD5. See `reviews/WR-IV/WREH_WR-IV_Post_Publication_Check_v0.6.md` for the separate metadata/archive follow-ups. WR-V requires review of its newly declared experimental transition interface; no WR-V publication readiness or DOI is asserted.
 
 WR-III inherits the WR-I response maps and quotients together with the WR-II data-compatible fibre language. Its new target is not existence, but the geometry and regularity of **nonempty** admissible world fibres as response data vary and protocols are refined.
 
@@ -88,10 +89,11 @@ projection layer:
 \mathfrak H_-(D)=\pi_-(\mathfrak C(D)).
 \]
 
-Active source: papers/WR-IV/preprint-v0.6/wriv-body.tex, with separate English and Russian entry points.
-Release status: PUBLICATION_READY for a complete, explicitly expository and unpeer-reviewed
-preprint. The Zenodo package is prepared; no WR-IV DOI is assigned and no deposit has
-been published. This does not close the branch, merge PR #5 or open WR-V.
+Frozen source: papers/WR-IV/preprint-v0.6/wriv-body.tex, with separate English and Russian entry points.
+Published: 8 October 2026, version DOI `10.5281/zenodo.23248138`; English/Russian PDFs and
+HTML are deposited together. The work is explicitly expository and unpeer-reviewed.
+The original PDFs/source retain historical pre-deposit wording; this does not negate the
+assigned DOI. PR #5 is merged. The author separately authorized opening WR-V.
 
 The upstream bridge makes model-relative emptiness explicit for a full profile in the
 WR-II global defect; all finite restrictions can remain realizable. WR-IV does not
@@ -136,7 +138,50 @@ elementary/classical provenance and do not claim theorem priority. Exhaustive or
 of the wider framework classification is not certified. Further research novelty requires
 a nonduplicative result and a broader review tailored to that claim.
 
-PUBLICATION_READY here means the files, proofs, source mapping, parallel translation,
-rendering and deposit metadata are prepared for an expository Zenodo preprint. It is not
-journal-submission clearance, external peer review or a certificate of fundamental
-scientific novelty. WR-I–III remain frozen and the planned sequence is unchanged.
+The historical PUBLICATION_READY decision meant the files, proofs, source mapping,
+parallel translation, rendering and deposit materials were prepared for an expository
+Zenodo preprint. It was not journal-submission clearance, external peer review or a
+certificate of fundamental scientific novelty. WR-I–IV remain frozen; the numbered
+sequence is unchanged.
+
+## WR-IV -> WR-V handoff
+
+WR-IV distinguishes fixed-carrier compatibility, historical projections and laws.
+WR-V adds a declared experimental transition description:
+\[
+I_e(r,s\mid x),\qquad
+L_e(r\mid x)=\sum_s I_e(r,s\mid x),\qquad
+K_e(s\mid x,r)=I_e(r,s\mid x)/L_e(r\mid x)
+\]
+for finite carriers and positive likelihood rows. Input labels, successor labels and
+full global realizations remain different types. Zero-likelihood conditional rows are
+not identifiable parameters.
+
+Active source: `papers/WR-V/draft-v0.1/wrv-body.tex`; parallel English/Russian PDFs.
+Release status: **REVIEWABLE_DRAFT**. No external peer review, deposit or WR-V DOI.
+
+New obligation: determine the class of experimental transition models consistent with
+outcome data, then identify which calibrated post-experiment probes constrain that class.
+Known outcome marginals leave an unconstrained product of successor simplices. Calibrated
+probe responses define a nonnegative linear completion fibre; uniform full-rank and
+pointwise feasible-direction certificates have self-contained elementary proofs.
+
+The three-state benchmark separates pure-state distinguishability from mixture-law
+identification, and exact boundary uniqueness from finite-resolution uncertainty.
+The four scenario labels have different domains and can coexist; they are not an
+exhaustive partition of physical ontologies.
+
+WR-V must not:
+
+- infer physical branching or collapse from support multiplicity or posterior concentration;
+- identify a projected label or transition law with a unique full world without an injective bridge;
+- assume outcome likelihoods determine state transitions;
+- call ordinary protocol dependence a proven contextuality obstruction;
+- solve a failed global-variable model by silently dropping overlap identity conditions;
+- rebrand classical instruments, null-space criteria, contextuality or Bayes conditioning as new discoveries;
+- reopen generic WR-I quotients, WR-II existence, WR-III geometry or WR-IV smoothing.
+
+WR-V hands a declared instrument-completion class to WR-VI. Physically admissible
+restrictions on that class require independent construction and justification. WR-IX
+needs explicit accessible protocols and resources before strengthening relative
+indistinguishability to a horizon claim. These downstream branches remain planned.

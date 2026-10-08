@@ -1,0 +1,24 @@
+{
+  "EN": {
+    "pages": 9,
+    "bytes": 89763,
+    "warnings": [],
+    "numbered_labels": 34,
+    "numbered_equations": 13,
+    "bibliographic_entries": 8
+  },
+  "RU": {
+    "pages": 10,
+    "bytes": 99830,
+    "warnings": [],
+    "numbered_labels": 34,
+    "numbered_equations": 13,
+    "bibliographic_entries": 8
+  },
+  "parallel_numbering": "PASS",
+  "visual_review": {
+    "status": "PASS",
+    "date": "2026-10-08",
+    "scope": "all 19 rendered PDF pages"
+  }
+}
