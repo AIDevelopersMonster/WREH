@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite WR-II using the Zenodo DOI."
+title: "Finite Consistency and Global World Realizability"
+type: article
+authors:
+  - family-names: "Malachevsky"
+    given-names: "A. A."
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+version: "0.5"
+doi: "10.5281/zenodo.23224154"
+date-released: 2026-10-08
+license: "CC-BY-4.0"
+repository-code: "https://github.com/AIDevelopersMonster/WREH"
+url: "https://doi.org/10.5281/zenodo.23224154"
+keywords:
+  - WREH
+  - world realizability
+  - finite consistency
+  - global realizability
+  - inverse limits
+  - response equivalence
+  - stability gap
+  - inverse problems
+  - sparse moment reconstruction
+  - epistemic horizons

@@ -1,0 +1,1605 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{example}[definition]{Example}
+\newtheorem{remark}[definition]{Remark}
+
+\newcommand{\W}{\mathcal W}
+\newcommand{\Pcal}{\mathcal P}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\Bcal}{\mathcal B}
+\newcommand{\Y}{\mathcal Y}
+\newcommand{\Fin}{\operatorname{Fin}}
+\newcommand{\Cfin}{\mathfrak C_{\mathrm{fin}}}
+\newcommand{\Dfin}{\mathfrak D_{\mathrm{fin}}}
+
+\hypersetup{
+  pdftitle={WR-II: Finite Consistency and Global World Realizability},
+  pdfauthor={A. A. Malachevsky},
+  pdfsubject={World Realizability and Epistemic Horizons (WREH), WR-II},
+  pdfkeywords={world realizability, finite consistency, inverse limits, compactness, response profiles, global realization, epistemic horizons}
+}
+
+\title{\textbf{WR-II Preprint Draft v0.4}\\[4pt]
+\large Finite Consistency and Global World Realizability}
+\author{A. A. Malachevsky\\
+ORCID: 0009-0008-6009-3196\\
+World Realizability \& Epistemic Horizons (WREH)\\
+Research Programme \& Community}
+\date{7 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+WR-II studies the local-to-global question left open by WR-I: whether a response
+profile whose every finite restriction is realized by some admissible global
+realization must itself be realized by one admissible global realization.
+Starting from the WR-I world-response structure, we construct an inverse system
+of finite response images and define its inverse limit as the finite-consistency
+space. The full WR-I response quotient embeds canonically into this space; the
+complement of its image is the global realizability defect. We show that this
+defect is impossible for a finite protocol family, exhibit an explicit
+infinite-protocol counterexample based on finite-support binary sequences, and
+identify the finite-consistency space with a finite-projection closure of the
+full response image. This yields a closed-image criterion and, in particular,
+a compactness criterion for global realizability. We then introduce
+protocol-normalized residual radii for noisy response profiles and prove a
+finite-to-global residual identity on compact world spaces, together with a
+compact-core extension that prevents escape to infinity. Noncompact examples
+separate positive stability gaps from zero-distance nonattainment. For
+countable protocol families we also give nested-fibre existence and uniqueness
+criteria. Finally, we distinguish full finite consistency from
+context-restricted local consistency, where local-to-global failure can already
+occur for finitely many protocols. The framework is model-relative and does
+not identify mathematical completion with physical existence.
+\end{abstract}
+
+\section{Upstream interface and claim ceiling}
+
+WR-II begins from the world-response structure fixed in WR-I
+\cite{MalachevskyWRI}:
+\[
+\mathbf W=(\W,\Pcal,\{R_P\}_{P\in\Pcal}),
+\]
+where $\W$ is a declared class of admissible global realizations, $\Pcal$ is a
+declared family of admissible protocols, and
+\[
+R_P:\W\to Y_P
+\]
+is the response map associated with protocol $P$.
+
+WR-I studied identifiability relative to a fixed protocol family. WR-II asks a
+different question: whether a family of locally or finitely realizable response
+constraints admits one common global realization.
+
+The claim ceiling is strict. WR-II does not claim that:
+\begin{itemize}
+\item mathematical finite consistency implies physical existence;
+\item a profile not realized inside the declared class $\W$ is physically
+impossible in an absolute sense;
+\item a formal inverse-limit point is itself a physical world;
+\item global completion is unique without a separate uniqueness argument;
+\item refinement order is physical time, dynamics, or renormalization flow;
+\item failure of global realizability means that the physical Universe fails
+to exist.
+\end{itemize}
+
+\section{Full response profiles and finite response images}
+
+Define the full response product
+\[
+\Y:=\prod_{P\in\Pcal}Y_P
+\]
+and the full response map
+\[
+R:\W\to\Y,
+\qquad
+R(W):=(R_P(W))_{P\in\Pcal}.
+\]
+
+For a finite bundle $\Acal\in\Fin(\Pcal)$, let
+\[
+Y_{\Acal}:=\prod_{P\in\Acal}Y_P,
+\qquad
+R_{\Acal}:=\pi_{\Acal}\circ R,
+\]
+where $\pi_{\Acal}:\Y\to Y_{\Acal}$ is the coordinate projection.
+
+\begin{definition}[Finite realizable image]
+For $\Acal\in\Fin(\Pcal)$ define
+\[
+E_{\Acal}:=R_{\Acal}(\W)\subseteq Y_{\Acal}.
+\]
+\end{definition}
+
+If $\Acal\subseteq\Bcal$, coordinate restriction gives
+\[
+\rho_{\Bcal\Acal}:E_{\Bcal}\to E_{\Acal}.
+\]
+
+\begin{proposition}[Finite response inverse system]\label{prop:inverse-system}
+For every $\Acal\subseteq\Bcal$, the restriction map
+$\rho_{\Bcal\Acal}$ is surjective. Moreover,
+\[
+\rho_{\Acal\Acal}=\mathrm{id}_{E_{\Acal}},
+\qquad
+\rho_{\mathcal C\Acal}
+=
+\rho_{\Bcal\Acal}\circ\rho_{\mathcal C\Bcal}
+\]
+whenever $\Acal\subseteq\Bcal\subseteq\mathcal C$.
+Hence $(E_{\Acal},\rho_{\Bcal\Acal})$ is an inverse system indexed by
+$\Fin(\Pcal)$.
+\end{proposition}
+
+\begin{proof}
+Take $e_{\Acal}\in E_{\Acal}$. By definition there is $W\in\W$ with
+$R_{\Acal}(W)=e_{\Acal}$. Then $R_{\Bcal}(W)\in E_{\Bcal}$ restricts to
+$e_{\Acal}$. The identity and composition laws are coordinate restriction.
+\end{proof}
+
+\section{Finite-consistency space}
+
+\begin{definition}[Finite-consistency space]
+The \emph{finite-consistency space} of $\mathbf W$ is
+\[
+\Cfin(\mathbf W)
+:=
+\varprojlim_{\Acal\in\Fin(\Pcal)}E_{\Acal}.
+\]
+Its points are compatible families
+\[
+e=(e_{\Acal})_{\Acal\in\Fin(\Pcal)}
+\]
+with
+\[
+\rho_{\Bcal\Acal}(e_{\Bcal})=e_{\Acal}
+\qquad
+(\Acal\subseteq\Bcal).
+\]
+\end{definition}
+
+There is an equivalent profile description.
+
+\begin{proposition}[Profile representation]\label{prop:profile-representation}
+There is a canonical bijection
+\[
+\Cfin(\mathbf W)
+\cong
+\left\{
+y\in\Y:
+\pi_{\Acal}(y)\in E_{\Acal}
+\text{ for every finite }\Acal\subseteq\Pcal
+\right\}.
+\]
+Thus a point of $\Cfin$ is exactly a full response profile whose every finite
+restriction is realized by at least one admissible global realization.
+\end{proposition}
+
+\begin{proof}
+A compatible inverse-limit family determines its singleton coordinates and
+therefore a unique point $y\in\Y$. Compatibility forces every finite component
+to equal the corresponding finite coordinate tuple of $y$. Conversely, any
+such $y$ defines a compatible family by finite restriction.
+\end{proof}
+
+\section{Canonical embedding of the WR-I quotient}
+
+Let
+\[
+\mathcal Q_{\Pcal}:=\W/\!\sim_{\Pcal}
+\]
+be the full WR-I response quotient.
+
+\begin{proposition}[Canonical global-realization embedding]
+There is a canonical injection
+\[
+J:\mathcal Q_{\Pcal}\hookrightarrow\Cfin(\mathbf W),
+\qquad
+J([W])=(R_{\Acal}(W))_{\Acal\in\Fin(\Pcal)}.
+\]
+Under Proposition~\ref{prop:profile-representation}, the image of $J$ is
+exactly the full response image $R(\W)\subseteq\Y$.
+\end{proposition}
+
+\begin{proof}
+If $[W]=[W']$ in $\mathcal Q_{\Pcal}$, all protocol responses agree, hence all
+finite responses agree, so $J$ is well defined. If $J([W])=J([W'])$, singleton
+components agree for every $P\in\Pcal$, so $W\sim_{\Pcal}W'$ and $J$ is
+injective. The image statement is immediate.
+\end{proof}
+
+\begin{definition}[Global realizability defect]
+The \emph{global realizability defect} is
+\[
+\Dfin(\mathbf W)
+:=
+\Cfin(\mathbf W)\setminus J(\mathcal Q_{\Pcal}).
+\]
+\end{definition}
+
+This definition is model-relative: $\Dfin$ measures failure of realization
+inside the declared class $\W$.
+
+\section{Three-way realizability classification}
+
+For any proposed full response profile $y\in\Y$, exactly one of the following
+holds.
+
+\begin{proposition}[Profile trichotomy]
+Each $y\in\Y$ is in exactly one of three states:
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{finite obstruction:} there exists finite $\Acal\subseteq\Pcal$
+with $\pi_{\Acal}(y)\notin E_{\Acal}$;
+\item \textbf{global completion defect:}
+$y\in\Cfin(\mathbf W)\setminus R(\W)$;
+\item \textbf{global realization:} $y\in R(\W)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:profile-representation}, absence of a finite
+obstruction is equivalent to membership in $\Cfin$. Since
+$R(\W)\subseteq\Cfin$, the remaining two cases partition $\Cfin$.
+\end{proof}
+
+\section{Why the protocol family must be infinite for a genuine full-finite defect}
+
+\begin{proposition}[Finite-family collapse]\label{prop:finite-collapse}
+If $\Pcal$ is finite, then
+\[
+\Cfin(\mathbf W)=R(\W)
+\]
+and therefore
+\[
+\Dfin(\mathbf W)=\varnothing.
+\]
+\end{proposition}
+
+\begin{proof}
+Since $\Pcal\in\Fin(\Pcal)$, finite consistency includes the requirement
+\[
+\pi_{\Pcal}(y)=y\in E_{\Pcal}=R(\W).
+\]
+\end{proof}
+
+\begin{remark}
+This elementary observation is structurally important. A genuine distinction
+between \emph{all finite bundles} and a global response profile requires an
+infinite protocol family. Finite contextuality scenarios avoid this collapse
+because only specified jointly admissible contexts, not the full finite power
+set, are required to be locally realizable.
+\end{remark}
+
+\section{Explicit failure of finite-to-global realizability}
+
+\begin{example}[Finite-support binary worlds]\label{ex:finite-support}
+Let
+\[
+\Pcal=\mathbb N,
+\qquad
+Y_n=\{0,1\},
+\]
+and let
+\[
+\W
+=
+\bigoplus_{n\in\mathbb N}\mathbb Z_2
+=
+\left\{
+x\in\{0,1\}^{\mathbb N}:
+x_n=1\text{ for only finitely many }n
+\right\}.
+\]
+Let protocol $P_n$ read the $n$th coordinate:
+\[
+R_n(x)=x_n.
+\]
+
+For every finite $\Acal\subset\mathbb N$,
+\[
+E_{\Acal}=\{0,1\}^{\Acal},
+\]
+because any finite binary pattern can be extended by zeros to an element of
+$\W$. Hence
+\[
+\Cfin(\mathbf W)=\{0,1\}^{\mathbb N}.
+\]
+But
+\[
+R(\W)=\W
+\]
+contains only finite-support profiles. Therefore
+\[
+\Dfin(\mathbf W)
+=
+\{0,1\}^{\mathbb N}\setminus
+\bigoplus_{n\in\mathbb N}\mathbb Z_2.
+\]
+
+In particular, the profile
+\[
+y=(1,1,1,\ldots)
+\]
+is realized on every finite protocol bundle but by no world in $\W$.
+\end{example}
+
+This example shows that finite realizability alone does not imply a common
+global realization.
+
+\section{Finite-projection closure}
+
+The previous construction has a simple closure formulation.
+
+\begin{definition}[Finite-projection closure]
+For $S\subseteq\Y$, define
+\[
+\operatorname{Cl}_{\mathrm{fin}}(S)
+:=
+\bigcap_{\Acal\in\Fin(\Pcal)}
+\pi_{\Acal}^{-1}\!\left(\pi_{\Acal}(S)\right).
+\]
+\end{definition}
+
+\begin{proposition}[Closure-operator properties]
+The map $S\mapsto\operatorname{Cl}_{\mathrm{fin}}(S)$ is extensive,
+monotone, and idempotent:
+\[
+S\subseteq\operatorname{Cl}_{\mathrm{fin}}(S),
+\]
+\[
+S\subseteq T
+\Longrightarrow
+\operatorname{Cl}_{\mathrm{fin}}(S)
+\subseteq
+\operatorname{Cl}_{\mathrm{fin}}(T),
+\]
+and
+\[
+\operatorname{Cl}_{\mathrm{fin}}
+\!\left(\operatorname{Cl}_{\mathrm{fin}}(S)\right)
+=
+\operatorname{Cl}_{\mathrm{fin}}(S).
+\]
+\end{proposition}
+
+\begin{proof}
+Extensivity and monotonicity are immediate. If
+$C=\operatorname{Cl}_{\mathrm{fin}}(S)$, then for every finite $\Acal$,
+\[
+\pi_{\Acal}(C)=\pi_{\Acal}(S).
+\]
+The inclusion $\pi_{\Acal}(S)\subseteq\pi_{\Acal}(C)$ follows from
+$S\subseteq C$, while the reverse inclusion is part of the definition of $C$.
+Applying the definition again therefore changes nothing.
+\end{proof}
+
+\begin{proposition}[Finite consistency as completion]\label{prop:completion}
+For the full response image $S=R(\W)$,
+\[
+\Cfin(\mathbf W)
+=
+\operatorname{Cl}_{\mathrm{fin}}(R(\W)).
+\]
+Consequently,
+\[
+\Dfin(\mathbf W)=\varnothing
+\quad\Longleftrightarrow\quad
+R(\W)
+=
+\operatorname{Cl}_{\mathrm{fin}}(R(\W)).
+\]
+\end{proposition}
+
+\begin{remark}
+No novelty claim is attached to the abstract idea of closure by finite
+projections. WR-II uses this operator because it exposes the precise gap
+between finite response realizability and realization by a single world.
+\end{remark}
+
+\section{Topological criteria for global realizability}
+
+Give each $Y_P$ a topology and $\Y$ the product topology.
+
+\begin{proposition}[Finite-projection completion lies in topological closure]
+For every $S\subseteq\Y$,
+\[
+\operatorname{Cl}_{\mathrm{fin}}(S)
+\subseteq
+\overline S.
+\]
+\end{proposition}
+
+\begin{proof}
+Let $y\in\operatorname{Cl}_{\mathrm{fin}}(S)$. Every basic neighborhood of
+$y$ restricts only finitely many coordinates, say those in $\Acal$. Since
+$\pi_{\Acal}(y)\in\pi_{\Acal}(S)$, some $s\in S$ agrees with $y$ on all
+coordinates in $\Acal$, hence lies in that basic neighborhood. Therefore every
+neighborhood of $y$ meets $S$.
+\end{proof}
+
+
+\begin{remark}[No separation axiom needed for finite-projection closure]
+The inclusion
+\[
+\operatorname{Cl}_{\mathrm{fin}}(S)\subseteq\overline S
+\]
+uses only the basis structure of the product topology: a basic neighborhood
+restricts finitely many coordinates. Hausdorffness is not required here. It
+enters later in Corollary~\ref{cor:compact}, where compact response images are
+required to be closed.
+\end{remark}
+
+\begin{theorem}[Closed-image criterion]\label{thm:closed-image}
+If the full response image $R(\W)$ is closed in the product topology on $\Y$,
+then
+\[
+\Cfin(\mathbf W)=R(\W)
+\]
+and the global realizability defect is empty.
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:completion},
+\[
+\Cfin=\operatorname{Cl}_{\mathrm{fin}}(R(\W))
+\subseteq
+\overline{R(\W)}
+=
+R(\W).
+\]
+The reverse inclusion always holds.
+\end{proof}
+
+\begin{corollary}[Compact-domain global realizability]\label{cor:compact}
+Assume:
+\begin{enumerate}[label=(\roman*)]
+\item $\W$ is compact;
+\item each response space $Y_P$ is Hausdorff;
+\item each $R_P:\W\to Y_P$ is continuous.
+\end{enumerate}
+Then
+\[
+\Dfin(\mathbf W)=\varnothing.
+\]
+\end{corollary}
+
+\begin{proof}
+The full map
+\[
+R:\W\to\prod_{P\in\Pcal}Y_P
+\]
+is continuous. The product is Hausdorff, so the compact set $R(\W)$ is closed.
+Apply Theorem~\ref{thm:closed-image}.
+\end{proof}
+
+\begin{remark}
+This is a sufficient condition, not a claim that physically admissible world
+spaces are compact. Noncompact models may still be globally realizable, while
+Example~\ref{ex:finite-support} shows that noncompactness can permit a genuine
+completion defect.
+\end{remark}
+
+
+\section{Noisy finite consistency and quantitative global realizability}
+
+Exact equality is too strong for experimental data. Assume from now on that
+each response space $Y_P$ is equipped with a metric $d_P$, and choose a
+strictly positive protocol scale
+\[
+\sigma_P>0.
+\]
+The scale may represent a declared resolution, tolerance, or normalization
+needed to compare heterogeneous protocols. It is part of the model and is not
+canonically determined by the abstract world-response structure. For the
+topological results below, $\W$ is additionally equipped with a topology.
+
+Fix a target profile
+\[
+y=(y_P)_{P\in\Pcal}\in\Y.
+\]
+
+\begin{definition}[Normalized protocol residual]
+Define
+\[
+r_P(W;y)
+:=
+\frac{d_P(R_P(W),y_P)}{\sigma_P}.
+\]
+For finite $\Acal\subseteq\Pcal$, define
+\[
+r_{\Acal}(W;y)
+:=
+\max_{P\in\Acal}r_P(W;y).
+\]
+\end{definition}
+
+
+\begin{definition}[Weighted uniform response discrepancy]
+For profiles $y,z\in\Y$, define the extended discrepancy
+\[
+d_{\sigma,\infty}(y,z)
+:=
+\sup_{P\in\Pcal}
+\frac{d_P(y_P,z_P)}{\sigma_P}
+\in[0,\infty].
+\]
+For finite $\Acal$, define
+\[
+d_{\sigma,\Acal}
+(\pi_{\Acal}y,\pi_{\Acal}z)
+:=
+\max_{P\in\Acal}
+\frac{d_P(y_P,z_P)}{\sigma_P}.
+\]
+\end{definition}
+
+\begin{definition}[Finite and global residual radii]
+For finite $\Acal$, let
+\[
+\delta_{\Acal}(y)
+:=
+\inf_{W\in\W} r_{\Acal}(W;y).
+\]
+Define
+\[
+\delta_{\mathrm{fin}}(y)
+:=
+\sup_{\Acal\in\Fin(\Pcal)}
+\delta_{\Acal}(y)
+\]
+and
+\[
+\delta_{\mathrm{glob}}(y)
+:=
+\inf_{W\in\W}
+\sup_{P\in\Pcal}r_P(W;y).
+\]
+These are extended nonnegative numbers.
+\end{definition}
+
+\begin{proposition}[Distance-to-response-image representation]
+For every target profile $y$,
+\[
+\delta_{\mathrm{glob}}(y)
+=
+\inf_{z\in R(\W)}d_{\sigma,\infty}(y,z).
+\]
+For every finite $\Acal$,
+\[
+\delta_{\Acal}(y)
+=
+\inf_{z_{\Acal}\in E_{\Acal}}
+d_{\sigma,\Acal}
+(\pi_{\Acal}y,z_{\Acal}),
+\]
+and therefore
+\[
+\delta_{\mathrm{fin}}(y)
+=
+\sup_{\Acal\in\Fin(\Pcal)}
+\operatorname{dist}_{\sigma,\Acal}
+\bigl(\pi_{\Acal}y,E_{\Acal}\bigr).
+\]
+\end{proposition}
+
+\begin{proof}
+Each formula is the corresponding definition rewritten through the image of
+the response map.
+\end{proof}
+
+The finite radius asks how well every finite response bundle can be fitted,
+allowing the fitting world to depend on the bundle. The global radius asks for
+one world that fits all protocols simultaneously.
+
+\begin{proposition}[Finite-to-global residual inequality]
+For every target profile $y$,
+\[
+\delta_{\mathrm{fin}}(y)
+\le
+\delta_{\mathrm{glob}}(y).
+\]
+\end{proposition}
+
+\begin{proof}
+For every $W\in\W$ and every finite $\Acal$,
+\[
+r_{\Acal}(W;y)
+\le
+\sup_{P\in\Pcal}r_P(W;y).
+\]
+Taking the infimum over $W$ and then the supremum over finite $\Acal$ gives the
+claim.
+\end{proof}
+
+\begin{proposition}[Quantitative finite-family collapse]
+If $\Pcal$ is finite, then for every target profile $y$,
+\[
+\delta_{\mathrm{fin}}(y)
+=
+\delta_{\mathrm{glob}}(y).
+\]
+Hence a positive finite-to-global stability gap requires an infinite full
+protocol family, unless finite consistency is replaced by a restricted context
+family.
+\end{proposition}
+
+\begin{proof}
+When $\Pcal$ is finite, the bundle $\Acal=\Pcal$ occurs in the supremum defining
+$\delta_{\mathrm{fin}}$. For this bundle,
+\[
+\delta_{\Pcal}(y)
+=
+\inf_{W\in\W}
+\max_{P\in\Pcal}r_P(W;y)
+=
+\delta_{\mathrm{glob}}(y).
+\]
+Together with the general inequality, this gives equality.
+\end{proof}
+
+\begin{definition}[Finite-to-global stability gap]
+When both radii are finite, define
+\[
+\Gamma(y)
+:=
+\delta_{\mathrm{glob}}(y)
+-
+\delta_{\mathrm{fin}}(y)
+\ge0.
+\]
+A positive value measures a quantitative failure of finite fits to globalize
+at the same normalized tolerance.
+\end{definition}
+
+The numerical values of the radii depend on the declared protocol
+normalization. Nevertheless, boundedly equivalent calibrations preserve their
+zero-versus-positive character.
+
+\begin{proposition}[Uniform calibration stability]
+Let $(\sigma_P)$ and $(\tau_P)$ be two positive protocol scales satisfying
+\[
+0<c\le
+\frac{\tau_P}{\sigma_P}
+\le C<\infty
+\qquad
+\text{for every }P\in\Pcal.
+\]
+Let $\delta^{\sigma}_{\mathrm{fin}},
+\delta^{\sigma}_{\mathrm{glob}}$ and
+$\delta^{\tau}_{\mathrm{fin}},
+\delta^{\tau}_{\mathrm{glob}}$
+denote the radii computed with the two calibrations. Then
+\[
+\frac1C\,
+\delta^{\sigma}_{\mathrm{fin}}(y)
+\le
+\delta^{\tau}_{\mathrm{fin}}(y)
+\le
+\frac1c\,
+\delta^{\sigma}_{\mathrm{fin}}(y),
+\]
+and
+\[
+\frac1C\,
+\delta^{\sigma}_{\mathrm{glob}}(y)
+\le
+\delta^{\tau}_{\mathrm{glob}}(y)
+\le
+\frac1c\,
+\delta^{\sigma}_{\mathrm{glob}}(y).
+\]
+In particular, whether either radius is zero is invariant under uniformly
+equivalent changes of scale.
+\end{proposition}
+
+\begin{proof}
+The scale bounds imply, for every protocol,
+\[
+\frac1C r_P^\sigma(W;y)
+\le
+r_P^\tau(W;y)
+\le
+\frac1c r_P^\sigma(W;y).
+\]
+The same inequalities survive finite maxima, arbitrary suprema, and infima over
+$W$.
+\end{proof}
+
+\begin{remark}
+The hypothesis of uniform equivalence is essential. The scale choice
+$\sigma_n=n$ in the zero-margin nonattainment example is not uniformly
+equivalent to the unit calibration; it deliberately changes the asymptotic
+importance of high-index protocols.
+\end{remark}
+
+
+\begin{remark}[Continuity implies lower semicontinuity]
+If $R_P:\W\to Y_P$ is continuous and $Y_P$ is metric, then
+\[
+W\longmapsto d_P(R_P(W),y_P)
+\]
+is continuous and hence lower semicontinuous. The weaker hypothesis is retained
+because some applications define the residual directly or only lower
+semicontinuously.
+\end{remark}
+
+\begin{remark}[Protocol scales are not Tikhonov regularizers]
+The factors $\sigma_P$ determine the geometry of the data-fidelity term. For
+independent Gaussian measurement noise they may be chosen from per-protocol
+standard deviations. Correlated noise generally requires bundle-level
+covariance metrics rather than one scalar per protocol.
+
+This role is distinct from Tikhonov regularization, which adds a penalty or
+prior geometry on the model variable itself. WR-II does not identify response
+calibration with model-space regularization.
+\end{remark}
+
+\begin{remark}[Uniform versus measure-aggregated control]
+The supremum over protocols encodes uniform feasibility: one world must satisfy
+the declared tolerance for every admissible protocol. A continuum experiment
+may instead use $L^q$ or covariance-weighted integrated data-fidelity norms
+after adding a measure or covariance structure on protocol space. Such norms
+answer a different question and require a separate local-to-global analysis.
+\end{remark}
+
+\begin{theorem}[Compact finite-to-global residual identity]
+\label{thm:robust-compact}
+Assume $\W$ is compact and, for every $P\in\Pcal$, the residual function
+\[
+W\longmapsto r_P(W;y)
+\]
+is lower semicontinuous. If $\delta_{\mathrm{fin}}(y)<\infty$, then
+\[
+\delta_{\mathrm{glob}}(y)
+=
+\delta_{\mathrm{fin}}(y),
+\]
+and the global infimum is attained by at least one $W_\ast\in\W$.
+\end{theorem}
+
+\begin{proof}
+Write
+\[
+\alpha:=\delta_{\mathrm{fin}}(y).
+\]
+For finite $\Acal$, the function
+\[
+r_{\Acal}(\cdot;y)
+=
+\max_{P\in\Acal}r_P(\cdot;y)
+\]
+is lower semicontinuous. Compactness implies that it attains its minimum
+$\delta_{\Acal}(y)$.
+
+Define the closed nonempty set
+\[
+K_{\Acal}
+:=
+\{W\in\W:r_{\Acal}(W;y)\le\alpha\}.
+\]
+The family $(K_{\Acal})_{\Acal\in\Fin(\Pcal)}$ has the finite intersection
+property: for finite bundles $\Acal_1,\ldots,\Acal_m$, let
+\[
+\Bcal:=\Acal_1\cup\cdots\cup\Acal_m.
+\]
+Then $K_{\Bcal}$ is nonempty and
+\[
+K_{\Bcal}\subseteq
+K_{\Acal_1}\cap\cdots\cap K_{\Acal_m}.
+\]
+By compactness,
+\[
+\bigcap_{\Acal\in\Fin(\Pcal)}K_{\Acal}\neq\varnothing.
+\]
+Choose $W_\ast$ in the intersection. In particular, for every singleton
+$\{P\}$,
+\[
+r_P(W_\ast;y)\le\alpha.
+\]
+Hence
+\[
+\sup_{P\in\Pcal}r_P(W_\ast;y)\le\alpha,
+\]
+so
+\[
+\delta_{\mathrm{glob}}(y)\le\alpha.
+\]
+The reverse inequality is the preceding proposition.
+\end{proof}
+
+\begin{corollary}[Tolerance globalization]
+Under the hypotheses of Theorem~\ref{thm:robust-compact}, suppose that for
+every finite $\Acal\subseteq\Pcal$ there exists $W_{\Acal}\in\W$ such that
+\[
+d_P(R_P(W_{\Acal}),y_P)\le\sigma_P
+\qquad
+\text{for all }P\in\Acal.
+\]
+Then there exists one $W_\ast\in\W$ such that
+\[
+d_P(R_P(W_\ast),y_P)\le\sigma_P
+\qquad
+\text{for every }P\in\Pcal.
+\]
+\end{corollary}
+
+\begin{proof}
+The hypothesis gives $\delta_{\Acal}(y)\le1$ for every finite $\Acal$, so
+$\delta_{\mathrm{fin}}(y)\le1$. Apply
+Theorem~\ref{thm:robust-compact}.
+\end{proof}
+
+\begin{corollary}[Vanishing-noise exactification]
+Under the hypotheses of Theorem~\ref{thm:robust-compact}, if
+\[
+\delta_{\mathrm{fin}}(y)=0,
+\]
+then there exists $W_\ast\in\W$ with
+\[
+R_P(W_\ast)=y_P
+\qquad
+\text{for every }P\in\Pcal.
+\]
+\end{corollary}
+
+\begin{proof}
+The theorem gives an attained global radius equal to zero. Since every metric
+is definite, every protocol residual vanishes.
+\end{proof}
+
+Global compactness is stronger than necessary. A finite bundle can itself
+provide the compactness needed to prevent approximate witnesses from escaping
+to infinity.
+
+\begin{theorem}[Compact-core residual identity]
+\label{thm:compact-core}
+Assume every residual $r_P(\cdot;y)$ is lower semicontinuous and
+\[
+\alpha:=\delta_{\mathrm{fin}}(y)<\infty.
+\]
+Suppose there exist a finite bundle $\Acal_0$ and a number $c>\alpha$ such
+that the sublevel set
+\[
+K
+:=
+\{W\in\W:r_{\Acal_0}(W;y)\le c\}
+\]
+is compact. Then
+\[
+\delta_{\mathrm{glob}}(y)=\alpha,
+\]
+and the global infimum is attained.
+\end{theorem}
+
+\begin{proof}
+Choose $N$ such that
+\[
+\alpha+\frac1N<c.
+\]
+For finite $\Acal$ and $n\ge N$, define
+\[
+K_{\Acal,n}
+:=
+\left\{
+W\in K:
+r_{\Acal}(W;y)\le\alpha+\frac1n
+\right\}.
+\]
+These sets are closed in $K$.
+
+They are nonempty. Indeed,
+\[
+\delta_{\Acal\cup\Acal_0}(y)\le\alpha,
+\]
+so for every $n\ge N$ there exists $W$ with
+\[
+r_{\Acal\cup\Acal_0}(W;y)
+\le
+\alpha+\frac1n.
+\]
+Such a point lies in $K$ because
+\[
+r_{\Acal_0}(W;y)
+\le
+\alpha+\frac1n
+<c.
+\]
+
+The family $\{K_{\Acal,n}\}$ has the finite intersection property. For a
+finite collection $(\Acal_i,n_i)$, let
+\[
+\Bcal:=\Acal_0\cup\bigcup_i\Acal_i,
+\qquad
+m:=\max_i n_i.
+\]
+Choose $W$ with
+\[
+r_{\Bcal}(W;y)\le\alpha+\frac1m.
+\]
+Then $W$ belongs to every selected $K_{\Acal_i,n_i}$.
+
+Compactness of $K$ gives a point $W_\ast$ in the intersection of all
+$K_{\Acal,n}$ for finite $\Acal$ and $n\ge N$. Letting $n\to\infty$ yields
+\[
+r_{\Acal}(W_\ast;y)\le\alpha
+\]
+for every finite $\Acal$. Hence
+\[
+\sup_{P\in\Pcal}r_P(W_\ast;y)\le\alpha.
+\]
+Combine with the general inequality.
+\end{proof}
+
+\begin{remark}
+The compact-core theorem is a coercivity principle. The entire world class
+need not be compact: it is enough that one finite response bundle traps all
+near-optimal global candidates inside a compact sublevel set.
+\end{remark}
+
+\begin{example}[Positive stability gap without compactness]
+Return to the finite-support binary world class of
+Example~\ref{ex:finite-support}. Give every $Y_n=\{0,1\}$ the discrete metric,
+set $\sigma_n=1$, and use the all-ones target
+\[
+y=(1,1,\ldots).
+\]
+Every finite bundle is fitted exactly, so
+\[
+\delta_{\mathrm{fin}}(y)=0.
+\]
+Every finite-support world has at least one zero coordinate, hence
+\[
+\sup_n d_n(R_n(W),1)=1.
+\]
+Therefore
+\[
+\delta_{\mathrm{glob}}(y)=1,
+\qquad
+\Gamma(y)=1.
+\]
+\end{example}
+
+\begin{example}[Zero-margin nonattainment and scale dependence]
+Use the same finite-support world class and the same all-ones target, but choose
+protocol scales
+\[
+\sigma_n=n.
+\]
+Again
+\[
+\delta_{\mathrm{fin}}(y)=0.
+\]
+For the world having ones in the first $N$ coordinates and zeros afterwards,
+\[
+\sup_n r_n(W;y)
+=
+\frac{1}{N+1}.
+\]
+Hence
+\[
+\delta_{\mathrm{glob}}(y)=0,
+\]
+but no world realizes $y$ exactly.
+
+Thus a zero global residual radius does not imply exact realization when the
+infimum is not attained. Moreover, the quantitative margin depends on the
+declared protocol metrics and scales. Any physical use of $\Gamma$ therefore
+requires an independently justified calibration of those choices.
+\end{example}
+
+\begin{remark}[Not an approximate inverse system]
+The inverse system of finite response images remains exactly commutative in
+this section. Noise is introduced in the target response profile and in its
+metric residuals, not in the bonding maps. This differs from the classical
+theory of approximate inverse systems, where commutativity of the bonding
+maps is itself relaxed in a controlled way
+\cite{MardesicRubin1989,MardesicSegal1989}.
+\end{remark}
+
+\begin{remark}[Relation to robust contextuality]
+For context-restricted probability models, quantitative distances and
+robustness measures relative to the noncontextual set are already well
+developed, including the contextual fraction
+\cite{AbramskyBarbosaMansfield2017}. WR-II does not claim novelty for
+quantitative contextuality. The residual radii above are defined for an
+arbitrary world-response structure and address a different question: whether
+finite protocol fits at a declared tolerance can be globalized by one world.
+\end{remark}
+
+
+
+\section{Application benchmark: sparse moment reconstruction and model-class mismatch}
+\label{sec:moment-benchmark}
+
+We now give a continuum inverse-problem benchmark in which the declared model
+class consists of sparse probability measures while the target response is
+generated by a continuous distribution.
+
+Let
+\[
+\W_{\mathrm{at}}
+=
+\left\{
+\nu=\sum_{j=1}^N a_j\delta_{x_j}:
+N<\infty,\;
+a_j>0,\;
+\sum_{j=1}^N a_j=1,\;
+x_j\in\mathbb R
+\right\}.
+\]
+Take
+\[
+\Pcal=\mathbb N_0,
+\qquad
+R_n(\nu)=\int_{\mathbb R}x^n\,d\nu(x).
+\]
+Let the target profile be generated by the standard Gaussian probability
+measure $\gamma=N(0,1)$:
+\[
+y_n=\int_{\mathbb R}x^n\,d\gamma(x).
+\]
+Thus
+\[
+y_{2m+1}=0,
+\qquad
+y_{2m}=(2m-1)!!.
+\]
+
+\begin{proposition}[Exact finite moment consistency]
+For every finite bundle $\Acal\subset\mathbb N_0$ there exists
+$\nu_{\Acal}\in\W_{\mathrm{at}}$ such that
+\[
+R_n(\nu_{\Acal})=y_n
+\qquad
+\text{for every }n\in\Acal.
+\]
+Hence, for every positive protocol-scale family,
+\[
+\delta_{\mathrm{fin}}(y)=0.
+\]
+\end{proposition}
+
+\begin{proof}
+Let $m=\max\Acal$. Tchakaloff's theorem provides a finitely supported positive
+probability measure matching the Gaussian integrals of all polynomials through
+degree $m$. In particular it matches every moment indexed by $\Acal$.
+\end{proof}
+
+\begin{proposition}[No exact global sparse realization]
+No $\nu\in\W_{\mathrm{at}}$ has the full Gaussian moment profile.
+\end{proposition}
+
+\begin{proof}
+For fixed $\nu\in\W_{\mathrm{at}}$, let
+\[
+R=\max\{|x|:x\in\operatorname{supp}\nu\}<\infty.
+\]
+Then
+\[
+0\le R_{2m}(\nu)\le R^{2m}.
+\]
+But $y_{2m}=(2m-1)!!$ grows faster than $R^{2m}$ for every fixed $R$.
+Hence the two even-moment sequences cannot agree for all $m$.
+\end{proof}
+
+\begin{proposition}[Raw-moment calibration]
+If $\sigma_n=1$, then
+\[
+\delta_{\mathrm{fin}}(y)=0,
+\qquad
+\delta_{\mathrm{glob}}(y)=\infty.
+\]
+\end{proposition}
+
+\begin{proof}
+Finite consistency was proved above. For any fixed atomic $\nu$,
+\[
+y_{2m}-R_{2m}(\nu)\to+\infty.
+\]
+Hence
+\[
+\sup_n|R_n(\nu)-y_n|=\infty.
+\]
+Taking the infimum over $\nu$ still gives infinity.
+\end{proof}
+
+\begin{proposition}[Relative-moment calibration]
+Set
+\[
+\sigma_n=\max\{1,|y_n|\}.
+\]
+Then
+\[
+\delta_{\mathrm{fin}}(y)=0,
+\qquad
+\delta_{\mathrm{glob}}(y)=1,
+\qquad
+\Gamma(y)=1.
+\]
+\end{proposition}
+
+\begin{proof}
+Again $\delta_{\mathrm{fin}}(y)=0$. For any atomic $\nu$ with support radius
+$R$,
+\[
+\frac{R_{2m}(\nu)}{y_{2m}}
+\le
+\frac{R^{2m}}{(2m-1)!!}
+\to0.
+\]
+Therefore the normalized even-moment residual tends to $1$, so every atomic
+model has global residual at least $1$. Conversely, the atomic measure
+$\delta_0$ has zero odd residuals and normalized even residual exactly $1$ for
+all even $n\ge2$. Thus the infimum is $1$.
+\end{proof}
+
+\begin{proposition}[Factorial calibration and nonattainment]
+Set
+\[
+\sigma_n=n!.
+\]
+Then
+\[
+\delta_{\mathrm{fin}}(y)
+=
+\delta_{\mathrm{glob}}(y)
+=
+0,
+\]
+but the global infimum is not attained by any
+$\nu\in\W_{\mathrm{at}}$.
+\end{proposition}
+
+\begin{proof}
+Let $\nu_N$ be an $N$-point Gauss--Hermite quadrature probability measure for
+the standard Gaussian. It matches all polynomial moments through degree
+$2N-1$ exactly. Its largest absolute node satisfies a bound of order
+$\sqrt N$. Hence for even $n=2m\ge2N$,
+\[
+\frac{R_{2m}(\nu_N)}{(2m)!}
+\le
+\frac{(C\sqrt N)^{2m}}{(2m)!},
+\]
+while
+\[
+\frac{y_{2m}}{(2m)!}
+=
+\frac{1}{2^m m!}.
+\]
+Using Stirling's formula, both tails are uniformly small for sufficiently large
+$N$, and the first $2N-1$ moments are exact. Therefore
+\[
+\sup_n\frac{|R_n(\nu_N)-y_n|}{n!}\to0.
+\]
+Thus $\delta_{\mathrm{glob}}(y)=0$. Exact attainment would imply equality of
+all Gaussian moments by one finite atomic measure, contradicting the preceding
+proposition.
+\end{proof}
+
+\begin{remark}[Interpretation]
+The same exact model-class mismatch exhibits three different global behaviors
+under three non-uniformly equivalent response calibrations:
+\[
+\delta_{\mathrm{glob}}=\infty,
+\qquad
+0<\delta_{\mathrm{glob}}<\infty,
+\qquad
+\delta_{\mathrm{glob}}=0\text{ without attainment}.
+\]
+Therefore $\Gamma$ is a protocol-relative diagnostic, not a universal
+calibration-independent metric of misspecification.
+\end{remark}
+
+\begin{remark}[Sparse spectral reading]
+Finite atomic probability measures can model finite line spectra, whereas
+continuous measures can model distributed spectral content. The example may
+therefore be read as an abstract sparse spectral reconstruction problem. No
+claim is made that every physical spectroscopy problem reduces to polynomial
+moments.
+\end{remark}
+
+\section{Nested-fibre criteria for countable protocol families}
+
+Assume now that $\Pcal=\{P_1,P_2,\ldots\}$ is countable and define
+\[
+\Acal_n:=\{P_1,\ldots,P_n\}.
+\]
+For a finitely consistent profile $y\in\Cfin$, define
+\[
+F_n(y)
+:=
+\{W\in\W:R_{\Acal_n}(W)=\pi_{\Acal_n}(y)\}.
+\]
+Then
+\[
+F_1(y)\supseteq F_2(y)\supseteq\cdots
+\]
+and every $F_n(y)$ is nonempty.
+
+\begin{proposition}[Compact nested-fibre existence]
+Assume $\W$ is compact and every fibre $F_n(y)$ is closed in $\W$. Then
+\[
+\bigcap_{n=1}^{\infty}F_n(y)\neq\varnothing.
+\]
+Every point in this intersection globally realizes $y$.
+\end{proposition}
+
+\begin{proof}
+The sets $F_n(y)$ are nonempty, closed, and nested. Compactness gives a
+nonempty intersection. Agreement on every $\Acal_n$ implies agreement on every
+protocol.
+\end{proof}
+
+\begin{corollary}[Continuous Hausdorff-response version]
+If $\W$ is compact, every $Y_P$ is Hausdorff, and every response
+$R_P:\W\to Y_P$ is continuous, then every finitely consistent profile for a
+countable protocol family has at least one global realization.
+\end{corollary}
+
+\begin{proof}
+For each $n$, the target point $\pi_{\Acal_n}(y)$ is closed in the finite
+Hausdorff product $Y_{\Acal_n}$. Hence
+\[
+F_n(y)=R_{\Acal_n}^{-1}\!\left(\{\pi_{\Acal_n}(y)\}\right)
+\]
+is closed. Apply the preceding proposition.
+\end{proof}
+
+\begin{theorem}[Metric shrinking-fibre uniqueness]\label{thm:shrinking}
+Let $(\W,d)$ be complete. Suppose each $F_n(y)$ is nonempty and closed and
+\[
+\operatorname{diam}F_n(y)\longrightarrow0.
+\]
+Then
+\[
+\bigcap_{n=1}^{\infty}F_n(y)
+=
+\{W_y\}
+\]
+for a unique $W_y\in\W$, and $R(W_y)=y$.
+\end{theorem}
+
+\begin{proof}
+Choose $W_n\in F_n(y)$. If $m\ge n$, then both $W_m$ and $W_n$ lie in
+$F_n(y)$, hence
+\[
+d(W_m,W_n)\le\operatorname{diam}F_n(y)\to0.
+\]
+Thus $(W_n)$ is Cauchy and converges to some $W_y\in\W$. For fixed $n$, all
+$W_m$ with $m\ge n$ lie in the closed set $F_n(y)$, so $W_y\in F_n(y)$.
+Therefore $W_y$ belongs to every $F_n(y)$. If $W'$ also belongs to every
+$F_n(y)$, then
+\[
+d(W_y,W')\le\operatorname{diam}F_n(y)
+\]
+for all $n$, hence $W'=W_y$.
+\end{proof}
+
+\section{Context-restricted local consistency}
+
+Full finite consistency uses every finite bundle. Physical theories may instead
+specify only certain jointly admissible contexts.
+
+\begin{definition}[Context family]
+A \emph{context family} is a collection
+\[
+\mathfrak C\subseteq\Fin(\Pcal)
+\]
+covering $\Pcal$ and closed under taking subsets. For each
+$C\in\mathfrak C$, define
+\[
+E_C:=R_C(\W).
+\]
+\end{definition}
+
+The inclusion order and coordinate restrictions form a diagram of local
+response images even when $\mathfrak C$ is not directed.
+
+\begin{definition}[Context-consistency space]
+Define
+\[
+\mathfrak C_{\mathrm{ctx}}(\mathbf W,\mathfrak C)
+:=
+\varprojlim_{C\in\mathfrak C}E_C,
+\]
+that is, the set of families $(e_C)_{C\in\mathfrak C}$ satisfying
+\[
+e_C\in E_C
+\]
+and agreeing under every restriction $D\subseteq C$ in $\mathfrak C$.
+\end{definition}
+
+Because $\mathfrak C$ covers $\Pcal$, there is a canonical map
+\[
+J_{\mathfrak C}:\mathcal Q_{\Pcal}
+\longrightarrow
+\mathfrak C_{\mathrm{ctx}}(\mathbf W,\mathfrak C)
+\]
+sending a world class to all of its contextual responses.
+
+\begin{proposition}[Context embedding]
+If $\mathfrak C$ covers $\Pcal$ and is closed under subsets, then
+$J_{\mathfrak C}$ is injective.
+\end{proposition}
+
+\begin{proof}
+If two world classes have the same contextual family, then for every
+$P\in\Pcal$ their responses agree on the singleton context $\{P\}$.
+Hence they are equivalent under the full protocol family.
+\end{proof}
+
+\begin{definition}[Contextual global-realizability defect]
+The context-relative defect is
+\[
+\mathfrak D_{\mathrm{ctx}}(\mathbf W,\mathfrak C)
+:=
+\mathfrak C_{\mathrm{ctx}}(\mathbf W,\mathfrak C)
+\setminus
+J_{\mathfrak C}(\mathcal Q_{\Pcal}).
+\]
+\end{definition}
+
+\begin{example}[Finite contextual completion defect]
+Let
+\[
+\Pcal=\{1,2,3\},
+\qquad
+\W=\{000,011,101,110\},
+\]
+the even-parity binary triples. Let the maximal contexts be
+\[
+\{1,2\},\qquad \{2,3\},\qquad \{1,3\},
+\]
+together with all their subsets.
+
+Every binary pair occurs as the projection of some $W\in\W$. Hence the local
+pair responses
+\[
+(1,1)\text{ on }\{1,2\},\quad
+(1,1)\text{ on }\{2,3\},\quad
+(1,1)\text{ on }\{1,3\}
+\]
+are individually realizable and agree on all overlaps. They define the global
+coordinate profile $111$, but
+\[
+111\notin\W.
+\]
+Thus context-local consistency fails to extend to a world realization even
+though $\Pcal$ is finite.
+\end{example}
+
+\begin{remark}
+This does not contradict Proposition~\ref{prop:finite-collapse}: the full
+bundle $\{1,2,3\}$ is not a member of the chosen context family. This is the
+precise interface with contextuality and other local-to-global obstruction
+theories.
+\end{remark}
+
+\section{Prior-art boundary}
+
+WR-II sits next to several mature finite-to-global theories.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\textwidth}
+                  >{\raggedright\arraybackslash}p{0.34\textwidth}
+                  >{\raggedright\arraybackslash}p{0.34\textwidth}}
+\toprule
+\textbf{Prior line} & \textbf{Established result} & \textbf{WR-II boundary}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Prior line} & \textbf{Established result} & \textbf{WR-II boundary}\\
+\midrule
+\endhead
+
+First-order compactness &
+If every finite subset of a first-order theory is satisfiable, the whole theory
+is satisfiable. &
+WR-II does not rebrand logical compactness. Its constraints are response images
+of a declared world class, with topology and admissibility supplied by the
+application. \\[5pt]
+
+Inverse/projective limits &
+Classical inverse-limit theory supplies existence results under compactness,
+surjectivity, Mittag--Leffler, or related hypotheses. &
+WR-II uses the inverse limit of finite response images as a diagnostic space and
+compares it with the image of the WR-I full response quotient. \\[5pt]
+
+Kolmogorov extension &
+Compatible finite-dimensional probability laws admit a global stochastic
+process under the standard hypotheses. &
+WR-II response profiles need not be probability measures. Kolmogorov extension
+is a domain-specific positive archetype, not the WR-II theorem. \\[5pt]
+
+Vorob'ev (1962) &
+Characterizes extendability of consistent families of measures through the
+structure of the underlying complex \cite{Vorobev1962}. &
+Direct predecessor for context-restricted extension questions. WR-II keeps
+world realizations distinct from probability measures. \\[5pt]
+
+Abramsky--Brandenburger (2011) &
+Contextuality and non-locality correspond to obstructions to global sections
+over measurement covers \cite{AbramskyBrandenburger2011}. &
+Direct predecessor for the context-family layer. WR-II does not identify a
+global section with a physical world without an explicit bridge. \\[5pt]
+
+Atserias--Kolaitis (2023) &
+Acyclicity characterizes when local consistency of positive-semiring relations
+forces global consistency, generalizing probability and database results
+\cite{AtseriasKolaitis2023}. &
+Shows that local-to-global consistency has a broad established theory. WR-II's
+claim is architectural and model-relative, not theorem-priority over that
+literature. \\[5pt]
+
+Semi-infinite programming &
+Optimization with finitely many decision variables and infinitely many
+constraints is a mature field, with compactness, discretization, duality, and
+exchange methods surveyed by Hettich and Kortanek
+\cite{HettichKortanek1993}. &
+The noisy WR-II global residual is a response-space fitting functional and can
+be viewed as a semi-infinite min--max problem in suitable applications. WR-II
+does not claim priority for infinite-constraint optimization. \\[5pt]
+
+Approximate inverse systems &
+Classical approximate inverse systems relax exact commutativity of bonding maps
+in a controlled way \cite{MardesicRubin1989,MardesicSegal1989}. &
+WR-II keeps the finite-response inverse system exactly commutative. Its noisy
+layer perturbs target responses and residual tolerances instead. \\[5pt]
+
+Quantitative contextuality &
+The contextual fraction and related robustness constructions quantify
+contextuality for empirical probability models
+\cite{AbramskyBarbosaMansfield2017}. &
+WR-II does not claim novelty for robustness measures of contextuality. Its
+radii compare finite and one-world fits for a general response structure. \\
+\bottomrule
+\end{longtable}
+
+\section{Novelty claim permitted at v0.4}
+
+The defensible claim at this stage is architectural:
+
+\begin{quote}
+WR-II attaches to the WR-I world-response structure a canonical finite-response
+inverse system, identifies its inverse limit with the set of finitely realizable
+full response profiles, embeds the full response quotient into this completion,
+and names the residual complement as a model-relative global realizability
+defect. It separates full finite consistency from context-restricted local
+consistency. For noisy profiles it introduces protocol-normalized finite and
+global fitting radii, proves equality and attainment under compactness or a
+finite compact-core condition, and isolates the finite-to-global stability gap
+that may remain in noncompact models.
+\end{quote}
+
+No priority claim is made for compactness, inverse limits, finite-intersection
+arguments, global-section obstructions, extension theorems, semi-infinite
+optimization, approximate inverse systems, or quantitative contextuality
+themselves.
+
+\section{Open obligations}
+
+The next obligations are:
+\begin{enumerate}
+\item identify computable obstruction certificates for
+$\Dfin\neq\varnothing$ and for a positive stability gap $\Gamma(y)$;
+\item determine how exact and quantitative defects change when the admissible
+world class $\W$ is enlarged or restricted;
+\item develop finite algorithms and exchange schemes for estimating
+$\delta_{\mathrm{glob}}$ from protocol subsets, with explicit error
+certificates;
+\item formulate physically justified protocol metrics and scale families
+$(\sigma_P)$ rather than treating calibration as arbitrary;
+\item develop a quantitative context-family layer and compare it explicitly
+with established robustness measures of contextuality;
+\item determine when physically motivated coercivity assumptions imply the
+compact-core hypothesis;
+\item test the framework on at least one non-toy inverse or reconstruction
+problem before making broader physical claims.
+\end{enumerate}
+
+\section*{Conclusion}
+
+WR-I asked which worlds are distinguished by available responses. WR-II asks
+whether finitely compatible responses can be assembled into one admissible
+global realization. The answer is not automatic. The finite-support example
+shows a genuine full-finite completion defect; compactness and closed-image
+criteria show when that defect disappears; context-restricted examples connect
+the programme to established local-to-global obstruction theory.
+
+The mathematical lesson is deliberately weaker than an ontological one:
+\[
+\text{finite consistency}
+\not\Rightarrow
+\text{global realization}
+\]
+without additional structure. In the noisy layer,
+\[
+\delta_{\mathrm{fin}}(y)
+\le
+\delta_{\mathrm{glob}}(y),
+\]
+and the inequality can be strict in noncompact models. Compactness or a finite
+compact core forces equality and attainment, while shrinking exact fibres can
+restore uniqueness. None of these mathematical completion statements is, by
+itself, a claim of physical existence.
+
+\begin{thebibliography}{99}
+
+\bibitem{MalachevskyWRI}
+A. A. Malachevsky,
+\emph{Response-Defined World Spaces: Response Equivalence,
+Finite-Resolution Separation, and Identifiability of Global Realizations},
+WR-I, World Realizability \& Epistemic Horizons (2026).
+DOI: 10.5281/zenodo.23210258.
+
+
+
+
+\bibitem{BayerTeichmann2006}
+C. Bayer and J. Teichmann,
+\emph{The proof of Tchakaloff's theorem},
+Proceedings of the American Mathematical Society 134(10) (2006), 3035--3040.
+DOI: 10.1090/S0002-9939-06-08249-9.
+
+\bibitem{Gautschi2004}
+W. Gautschi,
+\emph{Orthogonal Polynomials: Computation and Approximation},
+Oxford University Press (2004).
+
+\bibitem{HettichKortanek1993}
+R. Hettich and K. O. Kortanek,
+\emph{Semi-Infinite Programming: Theory, Methods, and Applications},
+SIAM Review 35(3) (1993), 380--429.
+DOI: 10.1137/1035089.
+
+\bibitem{MardesicRubin1989}
+S. Marde\v{s}i\'c and L. R. Rubin,
+\emph{Approximate inverse systems of compacta and covering dimension},
+Pacific Journal of Mathematics 138 (1989), 129--144.
+DOI: 10.2140/pjm.1989.138.129.
+
+\bibitem{MardesicSegal1989}
+S. Marde\v{s}i\'c and J. Segal,
+\emph{Stability of almost commutative inverse systems of compacta},
+Topology and its Applications 31 (1989), 285--299.
+DOI: 10.1016/0166-8641(89)90025-4.
+
+\bibitem{AbramskyBarbosaMansfield2017}
+S. Abramsky, R. S. Barbosa, and S. Mansfield,
+\emph{Contextual Fraction as a Measure of Contextuality},
+Physical Review Letters 119 (2017), 050504.
+DOI: 10.1103/PhysRevLett.119.050504.
+
+\bibitem{Vorobev1962}
+N. N. Vorob'ev,
+\emph{Consistent Families of Measures and Their Extensions},
+Theory of Probability and Its Applications 7(2) (1962), 147--163.
+DOI: 10.1137/1107014.
+
+\bibitem{AbramskyBrandenburger2011}
+S. Abramsky and A. Brandenburger,
+\emph{The Sheaf-Theoretic Structure of Non-Locality and Contextuality},
+New Journal of Physics 13 (2011), 113036.
+DOI: 10.1088/1367-2630/13/11/113036.
+
+\bibitem{AtseriasKolaitis2023}
+A. Atserias and P. G. Kolaitis,
+\emph{Consistency, Acyclicity, and Positive Semirings},
+in \emph{Samson Abramsky on Logic and Structure in Computer Science and Beyond},
+Springer (2023), 623--668.
+DOI: 10.1007/978-3-031-24117-8\_17.
+
+\end{thebibliography}
+
+\end{document}

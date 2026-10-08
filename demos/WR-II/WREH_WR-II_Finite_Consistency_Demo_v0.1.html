@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WREH WR-II — Finite Consistency vs Global Realizability</title>
+<style>
+:root{
+  --bg:#07111d;--panel:#0d1b2b;--panel2:#11243a;--text:#edf5ff;--muted:#9fb3c8;
+  --line:#243c56;--cyan:#71d8ff;--gold:#efc66a;--green:#78dfae;--red:#ff9999;
+}
+*{box-sizing:border-box}
+body{margin:0;background:
+radial-gradient(circle at 12% 8%,rgba(55,147,255,.13),transparent 25%),
+radial-gradient(circle at 88% 5%,rgba(239,198,106,.10),transparent 23%),var(--bg);
+color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1280px;margin:auto;padding:24px}
+header,.panel{background:rgba(13,27,43,.96);border:1px solid var(--line);border-radius:18px}
+header{padding:25px 28px}
+.eyebrow{font-size:12px;letter-spacing:.16em;color:var(--cyan);text-transform:uppercase;font-weight:800}
+h1{font-family:Georgia,serif;font-size:clamp(32px,4.7vw,58px);margin:8px 0 10px;line-height:1.02}
+.sub{color:#c8d8e8;max-width:980px;line-height:1.55;font-size:17px}
+.formula{margin-top:17px;padding:13px 16px;border-left:3px solid var(--gold);background:rgba(239,198,106,.06);font-family:"Cambria Math",serif;font-size:19px}
+.tabs{display:flex;gap:10px;margin:18px 0;flex-wrap:wrap}
+button{border:1px solid #345474;background:#10263e;color:var(--text);padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700}
+button.active{outline:2px solid var(--cyan);background:#173653}
+.grid{display:grid;grid-template-columns:340px 1fr;gap:18px}
+.controls,.main{padding:20px}
+h2{font-size:19px;margin:0 0 12px}
+label{display:block;margin:11px 0;color:#d8e5f2}
+input[type=range]{width:100%}
+.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:15px}
+.stat{padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--panel2)}
+.k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.v{font-size:25px;font-weight:800;margin-top:3px}
+.note{padding:13px 15px;border-radius:12px;background:rgba(113,216,255,.06);border:1px solid rgba(113,216,255,.2);line-height:1.5;margin-bottom:15px}
+.worlds{display:flex;gap:8px;flex-wrap:wrap}
+.world{font-family:Consolas,monospace;padding:7px 8px;border-radius:9px;background:#091726;border:1px solid #34506e}
+.good{color:var(--green)} .bad{color:var(--red)} .gold{color:var(--gold)}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:linear-gradient(180deg,#10243a,#0b1928);margin-bottom:12px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hidden{display:none}
+.ctx{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ctxbox{padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--panel2)}
+.bits{font-family:Consolas,monospace;font-size:20px;color:var(--gold)}
+footer{color:#7890aa;font-size:12px;padding:18px 4px}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.statgrid{grid-template-columns:repeat(2,1fr)}.row,.ctx{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">WREH · WR-II interactive prototype</div>
+  <h1>Finite Consistency ≠ Global Realizability</h1>
+  <div class="sub">
+    Two minimal models illustrate the distinction between finite realizability and a
+    single global realization. The first needs infinitely many protocols; the second
+    uses a restricted family of jointly admissible contexts.
+  </div>
+  <div class="formula">C<sub>fin</sub>(W) = lim← E<sub>A</sub> &nbsp;&nbsp; and &nbsp;&nbsp; D<sub>fin</sub>(W) = C<sub>fin</sub>(W) \ R(W)</div>
+</header>
+
+<div class="tabs">
+  <button id="tabInfinite" class="active">Infinite protocols</button>
+  <button id="tabContext">Restricted contexts</button>
+</div>
+
+<section id="infiniteMode" class="grid">
+  <aside class="panel controls">
+    <h2>Finite-support world class</h2>
+    <p style="color:var(--muted);line-height:1.45">
+      Worlds are infinite binary sequences with only finitely many 1s.
+      Protocol P<sub>n</sub> reads coordinate n.
+    </p>
+    <label>Visible finite bundle size: <b id="nLabel">6</b></label>
+    <input id="nRange" type="range" min="1" max="14" value="6">
+    <label><input id="targetAllOnes" type="checkbox" checked> Target profile begins with all 1s</label>
+    <button id="randomize">Random finite target</button>
+    <div class="note" style="margin-top:15px">
+      Every finite binary pattern is realizable: extend it by zeros.
+      But the infinite all-ones profile is not a finite-support world.
+    </div>
+  </aside>
+  <main class="panel main">
+    <div class="statgrid">
+      <div class="stat"><div class="k">Finite bundle</div><div class="v" id="bundleSize">6</div></div>
+      <div class="stat"><div class="k">Finite realizable?</div><div class="v good">YES</div></div>
+      <div class="stat"><div class="k">Global target</div><div class="v" id="globalState">DEFECT</div></div>
+      <div class="stat"><div class="k">Support seen</div><div class="v" id="onesCount">6</div></div>
+    </div>
+    <div class="card">
+      <b>Observed finite response</b>
+      <div class="worlds" id="finiteBits" style="margin-top:10px"></div>
+    </div>
+    <div class="row">
+      <div class="card">
+        <b>A world realizing this finite bundle</b>
+        <p style="color:var(--muted)">Match the finite pattern, then set every later coordinate to 0.</p>
+        <div class="world" id="witness"></div>
+      </div>
+      <div class="card">
+        <b>Limit question</b>
+        <p id="limitText" style="line-height:1.45"></p>
+      </div>
+    </div>
+  </main>
+</section>
+
+<section id="contextMode" class="grid hidden">
+  <aside class="panel controls">
+    <h2>Even-parity world class</h2>
+    <p style="color:var(--muted);line-height:1.45">
+      W = {000, 011, 101, 110}. Only pair contexts {1,2}, {2,3}, {1,3}
+      and their subsets are locally admissible.
+    </p>
+    <button id="set111">Use local target 11 / 11 / 11</button>
+    <button id="set000">Use local target 00 / 00 / 00</button>
+    <div class="note" style="margin-top:15px">
+      Because the full context {1,2,3} is absent, local compatibility may fail to
+      extend even though the protocol set itself is finite.
+    </div>
+  </aside>
+  <main class="panel main">
+    <div class="ctx">
+      <div class="ctxbox"><b>Context {1,2}</b><div class="bits" id="c12">11</div><small>locally realizable</small></div>
+      <div class="ctxbox"><b>Context {2,3}</b><div class="bits" id="c23">11</div><small>locally realizable</small></div>
+      <div class="ctxbox"><b>Context {1,3}</b><div class="bits" id="c13">11</div><small>locally realizable</small></div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <b>Overlap consistency</b>
+      <p id="overlap" class="good">PASS — all singleton overlaps agree.</p>
+    </div>
+    <div class="card">
+      <b>Global realization</b>
+      <p id="globalCtx"></p>
+      <div class="worlds">
+        <span class="world">000</span><span class="world">011</span><span class="world">101</span><span class="world">110</span>
+      </div>
+    </div>
+  </main>
+</section>
+
+<footer>
+  WR-II concept demo · Mathematical illustration only. A completion defect is relative
+  to the declared world class and protocol/context structure; it is not by itself a claim
+  about physical existence.
+</footer>
+</div>
+
+<script>
+const tabInfinite=document.getElementById('tabInfinite');
+const tabContext=document.getElementById('tabContext');
+const infiniteMode=document.getElementById('infiniteMode');
+const contextMode=document.getElementById('contextMode');
+
+function tab(which){
+  const inf=which==='inf';
+  infiniteMode.classList.toggle('hidden',!inf);
+  contextMode.classList.toggle('hidden',inf);
+  tabInfinite.classList.toggle('active',inf);
+  tabContext.classList.toggle('active',!inf);
+}
+tabInfinite.onclick=()=>tab('inf');
+tabContext.onclick=()=>tab('ctx');
+
+let bits=[];
+function makeTarget(){
+  const n=+nRange.value;
+  if(targetAllOnes.checked) bits=Array(n).fill(1);
+  else if(bits.length!==n) bits=Array.from({length:n},()=>Math.random()<.5?0:1);
+  renderInfinite();
+}
+function renderInfinite(){
+  const n=+nRange.value;
+  nLabel.textContent=n; bundleSize.textContent=n;
+  if(bits.length!==n) {
+    if(targetAllOnes.checked) bits=Array(n).fill(1);
+    else bits=Array.from({length:n},(_,i)=>bits[i]??0);
+  }
+  finiteBits.innerHTML=bits.map((b,i)=>'<span class="world">P'+(i+1)+'='+b+'</span>').join('');
+  const ones=bits.reduce((a,b)=>a+b,0);
+  onesCount.textContent=ones;
+  witness.textContent=bits.join('')+'000000…';
+  if(targetAllOnes.checked){
+    globalState.textContent='DEFECT';
+    globalState.className='v bad';
+    limitText.innerHTML='<span class="bad"><b>No finite-support global world realizes 1111…</b></span><br>Yet every finite prefix has a witness. This profile lies in C_fin but outside R(W).';
+  } else {
+    globalState.textContent='FINITE TARGET';
+    globalState.className='v gold';
+    limitText.innerHTML='This display specifies only a finite prefix. Extending by zeros gives a valid global world. The demo becomes a genuine defect only when the intended full profile has infinitely many 1s.';
+  }
+}
+nRange.oninput=makeTarget;
+targetAllOnes.onchange=makeTarget;
+randomize.onclick=()=>{targetAllOnes.checked=false;bits=Array.from({length:+nRange.value},()=>Math.random()<.5?0:1);renderInfinite();};
+makeTarget();
+
+const worlds=new Set(['000','011','101','110']);
+function renderCtx(v){
+  c12.textContent=v[0]+v[1];
+  c23.textContent=v[1]+v[2];
+  c13.textContent=v[0]+v[2];
+  const ok=worlds.has(v);
+  globalCtx.innerHTML=ok
+    ? '<span class="good"><b>PASS — '+v+' is an admissible global world.</b></span>'
+    : '<span class="bad"><b>FAIL — '+v+' is not in W.</b></span><br>The three local pair responses are individually realizable and overlap-compatible, but no admissible world realizes them together.';
+}
+set111.onclick=()=>renderCtx('111');
+set000.onclick=()=>renderCtx('000');
+renderCtx('111');
+</script>
+</body>
+</html>
