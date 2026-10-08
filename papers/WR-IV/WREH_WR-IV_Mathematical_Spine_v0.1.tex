@@ -1,0 +1,142 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{remark}[definition]{Remark}
+\newcommand{\Wcal}{\mathcal W}
+\newcommand{\Ccal}{\mathfrak C}
+\newcommand{\Hminus}{\mathcal H_-}
+\newcommand{\Pcal}{\mathfrak H_-}
+
+\title{\textbf{WR-IV Mathematical Spine v0.1}\\[4pt]\large Response-Conditioned Global Completion and the Status of the Past}
+\author{A. A. Malachevsky\\ORCID: 0009-0008-6009-3196\\World Realizability \& Epistemic Horizons (WREH)}
+\date{8 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+WR-IV studies historical ambiguity inside response-conditioned global completions. Given present data $D$, the globally compatible world class $\Ccal(D)$ is projected onto declared past-history spaces. This separates world-level nonuniqueness from past-level nonuniqueness and from nonuniqueness of observable historical records. Additional evidence shrinks the completion class rather than mathematically rewriting any history. A natural-extension benchmark for the doubling map shows that an exactly known present state may have a unique deterministic future while admitting a Cantor family of compatible full pasts. No claim of physical past creation, retrocausality, or branching ontology is made.
+\end{abstract}
+
+\section{Claim ceiling}
+WR-IV assumes a model in which a temporal decomposition is already meaningful. It does not infer physical time from WREH itself. It does not claim observation creates or rewrites the past, that mathematical completion implies physical existence, or that noninvertibility implies a branching ontology.
+
+\section{Response-conditioned completions}
+Let
+\[
+\Ccal(D)=\{W\in\Wcal: W\text{ is globally compatible with }D\}.
+\]
+A declared historical projection is a map
+\[
+\pi_-:\Wcal\to\Hminus.
+\]
+\begin{definition}[Past-completion set]
+\[
+\Pcal(D):=\pi_-(\Ccal(D)).
+\]
+\end{definition}
+\begin{definition}[Past rigidity]
+$D$ is past-rigid if $\Pcal(D)$ is a singleton, and world-rigid if $\Ccal(D)$ is a singleton.
+\end{definition}
+
+\begin{proposition}[World rigidity implies past rigidity]
+If $D$ is world-rigid, then $D$ is past-rigid.
+\end{proposition}
+\begin{proof}
+The image of a singleton under any map is a singleton.
+\end{proof}
+
+\begin{proposition}[The converse fails]
+Past rigidity need not imply world rigidity.
+\end{proposition}
+\begin{proof}
+Take two distinct worlds $(h_0,0)$ and $(h_0,1)$ with the same past projection $h_0$, and let both satisfy $D$.
+\end{proof}
+
+\section{Evidence refinement and non-rewriting}
+Write $D\preceq D'$ when $D'$ contains all constraints of $D$ plus additional compatible evidence.
+\begin{theorem}[Completion refinement]
+If $D\preceq D'$, then
+\[
+\Ccal(D')\subseteq\Ccal(D)
+\qquad\text{and}\qquad
+\Pcal(D')\subseteq\Pcal(D).
+\]
+\end{theorem}
+\begin{proof}
+Every world satisfying the stronger data set also satisfies the weaker one; applying $\pi_-$ preserves inclusion.
+\end{proof}
+\begin{corollary}[Past rigidity persists under consistent refinement]
+If $D$ is past-rigid, $D\preceq D'$, and $\Ccal(D')\neq\varnothing$, then $D'$ is past-rigid with the same past projection.
+\end{corollary}
+\begin{remark}[Non-rewriting principle]
+Set refinement removes incompatible completions; it does not alter the histories carried by completions that remain. No physical rewriting of the past is implied.
+\end{remark}
+
+\section{Observable past versus hidden past}
+Let $Q_-:\Hminus\to\mathcal O_-$ encode accessible historical records and define
+\[
+\mathfrak O_-(D)=Q_-(\Pcal(D)).
+\]
+Observable-past rigidity can coexist with hidden-past ambiguity whenever distinct $h_1,h_2$ satisfy $Q_-(h_1)=Q_-(h_2)$.
+
+\section{Deterministic future with ambiguous past}
+Let $T:X\to X$ be deterministic. A full backward history ending at $x_0$ is
+\[
+(x_0,x_{-1},x_{-2},\ldots),
+\qquad T(x_{-n})=x_{-(n-1)}.
+\]
+The set of all such histories is the inverse-limit / natural-extension history space $\widehat X$.
+\begin{proposition}
+The forward orbit of $x_0$ is unique, while noninjectivity of $T$ may leave multiple full backward histories over $x_0$.
+\end{proposition}
+
+\section{Benchmark: doubling map}
+Let $X=\mathbb R/\mathbb Z$ and $T(x)=2x\pmod1$. Each present state has two one-step predecessors.
+\begin{theorem}[Cantor family of compatible full pasts]
+For every $x_0\in X$, the natural-extension fibre over $x_0$ is naturally homeomorphic to $\{0,1\}^{\mathbb N}$.
+\end{theorem}
+\begin{proof}
+Choose a branch bit $\epsilon_n\in\{0,1\}$ at each backward step and define
+\[
+x_{-n}=\frac{x_{-(n-1)}+\epsilon_n}{2}\pmod1.
+\]
+Binary sequences and backward histories determine one another, continuously in the product and inverse-limit topologies.
+\end{proof}
+\begin{corollary}
+Fixing any finite number of backward branch choices still leaves a Cantor family of older compatible histories.
+\end{corollary}
+
+\section{Construction order versus internal time}
+\begin{proposition}
+The inference order $D\mapsto\Ccal(D)$ does not define internal temporal order in a completed world without an additional bridge.
+\end{proposition}
+\begin{proof}
+The two relations live on different object types: one orders stages of inference, the other belongs to the internal structure of a temporal model.
+\end{proof}
+
+\section{Prior-art boundary}
+Natural extensions, inverse limits, projective-limit constructions, smoothing, retrodiction, and trajectory reconstruction are established subjects. WR-IV does not claim invention of these tools. Its target is the WREH-specific separation of global-completion multiplicity, hidden-past multiplicity, observable-past multiplicity, and evidence refinement.
+
+\section{Open obligations}
+\begin{enumerate}
+\item source-level audit of natural extensions, projective limits, smoothing, and retrodiction;
+\item a nontrivial inverse or physical benchmark beyond the doubling map;
+\item finite-resolution observable-past equivalence;
+\item a non-duplicative topological or metric theory of past-completion sets;
+\item an HTML demo of backward-history branching and evidence refinement.
+\end{enumerate}
+
+\section*{Conclusion}
+Knowing a present response, knowing that a global completion exists, knowing a unique hidden past, and knowing a unique observable past are distinct statements. Under evidence refinement the compatible completion class shrinks; no rewriting operation is required. Noninvertible deterministic dynamics provides a clean benchmark in which the future is unique while the full past remains highly nonunique.
+
+\begin{thebibliography}{9}
+\bibitem{WRI} A. A. Malachevsky, \emph{Response-Defined World Spaces}, WR-I, WREH (2026). DOI: 10.5281/zenodo.23210258.
+\bibitem{WRII} A. A. Malachevsky, \emph{Finite Consistency and Global World Realizability}, WR-II, WREH (2026). DOI: 10.5281/zenodo.23224154.
+\bibitem{WRIII} A. A. Malachevsky, \emph{Geometry of Admissible World Fibres}, WR-III, WREH (2026). DOI: 10.5281/zenodo.23228682.
+\end{thebibliography}
+\end{document}
