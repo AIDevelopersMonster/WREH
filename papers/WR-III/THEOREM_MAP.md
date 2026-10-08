@@ -133,3 +133,92 @@ Prior-art controls now explicitly include:
 - Thom / stratified isotopy and Hardt semialgebraic triviality;
 - identifiability fibre geometry;
 - Reeb-type fibre topology summaries.
+
+
+## Refinement theorem layer
+
+### R11 — Pulled-back rigidity monotonicity
+
+For every epsilon >= 0,
+[
+E_{mathcal B}cap
+ho_{mathcal Bmathcal A}^{-1}(mathcal R_{mathcal A}^{epsilon})
+subseteq
+mathcal R_{mathcal B}^{epsilon}.
+]
+
+Status: PROVED.
+
+Interpretation: protocol refinement cannot destroy exact or finite-resolution rigidity already present at the coarser response.
+
+### R12 — Rigidity gain
+
+On a fixed metric realization carrier,
+[
+G_{mathcal Bmidmathcal A}
+=
+D_{mathcal A}circho_{mathcal Bmathcal A}
+-
+D_{mathcal B}
+ge 0.
+]
+
+Status: DEFINED / NONNEGATIVITY PROVED.
+
+### R13 — Conditional-rank formula
+
+For a smooth refinement
+[
+R_{mathcal B}=(R_{mathcal A},S)
+]
+at a point where (dR_{mathcal A}) is surjective,
+[
+operatorname{rank}dR_{mathcal B}
+=
+dim Y_{mathcal A}
++
+operatorname{rank}
+left(dS|_{ker dR_{mathcal A}}ight).
+]
+
+Status: PROVED.
+
+Prior-art note: in analytic/algebraic singularity theory, closely related critical loci of augmented maps are organized by relative polar varieties. No novelty claim is made for the underlying rank-defect object.
+
+### R14 — Container for refinement-created walls
+
+For a proper smooth refinement above a coarse regular value, every refined structural-wall value lies in the image of the conditional rank-defect set.
+
+Status: PROVED.
+
+### R15 — Refinement can create a wall
+
+The map
+[
+(x,y)mapsto (x,y^3-xy)
+]
+refines the wall-free coarse map (x) and creates a semicubical cusp bifurcation set.
+
+Status: PROVED EXAMPLE.
+
+### R16 — Refinement can resolve a wall
+
+The coarse map
+[
+(x,	heta)mapsto x^2
+]
+on ([-1,1]	imes S^1) has a branch wall at zero, while the refinement
+[
+(x,	heta)mapsto (x^2,x)
+]
+is globally a trivial (S^1)-bundle over its response image.
+
+Status: PROVED EXAMPLE.
+
+### R17 — Refinement asymmetry
+
+Rigidity loci are monotone under pullback by protocol refinement, whereas structural bifurcation walls are not monotone: refinement can create or resolve them.
+
+Status: PROVED as an organizational contrast by R11, R15, and R16.
+
+Claim ceiling: this is a WREH organizational theorem, not a priority claim over singularity theory or relative polar geometry.
