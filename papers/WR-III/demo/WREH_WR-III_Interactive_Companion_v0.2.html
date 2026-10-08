@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WR-III Interactive Companion v0.2</title>
+<style>
+:root{--bg:#091121;--panel:#111a34;--line:#30416d;--text:#eef3ff;--muted:#aab6d7;--a:#79d8ff;--b:#ffd071;--c:#9cffaf;--r:#ff9696}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(#08101f,#111832);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}
+header{padding:26px 22px;border-bottom:1px solid var(--line);background:#08101fdd;position:sticky;top:0;z-index:5}
+.wrap{max-width:1180px;margin:auto;padding:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:15px}
+.card{background:linear-gradient(#121d3a,#0e1730);border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:0 8px 24px #0005}
+h1{margin:0 0 7px;font-size:30px}h2{margin:6px 0 12px}h3{margin:0 0 8px}.muted{color:var(--muted);line-height:1.5}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid var(--line);padding:9px;vertical-align:top}th{background:#17234a}
+.good{color:var(--c)}.warn{color:var(--b)}.bad{color:var(--r)}button{background:#1d2b58;border:1px solid var(--line);color:var(--text);border-radius:9px;padding:8px 11px;cursor:pointer}
+input[type=range]{width:240px}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+svg{width:100%;height:auto;background:#081128;border:1px solid var(--line);border-radius:13px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.m{border:1px solid var(--line);border-radius:11px;padding:10px;background:#ffffff08}
+.v{font-size:22px;font-weight:700;color:var(--c)}.l{font-size:12px;color:var(--muted)}
+.note{border-left:4px solid var(--a);padding:10px 12px;background:#79d8ff10;border-radius:0 10px 10px 0;color:var(--muted);line-height:1.45}
+code{background:#ffffff0c;padding:2px 5px;border-radius:5px}.section{margin:18px 0 28px}
+</style>
+</head>
+<body>
+<header><div class="wrap" style="padding:0">
+<h1>WR-III Interactive Companion v0.2</h1>
+<div class="muted"><b>Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls</b><br>
+Companion to WR-III v0.6. DOI: <a href="https://doi.org/10.5281/zenodo.23228682" style="color:#79d8ff">10.5281/zenodo.23228682</a>. Explanatory visualization only; formal statements and proofs remain in the manuscript.</div>
+</div></header>
+
+<div class="wrap">
+<section class="section grid">
+<div class="card"><h3>WR-I</h3><div class="muted">Which realizations are response-equivalent?</div></div>
+<div class="card"><h3>WR-II</h3><div class="muted">Does a compatible response profile have a global realization?</div></div>
+<div class="card"><h3>WR-III</h3><div class="muted">Assuming a nonempty inverse image, what geometry remains and how does it change under protocol refinement?</div></div>
+</section>
+
+<section class="section card">
+<h2>Core contrast</h2>
+<table>
+<tr><th>Object</th><th>Under protocol refinement</th><th>WR-III reading</th></tr>
+<tr><td>Fibre diameter</td><td class="good"><b>Non-increasing</b></td><td>Additional response constraints cannot enlarge the refined feasible fibre.</td></tr>
+<tr><td>Exact / epsilon-rigidity</td><td class="good"><b>Monotone after pullback</b></td><td>Rigidity already achieved at coarse resolution is preserved.</td></tr>
+<tr><td>Structural bifurcation wall</td><td class="warn"><b>Non-monotone</b></td><td>A new protocol can create a wall, or resolve a wall that existed before.</td></tr>
+</table>
+</section>
+
+<section class="section grid">
+<div class="card">
+<h2>Interactive range-localization ladder</h2>
+<div class="controls">
+<label>Stage <input id="stage" type="range" min="1" max="3" value="1"></label>
+<b id="stageLabel">1 anchor</b>
+<button onclick="setStage(1)">1</button><button onclick="setStage(2)">2</button><button onclick="setStage(3)">3</button>
+</div>
+<svg viewBox="0 0 640 430">
+<rect width="640" height="430" fill="#081128"/>
+<g id="circles"></g><g id="anchors"></g><g id="candidates"></g><g id="truth"></g><g id="wall"></g>
+</svg>
+</div>
+<div class="card">
+<h2>Interpretation</h2>
+<div id="explain" class="muted"></div>
+<div class="metrics">
+<div class="m"><div id="diam" class="v">large</div><div class="l">fibre diameter</div></div>
+<div class="m"><div id="rigid" class="v">no</div><div class="l">exact rigidity</div></div>
+<div class="m"><div id="walls" class="v">simple</div><div class="l">wall state</div></div>
+</div>
+<div class="note" style="margin-top:14px">The trilateration facts are classical. The demo exists to visualize the WREH refinement architecture, not to claim novelty for localization theory.</div>
+</div>
+</section>
+
+<section class="section grid">
+<div class="card"><h2>One anchor</h2><div class="muted">A squared-range response fixes a circle. The inverse image is one-dimensional and non-rigid.</div></div>
+<div class="card"><h2>Two anchors</h2><div class="muted">The circle ambiguity collapses to a mirror pair. On the baseline the two branches merge: a fold/bifurcation wall.</div></div>
+<div class="card"><h2>Three non-collinear anchors</h2><div class="muted">The reflection ambiguity is removed. The response map is an embedding into its intrinsic image, so every fibre is a singleton.</div></div>
+</section>
+
+<section class="section card">
+<h2>Reviewer's requested bridge</h2>
+<div class="muted">
+WR-II supplies conditions under which the response-compatible inverse image is nonempty.
+WR-III assumes nonemptiness and studies the geometry and topology of that set-theoretic preimage.
+The manuscript uses the word <i>fibre</i> in this broad inverse-image sense before any bundle structure is assumed.
+</div>
+</section>
+
+<section class="section card">
+<h2>Next technical layer: noisy ranges</h2>
+<div class="muted">
+Not inserted into the exact v0.6 theorem layer. A noisy extension should first define approximate fibres / uncertainty tubes, then study conditioning near the two-anchor fold wall and connect the resulting finite-resolution geometry to the WR-II residual framework.
+</div>
+</section>
+</div>
+
+<script>
+const A=[{x:130,y:115,n:"A1"},{x:490,y:120,n:"A2"},{x:340,y:300,n:"A3"}], T={x:280,y:210};
+const ns="http://www.w3.org/2000/svg"; const $=id=>document.getElementById(id);
+const L={circles:$("circles"),anchors:$("anchors"),candidates:$("candidates"),truth:$("truth"),wall:$("wall")};
+const info={
+1:{label:"1 anchor",diam:"large",rigid:"no",walls:"circle collapse",text:"One range leaves a full circle of candidate positions. Ambiguity is continuous and exact rigidity is absent."},
+2:{label:"2 anchors",diam:"smaller",rigid:"no",walls:"fold / mirror",text:"Two ranges leave two mirror-symmetric candidates. Fibre diameter shrinks, but a fold wall appears where the two branches merge."},
+3:{label:"3 anchors",diam:"zero",rigid:"yes",walls:"resolved",text:"A third non-collinear anchor resolves the reflection ambiguity. The fibre becomes a singleton and the intrinsic wall disappears."}
+};
+function el(tag,a={}){const e=document.createElementNS(ns,tag);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));return e}
+function d(p,q){return Math.hypot(p.x-q.x,p.y-q.y)}
+const r=A.map(a=>d(a,T));
+function clear(){Object.values(L).forEach(g=>g.innerHTML="")}
+function anchor(a){L.anchors.appendChild(el("circle",{cx:a.x,cy:a.y,r:7,fill:"#79d8ff"}));const t=el("text",{x:a.x+9,y:a.y-9,fill:"#d7efff","font-size":14});t.textContent=a.n;L.anchors.appendChild(t)}
+function circle(a,r){L.circles.appendChild(el("circle",{cx:a.x,cy:a.y,r,fill:"none",stroke:"#58bce4","stroke-width":2,opacity:.85}))}
+function point(p,label,color="#ffd071"){L.candidates.appendChild(el("circle",{cx:p.x,cy:p.y,r:7,fill:color}));const t=el("text",{x:p.x+10,y:p.y+4,fill:"#ffe9ae","font-size":13});t.textContent=label;L.candidates.appendChild(t)}
+function intersections(c0,r0,c1,r1){const dx=c1.x-c0.x,dy=c1.y-c0.y,D=Math.hypot(dx,dy),a=(r0*r0-r1*r1+D*D)/(2*D),h=Math.sqrt(Math.max(0,r0*r0-a*a)),xm=c0.x+a*dx/D,ym=c0.y+a*dy/D,rx=-dy*h/D,ry=dx*h/D;return[{x:xm+rx,y:ym+ry},{x:xm-rx,y:ym-ry}]}
+function draw(s){
+clear();A.forEach(anchor);L.truth.appendChild(el("circle",{cx:T.x,cy:T.y,r:8,fill:"#9cffaf",stroke:"#e2ffe8","stroke-width":2}));
+circle(A[0],r[0]); if(s>=2)circle(A[1],r[1]); if(s>=3)circle(A[2],r[2]);
+if(s===1){point({x:190,y:285},"candidate");point({x:365,y:285},"candidate");point({x:185,y:135},"candidate")}
+if(s===2){intersections(A[0],r[0],A[1],r[1]).forEach((p,i)=>point(p,"candidate "+(i+1)));L.wall.appendChild(el("line",{x1:310,y1:40,x2:310,y2:385,stroke:"#ff9696","stroke-width":2,"stroke-dasharray":"8 6"}))}
+if(s===3)point(T,"unique candidate");
+$("stageLabel").textContent=info[s].label;$("diam").textContent=info[s].diam;$("rigid").textContent=info[s].rigid;$("walls").textContent=info[s].walls;$("explain").textContent=info[s].text;
+}
+function setStage(s){$("stage").value=s;draw(s)} $("stage").addEventListener("input",e=>draw(+e.target.value));draw(1);
+</script>
+</body></html>
