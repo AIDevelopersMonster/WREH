@@ -5,10 +5,10 @@ programme:
 
 work:
   code: WR-I
-  title: "Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations"
+  title: "Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations"
   document_type: "technical preprint"
-  version: "0.2"
-  status: "REVIEWED_CLEAN"
+  version: "0.3"
+  status: "PUBLISHED_FROZEN"
   date: "2026-10-07"
   language: "English"
 
@@ -18,7 +18,7 @@ creator:
 
 repository:
   url: "https://github.com/AIDevelopersMonster/WREH"
-  branch: "main"
+  branch: "paper-wr-i-v0.3-candidate"
   paper_path: "papers/WR-I"
 
 discovery:
@@ -39,15 +39,27 @@ lineage:
     title: "Boundary Compensation XI: The Inverse Isotypic Gap Problem and Finite-Resolution Response Equivalence Classes"
     doi: "10.5281/zenodo.20748061"
     relation: "methodological precursor; no automatic physical or ontological import"
+  close_prior_art:
+    - "Simons & Washburn (2026), arXiv:2608.02637: exact observation-law quotients, monotone refinement, non-transitive finite-resolution ambiguity"
   downstream:
     code: "WR-II"
     title: "Finite Consistency and Global World Realizability"
-    relation: "downstream technical paper; publication not yet opened"
+    relation: "downstream technical paper; development gate opened after WR-I v0.3 publication"
 
 publication:
-  doi: "pending"
-  license: "pending author decision"
-  release_status: "not yet frozen"
+  doi: "10.5281/zenodo.23210258"
+  doi_url: "https://doi.org/10.5281/zenodo.23210258"
+  license_content: "CC-BY-4.0"
+  license_software_demo: "MIT"
+  candidate_pdf_render_audit: "passed"
+  candidate_pdf_pages: 12
+  candidate_pdf_sha256: "c7d095e8db697ef21fb5e18e1b14eeddedae982929e69a500043fb4e3be4f063"
+  candidate_pdf_git_blob: "00eb102cf1d0a734f99f79688190ce1f5f732d27"
+  release_status: "published and frozen at v0.3"
+  post_publication_author_copies:
+    english_pdf_sha256: "261b1d23428f6e338bc7a3d4bffdb5cc6dfc460655af6abe72cdba6ea46a2115"
+    russian_pdf_sha256: "78c8ff1b6335c6b4c00a75aab8c262864332610238592d5ecbb5ddc2630942d0"
+    note: "DOI-stamped author copies; archival Zenodo files remain authoritative for the deposited record."
 
 claim_ceiling:
   - "No claim that response-equivalent realizations are ontologically identical."

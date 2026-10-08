@@ -1,5 +1,20 @@
 # WR-I Changelog
 
+## v0.3-candidate — 2026-10-07
+
+Status: `REVIEWED_CLEAN` pending freeze/licence/DOI.
+
+Final-audit changes:
+
+- added the missing full-protocol gauge-invariance assumption before descending responses to `W/G`;
+- repaired protocol/response notation in the continuous-history example;
+- added Simons & Washburn (2026), arXiv:2608.02637, as close prior art;
+- narrowed the novelty claim accordingly;
+- changed the subtitle to distinguish exact response equivalence from finite-resolution separation;
+- added PDF title/author/subject/keywords metadata;
+- compiled and visually audited a 12-page candidate PDF.
+
+
 ## v0.2 — 2026-10-07
 
 Status: `REVIEWED_CLEAN`
