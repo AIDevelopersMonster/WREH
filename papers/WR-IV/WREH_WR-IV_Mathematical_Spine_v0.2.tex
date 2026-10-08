@@ -1,0 +1,354 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{remark}[definition]{Remark}
+\newcommand{\Wcal}{\mathcal W}
+\newcommand{\Ccal}{\mathfrak C}
+\newcommand{\Hminus}{\mathcal H_-}
+\newcommand{\Pcal}{\mathfrak H_-}
+
+\title{\textbf{WR-IV Mathematical Spine v0.2}\\[4pt]\large Response-Conditioned Global Completion and the Status of the Past}
+\author{A. A. Malachevsky\\ORCID: 0009-0008-6009-3196\\World Realizability \& Epistemic Horizons (WREH)}
+\date{8 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+WR-IV studies historical ambiguity inside response-conditioned global completions. Given present data $D$, the globally compatible world class $\Ccal(D)$ is projected onto declared past-history spaces. This separates world-level nonuniqueness from past-level nonuniqueness and from nonuniqueness of observable historical records. Additional evidence shrinks the completion class rather than mathematically rewriting any history. A natural-extension benchmark for the doubling map shows that an exactly known present state may have a unique deterministic future while admitting a Cantor family of compatible full pasts. A second, physical inverse-problem benchmark uses fixed-interval smoothing of a diffusion: a later observation strictly reduces uncertainty about an earlier state, yet the conditioned past remains non-degenerate. No claim of physical past creation, retrocausality, or branching ontology is made.
+\end{abstract}
+
+\section{Claim ceiling}
+WR-IV assumes a model in which a temporal decomposition is already meaningful. It does not infer physical time from WREH itself. It does not claim observation creates or rewrites the past, that mathematical completion implies physical existence, or that noninvertibility implies a branching ontology.
+
+\section{Response-conditioned completions}
+Let
+\[
+\Ccal(D)=\{W\in\Wcal: W\text{ is globally compatible with }D\}.
+\]
+A declared historical projection is a map
+\[
+\pi_-:\Wcal\to\Hminus.
+\]
+\begin{definition}[Past-completion set]
+\[
+\Pcal(D):=\pi_-(\Ccal(D)).
+\]
+\end{definition}
+\begin{definition}[Past rigidity]
+$D$ is past-rigid if $\Pcal(D)$ is a singleton, and world-rigid if $\Ccal(D)$ is a singleton.
+\end{definition}
+
+\begin{proposition}[World rigidity implies past rigidity]
+If $D$ is world-rigid, then $D$ is past-rigid.
+\end{proposition}
+\begin{proof}
+The image of a singleton under any map is a singleton.
+\end{proof}
+
+\begin{proposition}[The converse fails]
+Past rigidity need not imply world rigidity.
+\end{proposition}
+\begin{proof}
+Take two distinct worlds $(h_0,0)$ and $(h_0,1)$ with the same past projection $h_0$, and let both satisfy $D$.
+\end{proof}
+
+\section{Evidence refinement and non-rewriting}
+Write $D\preceq D'$ when $D'$ contains all constraints of $D$ plus additional compatible evidence.
+\begin{theorem}[Completion refinement]
+If $D\preceq D'$, then
+\[
+\Ccal(D')\subseteq\Ccal(D)
+\qquad\text{and}\qquad
+\Pcal(D')\subseteq\Pcal(D).
+\]
+\end{theorem}
+\begin{proof}
+Every world satisfying the stronger data set also satisfies the weaker one; applying $\pi_-$ preserves inclusion.
+\end{proof}
+\begin{corollary}[Past rigidity persists under consistent refinement]
+If $D$ is past-rigid, $D\preceq D'$, and $\Ccal(D')\neq\varnothing$, then $D'$ is past-rigid with the same past projection.
+\end{corollary}
+\begin{remark}[Non-rewriting principle]
+Set refinement removes incompatible completions; it does not alter the histories carried by completions that remain. No physical rewriting of the past is implied.
+\end{remark}
+
+\section{Observable past versus hidden past}
+Let $Q_-:\Hminus\to\mathcal O_-$ encode accessible historical records and define
+\[
+\mathfrak O_-(D)=Q_-(\Pcal(D)).
+\]
+Observable-past rigidity can coexist with hidden-past ambiguity whenever distinct $h_1,h_2$ satisfy $Q_-(h_1)=Q_-(h_2)$.
+
+\section{Deterministic future with ambiguous past}
+Let $T:X\to X$ be deterministic. A full backward history ending at $x_0$ is
+\[
+(x_0,x_{-1},x_{-2},\ldots),
+\qquad T(x_{-n})=x_{-(n-1)}.
+\]
+The set of all such histories is the inverse-limit / natural-extension history space $\widehat X$.
+\begin{proposition}
+The forward orbit of $x_0$ is unique, while noninjectivity of $T$ may leave multiple full backward histories over $x_0$.
+\end{proposition}
+
+\section{Benchmark: doubling map}
+Let $X=\mathbb R/\mathbb Z$ and $T(x)=2x\pmod1$. Each present state has two one-step predecessors.
+\begin{theorem}[Cantor family of compatible full pasts]
+For every $x_0\in X$, the natural-extension fibre over $x_0$ is naturally homeomorphic to $\{0,1\}^{\mathbb N}$.
+\end{theorem}
+\begin{proof}
+Choose a branch bit $\epsilon_n\in\{0,1\}$ at each backward step and define
+\[
+x_{-n}=\frac{x_{-(n-1)}+\epsilon_n}{2}\pmod1.
+\]
+Binary sequences and backward histories determine one another, continuously in the product and inverse-limit topologies.
+\end{proof}
+\begin{corollary}
+Fixing any finite number of backward branch choices still leaves a Cantor family of older compatible histories.
+\end{corollary}
+
+\section{Physical inverse benchmark: retrospective smoothing of a diffusion}
+
+The doubling-map benchmark is exact and topological but not yet a physical inverse problem.
+We now add a standard stochastic-state-estimation benchmark. Fixed-interval smoothing
+estimates an earlier state using observations that occur after that state; in the linear
+Gaussian case the classical Rauch--Tung--Striebel smoother gives a closed-form solution
+\cite{RauchTungStriebel1965,SarkkaSvensson2023}.
+
+\subsection{Gaussian retrospective contraction}
+
+Let \(X\in\mathbb R^n\) denote a past state and let \(Z\in\mathbb R^m\) denote
+later data, after conditioning on whatever earlier data have already been absorbed.
+Assume the conditional joint law of \((X,Z)\) is Gaussian with covariance
+\[
+\begin{pmatrix}
+P & C\\
+C^\top & S
+\end{pmatrix},
+\qquad
+S\succ0.
+\]
+
+\begin{theorem}[Later Gaussian data cannot increase past covariance]
+\label{thm:gaussian-contraction}
+The conditional covariance of the earlier state after incorporating the later data is
+\[
+P_{\mathrm{smooth}}
+=
+P-CS^{-1}C^\top.
+\]
+Hence
+\[
+0\preceq P_{\mathrm{smooth}}\preceq P.
+\]
+Moreover, the reduction is strict in every direction coupled to the later data through \(C\).
+\end{theorem}
+
+\begin{proof}
+The conditional covariance formula for a jointly Gaussian vector gives the stated Schur
+complement. Since \(S^{-1}\succ0\),
+\[
+CS^{-1}C^\top\succeq0,
+\]
+so \(P_{\mathrm{smooth}}\preceq P\). For a vector \(v\),
+\[
+v^\top(P-P_{\mathrm{smooth}})v
+=
+(C^\top v)^\top S^{-1}(C^\top v),
+\]
+which is positive exactly when \(C^\top v\neq0\).
+\end{proof}
+
+\begin{definition}[Retrospective covariance gain]
+Define
+\[
+\Delta P:=P-P_{\mathrm{smooth}}=CS^{-1}C^\top\succeq0.
+\]
+\end{definition}
+
+\begin{remark}[Probabilistic extension]
+This theorem does not replace the exact set-refinement theorem of Section 3. In Gaussian
+models with nonzero noise the posterior support may remain full-dimensional; what shrinks
+is the posterior uncertainty encoded by covariance or credible regions. WR-IV therefore
+keeps exact-set refinement and probabilistic smoothing as distinct layers.
+\end{remark}
+
+\subsection{Brownian bridge as an exactly solvable physical model}
+
+Let
+\[
+X_t=x_0+\sqrt{2D}\,B_t,
+\qquad
+D>0,
+\]
+where \(B_t\) is standard Brownian motion. Brownian motion is the canonical diffusion model
+for physical random motion and related stochastic perturbations
+\cite{KaratzasShreve1998}.
+
+Before any later observation,
+\[
+X_t\sim
+\mathcal N(x_0,\,2Dt).
+\]
+
+Suppose an exact later endpoint is learned:
+\[
+X_T=b,
+\qquad
+0<t<T.
+\]
+
+\begin{theorem}[Past uncertainty contracts but does not collapse]
+\label{thm:brownian-bridge}
+Conditioned on the later endpoint \(X_T=b\),
+\[
+X_t\mid X_T=b
+\sim
+\mathcal N\!\left(
+x_0+\frac{t}{T}(b-x_0),
+\;
+2D\,\frac{t(T-t)}{T}
+\right).
+\]
+Therefore
+\[
+0<
+2D\,\frac{t(T-t)}{T}
+<
+2Dt
+\qquad
+(0<t<T).
+\]
+The later exact observation strictly reduces uncertainty about the earlier state, but it does
+not determine that earlier state uniquely.
+\end{theorem}
+
+\begin{proof}
+The pair \((X_t,X_T)\) is jointly Gaussian with
+\[
+\operatorname{Var}(X_t)=2Dt,
+\qquad
+\operatorname{Var}(X_T)=2DT,
+\qquad
+\operatorname{Cov}(X_t,X_T)=2Dt.
+\]
+Applying Theorem~\ref{thm:gaussian-contraction} gives
+\[
+\operatorname{Var}(X_t\mid X_T)
+=
+2Dt-\frac{(2Dt)^2}{2DT}
+=
+2D\,\frac{t(T-t)}{T}.
+\]
+The Gaussian conditional-mean formula gives the stated mean.
+\end{proof}
+
+\begin{corollary}[A full past path remains non-unique]
+Conditioning on \(X_0=x_0\) and \(X_T=b\) produces a Brownian-bridge law on continuous
+paths. For every interior time \(0<t<T\), the conditional variance is positive, so the
+conditioned path is not a single trajectory.
+\end{corollary}
+
+\begin{remark}
+At the path level, exact endpoint evidence restricts histories to trajectories pinned at the
+declared endpoints, but leaves an uncountable family of compatible paths. This realizes the
+WR-IV distinction between stronger retrospective evidence and unique hidden history.
+\end{remark}
+
+\subsection{Noisy later observation}
+
+Let the later measurement be
+\[
+Y_T=X_T+\eta,
+\qquad
+\eta\sim\mathcal N(0,R),
+\qquad
+R>0,
+\]
+independent of the diffusion.
+
+\begin{proposition}[Noisy retrospective contraction]
+For \(0<t<T\),
+\[
+\operatorname{Var}(X_t\mid Y_T)
+=
+2Dt-\frac{(2Dt)^2}{2DT+R},
+\]
+and
+\[
+0<
+\operatorname{Var}(X_t\mid Y_T)
+<
+2Dt.
+\]
+As \(R\downarrow0\), the formula converges to the Brownian-bridge variance.
+\end{proposition}
+
+\begin{proof}
+Use Theorem~\ref{thm:gaussian-contraction} with
+\[
+\operatorname{Cov}(X_t,Y_T)=2Dt,
+\qquad
+\operatorname{Var}(Y_T)=2DT+R.
+\]
+The inequalities follow because \(D,t,R>0\) and \(t<T\).
+\end{proof}
+
+\begin{remark}[Physical reading]
+A later noisy measurement improves retrodiction of an earlier diffusive state without making
+the past exact. This is standard fixed-interval smoothing behavior, not a WREH discovery.
+The WREH role of the benchmark is to make the status-of-the-past distinction operational:
+later evidence can sharpen a past posterior while residual historical ambiguity remains.
+\end{remark}
+
+\section{Construction order versus internal time}
+\begin{proposition}
+The inference order $D\mapsto\Ccal(D)$ does not define internal temporal order in a completed world without an additional bridge.
+\end{proposition}
+\begin{proof}
+The two relations live on different object types: one orders stages of inference, the other belongs to the internal structure of a temporal model.
+\end{proof}
+
+\section{Prior-art boundary}
+Natural extensions, inverse limits, projective-limit constructions, smoothing, retrodiction, and trajectory reconstruction are established subjects. WR-IV does not claim invention of these tools. Its target is the WREH-specific separation of global-completion multiplicity, hidden-past multiplicity, observable-past multiplicity, and evidence refinement.
+
+\section{Open obligations}
+\begin{enumerate}
+\item source-level audit of natural extensions, projective limits, smoothing, and retrodiction;
+\item extend the diffusion benchmark to a finite-dimensional state-space smoother with several observation times and compare exact-set versus probabilistic historical uncertainty;
+\item finite-resolution observable-past equivalence;
+\item a non-duplicative topological or metric theory of past-completion sets;
+\item an HTML demo of backward-history branching and evidence refinement.
+\end{enumerate}
+
+\section*{Conclusion}
+Knowing a present response, knowing that a global completion exists, knowing a unique hidden past, and knowing a unique observable past are distinct statements. Under evidence refinement the compatible completion class shrinks; no rewriting operation is required. Noninvertible deterministic dynamics provides a clean benchmark in which the future is unique while the full past remains highly nonunique. Fixed-interval smoothing provides a complementary physical inverse-problem benchmark in which later observations strictly reduce uncertainty about an earlier state without collapsing the conditioned past to a unique trajectory.
+
+\begin{thebibliography}{9}
+\bibitem{WRI} A. A. Malachevsky, \emph{Response-Defined World Spaces}, WR-I, WREH (2026). DOI: 10.5281/zenodo.23210258.
+\bibitem{WRII} A. A. Malachevsky, \emph{Finite Consistency and Global World Realizability}, WR-II, WREH (2026). DOI: 10.5281/zenodo.23224154.
+\bibitem{WRIII} A. A. Malachevsky, \emph{Geometry of Admissible World Fibres}, WR-III, WREH (2026). DOI: 10.5281/zenodo.23228682.
+
+\bibitem{RauchTungStriebel1965}
+H. E. Rauch, F. Tung, and C. T. Striebel,
+\emph{Maximum Likelihood Estimates of Linear Dynamic Systems},
+AIAA Journal 3(8) (1965), 1445--1450.
+DOI: 10.2514/3.3166.
+
+\bibitem{SarkkaSvensson2023}
+S. S\"arkk\"a and L. Svensson,
+\emph{Bayesian Filtering and Smoothing}, 2nd ed.,
+Cambridge University Press, 2023.
+DOI: 10.1017/9781108917407.
+
+\bibitem{KaratzasShreve1998}
+I. Karatzas and S. E. Shreve,
+\emph{Brownian Motion and Stochastic Calculus}, 2nd ed.,
+Springer, 1998.
+DOI: 10.1007/978-1-4612-0949-2.
+\end{thebibliography}
+\end{document}
