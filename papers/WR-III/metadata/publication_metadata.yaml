@@ -9,7 +9,7 @@ work:
   title_ru: "Геометрия допустимых слоев миров: уточнение протоколов, жесткость и стены реализуемости"
   document_type: "technical preprint"
   version: "0.6"
-  status: "PUBLICATION_READY"
+  status: "PUBLISHED_FROZEN"
   date: "2026-10-08"
   canonical_language: "English"
   translations:
@@ -30,17 +30,18 @@ repository:
   url: "https://github.com/AIDevelopersMonster/WREH"
   branch: "paper-wr-iii-v0.1-spine"
   paper_path: "papers/WR-III"
-  canonical_source: "papers/WR-III/WREH_WR-III_Preprint_Candidate_v0.6.tex"
+  canonical_source: "papers/WR-III/WREH_WR-III_v0.6.tex"
   companion_html: "papers/WR-III/demo/WREH_WR-III_Interactive_Companion_v0.2.html"
 
 publication:
-  doi: "DOI_PENDING"
+  doi: "10.5281/zenodo.23228682"
+  doi_url: "https://doi.org/10.5281/zenodo.23228682"
   license_content: "CC-BY-4.0"
-  release_status: "publication ready; DOI/deposition pending"
+  release_status: "published and frozen at v0.6"
   english_pdf_pages: 15
   russian_pdf_pages: 17
-  english_pdf_sha256: "2f1b441591c42f85f4729d53fd0d99b6b8f9bec86941b603e6b1f35cf2cf9bd6"
-  russian_pdf_sha256: "851fa9f54dc5e008e5a92fb3a56cd37c365c99c6e9a268ee438659dccdc2d8b0"
-  english_tex_sha256: "373e5089731446013d03d559ea2e77dba6a83885b3ef398ef7cca02f9ab3a58e"
-  russian_tex_sha256: "c3e8376071c2c63ce2057d75c3a54fbb31563775b4217efd05453a2997d2e074"
+  english_pdf_sha256: "614bcb660a6b10df5cbdf3070b3d74d78bf50aa839f40e845d453889e33cb137"
+  russian_pdf_sha256: "c8d74950b0b6469881ffad7e01aced6835abf5b3abfa21bf7f831d117679313c"
+  english_tex_sha256: "9f1abd9b11e90db51be8c5ed01e6e56b88daab9947dd1260059259f8a127fdfd"
+  russian_tex_sha256: "0d695548502e70ae9d797a5a306d24ea52fad4af344557ddcf639d116fd13739"
   companion_html_sha256: "c17d71c6a5a15489e88ee838e12520dc19fa904082eb29926332cec9157ee760"
