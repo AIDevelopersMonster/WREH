@@ -3,11 +3,11 @@
 **Full title:** Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls  
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
 **Upstream:** WR-I DOI 10.5281/zenodo.23210258; WR-II DOI 10.5281/zenodo.23224154  
-**Status:** ACTIVE / MATHEMATICAL SPINE v0.1
+**Status:** PUBLICATION_READY_PENDING_RENDER_AUDIT / PREPRINT CANDIDATE v0.6
 
 ## New mathematical target
 
-WR-I defined response equivalence and response-defined world spaces. WR-II asked whether finitely compatible responses admit one global realization.
+WR-I defined response equivalence and response-defined world spaces. WR-II supplied exact and quantitative criteria for global realizability. WR-III assumes a nonempty response-compatible inverse image and studies its geometry under protocol refinement.
 
 WR-III assumes a response value is realizable and studies the geometry of its admissible world fibre:
 \[
@@ -56,3 +56,25 @@ WR-III does not re-prove:
 - WR-II residual radii and stability gap.
 
 Its new object is the variation of nonempty inverse fibres over realizable response space.
+
+
+## Companion HTML
+
+Interactive review/presentation companion:
+
+`papers/WR-III/demo/WREH_WR-III_Interactive_Companion_v0.2.html`
+
+It visualizes the one-anchor / two-anchor / three-anchor localization ladder and the main WR-III contrast:
+
+- fibre diameter and rigidity improve monotonically under protocol refinement;
+- structural bifurcation walls can be created or resolved non-monotonically.
+
+The HTML is explanatory material only. Formal claims and proofs remain in the manuscript.
+
+## Current candidate
+
+Canonical review candidate source:
+
+`papers/WR-III/WREH_WR-III_Preprint_Candidate_v0.6.tex`
+
+External proof-review corrections have been incorporated. Remaining release gate: compile/render audit of v0.6.
