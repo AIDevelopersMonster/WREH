@@ -13,7 +13,7 @@
 
 1. **WR-I** — *Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations* — **PUBLISHED / FROZEN v0.3** — DOI: `10.5281/zenodo.23210258`.
 2. **WR-II** — *Finite Consistency and Global World Realizability* — **PUBLISHED / FROZEN v0.5** — DOI: `10.5281/zenodo.23224154`.
-3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **DEVELOPMENT GATE OPEN / ACTIVE NEXT PAPER**.
+3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23228682`.
 4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — PLANNED.
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — PLANNED.
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — PLANNED.
@@ -27,8 +27,9 @@ WR-I and WR-II are published and frozen.
 
 - WR-I DOI: `10.5281/zenodo.23210258`
 - WR-II DOI: `10.5281/zenodo.23224154`
+- WR-III DOI: `10.5281/zenodo.23228682`
 
-The next permitted technical action is WR-III development.
+WR-III is now published and frozen. The next permitted technical action is WR-IV development, subject to a fresh anti-duplication and prior-art preflight.
 
 WR-III inherits the WR-I response maps and quotients together with the WR-II data-compatible fibre language. Its new target is not existence, but the geometry and regularity of **nonempty** admissible world fibres as response data vary and protocols are refined.
 
