@@ -1,13 +1,13 @@
-# WR-IV theorem and dependency map — v0.3
+# WR-IV theorem and dependency map — v0.4
 
-Active source: [WREH_WR-IV_Mathematical_Spine_v0.3.tex](WREH_WR-IV_Mathematical_Spine_v0.3.tex).
-Release status: REVIEWABLE_DRAFT. Earlier v0.1/v0.2 sources are historical snapshots.
+Active source: [WREH_WR-IV_Mathematical_Spine_v0.4.tex](WREH_WR-IV_Mathematical_Spine_v0.4.tex).
+Release status: REVIEWABLE_DRAFT. Earlier v0.1/v0.2/v0.3 sources are historical snapshots.
 R identifiers are programme aliases; printed LaTeX numbering is shown below.
 
 ## Inherited objects
 
 WR-I supplies response equivalence; WR-II supplies global-completion existence discipline;
-WR-III supplies nonempty fibre/refinement language. WR-IV declares the historical projection.
+WR-III supplies fibre/refinement language and its local-triviality definition of a structural wall. WR-IV declares the historical projection and states the conditional bridge to historical families.
 
 \[
 \mathfrak C(D)=\{W\in\mathcal W:W\text{ is compatible with }D\},\quad
@@ -33,7 +33,9 @@ persistence of rigidity requires a nonempty refined fibre.
 | R11 | Theorem 7.1 and Definition 7.2 | \(\Delta P=CS^{-1}C^\top\); directional strictness iff \(C^\top v\ne0\) | Classical consequence |
 | R12 | Theorem 7.4 / thm:brownian-bridge | Deterministic \(x_0\), fixed \(T>0\), \(\kappa>0\), \(0<t<T\); continuous regular kernel \(K_b\); variance \(2\kappa t(T-t)/T\) | Classical Brownian bridge |
 | R13 | Corollary 7.5 / cor:path-nonuniqueness; Remark 7.6 | Brownian bridge is non-Dirac; countable path sets have zero mass; full pre-\(T\) historical image is properly constrained by endpoint limit | Classical bridge plus explicit compatibility interpretation |
-| R14 | Proposition 7.7 / prop:noisy-contraction; Remark 7.8 | Independent Gaussian noise \(R>0\); variance \(2\kappa t-(2\kappa t)^2/(2\kappa T+R)\); positive likelihood preserves path support | Classical conditioning and direct Bayes argument |
+| R14 | Proposition 7.7 / prop:noisy-contraction; Remark 7.8 | Independent Gaussian noise \(R>0\); variance \(2\kappa t(1-2\kappa t/(2\kappa T+R))\); positive likelihood preserves path support | Classical conditioning and direct Bayes argument |
+| R15 | Proposition 2.5 / prop:realizability-gate; Remark 2.6 / rem:empty-past | For a total historical projection and full-profile data, historical fibre empty iff world fibre empty iff response unrealizable; finite fibres may remain nonempty | Elementary image property plus WR-II §§3–7; no new existence criterion |
+| R16 | Proposition 4.2 / prop:wall-transfer; Remark 4.3 / rem:wall-erasure | A homeomorphism of response-indexed families over U transfers local triviality both ways; constant projection can erase a world wall | Elementary conjugation of trivializations; WR-III §§8,10 |
 
 ## Explicit application result and its limit
 
@@ -53,7 +55,7 @@ earlier projection or for noisy path supports.
 
 ## Claim and novelty ceiling
 
-R1–R14 are elementary consequences, standard benchmarks, or scope conventions.
+R1–R16 are elementary consequences, standard benchmarks, or scope conventions.
 No theorem-priority claim is made. WREH organizes world/past/record multiplicity;
 originality of the wider classification still needs comparison with observability,
 identifiability, natural extensions, smoothing, and partial-observation reconstruction.
@@ -62,8 +64,21 @@ No past rewriting, retrocausality, branching ontology, or cosmological inference
 ## Open next work
 
 - Broader prior-art and cross-manuscript duplication review.
-- Several-time state-space example; explicitly separate historical sets and posterior laws.
+- Several-time linear Gaussian state-space example using the standard RTS backward recursion; explicitly separate historical sets and posterior laws.
 - Finite-resolution observable-past equivalence.
 - Nonduplicative metric/topological results and HTML demonstration.
 
 Adding observations or a new example does not itself establish research novelty.
+
+
+## Limits of the new upstream bridges
+
+- R15 concerns the complete profile y. WR-II's finite-support example has empty full
+  fibre over (1,1,...) and nonempty fibres for every finite restriction.
+- R16 requires a homeomorphism of the total families over the response base. Separate
+  fibre homeomorphisms do not by themselves establish this family-level condition.
+- A structural wall is a failure of local bundle triviality; it need not, by definition,
+  change the number of connected components or describe a physical transition.
+- The Brownian dictionary distinguishes the set C(D_b) from the law K_b and the full
+  pre-T history from a fixed earlier fragment. Regular conditioning on a null endpoint
+  event is distinct from a mathematically empty compatibility fibre.
