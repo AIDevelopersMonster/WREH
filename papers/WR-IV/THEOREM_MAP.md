@@ -80,3 +80,84 @@ No physical past creation, past rewriting, retrocausality, branching ontology, o
 ## Main open obligation
 
 Find a nontrivial application where later/current observations reduce the set of compatible historical trajectories while leaving a mathematically controlled residual past ambiguity.
+
+## Physical retrospective-smoothing benchmark
+
+### R10 — Later Gaussian data cannot increase past covariance
+
+For jointly Gaussian past state (X) and later data (Z),
+[
+P_{mathrm{smooth}}=P-CS^{-1}C^	op
+]
+with
+[
+0preceq P_{mathrm{smooth}}preceq P.
+]
+
+Status: PROVED / STANDARD GAUSSIAN CONDITIONING.
+
+### R11 — Retrospective covariance gain
+
+[
+Delta P=P-P_{mathrm{smooth}}=CS^{-1}C^	opsucceq0.
+]
+
+The reduction is strict in a direction (v) iff (C^	op v
+eq0).
+
+Status: PROVED.
+
+### R12 — Brownian-bridge retrospective contraction
+
+For
+[
+X_t=x_0+sqrt{2D},B_t,
+]
+conditioning on the later endpoint (X_T=b) gives
+[
+X_tmid X_T=b
+sim
+mathcal N!left(
+x_0+rac{t}{T}(b-x_0),
+2Drac{t(T-t)}{T}
+ight).
+]
+
+For (0<t<T),
+[
+0<2Drac{t(T-t)}{T}<2Dt.
+]
+
+Status: PROVED / STANDARD BROWNIAN BRIDGE.
+
+### R13 — Endpoint evidence does not determine the full path
+
+Conditioning a diffusion path on its endpoints yields a Brownian-bridge law with positive interior variance, so the compatible hidden path remains non-unique.
+
+Status: PROVED.
+
+### R14 — Noisy later observation still contracts past uncertainty
+
+For
+[
+Y_T=X_T+eta,qquad etasimmathcal N(0,R),
+]
+[
+operatorname{Var}(X_tmid Y_T)
+=
+2Dt-rac{(2Dt)^2}{2DT+R},
+]
+which lies strictly between zero and the prior variance (2Dt) for (0<t<T), (R>0).
+
+Status: PROVED.
+
+## Benchmark role
+
+This physical inverse-problem benchmark satisfies the main WR-IV application obligation:
+
+- later observation improves inference about an earlier state;
+- residual past uncertainty remains;
+- with exact endpoint data, the compatible path set remains infinite;
+- with noisy data, posterior support need not shrink even though covariance and credible regions do.
+
+Claim firewall: this is standard smoothing / Brownian-bridge mathematics, not a claim that future measurements physically modify the past.
