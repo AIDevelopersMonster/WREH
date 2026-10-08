@@ -680,9 +680,10 @@ Rigidity monotonicity was proved in Theorem~\ref{thm:rigidity-pullback}.
 \end{proof}
 
 \begin{remark}
-This asymmetry is one of the first genuinely WREH-specific organizational
-facts in WR-III: ambiguity shrinks monotonically under added information, but
-the singularity structure of the response map need not.
+This asymmetry is a programme-level organizing contrast in WR-III: ambiguity
+shrinks monotonically under added information, while the singularity structure
+of the response map need not. No theorem-priority claim is made for the
+underlying singularity mechanisms.
 \end{remark}
 
 \section{Prior-art boundary}
@@ -697,7 +698,11 @@ infrastructure rather than novelty claims.
 \item Bifurcation and singularity theory use failure of local fibre
 triviality as the definition of bifurcation or atypical values. For proper
 submersions, Ehresmann gives local triviality; for nonproper maps, bifurcation
-values at infinity may occur.
+values at infinity may occur. In analytic/algebraic settings, critical loci of
+augmented maps \((f,g)\), equivalently criticality of the added observable
+along fibres of \(f\), are standardly organized by relative polar varieties.
+Thus the conditional-rank set of Theorem~\ref{thm:conditional-rank} has direct
+prior-art relatives and is not claimed as a new singularity-theory object.
 
 \item Thom-type isotopy theorems and Hardt semialgebraic triviality provide
 stratified or tame local-triviality frameworks beyond smooth manifolds.
@@ -720,17 +725,22 @@ explicit claim firewall.
 Before WR-III can become a preprint:
 
 \begin{enumerate}
-\item perform a detailed prior-art audit against set-valued inverse maps,
-identifiability geometry, singular inverse problems, and stratified maps;
-\item determine useful fibre invariants beyond diameter;
-\item study quantitative distance to the structural wall;
-\item characterize refinement-induced wall creation, destruction, and
-resolution;
-\item add at least one nontrivial inverse-problem application;
-\item test whether proper stratified maps give the right extension beyond the
-smooth Ehresmann layer;
-\item build an interactive demo separating rigidity, ambiguity, and wall
-crossing.
+\item complete a source-level audit of the conditional-rank construction
+against relative polar varieties and augmented-map singularity theory;
+\item determine useful fibre invariants beyond diameter and prove which of
+them remain monotone under protocol refinement;
+\item formulate a quantitative distance-to-bifurcation notion only after a
+response-space metric and regularity class are fixed;
+\item extend the refinement theorem from smooth proper maps to a justified
+Whitney/Thom or semialgebraic stratified setting;
+\item add at least one nontrivial inverse-problem or identifiability
+application in which the added protocol block changes fibre geometry in a
+certifiable way;
+\item determine whether the rigidity-gain function
+\(G_{\Bcal\mid\Acal}\) has stable or computable bounds in a useful model
+class;
+\item build an interactive demo showing the monotone rigidity/nonmonotone-wall
+contrast.
 \end{enumerate}
 
 \section*{Conclusion}
