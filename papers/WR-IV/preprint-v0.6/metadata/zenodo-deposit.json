@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "title": "WR-IV: Response-Conditioned Global Completion and the Status of the Past",
+    "creators": [
+      {
+        "name": "Malachevsky, A. A.",
+        "orcid": "0009-0008-6009-3196"
+      }
+    ],
+    "publication_date": "2026-10-08",
+    "version": "0.6",
+    "description": "<h3>English</h3><p>WR-IV: Response-Conditioned Global Completion and the Status of the Past. Technical preprint v0.6 by A. A. Malachevsky (WREH), with a complete English manuscript and a parallel complete Russian translation.</p><p>The paper distinguishes compatible global completions, projected histories, observable records, conditional probability laws, supports and covariance. It gives an explicit WR-II realizability gate, a sufficient condition for transferring WR-III structural walls, a deterministic doubling-map benchmark, and classical Gaussian and Brownian smoothing benchmarks. A weakly continuous regular conditional Brownian-bridge kernel is constructed for every endpoint value. The work demonstrates that a fixed earlier prefix can retain its entire compatibility set while its conditional variance decreases. Independent Gaussian measurement noise preserves path-measure equivalence, whereas bounded admissible noise constrains the endpoint. The classical Rauch–Tung–Striebel recursion is specialized to a fully specified random-walk model, with a two-observation calculation and independent reproducibility checks.</p><p>The contribution is an explicitly declared WREH comparison framework and a careful separation of mathematical objects. Set-image statements are elementary and the stochastic/topological benchmarks are classical; no new theorem priority or smoothing method is claimed. The paper does not infer physical rewriting of the past, retrocausality, ontological branching or the emergence of physical time. This is an unpeer-reviewed expository technical preprint; comprehensive originality certification is not asserted.</p><p>The package contains both PDFs, common bilingual LaTeX source, analytic figures, an optional standalone offline English/Russian HTML demonstration, reproducibility scripts, source map and audit. Text, translations, documentation and figures are CC BY 4.0; executable scripts and the executable portion of the HTML are MIT. Third-party cited full texts are not redistributed. English and Russian are two manifestations of the same version, not two successive papers.</p><h3>Русский</h3><p>WR-IV: Глобальное достраивание при заданных откликах и статус прошлого. Технический препринт v0.6 автора A. A. Malachevsky (WREH), включающий полный английский текст и параллельный полный русский перевод.</p><p>Работа различает совместимые глобальные достраивания, проекции историй, наблюдаемые записи, условные вероятностные законы, носители и ковариации. Явно сформулированы проверка реализуемости из WR-II, достаточное условие переноса структурных стен из WR-III, пример удвоения окружности и классические примеры гауссовского и броуновского сглаживания. Для каждого значения конечного наблюдения построено слабо непрерывное регулярное условное ядро броуновского моста. Показано, что множество совместимых ранних фрагментов может сохраняться целиком, хотя условная дисперсия уменьшается. Независимый гауссовский шум сохраняет эквивалентность мер путей, а ограниченный допустимый шум ограничивает конечное значение. Классическая рекурсия Rauch–Tung–Striebel применена к полностью заданной модели случайного блуждания; приведены расчёт двух наблюдений и независимые проверки воспроизводимости.</p><p>Вклад состоит в явно заданной сравнительной схеме WREH и разграничении математических объектов. Утверждения об образах множеств элементарны, а стохастические и топологические примеры классические; приоритет новых теорем или нового метода сглаживания не заявлен. Не выводятся физическое переписывание прошлого, ретрокаузальность, онтологическое ветвление или возникновение физического времени. Это экспозиционный технический препринт без внешнего рецензирования; исчерпывающая сертификация оригинальности не заявлена.</p><p>Комплект содержит оба PDF, общий двуязычный исходник LaTeX, аналитические рисунки, автономную HTML-демонстрацию на английском и русском, скрипты воспроизведения, карту источников и аудит. Текст, переводы, документация и рисунки имеют лицензию CC BY 4.0; скрипты и исполняемая часть HTML — MIT. Полные тексты чужих публикаций не распространяются. Английский и русский — две языковые формы одной версии, а не последовательные статьи.</p>",
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "language": "eng",
+    "communities": [
+      {
+        "identifier": "wreh"
+      }
+    ],
+    "keywords": [
+      "world realizability",
+      "historical projection",
+      "epistemic horizons",
+      "Brownian bridge",
+      "regular conditional distribution",
+      "Gaussian smoothing",
+      "Rauch-Tung-Striebel smoother",
+      "inverse limits",
+      "English and Russian"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23210258",
+        "relation": "cites",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.23224154",
+        "relation": "cites",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.23228682",
+        "relation": "cites",
+        "scheme": "doi"
+      }
+    ],
+    "notes": "Unpeer-reviewed technical preprint. Complete parallel English and Russian texts. CC BY 4.0 covers research content; code and executable HTML are MIT. No new theorem priority claimed. Repository: https://github.com/AIDevelopersMonster/WREH ; draft PR: https://github.com/AIDevelopersMonster/WREH/pull/5 ."
+  }
+}

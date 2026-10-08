@@ -1,0 +1,707 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+\usepackage{booktabs,tabularx}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{remark}[definition]{Remark}
+\newcommand{\Wcal}{\mathcal W}
+\newcommand{\Ccal}{\mathfrak C}
+\newcommand{\Hminus}{\mathcal H_-}
+\newcommand{\Pcal}{\mathfrak H_-}
+
+\hypersetup{
+  pdftitle={WR-IV v0.4: Response-Conditioned Global Completion and the Status of the Past},
+  pdfauthor={A. A. Malachevsky},
+  pdfsubject={World Realizability and Epistemic Horizons; review draft},
+  pdfkeywords={history projection, realizability, structural walls, Brownian bridge, smoothing}
+}
+
+\title{\textbf{WR-IV Mathematical Spine v0.4}\\[4pt]\large Response-Conditioned Global Completion and the Status of the Past}
+\author{A. A. Malachevsky\\ORCID: 0009-0008-6009-3196\\World Realizability \& Epistemic Horizons (WREH)}
+\date{8 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+WR-IV studies historical ambiguity inside response-conditioned global completions. Given present data $D$, the globally compatible world class $\Ccal(D)$ is projected onto declared past-history spaces. This separates world-level nonuniqueness from past-level nonuniqueness and from nonuniqueness of observable historical records. Accumulated hard constraints give nested completion classes, possibly equal, without altering retained histories. The WR-II realizability gate distinguishes an empty historical class from an ambiguous one. Transfer of WR-III structural walls to historical families requires a topology-preserving projection of the response-indexed family. A natural-extension benchmark for the doubling map shows that an exactly known present state may have a unique deterministic future while admitting a Cantor family of compatible full pasts. A second, physical inverse-problem benchmark uses fixed-interval smoothing of a diffusion: an endpoint observation reduces interior-state variance while the conditioned path law remains non-degenerate. Full-history compatibility and uncertainty about a fixed earlier fragment are distinguished. No claim of physical past creation, retrocausality, or branching ontology is made.
+\end{abstract}
+
+\section{Claim ceiling}
+WR-IV inherits response equivalence and completion-fibre language from
+WR-I--III \cite{WRI,WRII,WRIII}. The realizability gate below is an
+inherited existence discipline, and the structural-wall bridge is a
+conditional transfer of WR-III geometry, not a new existence or
+singularity theory. It assumes a model in which a temporal
+decomposition is already meaningful. It does not infer physical time from WREH itself. It does not claim observation creates or rewrites the past, that mathematical completion implies physical existence, or that noninvertibility implies a branching ontology.
+
+\section{Response-conditioned completions}
+Let
+\[
+\Ccal(D)=\{W\in\Wcal: W\text{ is globally compatible with }D\}.
+\]
+A declared historical projection is a map
+\[
+\pi_-:\Wcal\to\Hminus.
+\]
+\begin{definition}[Past-completion set]
+\[
+\Pcal(D):=\pi_-(\Ccal(D)).
+\]
+\end{definition}
+\begin{definition}[Past rigidity]
+$D$ is past-rigid if $\Pcal(D)$ is a singleton, and world-rigid if $\Ccal(D)$ is a singleton.
+\end{definition}
+
+\begin{proposition}[World rigidity implies past rigidity]
+\label{prop:world-past}
+If $D$ is world-rigid, then $D$ is past-rigid.
+\end{proposition}
+\begin{proof}
+The image of a singleton under any map is a singleton.
+\end{proof}
+
+\begin{proposition}[The converse fails]
+\label{prop:converse}
+Past rigidity need not imply world rigidity.
+\end{proposition}
+\begin{proof}
+Take $\Wcal=\{(h_0,0),(h_0,1)\}$, set $\Ccal(D)=\Wcal$,
+and project both worlds onto $h_0$. Then $\Pcal(D)=\{h_0\}$,
+although $\Ccal(D)$ has two elements.
+\end{proof}
+
+
+\subsection{The WR-II realizability gate}
+
+For a declared protocol family $\mathcal P$, let
+$R:\Wcal\to\mathcal Y=\prod_{P\in\mathcal P}Y_P$ be the full
+response map. Use the profile representation of WR-II
+\cite[Sections 3--7]{WRII}. For finite $\mathcal A\subseteq\mathcal P$,
+write $R_{\mathcal A}=(R_P)_{P\in\mathcal A}$ and let
+$y_{\mathcal A}$ denote the coordinate restriction of $y$. Then
+\[
+\begin{aligned}
+\mathfrak C_{\mathrm{fin}}
+&=\{y\in\mathcal Y:y_{\mathcal A}\in R_{\mathcal A}(\Wcal)
+  \text{ for every finite }\mathcal A\subseteq\mathcal P\},\\
+\mathfrak D_{\mathrm{fin}}
+&=\mathfrak C_{\mathrm{fin}}\setminus R(\Wcal).
+\end{aligned}
+\]
+For the full-profile data $D_y$, compatibility means
+$\Ccal(D_y)=R^{-1}(y)$.
+
+\begin{proposition}[Realizability precedes historical ambiguity]
+\label{prop:realizability-gate}
+For the total map $\pi_-:\Wcal\to\Hminus$,
+\[
+\Pcal(D_y)=\varnothing
+\quad\Longleftrightarrow\quad
+\Ccal(D_y)=\varnothing
+\quad\Longleftrightarrow\quad
+y\notin R(\Wcal).
+\]
+In particular, a full profile $y\in\mathfrak D_{\mathrm{fin}}$
+has no compatible past in the declared model, despite realization
+of every finite restriction.
+\end{proposition}
+\begin{proof}
+An image under a total map is empty exactly when its domain is
+empty. The fibre $R^{-1}(y)$ is empty exactly when $y$ is outside
+the response image. The final statement uses the definition of
+$\mathfrak D_{\mathrm{fin}}$.
+\end{proof}
+
+\begin{remark}[Empty class versus ambiguous past]
+\label{rem:empty-past}
+Emptiness is model-relative nonrealizability, not past rigidity,
+physical disappearance of the past, or a failure of the Universe to
+exist. A defect of a full profile does not make its finite-data fibres
+empty. In the finite-support binary-world example of WR-II
+\cite[Section 7]{WRII}, $y=(1,1,\ldots)$ has an empty full fibre,
+but every finite restriction has a nonempty fibre. This is distinct
+from conditioning on a probability-zero event with a nonempty fibre,
+as in the Brownian endpoint example below.
+\end{remark}
+
+\section{Evidence refinement and non-rewriting}
+Throughout refinement, $\Wcal$, the reference temporal cut, and $\pi_-$
+are fixed. Write $D\preceq D'$ when $D'$ contains all hard constraints
+of $D$ and possibly further constraints. This order does not include a
+change of model or replacement of previous data. Refinement may leave
+the completion set unchanged or make it empty; consistency is stated
+separately when needed.
+\begin{theorem}[Completion refinement]
+\label{thm:completion-refinement}
+If $D\preceq D'$, then
+\[
+\Ccal(D')\subseteq\Ccal(D)
+\qquad\text{and}\qquad
+\Pcal(D')\subseteq\Pcal(D).
+\]
+\end{theorem}
+\begin{proof}
+Every world satisfying the stronger data set also satisfies the weaker one; applying $\pi_-$ preserves inclusion.
+\end{proof}
+\begin{corollary}[Past rigidity persists under consistent refinement]
+\label{cor:rigidity-persistence}
+If $D$ is past-rigid, $D\preceq D'$, and $\Ccal(D')\neq\varnothing$, then $D'$ is past-rigid with the same past projection.
+\end{corollary}
+\begin{remark}[Non-rewriting principle]
+Set refinement removes incompatible completions; it does not alter the histories carried by completions that remain. No physical rewriting of the past is implied.
+\end{remark}
+
+\section{Observable past versus hidden past}
+Let $Q_-:\Hminus\to\mathcal O_-$ encode accessible historical records and define
+\[
+\mathfrak O_-(D)=Q_-(\Pcal(D)).
+\]
+\begin{proposition}[Observable rigidity criterion]
+\label{prop:observable-rigidity}
+$\mathfrak O_-(D)$ is a singleton if and only if $\Pcal(D)$ is
+nonempty and $Q_-$ is constant on $\Pcal(D)$. Observable-past rigidity
+can coexist with hidden-past ambiguity.
+\end{proposition}
+\begin{proof}
+The criterion follows directly from the image definition. For the
+counterexample, take $\Pcal(D)=\{h_1,h_2\}$ with $h_1\ne h_2$ and
+$Q_-(h_1)=Q_-(h_2)$.
+\end{proof}
+Equality of records for one pair does not establish rigidity of a
+larger past-completion set.
+
+
+\subsection{When WR-III structural walls survive historical projection}
+
+In a topological response model, let $R:\Wcal\to E=R(\Wcal)$
+and $\pi_-:\Wcal\to\Hminus$ be continuous, with the declared
+topologies. For an open $U\subseteq E$, give
+\[
+\mathcal H_U
+=\{(y,h)\in U\times\Hminus:h\in\pi_-(R^{-1}(y))\}
+\]
+the subspace topology and let $p(y,h)=y$.
+WR-III defines a structural wall by failure of local fibre-bundle
+triviality over the attainable response image
+\cite[Section 8]{WRIII}.
+
+\begin{proposition}[Conditional transfer of structural walls]
+\label{prop:wall-transfer}
+If
+\[
+F:R^{-1}(U)\longrightarrow\mathcal H_U,
+\qquad F(W)=(R(W),\pi_-(W))
+\]
+is a homeomorphism, then $R:R^{-1}(U)\to U$ and
+$p:\mathcal H_U\to U$ have the same local-triviality locus.
+Thus their structural walls coincide within $U$.
+\end{proposition}
+\begin{proof}
+The identity $p\circ F=R$ makes $F$ an isomorphism of the two
+families over $U$. Compose a local bundle trivialization with $F$
+or $F^{-1}$ to transfer it in either direction.
+\end{proof}
+
+\begin{remark}[Projection can hide a structural wall]
+\label{rem:wall-erasure}
+The hypothesis concerns the whole response-indexed family, not
+only a separate homeomorphism on each fibre. It is sufficient and
+is not claimed necessary. Without such a bridge, a response wall
+need not be a past wall. In the sphere-height example of WR-III
+\cite[Section 10]{WRIII}, $R:S^2\to[-1,1]$, $R(x,y,z)=z$,
+has circle fibres in the interior and singleton fibres at the
+endpoints. Both endpoints are structural wall points. If the
+declared historical projection is constant, $\pi_-(W)=h_0$, then
+$\mathcal H_E=E\times\{h_0\}$ is a trivial historical family
+with no wall. The example tests information loss under projection;
+it supplies no physical temporal interpretation. Even an inherited
+failure of local triviality does not by definition require a change
+in the number of connected components. A response map is not a
+physical forward-evolution map unless a separate bridge says so.
+\end{remark}
+
+\section{Deterministic future with ambiguous past}
+Let $T:X\to X$ be deterministic. A full backward history ending at $x_0$ is
+\[
+(x_0,x_{-1},x_{-2},\ldots),
+\qquad T(x_{-n})=x_{-(n-1)}.
+\]
+Define
+\[
+\widehat X=\{(x_0,x_{-1},\ldots)\in X^{\mathbb N_0}:
+T(x_{-n})=x_{-(n-1)},\ n\ge1\},
+\qquad p_0(\widehat x)=x_0.
+\]
+Histories over a fixed $x_0$ form the fibre $p_0^{-1}(x_0)$,
+not the entire history space. For a continuous map on a topological
+space, use the subspace topology inherited from the product.
+These inverse-limit constructions are standard; the doubling-map
+case is the dyadic solenoid \cite[Section 1]{ClarkFokkink2004}.
+\begin{proposition}[Forward uniqueness and backward ambiguity]
+\label{prop:forward-backward}
+The forward orbit of $x_0$ is unique. Noninjectivity may allow
+multiple full backward histories, but does not guarantee their
+existence or multiplicity over every state.
+\end{proposition}
+\begin{proof}
+The forward orbit is $(x_0,T(x_0),T^2(x_0),\ldots)$.
+The doubling map below supplies an example of multiple full histories.
+In contrast, for $T:\mathbb N_0\to\mathbb N_0$ with $T(0)=1$ and
+$T(n)=n$ for $n\ge1$, no full history ends at $0$. Over $1$ the only
+full history is $(1,1,\ldots)$, since a predecessor $0$ cannot be
+continued backward.
+\end{proof}
+
+\section{Benchmark: doubling map}
+Let $X=\mathbb R/\mathbb Z$ and $T(x)=2x\pmod1$. Each present state has two one-step predecessors.
+\begin{theorem}[Cantor family of compatible full pasts]
+\label{thm:cantor-pasts}
+For every $x_0\in X$, the natural-extension fibre over $x_0$ is homeomorphic to $\{0,1\}^{\mathbb N}$.
+\end{theorem}
+\begin{proof}
+Fix the representative $r_0\in[0,1)$ of $x_0$. Given
+$\epsilon\in\{0,1\}^{\mathbb N}$, put
+\[
+r_n=(r_{n-1}+\epsilon_n)/2,\qquad x_{-n}=[r_n].
+\]
+Every history has unique representatives $r_n\in[0,1)$ and recovers
+the bits by $\epsilon_n=2r_n-r_{n-1}\in\{0,1\}$. The coding is
+therefore bijective. Each coordinate depends only on a finite prefix
+of bits, so the coding is continuous. Its domain is compact and the
+fibre is Hausdorff, hence the inverse is continuous. The identification
+uses the chosen branch labels; no global continuous inverse branch on
+the circle is asserted.
+\end{proof}
+\begin{corollary}[Finite backward records]
+\label{cor:finite-backward}
+Fixing any finite number of backward branch choices still leaves
+a Cantor family of compatible full histories.
+\end{corollary}
+\begin{proof}
+Deleting the finitely many fixed bit coordinates leaves a countably
+infinite set of free coordinates, whose product is homeomorphic to
+$\{0,1\}^{\mathbb N}$. For a fixed initial block these free coordinates
+describe older histories.
+\end{proof}
+
+\section{Physical inverse benchmark: retrospective smoothing of a diffusion}
+
+The doubling-map benchmark is exact and topological but not yet a physical inverse problem.
+We now add a standard stochastic-state-estimation benchmark. Fixed-interval smoothing
+estimates an earlier state using observations that occur after that state; in the linear
+Gaussian case the classical Rauch--Tung--Striebel smoother gives a closed-form solution
+\cite[Section 3.2]{RauchTungStriebel1965}
+\cite[Section 12.2, Theorem 12.2]{SarkkaSvensson2023}.
+The formulas below use direct Gaussian conditioning, not an
+implementation or a new derivation of the RTS recursion.
+
+\subsection{Gaussian retrospective contraction}
+
+Fix a previously observed data value $A=a$ and work throughout
+under its declared conditional law. Let $X\in\mathbb R^n$ denote a
+past state and $Z\in\mathbb R^m$ later data. Under this fixed law,
+assume $(X,Z)$ is jointly Gaussian with means $m_X,m_Z$ and covariance
+\[
+\begin{pmatrix}
+P & C\\
+C^\top & S
+\end{pmatrix},
+\qquad
+S\succ0.
+\]
+
+\begin{theorem}[Later Gaussian data cannot increase past covariance]
+\label{thm:gaussian-contraction}
+The conditional covariance of the earlier state after incorporating the later data is
+\[
+P_{\mathrm{smooth}}
+=
+P-CS^{-1}C^\top.
+\]
+Hence
+\[
+0\preceq P_{\mathrm{smooth}}\preceq P.
+\]
+Moreover, the reduction is strict in every direction coupled to the later data through \(C\).
+\end{theorem}
+
+\begin{proof}
+Set $E=X-m_X-CS^{-1}(Z-m_Z)$. Then
+$\operatorname{Cov}(E,Z)=0$, so Gaussianity makes $E$ and $Z$
+independent. The continuous Gaussian conditional kernel is
+\[
+X\mid Z=z\sim\mathcal N
+\bigl(m_X+CS^{-1}(z-m_Z),\,P-CS^{-1}C^\top\bigr),
+\]
+where degenerate Gaussian laws are allowed. This is the standard
+conditioning formula \cite[Appendix A.1, Lemma A.3]{SarkkaSvensson2023}.
+In particular,
+$P-CS^{-1}C^\top=\operatorname{Cov}(E)\succeq0$.
+Since \(S^{-1}\succ0\),
+\[
+CS^{-1}C^\top\succeq0,
+\]
+so \(P_{\mathrm{smooth}}\preceq P\). For a vector \(v\),
+\[
+v^\top(P-P_{\mathrm{smooth}})v
+=
+(C^\top v)^\top S^{-1}(C^\top v),
+\]
+which is positive exactly when \(C^\top v\neq0\).
+\end{proof}
+
+\begin{definition}[Retrospective covariance gain]
+Define
+\[
+\Delta P:=P-P_{\mathrm{smooth}}=CS^{-1}C^\top\succeq0.
+\]
+\end{definition}
+
+\begin{remark}[Probabilistic extension]
+All covariances above refer to the same fixed earlier data value
+$A=a$. The theorem controls covariance, and does not assert nesting
+of supports or of prior and posterior credible regions: their means
+may differ. In the scalar nondegenerate Gaussian benchmark, central
+intervals of a fixed probability become shorter, but may move outside
+the prior interval. A zero coupling $C=0$ gives no reduction.
+Positive residual covariance is not guaranteed by the general theorem;
+it is established separately below. Outside Gaussian models,
+pointwise monotonicity of conditional variance is not asserted.
+Exact hard-constraint refinement and probabilistic smoothing remain
+distinct layers.
+\end{remark}
+
+\subsection{Brownian bridge as an exactly solvable physical model}
+
+Fix $x_0\in\mathbb R$, $T>0$, and diffusivity $\kappa>0$. Let
+\[
+X_t=x_0+\sqrt{2\kappa}\,B_t,\qquad 0\le t\le T.
+\]
+The coefficient $\kappa$ has units of length squared per unit time
+and is distinct from the evidence symbol $D$.
+Here $B$ is standard Brownian motion. This is an idealized physical
+diffusion model, rather than an experimental validation of any specific
+system; see \cite{KaratzasShreve1998} for Brownian-motion background.
+
+With the deterministic initial state $X_0=x_0$ fixed, the marginal
+law before the endpoint observation (the prior for this smoothing
+problem) is
+\[
+X_t\sim
+\mathcal N(x_0,\,2\kappa t).
+\]
+
+Suppose an exact later endpoint $X_T=b$ is learned.
+This is an idealized observation. To define its conditional law despite
+$\mathbb P(X_T=b)=0$, work on the Polish space
+\[
+\Wcal_T=\{w\in C([0,T],\mathbb R):w(0)=x_0\}
+\]
+with the uniform topology and its Borel sigma-field.
+
+\paragraph{WREH dictionary for the endpoint experiment.}
+The benchmark uses the following fixed objects. Here $\mu$ is the
+unconditioned diffusion path law, and $0<\tau<T$ is a fixed earlier cut.
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Object & Declaration \\
+\midrule
+World / carrier & $w\in\Wcal_T$, a continuous path starting at $x_0$;
+  $\mu$ supplies its prior probability law. \\
+Protocol / response & Endpoint evaluation $R_{P_T}(w)=w(T)$. \\
+Data & $D_b$ records the exact endpoint $b$; $x_0$ is fixed in the carrier. \\
+Completion fibre & $\Ccal(D_b)=\{w\in\Wcal_T:w(T)=b\}$,
+  also denoted $\Ccal(x_0,b)$. \\
+Full pre-endpoint past & $\pi_-(w)=w|_{[0,T)}$,
+  with codomain $\pi_-(\Wcal_T)$. \\
+Fixed earlier fragment & $\pi_\tau(w)=w|_{[0,\tau]}$,
+  with codomain $C_{x_0}([0,\tau],\mathbb R)$. \\
+Conditional path law & $K_b$, a probability measure concentrated on
+  $\Ccal(D_b)$; the fibre is a set, whereas the bridge is a law on paths. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+The two historical projections answer different compatibility questions,
+as explained in Remark~\ref{rem:bridge-compatibility}.
+
+For every $b\in\mathbb R$, let $K_b$ be the law of
+\[
+U_t^b=x_0+\frac tT(b-x_0)
++\sqrt{2\kappa}\left(B_t-\frac tT B_T\right),
+\qquad 0\le t\le T.
+\]
+The residual Gaussian bridge has zero covariance with $B_T$ at every
+time. Thus its finite-dimensional vectors are independent of $B_T$;
+continuity and evaluations at rational times extend this to the path
+sigma-field. Since $X_t= x_0+t(X_T-x_0)/T+
+\sqrt{2\kappa}(B_t-tB_T/T)$, it follows that
+\[
+\mathbb P(X\in F,\ X_T\in E)
+=\int_E K_b(F)\,\mathbb P_{X_T}(db)
+\]
+for Borel $F\subseteq\Wcal_T$ and $E\subseteq\mathbb R$.
+Translation by the continuous mean path makes $b\mapsto K_b$ weakly
+continuous, in particular a measurable probability kernel.
+An arbitrary regular conditional law is determined only
+$\mathbb P_{X_T}$-almost everywhere; this explicit kernel selects a
+version for every $b$. The notation $X\mid X_T=b$ refers to $K_b$,
+not to division by a zero event probability. This residual construction
+is classical \cite[Theorem 22.1 and the following remark]{Pitman2003}.
+Its covariance is
+\[
+\operatorname{Cov}_{K_b}(X_s,X_t)
+=2\kappa\left(\min(s,t)-\frac{st}{T}\right).
+\]
+
+\begin{theorem}[Past uncertainty contracts but does not collapse]
+\label{thm:brownian-bridge}
+Conditioned on the later endpoint \(X_T=b\),
+\[
+X_t\mid X_T=b
+\sim
+\mathcal N\!\left(
+x_0+\frac{t}{T}(b-x_0),
+\;
+2\kappa\,\frac{t(T-t)}{T}
+\right).
+\]
+Therefore
+\[
+0<
+2\kappa\,\frac{t(T-t)}{T}
+<
+2\kappa t
+\qquad
+(0<t<T).
+\]
+The later exact observation strictly reduces uncertainty about the earlier state, but it does
+not determine that earlier state uniquely.
+\end{theorem}
+
+\begin{proof}
+The pair \((X_t,X_T)\) is jointly Gaussian with
+\[
+\operatorname{Var}(X_t)=2\kappa t,
+\qquad
+\operatorname{Var}(X_T)=2\kappa T,
+\qquad
+\operatorname{Cov}(X_t,X_T)=2\kappa t.
+\]
+Applying Theorem~\ref{thm:gaussian-contraction} gives
+\[
+\operatorname{Var}(X_t\mid X_T)
+=
+2\kappa t-\frac{(2\kappa t)^2}{2\kappa T}
+=
+2\kappa\,\frac{t(T-t)}{T}.
+\]
+The Gaussian conditional-mean formula gives the stated mean.
+\end{proof}
+
+\begin{corollary}[A full past path remains non-unique]
+\label{cor:path-nonuniqueness}
+The kernel $K_b$ is a Brownian-bridge law on continuous paths
+and is not concentrated on a single trajectory. It assigns probability
+zero to every countable family of trajectories.
+\end{corollary}
+\begin{proof}
+Fix $t_*\in(0,T)$. Its evaluation marginal under $K_b$ is a
+nondegenerate Gaussian law. Every singleton path imposes a singleton
+evaluation value, which has probability zero. Countable unions of such
+singleton paths also have probability zero.
+\end{proof}
+
+\begin{remark}
+\label{rem:bridge-compatibility}
+In this benchmark declare hard-constraint compatibility by
+\[
+\Ccal(x_0)=\Wcal_T,\qquad
+\Ccal(x_0,b)=\{w\in\Wcal_T:w(T)=b\}.
+\]
+The endpoint fibre is a proper subset of $\Wcal_T$, and $K_b$ is
+concentrated on it. These are compatibility classes, not sets of paths
+with positive singleton probability.
+For the full past before $T$, take $\pi_-(w)=w|_{[0,T)}$ and its
+codomain to be $\pi_-(\Wcal_T)$. Continuity makes this restriction
+injective. Its endpoint-conditioned image is therefore a proper
+subset of the prior image, characterized by limit $b$ as $t\uparrow T$.
+It remains uncountable by the preceding corollary.
+
+By contrast, for any fixed $\tau<T$, the projected compatibility set
+of fragments on $[0,\tau]$ is unchanged: every continuous fragment
+starting at $x_0$ can be extended continuously to $b$ at $T$.
+Its projected conditional law nevertheless has reduced variance at
+each $0<t\le\tau$. Thus strict whole-history refinement does not imply
+strict refinement of every earlier historical projection. No claim
+about topological support equality is inferred from positive variance.
+\end{remark}
+
+\subsection{Noisy later observation}
+
+Let the later measurement be
+\[
+Y_T=X_T+\eta,
+\qquad
+\eta\sim\mathcal N(0,R),
+\qquad
+R>0,
+\]
+independent of the diffusion.
+
+\begin{proposition}[Noisy retrospective contraction]
+\label{prop:noisy-contraction}
+For \(0<t<T\),
+\[
+\operatorname{Var}(X_t\mid Y_T)
+=
+2\kappa t\left(1-\frac{2\kappa t}{2\kappa T+R}\right),
+\]
+and
+\[
+0<
+\operatorname{Var}(X_t\mid Y_T)
+<
+2\kappa t.
+\]
+As \(R\downarrow0\), the formula converges to the Brownian-bridge
+variance; as $R\to\infty$, it converges to the prior variance.
+The continuous Gaussian kernel has mean
+\[
+\mathbb E[X_t\mid Y_T=y]
+=x_0+\frac{2\kappa t}{2\kappa T+R}(y-x_0).
+\]
+\end{proposition}
+
+\begin{proof}
+Use Theorem~\ref{thm:gaussian-contraction} with
+\[
+\operatorname{Cov}(X_t,Y_T)=2\kappa t,
+\qquad
+\operatorname{Var}(Y_T)=2\kappa T+R.
+\]
+The inequalities follow because \(\kappa,t,R>0\) and \(t<T\).
+\end{proof}
+
+\begin{remark}[Noisy compatibility and support]
+For observed $y$, the path likelihood is
+\[
+L_y(w)=\frac{1}{\sqrt{2\pi R}}
+\exp\!\left[-\frac{(y-w(T))^2}{2R}\right]>0.
+\]
+It is bounded and has a finite positive prior integral. Bayes' formula
+therefore defines a posterior equivalent to the prior path measure:
+both have the same null sets and the same topological support.
+If worlds include measurement noise, exact observation constrains
+$(w,\eta)$ by $w(T)+\eta=y$, but its projection onto $w$ is all of
+$\Wcal_T$, since $\eta=y-w(T)$ is always available.
+\end{remark}
+
+\begin{remark}[Physical reading]
+A later noisy measurement improves retrodiction of an earlier diffusive state without making
+the past exact. This is standard fixed-interval smoothing behavior, not a WREH discovery.
+The WREH role of the benchmark is to make the status-of-the-past distinction operational:
+later evidence can sharpen a past posterior while residual historical ambiguity remains.
+\end{remark}
+
+\section{Construction order versus internal time}
+\begin{remark}[Inference order and temporal order]
+The definitions supply an evidence-refinement order and, separately,
+a declared temporal model. No map identifying the two orders is
+specified. Any physical identification requires an additional stated
+bridge. This is a scope convention, not a general impossibility theorem.
+\end{remark}
+
+\section{Prior-art boundary}
+Inverse-limit history systems and dyadic solenoids are established
+objects \cite[Section 1]{ClarkFokkink2004}. Gaussian conditioning
+\cite[Appendix A.1]{SarkkaSvensson2023}, Brownian bridges
+\cite{Pitman2003}, and retrospective smoothing
+\cite{RauchTungStriebel1965} are classical tools.
+The image, realizability-gate, and refinement propositions are
+elementary consequences of the definitions. The structural-wall
+transfer follows by conjugating local trivializations and inherits
+the WR-III notion; it is not a new bifurcation theorem. This version organizes these results within
+the WREH history-projection framework; it claims no theorem priority
+for them. Originality of the wider classification has not been
+certified by an exhaustive prior-art comparison.
+No projective-extension theorem is used: existence of Brownian motion
+is assumed in the benchmark, and its conditional kernel is constructed
+explicitly.
+
+\section{Open obligations}
+\begin{enumerate}
+\item complete the broader prior-art comparison with observability,
+identifiability, natural extensions, retrodiction, and reconstruction
+under partial observations; the source mapping for the specific
+benchmarks is recorded in the accompanying repair audit;
+\item retain the distinction between a framework exposition and a new
+technical theorem; upstream DOI records have been checked, while a full
+cross-manuscript duplication audit remains separate;
+\item give a several-observation-time example in a declared linear
+Gaussian state-space model, using the standard Rauch--Tung--Striebel
+(RTS) backward recursion \cite[Section 3.2]{RauchTungStriebel1965}
+\cite[Section 12.2, Theorem 12.2]{SarkkaSvensson2023}, and compare
+exact-set versus probabilistic historical uncertainty. This is an
+application obligation, not a new smoothing algorithm; nonlinear
+models require separate treatment;
+\item finite-resolution observable-past equivalence;
+\item a non-duplicative topological or metric theory of past-completion sets;
+\item an HTML demo of backward-history branching and evidence refinement.
+\end{enumerate}
+
+\section*{Conclusion}
+Knowing a present response, knowing that a global completion exists, knowing a unique hidden past, and knowing a unique observable past are distinct statements. An unrealizable full profile has an empty historical class only relative to the declared model. Structural walls transfer to historical families under the stated topological bridge, and may otherwise disappear under projection. Under accumulated hard constraints the compatible completion classes are nested, possibly equal; no rewriting operation is required. Noninvertible deterministic dynamics provides a clean benchmark in which the future is unique while the full past remains highly nonunique. In the Brownian endpoint benchmark, later observations reduce
+interior-state variance without determining a unique path. Exact
+endpoint data restrict full histories before $T$, but need not exclude
+any fragment on a fixed interval ending strictly before $T$. Noisy
+Gaussian endpoint data preserve path-measure support. These conclusions
+refer to different declared mathematical objects.
+
+\paragraph{Review status.}
+This is a revised review draft responding to Reviewer 1, not a
+publication-ready release.
+The broader prior-art and cross-manuscript checks listed above remain
+open. Content licence: CC BY 4.0, subject to the repository's
+third-party-material exclusions.
+
+\begin{thebibliography}{99}
+\bibitem{WRI} A. A. Malachevsky, \emph{Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations}, WR-I, WREH (2026). DOI: 10.5281/zenodo.23210258.
+\bibitem{WRII} A. A. Malachevsky, \emph{Finite Consistency and Global World Realizability}, WR-II, WREH (2026). DOI: 10.5281/zenodo.23224154.
+\bibitem{WRIII} A. A. Malachevsky, \emph{Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls}, WR-III, WREH (2026). DOI: 10.5281/zenodo.23228682.
+
+\bibitem{RauchTungStriebel1965}
+H. E. Rauch, F. Tung, and C. T. Striebel,
+\emph{Maximum Likelihood Estimates of Linear Dynamic Systems},
+AIAA Journal 3(8) (1965), 1445--1450.
+DOI: 10.2514/3.3166.
+
+\bibitem{SarkkaSvensson2023}
+S. S\"arkk\"a and L. Svensson,
+\emph{Bayesian Filtering and Smoothing}, 2nd ed.,
+Cambridge University Press, 2023.
+DOI: 10.1017/9781108917407.
+
+\bibitem{KaratzasShreve1998}
+I. Karatzas and S. E. Shreve,
+\emph{Brownian Motion and Stochastic Calculus}, 2nd ed.,
+Springer, 1998.
+DOI: 10.1007/978-1-4612-0949-2.
+\bibitem{ClarkFokkink2004}
+A. Clark and R. Fokkink,
+\emph{Embedding solenoids},
+Fundamenta Mathematicae 181(2) (2004), 111--124.
+DOI: \href{https://doi.org/10.4064/fm181-2-2}{10.4064/fm181-2-2}.
+
+\bibitem{Pitman2003}
+J. W. Pitman, \emph{Brownian Bridge},
+Stat205B: Probability Theory, Lecture 22, Spring 2003,
+University of California, Berkeley; scribe T. Chen.
+\url{https://www.stat.berkeley.edu/~pitman/s205s03/b_bridge.pdf}.
+\end{thebibliography}
+\end{document}
