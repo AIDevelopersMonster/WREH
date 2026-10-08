@@ -312,46 +312,65 @@ map. It is not by itself a phase-transition criterion, dynamical instability,
 or physical criticality statement.
 \end{remark}
 
-\section{Upper hemicontinuity}
+\section{Upper hemicontinuity and the closed-map criterion}
 
 A correspondence
 \[
 \Phi:E\rightrightarrows\X
 \]
-is upper hemicontinuous at \(e\) if every open \(U\subseteq\X\) with
+is upper hemicontinuous at \(e\) if for every open \(U\subseteq\X\) with
 \[
-\Phi(e)\subseteq U
+\Phi(e)\subseteq U,
 \]
-contains all nearby fibres.
+there is a neighborhood \(V\) of \(e\) such that
+\[
+\Phi(e')\subseteq U
+\qquad(e'\in V).
+\]
 
-\begin{theorem}[Compact-carrier upper hemicontinuity]
+\begin{theorem}[Closed-map criterion]
+\label{thm:closed-map}
+Let \(R:\X\to E\) be a surjection. The inverse correspondence
+\[
+\Phi(e)=R^{-1}(e)
+\]
+is upper hemicontinuous if and only if \(R\) is a closed map.
+\end{theorem}
+
+\begin{proof}
+Assume first that \(R\) is closed. Let \(U\subseteq\X\) be open with
+\(\Phi(e)\subseteq U\). Then \(C=\X\setminus U\) is closed and
+\(e\notin R(C)\). Since \(R(C)\) is closed,
+\[
+V:=E\setminus R(C)
+\]
+is an open neighborhood of \(e\), and every fibre above \(V\) is contained
+in \(U\).
+
+Conversely, suppose the inverse correspondence is upper hemicontinuous and let
+\(C\subseteq\X\) be closed. If \(e\notin R(C)\), then
+\[
+\Phi(e)\subseteq\X\setminus C.
+\]
+Upper hemicontinuity gives a neighborhood \(V\) of \(e\) whose fibres avoid
+\(C\). Hence \(V\cap R(C)=\varnothing\), so \(R(C)\) is closed.
+\end{proof}
+
+\begin{corollary}[Compact-carrier upper hemicontinuity]
 \label{thm:uhc}
 Let \(\X\) be compact, let \(E\) be Hausdorff, and let
 \[
 R:\X\to E
 \]
-be continuous and surjective. Then the inverse correspondence
-\[
-\Phi(e)=R^{-1}(e)
-\]
-has nonempty compact values and is upper hemicontinuous.
-\end{theorem}
+be continuous and surjective. Then the inverse correspondence has nonempty
+compact values and is upper hemicontinuous.
+\end{corollary}
 
 \begin{proof}
-Every fibre is nonempty and closed, hence compact. Suppose upper
-hemicontinuity fails at \(e\). Then some open \(U\supseteq\Phi(e)\) admits a
-net \(e_i\to e\) and points
-\[
-x_i\in\Phi(e_i)\setminus U.
-\]
-Compactness gives a convergent subnet \(x_i\to x\in\X\setminus U\). By
-continuity,
-\[
-R(x)=e,
-\]
-contradicting \(x\in\Phi(e)\subseteq U\).
+A continuous map from a compact space to a Hausdorff space is closed. Apply
+Theorem~\ref{thm:closed-map}. Each fibre is the preimage of a closed singleton
+and is therefore compact.
 \end{proof}
-
 \section{Lower hemicontinuity and openness}
 
 A correspondence \(\Phi:E\rightrightarrows\X\) is lower hemicontinuous if for
@@ -362,6 +381,7 @@ every open \(U\subseteq\X\), the set
 is open.
 
 \begin{theorem}[Openness criterion]
+\label{thm:open-map}
 Let \(R:\X\to E\) be a surjection. Its inverse correspondence
 \[
 \Phi(e)=R^{-1}(e)
@@ -448,6 +468,40 @@ satisfies
 \]
 \end{corollary}
 
+\begin{theorem}[Hausdorff continuity under an open response map]
+\label{thm:hausdorff-cont}
+Let \((\X,d)\) be compact metric, let \(E\) be metric, and let
+\[
+R:\X\to E
+\]
+be continuous, surjective, and open. Then the compact fibres
+\[
+e\longmapsto R^{-1}(e)
+\]
+vary continuously in the Hausdorff metric. Consequently, \(D(e)\) is
+continuous.
+\end{theorem}
+
+\begin{proof}
+By Theorems~\ref{thm:closed-map} and \ref{thm:open-map}, the fibre
+correspondence is upper and lower hemicontinuous. Let \(e_n\to e\).
+Upper hemicontinuity gives, for every \(\varepsilon>0\),
+\[
+R^{-1}(e_n)\subseteq N_\varepsilon(R^{-1}(e))
+\]
+for all sufficiently large \(n\). Conversely, cover the compact fibre
+\(R^{-1}(e)\) by finitely many balls \(B(x_j,\varepsilon/2)\). Lower
+hemicontinuity implies that for all large \(n\), every such ball meets
+\(R^{-1}(e_n)\). Hence
+\[
+d_H(R^{-1}(e_n),R^{-1}(e))\to0.
+\]
+For nonempty compact \(A,B\subseteq\X\),
+\[
+|\operatorname{diam}A-\operatorname{diam}B|\le2d_H(A,B),
+\]
+so \(D(e_n)\to D(e)\).
+\end{proof}
 \begin{remark}
 Exact rigidity need not be open. Unique identification can occur at a
 structural singularity.
@@ -490,28 +544,37 @@ Neither the structural wall nor the combined realizability wall is assumed to
 be a hypersurface, manifold, or codimension-one set.
 \end{remark}
 \begin{definition}[Attainable-response boundary]
-If \(E\subseteq Y\) is embedded in a declared ambient response space \(Y\),
-define
+Let \(M\) be a declared response manifold or tame response stratum in which
+\(E\subseteq M\) is full-dimensional. Define
 \[
-\partial_YE
+\partial_M E
 \]
-to be its boundary in \(Y\).
+to be the topological boundary of \(E\) in \(M\).
 \end{definition}
 
-\begin{definition}[Realizability wall]
-Relative to the declared ambient response space \(Y\), define
+\begin{definition}[Combined WREH realizability-wall diagnostic]
+When such a full-dimensional ambient response space \(M\) has been justified,
+define
 \[
 \Sigma_{\mathrm{real}}
 =
-\Sigma_{\mathrm{str}}\cup\partial_YE.
+\Sigma_{\mathrm{str}}\cup\partial_M E.
 \]
 \end{definition}
 
+\begin{remark}[Ambient-space firewall]
+If \(E\) is lower-dimensional in an arbitrarily chosen ambient product space,
+its ambient boundary may equal all of \(E\). In that situation the combined
+diagnostic is not formed until an intrinsic or full-dimensional response
+manifold/stratum is declared. The internal structural wall
+\(\Sigma_{\mathrm{str}}\) remains well defined on \(E\) itself.
+\end{remark}
+
 \begin{remark}
 The two pieces have different meanings. The boundary separates attainable
-from unattainable responses in the declared model. The internal structural
-wall records failure of local fibre triviality among attainable responses.
-Neither is automatically a physical boundary.
+from unattainable responses in the declared full-dimensional response model.
+The internal structural wall records failure of local fibre triviality among
+attainable responses. Neither is automatically a physical boundary.
 \end{remark}
 
 \section{Smooth proper response maps}
