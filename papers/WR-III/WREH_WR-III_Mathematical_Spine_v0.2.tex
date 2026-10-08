@@ -376,13 +376,20 @@ Consequently,
 \end{theorem}
 
 \begin{proof}
-The critical set is closed. Proper maps are closed, so the set of critical
-values is closed. Hence a regular value has a neighborhood \(U\subseteq Y\)
-containing no critical values. The restriction
+The critical set is closed. Since a proper map between manifolds is closed,
+its critical-value set is closed.
+
+Choose \(x\in R^{-1}(e)\). Because \(e\) is a regular value, the
+differential \(dR_x\) is surjective. The submersion theorem therefore gives
+an open neighborhood \(U_0\subseteq Y\) of \(e\) contained in the image
+\(E\). Since the critical-value set is closed and does not contain \(e\),
+there is an open neighborhood \(U_1\subseteq Y\) of \(e\) containing no
+critical values. Set \(U=U_0\cap U_1\). Then
 \[
 R:R^{-1}(U)\to U
 \]
-is a proper submersion. Ehresmann's fibration theorem implies local triviality.
+is surjective, proper, and a submersion. Ehresmann's fibration theorem implies
+local triviality.
 \end{proof}
 
 \begin{corollary}[Constant smooth fibre type off the wall]
