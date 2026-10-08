@@ -11,9 +11,9 @@
 
 ## First technical sequence
 
-1. **WR-I** — *Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations* — **ACTIVE / REVIEWED_CLEAN v0.2**.
-2. **WR-II** — *Finite Consistency and Global World Realizability* — **DOWNSTREAM / NOT YET OPENED AS A PUBLICATION**.
-3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — PLANNED.
+1. **WR-I** — *Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations* — **PUBLISHED / FROZEN v0.3** — DOI: `10.5281/zenodo.23210258`.
+2. **WR-II** — *Finite Consistency and Global World Realizability* — **PUBLISHED / FROZEN v0.5** — DOI: `10.5281/zenodo.23224154`.
+3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **DEVELOPMENT GATE OPEN / ACTIVE NEXT PAPER**.
 4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — PLANNED.
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — PLANNED.
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — PLANNED.
@@ -23,14 +23,14 @@
 
 ## Current publication gate
 
-WR-I has completed its first formal review round and is currently at `REVIEWED_CLEAN`.
+WR-I and WR-II are published and frozen.
 
-Before WR-I is frozen or released as a publication candidate, the remaining gates are:
+- WR-I DOI: `10.5281/zenodo.23210258`
+- WR-II DOI: `10.5281/zenodo.23224154`
 
-1. final novelty and bibliography audit;
-2. final PDF/render audit from the repository source;
-3. author decision on licence;
-4. final release metadata and DOI after deposition/publication.
+The next permitted technical action is WR-III development.
+
+WR-III inherits the WR-I response maps and quotients together with the WR-II data-compatible fibre language. Its new target is not existence, but the geometry and regularity of **nonempty** admissible world fibres as response data vary and protocols are refined.
 
 ## WR-I -> WR-II handoff
 
@@ -50,3 +50,28 @@ WR-II may use these objects to study finite/local consistency versus global real
 ## Anti-duplication rule
 
 The planned sequence is obligation-driven. A paper number does not authorize a publication automatically. New technical work must introduce a genuinely new mathematical obligation rather than repackage quotient, fibre, refinement, wall, or gluing constructions already owned by another branch or precursor.
+
+
+## WR-II -> WR-III handoff
+
+WR-II decides whether a compatible response profile has a global realization and how finite/global fitting radii compare. WR-III starts after nonempty compatible fibres are present and studies how those fibres vary.
+
+Canonical WR-III object:
+[
+Phi_{mathcal A}(e):=R_{mathcal A}^{-1}(e),
+qquad ein E_{mathcal A}.
+]
+
+WR-III may study:
+- upper/lower semicontinuity of the fibre correspondence;
+- metric fibre diameter and other declared invariants;
+- monotonicity under protocol refinement;
+- rigidity loci;
+- smooth regular-value geometry;
+- mathematical response-space walls where local fibre structure changes.
+
+WR-III must not:
+- rebrand WR-I response equivalence as a new theorem;
+- repackage WR-II existence/nonexistence criteria as fibre geometry;
+- import BC walls, fibres, atlases, or parameter flows as physical cosmological objects without an explicit bridge;
+- identify a response-space wall with a physical boundary of the Universe.
