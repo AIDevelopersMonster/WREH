@@ -1,6 +1,6 @@
 # WR-III v0.6 release checklist
 
-Status: **PUBLICATION_READY**
+Status: **PUBLISHED / FROZEN**
 
 - [x] External AI review 1 incorporated.
 - [x] External AI review 2 incorporated.
@@ -20,7 +20,7 @@ Status: **PUBLICATION_READY**
 - [x] Fonts embedded in both PDFs.
 - [x] Cross-references resolved.
 - [x] No unresolved C0-C5 publication blockers known.
-- [ ] DOI assigned.
-- [ ] Zenodo deposition created.
-- [ ] DOI stamped into final archival PDFs after assignment.
-- [ ] Publication branch frozen after DOI deposition.
+- [x] DOI assigned: `10.5281/zenodo.23228682`.
+- [x] Zenodo deposition created.
+- [x] DOI stamped into final archival EN/RU PDFs.
+- [x] Publication metadata frozen at v0.6 after DOI deposition.
