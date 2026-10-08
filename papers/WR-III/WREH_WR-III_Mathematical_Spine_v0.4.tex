@@ -1,0 +1,1146 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{example}[definition]{Example}
+\newtheorem{remark}[definition]{Remark}
+
+\newcommand{\X}{\mathcal X}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\Bcal}{\mathcal B}
+
+\hypersetup{
+  pdftitle={WR-III: Geometry of Admissible World Fibres},
+  pdfauthor={A. A. Malachevsky},
+  pdfsubject={World Realizability and Epistemic Horizons (WREH), WR-III},
+  pdfkeywords={world fibres, inverse images, identifiability, rigidity, refinement, set-valued maps, realizability walls}
+}
+
+\title{\textbf{WR-III Mathematical Spine v0.4}\\[4pt]
+\large Geometry of Admissible World Fibres:\\
+Refinement, Rigidity and Realizability Walls}
+\author{A. A. Malachevsky\\
+ORCID: 0009-0008-6009-3196\\
+World Realizability \& Epistemic Horizons (WREH)\\
+Research Programme \& Community}
+\date{8 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+WR-III studies the geometry of nonempty inverse fibres left after the
+identifiability and realizability questions of WR-I and WR-II. For a declared
+geometric realization carrier and a response map indexed by a protocol bundle,
+we introduce the inverse-fibre correspondence over the realizable response
+image. We prove monotone fibre shrinkage under protocol refinement, establish
+upper hemicontinuity on compact carriers, characterize lower hemicontinuity by
+openness of the response map, and derive upper semicontinuity of fibre diameter
+on compact metric carriers. These results yield open finite-resolution
+rigidity loci. In the smooth proper setting, Ehresmann's theorem supplies local
+triviality over regular values, motivating an intrinsic structural wall as the
+failure locus of local fibre triviality. This wall is kept distinct from the
+boundary of the attainable response image. The framework is model-relative:
+no response-space wall is identified with a physical boundary or phase
+transition without an additional bridge.
+\end{abstract}
+
+\section{Upstream interface}
+
+WR-III begins after WR-I and WR-II. Let \(\X\) be the declared geometric
+realization carrier and let
+\[
+R_{\Acal}:\X\to Y_{\Acal}
+\]
+be the response map associated with an admissible protocol bundle \(\Acal\).
+Its realizable response image is
+\[
+E_{\Acal}:=R_{\Acal}(\X).
+\]
+
+The carrier \(\X\) may be the original admissible world class or a justified
+gauge-reduced carrier. WR-III does not assume that a gauge quotient exists, is
+Hausdorff, metric, or smooth unless those properties are stated.
+
+\begin{definition}[Admissible world fibre]
+For \(e\in E_{\Acal}\), define
+\[
+\Phi_{\Acal}(e):=R_{\Acal}^{-1}(e).
+\]
+\end{definition}
+
+Every fibre considered in WR-III is nonempty by construction. Whether a
+response is realizable belongs upstream to WR-II.
+
+\section{Refinement geometry}
+
+Suppose \(\Acal\subseteq\Bcal\) and
+\[
+R_{\Acal}
+=
+\rho_{\Bcal\Acal}\circ R_{\Bcal}.
+\]
+
+\begin{proposition}[Refinement inclusion]
+For every \(e_{\Bcal}\in E_{\Bcal}\),
+\[
+\Phi_{\Bcal}(e_{\Bcal})
+\subseteq
+\Phi_{\Acal}\bigl(\rho_{\Bcal\Acal}(e_{\Bcal})\bigr).
+\]
+\end{proposition}
+
+\begin{proof}
+If \(x\in\Phi_{\Bcal}(e_{\Bcal})\), then
+\[
+R_{\Bcal}(x)=e_{\Bcal}.
+\]
+Applying \(\rho_{\Bcal\Acal}\) gives
+\[
+R_{\Acal}(x)=\rho_{\Bcal\Acal}(e_{\Bcal}),
+\]
+so \(x\) lies in the coarser fibre.
+\end{proof}
+
+Assume now that \((\X,d)\) is metric.
+
+\begin{definition}[Fibre diameter]
+For nonempty \(F\subseteq\X\), define
+\[
+\operatorname{diam}F
+=
+\sup\{d(x,x'):x,x'\in F\}.
+\]
+Set
+\[
+D_{\Acal}(e)
+:=
+\operatorname{diam}\Phi_{\Acal}(e).
+\]
+\end{definition}
+
+\begin{corollary}[Diameter monotonicity under refinement]
+For \(\Acal\subseteq\Bcal\),
+\[
+D_{\Bcal}(e_{\Bcal})
+\le
+D_{\Acal}\bigl(\rho_{\Bcal\Acal}(e_{\Bcal})\bigr).
+\]
+\end{corollary}
+
+\begin{remark}
+This monotonicity is informational. It does not imply a physical time arrow,
+dynamical contraction, entropy law, or renormalization flow.
+\end{remark}
+
+\section{Refinement rigidity and conditional rank}
+
+Let \(\Acal\subseteq\Bcal\) with response restriction
+\[
+R_{\Acal}=\rho_{\Bcal\Acal}\circ R_{\Bcal}.
+\]
+
+\begin{definition}[Rigidity loci]
+For \(\varepsilon>0\), define
+\[
+\mathcal R_{\Acal}^{\varepsilon}
+=
+\{e\in E_{\Acal}:D_{\Acal}(e)<\varepsilon\},
+\]
+and let \(\mathcal R_{\Acal}^{0}\) denote the exact-rigidity locus.
+\end{definition}
+
+\begin{theorem}[Pulled-back rigidity monotonicity]
+\label{thm:rigidity-pullback}
+For every \(\varepsilon\ge0\),
+\[
+E_{\Bcal}\cap
+\rho_{\Bcal\Acal}^{-1}
+(\mathcal R_{\Acal}^{\varepsilon})
+\subseteq
+\mathcal R_{\Bcal}^{\varepsilon}.
+\]
+Thus protocol refinement cannot destroy exact or finite-resolution rigidity
+already present at the coarser response.
+\end{theorem}
+
+\begin{proof}
+For \(\varepsilon>0\), this is immediate from fibre inclusion and diameter
+monotonicity. For \(\varepsilon=0\), a nonempty refined fibre contained in
+a singleton coarse fibre is the same singleton.
+\end{proof}
+
+\begin{definition}[Rigidity gain]
+For a metric realization carrier define
+\[
+G_{\Bcal\mid\Acal}(e_{\Bcal})
+:=
+D_{\Acal}(\rho_{\Bcal\Acal}(e_{\Bcal}))
+-D_{\Bcal}(e_{\Bcal})
+\ge0.
+\]
+This is a metric- and protocol-dependent quantity measuring how much the
+added response block reduces fibre diameter.
+\end{definition}
+
+The smooth finite-dimensional case admits a sharper local criterion. Suppose
+\[
+R_{\Bcal}=(R_{\Acal},S):\X\to Y_{\Acal}\times Z,
+\]
+where \(S:\X\to Z\) is the added response block.
+
+\begin{theorem}[Conditional-rank formula for an added response block]
+\label{thm:conditional-rank}
+Let \(x\in\X\) be a point at which
+\[
+dR_{\Acal,x}:T_x\X\to T_{R_{\Acal}(x)}Y_{\Acal}
+\]
+is surjective. Then
+\[
+\operatorname{rank}dR_{\Bcal,x}
+=
+\dim Y_{\Acal}
++
+\operatorname{rank}
+\left(
+dS_x\big|_{\ker dR_{\Acal,x}}
+\right).
+\]
+In particular, \(R_{\Bcal}\) is a submersion at \(x\) if and only if
+\[
+dS_x\big|_{\ker dR_{\Acal,x}}:
+\ker dR_{\Acal,x}\to T_{S(x)}Z
+\]
+is surjective.
+\end{theorem}
+
+\begin{proof}
+Since \(dR_{\Acal,x}\) is surjective, choose a linear splitting
+\[
+T_x\X=H_x\oplus\ker dR_{\Acal,x}
+\]
+such that \(dR_{\Acal,x}|_{H_x}\) is an isomorphism onto
+\(T_{R_{\Acal}(x)}Y_{\Acal}\). The image of
+\[
+dR_{\Bcal,x}=(dR_{\Acal,x},dS_x)
+\]
+contains a graph over the entire coarse-response tangent space, while the
+additional independent directions in the \(Z\)-factor are exactly
+\[
+dS_x(\ker dR_{\Acal,x}).
+\]
+Hence the rank is the coarse target dimension plus the rank of this
+conditional derivative. Surjectivity onto the product is therefore
+equivalent to surjectivity of the conditional derivative.
+\end{proof}
+
+\begin{definition}[Conditional rank-defect set]
+On the coarse-regular locus define
+\[
+\mathcal C_{\Bcal\mid\Acal}
+=
+\left\{
+x:
+dR_{\Acal,x}\text{ is surjective and }
+\operatorname{rank}
+\left(dS_x|_{\ker dR_{\Acal,x}}\right)
+<\dim Z
+\right\}.
+\]
+\end{definition}
+
+\begin{corollary}[Container for refinement-created walls]
+\label{cor:new-wall-container}
+Assume \(R_{\Bcal}=(R_{\Acal},S)\) is smooth and proper. Let
+\(e_{\Bcal}=(e_{\Acal},z)\) be a refined response whose coarse component
+\(e_{\Acal}\) is a regular value of \(R_{\Acal}\). If
+\(e_{\Bcal}\) lies on the structural wall of \(R_{\Bcal}\), then
+\[
+e_{\Bcal}\in
+R_{\Bcal}(\mathcal C_{\Bcal\mid\Acal}).
+\]
+Thus a new refined wall above a coarse-regular response requires loss of
+conditional rank in the added response block along the coarse fibre.
+\end{corollary}
+
+\begin{proof}
+Proper smooth structural-wall points are critical values of
+\(R_{\Bcal}\). Hence some
+\(x\in R_{\Bcal}^{-1}(e_{\Bcal})\) is critical for the refined map.
+Because \(e_{\Acal}\) is a regular value, \(dR_{\Acal,x}\) is
+surjective. Theorem~\ref{thm:conditional-rank} then forces conditional
+rank loss at \(x\).
+\end{proof}
+
+\begin{remark}[Interpretation firewall]
+The conditional-rank criterion is differential geometry of an observation
+map. It is not by itself a phase-transition criterion, dynamical instability,
+or physical criticality statement.
+\end{remark}
+
+\section{Rigidity}
+
+\begin{definition}[Exact and finite-resolution rigidity]
+A response \(e\in E_{\Acal}\) is exactly rigid if
+\[
+\Phi_{\Acal}(e)
+\]
+is a singleton.
+
+For \(\varepsilon>0\), it is strictly \(\varepsilon\)-rigid if
+\[
+D_{\Acal}(e)<\varepsilon.
+\]
+\end{definition}
+
+\begin{proposition}[Refinement preserves rigidity]
+If \(e_{\Bcal}\) refines \(e_{\Acal}\), then exact rigidity or strict
+\(\varepsilon\)-rigidity of the coarser fibre implies the same property for
+the finer fibre.
+\end{proposition}
+
+\begin{proof}
+This follows from nonempty fibre inclusion.
+\end{proof}
+
+\section{Upper hemicontinuity}
+
+A correspondence
+\[
+\Phi:E\rightrightarrows\X
+\]
+is upper hemicontinuous at \(e\) if every open \(U\subseteq\X\) with
+\[
+\Phi(e)\subseteq U
+\]
+contains all nearby fibres.
+
+\begin{theorem}[Compact-carrier upper hemicontinuity]
+\label{thm:uhc}
+Let \(\X\) be compact, let \(E\) be Hausdorff, and let
+\[
+R:\X\to E
+\]
+be continuous and surjective. Then the inverse correspondence
+\[
+\Phi(e)=R^{-1}(e)
+\]
+has nonempty compact values and is upper hemicontinuous.
+\end{theorem}
+
+\begin{proof}
+Every fibre is nonempty and closed, hence compact. Suppose upper
+hemicontinuity fails at \(e\). Then some open \(U\supseteq\Phi(e)\) admits a
+net \(e_i\to e\) and points
+\[
+x_i\in\Phi(e_i)\setminus U.
+\]
+Compactness gives a convergent subnet \(x_i\to x\in\X\setminus U\). By
+continuity,
+\[
+R(x)=e,
+\]
+contradicting \(x\in\Phi(e)\subseteq U\).
+\end{proof}
+
+\section{Lower hemicontinuity and openness}
+
+A correspondence \(\Phi:E\rightrightarrows\X\) is lower hemicontinuous if for
+every open \(U\subseteq\X\), the set
+\[
+\{e\in E:\Phi(e)\cap U\neq\varnothing\}
+\]
+is open.
+
+\begin{theorem}[Openness criterion]
+Let \(R:\X\to E\) be a surjection. Its inverse correspondence
+\[
+\Phi(e)=R^{-1}(e)
+\]
+is lower hemicontinuous if and only if \(R\) is an open map.
+\end{theorem}
+
+\begin{proof}
+For every open \(U\subseteq\X\),
+\[
+R(U)
+=
+\{e\in E:\Phi(e)\cap U\neq\varnothing\}.
+\]
+Thus the defining condition for lower hemicontinuity is exactly openness of
+\(R\).
+\end{proof}
+
+\begin{corollary}
+If \(\X\) is compact, \(E\) is Hausdorff, and \(R\) is continuous, surjective,
+and open, then its inverse correspondence is both upper and lower
+hemicontinuous.
+\end{corollary}
+
+\section{Fibre-diameter stability}
+
+\begin{theorem}[Diameter upper semicontinuity]
+\label{thm:diam-usc}
+Let \((\X,d)\) be compact metric, let \(E\) be metric, and let
+\[
+R:\X\to E
+\]
+be continuous and surjective. Then
+\[
+D(e):=\operatorname{diam}R^{-1}(e)
+\]
+is upper semicontinuous.
+\end{theorem}
+
+\begin{proof}
+Let \(e_n\to e\). Choose
+\[
+x_n,x_n'\in R^{-1}(e_n)
+\]
+with
+\[
+d(x_n,x_n')
+\ge D(e_n)-\frac1n.
+\]
+Pass to a subsequence realizing the limsup. Compactness gives
+\[
+x_n\to x,\qquad x_n'\to x'.
+\]
+Continuity gives \(R(x)=R(x')=e\), and therefore
+\[
+\limsup_{n\to\infty}D(e_n)
+\le d(x,x')
+\le D(e).
+\]
+\end{proof}
+
+\begin{corollary}[Open finite-resolution rigidity loci]
+For every \(\varepsilon>0\),
+\[
+\mathcal R_\varepsilon
+=
+\{e\in E:D(e)<\varepsilon\}
+\]
+is open.
+\end{corollary}
+
+\begin{corollary}[Exact rigidity is a \(G_\delta\) locus]
+The exact rigidity locus
+\[
+\mathcal R_0
+=
+\{e\in E:D(e)=0\}
+\]
+satisfies
+\[
+\mathcal R_0
+=
+\bigcap_{n=1}^{\infty}\mathcal R_{1/n}.
+\]
+\end{corollary}
+
+\begin{remark}
+Exact rigidity need not be open. Unique identification can occur at a
+structural singularity.
+\end{remark}
+
+\section{Structural regularity, bifurcation values, and walls}
+
+The word wall is used here in a strictly mathematical, model-relative sense.
+
+\begin{definition}[Structural regular response]
+A response \(e\in E\) is structurally regular if there exists an open
+neighborhood \(U\subseteq E\) of \(e\) such that
+\[
+R^{-1}(U)\to U
+\]
+is a locally trivial topological fibre bundle.
+\end{definition}
+
+Let \(E_{\mathrm{reg}}^{\mathrm{str}}\) be the union of all structurally regular
+neighborhoods.
+
+\begin{definition}[WREH structural wall / bifurcation locus]
+The structural wall is
+\[
+\Sigma_{\mathrm{str}}
+=
+E\setminus E_{\mathrm{reg}}^{\mathrm{str}}.
+\]
+\end{definition}
+
+\begin{remark}[Standard terminology]
+In smooth and singularity-theory settings, the failure-of-local-triviality
+locus is commonly called the bifurcation set or set of atypical values.
+WR-III does not claim novelty for that notion; the word ``wall'' is retained
+only as WREH programme vocabulary.
+\end{remark}
+
+\begin{remark}[No codimension claim]
+Neither the structural wall nor the combined realizability wall is assumed to
+be a hypersurface, manifold, or codimension-one set.
+\end{remark}
+\begin{definition}[Attainable-response boundary]
+If \(E\subseteq Y\) is embedded in a declared ambient response space \(Y\),
+define
+\[
+\partial_YE
+\]
+to be its boundary in \(Y\).
+\end{definition}
+
+\begin{definition}[Realizability wall]
+Relative to the declared ambient response space \(Y\), define
+\[
+\Sigma_{\mathrm{real}}
+=
+\Sigma_{\mathrm{str}}\cup\partial_YE.
+\]
+\end{definition}
+
+\begin{remark}
+The two pieces have different meanings. The boundary separates attainable
+from unattainable responses in the declared model. The internal structural
+wall records failure of local fibre triviality among attainable responses.
+Neither is automatically a physical boundary.
+\end{remark}
+
+\section{Smooth proper response maps}
+
+Assume \(\X\) and \(Y\) are smooth manifolds without boundary and
+\[
+R:\X\to Y
+\]
+is smooth and proper. Let \(E=R(\X)\).
+
+\begin{theorem}[Regular values are structurally regular]
+If \(e\in E\) is a regular value of \(R\), then \(e\) is structurally regular.
+Consequently,
+\[
+\Sigma_{\mathrm{str}}
+\subseteq
+\operatorname{CritVal}(R)\cap E.
+\]
+\end{theorem}
+
+\begin{proof}
+The critical set is closed. Since a proper map between manifolds is closed,
+its critical-value set is closed.
+
+Choose \(x\in R^{-1}(e)\). Because \(e\) is a regular value, the
+differential \(dR_x\) is surjective. The submersion theorem therefore gives
+an open neighborhood \(U_0\subseteq Y\) of \(e\) contained in the image
+\(E\). Since the critical-value set is closed and does not contain \(e\),
+there is an open neighborhood \(U_1\subseteq Y\) of \(e\) containing no
+critical values. Set \(U=U_0\cap U_1\). Then
+\[
+R:R^{-1}(U)\to U
+\]
+is surjective, proper, and a submersion. Ehresmann's fibration theorem implies
+local triviality.
+\end{proof}
+
+\begin{corollary}[Constant smooth fibre type off the wall]
+On each connected component of the regular-value region, all fibres are
+diffeomorphic.
+\end{corollary}
+
+\begin{remark}
+Critical values only contain the possible structural wall under these
+hypotheses. A critical value need not change every fibre invariant of interest.
+\end{remark}
+
+\section{Minimal example}
+
+\begin{example}[Height response on the sphere]
+Let
+\[
+\X=S^2\subset\mathbb R^3,
+\qquad
+R(x,y,z)=z.
+\]
+Then
+\[
+E=[-1,1].
+\]
+For \(-1<e<1\), the fibre is a circle. At \(e=\pm1\), the fibre is a
+singleton.
+
+With the ambient Euclidean metric,
+\[
+D(e)=2\sqrt{1-e^2}.
+\]
+Thus exact rigidity occurs precisely at the two structural wall points.
+\end{example}
+
+\begin{remark}[Rigidity is not regularity]
+The example shows that exact rigidity and structural regularity are logically
+distinct. A singleton fibre can occur where the local fibre type becomes
+singular.
+\end{remark}
+
+\section{Refinement can create or resolve structural walls}
+
+The rigidity loci of Theorem~\ref{thm:rigidity-pullback} are monotone under
+refinement after pullback. Structural walls behave differently.
+
+\begin{example}[Refinement creates an internal cusp wall]
+Let
+\[
+\X=\mathbb R^2,
+\qquad
+R_{\Acal}(x,y)=x.
+\]
+The coarse map is a globally trivial bundle with no structural wall.
+Add the response
+\[
+S(x,y)=y^3-xy
+\]
+and define
+\[
+R_{\Bcal}(x,y)=(x,y^3-xy).
+\]
+The restriction map is projection onto the first coordinate, so this is a
+genuine refinement.
+
+The refined map is proper and surjective onto \(\mathbb R^2\). Its Jacobian
+determinant is
+\[
+3y^2-x.
+\]
+Therefore the conditional rank-defect set is
+\[
+x=3y^2.
+\]
+Its image is the semicubical cusp
+\[
+27v^2=4u^3,
+\qquad u\ge0.
+\]
+Across this cusp the cubic equation
+\[
+y^3-uy=v
+\]
+changes from one real solution to three real solutions. Hence the cusp is the
+refined structural bifurcation wall, even though the coarse response map had
+no wall at all.
+\end{example}
+
+\begin{example}[Refinement resolves a coarse branch wall]
+Let
+\[
+\X=[-1,1]\times S^1
+\]
+and define the coarse response
+\[
+R_{\Acal}(x,\theta)=x^2,
+\qquad
+E_{\Acal}=[0,1].
+\]
+For \(e>0\), the fibre is the disjoint union of two circles, while at
+\(e=0\) it is one circle. Thus \(0\) is a structural wall.
+
+Now refine by recording the branch label \(x\):
+\[
+R_{\Bcal}(x,\theta)=(x^2,x).
+\]
+Its response image is the parabola arc
+\[
+E_{\Bcal}
+=
+\{(u,v):u=v^2,\ |v|\le1\}.
+\]
+Projection \((u,v)\mapsto u\) recovers the coarse response. But
+\(R_{\Bcal}:\X\to E_{\Bcal}\) is globally a trivial bundle with fibre
+\(S^1\), via the homeomorphism
+\[
+(x,\theta)\longmapsto ((x^2,x),\theta).
+\]
+Hence the refined structural wall is empty.
+\end{example}
+
+\begin{theorem}[Refinement asymmetry]
+Structural walls are not monotone under protocol refinement: a refinement can
+create new structural walls or resolve coarse structural walls. In contrast,
+exact and finite-resolution rigidity loci obey the monotonicity relation of
+Theorem~\ref{thm:rigidity-pullback}.
+\end{theorem}
+
+\begin{proof}
+The two preceding examples establish creation and resolution of walls.
+Rigidity monotonicity was proved in Theorem~\ref{thm:rigidity-pullback}.
+\end{proof}
+
+\begin{remark}
+This asymmetry is a programme-level organizing contrast in WR-III: ambiguity
+shrinks monotonically under added information, while the singularity structure
+of the response map need not. No theorem-priority claim is made for the
+underlying singularity mechanisms.
+\end{remark}
+
+\section{Application benchmark: planar range-only localization}
+\label{sec:range-localization}
+
+Range-based localization is a standard inverse problem in sensor networks and
+multilateration: an unknown point is reconstructed from distances to anchors of
+known position \cite{AspnesEtAl2006,AndersonEtAl2010}. We use its simplest
+planar form as a WR-III benchmark because protocol refinement changes both
+fibre size and bifurcation geometry in closed form.
+
+Let
+\[
+\X=\mathbb R^2,
+\qquad
+p=(x,y),
+\]
+with the Euclidean metric. Fix two anchors
+\[
+a_1=(-a,0),
+\qquad
+a_2=(a,0),
+\qquad
+a>0,
+\]
+and define squared-range protocols
+\[
+r_i(p)=\|p-a_i\|^2.
+\]
+
+\subsection{One anchor: circular ambiguity}
+
+For the coarse protocol family
+\[
+\Acal=\{1\},
+\qquad
+R_{\Acal}=r_1,
+\]
+the realizable image is
+\[
+E_{\Acal}=[0,\infty).
+\]
+For \(u>0\),
+\[
+\Phi_{\Acal}(u)
+=
+\{p:\|p-a_1\|^2=u\}
+\]
+is a circle of radius \(\sqrt u\), while
+\[
+\Phi_{\Acal}(0)=\{a_1\}.
+\]
+Hence
+\[
+D_{\Acal}(u)=2\sqrt u.
+\]
+
+Over \((0,\infty)\) the fibres form the trivial circle bundle
+\[
+(0,\infty)\times S^1.
+\]
+At \(u=0\) the circle collapses to a point, so
+\[
+\Sigma_{\Acal}^{\mathrm{str}}=\{0\}.
+\]
+
+\subsection{Two anchors: reflection ambiguity and a fold wall}
+
+Add the second squared-range protocol:
+\[
+\Bcal=\{1,2\},
+\qquad
+R_{\Bcal}(p)
+=
+(r_1(p),r_2(p))
+=
+(u,v).
+\]
+From
+\[
+u=(x+a)^2+y^2,
+\qquad
+v=(x-a)^2+y^2,
+\]
+we obtain
+\[
+x=\frac{u-v}{4a}
+\]
+and
+\[
+y^2
+=
+q(u,v)
+:=
+\frac{u+v}{2}
+-a^2
+-\frac{(u-v)^2}{16a^2}.
+\]
+
+Therefore the realizable response image is
+\[
+E_{\Bcal}
+=
+\left\{
+(u,v)\in[0,\infty)^2:
+q(u,v)\ge0
+\right\}.
+\]
+
+\begin{proposition}[Exact two-anchor fibre geometry]
+For \((u,v)\in E_{\Bcal}\):
+\[
+\Phi_{\Bcal}(u,v)
+=
+\begin{cases}
+\left\{
+\left(\dfrac{u-v}{4a},\pm\sqrt{q(u,v)}\right)
+\right\},
+&
+q(u,v)>0,
+\\[10pt]
+\left\{
+\left(\dfrac{u-v}{4a},0\right)
+\right\},
+&
+q(u,v)=0.
+\end{cases}
+\]
+Consequently,
+\[
+D_{\Bcal}(u,v)
+=
+2\sqrt{q(u,v)}.
+\]
+\end{proposition}
+
+\begin{proof}
+The difference \(u-v\) determines \(x\), and the sum then determines \(y^2\).
+The two signs of \(y\) give the mirror ambiguity across the anchor baseline.
+The two-point separation is \(2|y|\).
+\end{proof}
+
+Thus the refinement from one to two anchors reduces a one-dimensional circular
+fibre to at most two points.
+
+For a realized response generated by \(p=(x,y)\),
+\[
+D_{\Acal}(r_1(p))
+=
+2\sqrt{(x+a)^2+y^2},
+\]
+while
+\[
+D_{\Bcal}(R_{\Bcal}(p))
+=
+2|y|.
+\]
+The rigidity gain is therefore
+\[
+G_{\Bcal\mid\Acal}(R_{\Bcal}(p))
+=
+2\left(
+\sqrt{(x+a)^2+y^2}-|y|
+\right)
+\ge0.
+\]
+
+\begin{theorem}[Two-anchor bifurcation wall]
+The structural wall of the two-anchor response map is
+\[
+\Sigma_{\Bcal}^{\mathrm{str}}
+=
+\{(u,v)\in E_{\Bcal}:q(u,v)=0\}.
+\]
+For \(q>0\), \(R_{\Bcal}\) is a two-sheeted covering, one sheet with \(y>0\)
+and one with \(y<0\). On \(q=0\), the two sheets merge and the fibre becomes
+a singleton.
+\end{theorem}
+
+\begin{proof}
+On \(q>0\), the explicit inverse formulas define two smooth branches
+\[
+(u,v)\longmapsto
+\left(
+\frac{u-v}{4a},
+\pm\sqrt{q(u,v)}
+\right),
+\]
+so the restriction is locally trivial with two-point fibre.
+
+On \(q=0\), nearby interior fibres contain two points whereas the wall fibre
+contains one point, so local fibre triviality fails.
+\end{proof}
+
+The Jacobian of the refined response is
+\[
+dR_{\Bcal}
+=
+\begin{pmatrix}
+2(x+a) & 2y\\
+2(x-a) & 2y
+\end{pmatrix},
+\]
+with determinant
+\[
+\det dR_{\Bcal}=8ay.
+\]
+Hence the critical set is precisely the anchor baseline
+\[
+y=0,
+\]
+and its image is the fold wall \(q=0\).
+
+The conditional-rank criterion of
+Theorem~\ref{thm:conditional-rank} recovers the same geometry directly.
+Away from the first anchor \(a_1\), the coarse protocol \(r_1\) is regular and
+a tangent vector to its circular fibre is
+\[
+\tau=(-y,x+a).
+\]
+For the added protocol \(S=r_2\),
+\[
+dr_2(\tau)=4ay.
+\]
+Thus the added range loses conditional rank exactly on
+\[
+y=0.
+\]
+The point \(a_1\), where the coarse protocol itself is singular, contributes
+the inherited endpoint
+\[
+R_{\Bcal}(a_1)=(0,4a^2).
+\]
+Together these give the full fold wall.
+
+\subsection{Three noncollinear anchors: exact localization}
+
+Now add a third anchor
+\[
+a_3=(0,b),
+\qquad
+b\neq0,
+\]
+with squared-range response
+\[
+r_3(p)=\|p-a_3\|^2.
+\]
+Let
+\[
+R_{\mathcal C}(p)
+=
+(r_1(p),r_2(p),r_3(p))
+=
+(u,v,w).
+\]
+
+\begin{theorem}[Three-anchor exact rigidity]
+For three noncollinear anchors as above,
+\[
+R_{\mathcal C}:\mathbb R^2\to E_{\mathcal C}
+\]
+is an embedding. Every response fibre is a singleton:
+\[
+D_{\mathcal C}\equiv0.
+\]
+Consequently the structural wall relative to the intrinsic response image
+\(E_{\mathcal C}\) is empty.
+\end{theorem}
+
+\begin{proof}
+The first two responses determine
+\[
+x=\frac{u-v}{4a}
+\]
+and
+\[
+s:=x^2+y^2
+=
+\frac{u+v}{2}-a^2.
+\]
+The third response satisfies
+\[
+w=s+b^2-2by,
+\]
+hence
+\[
+y=
+\frac{s+b^2-w}{2b}.
+\]
+Thus the response determines \(p=(x,y)\) uniquely.
+
+The map is an immersion. When \(y\neq0\), the first two range gradients already
+have rank two. When \(y=0\), the third gradient
+\[
+\nabla r_3=(2x,-2b)
+\]
+supplies the missing transverse direction because \(b\neq0\).
+Finally, the squared ranges diverge as \(\|p\|\to\infty\), so the map is
+proper. A proper injective immersion is an embedding.
+\end{proof}
+
+This final refinement removes the two-anchor reflection ambiguity and resolves
+the fold wall. The sequence
+\[
+\{r_1\}
+\subset
+\{r_1,r_2\}
+\subset
+\{r_1,r_2,r_3\}
+\]
+therefore exhibits, in a standard inverse problem,
+\[
+\text{circle fibre}
+\longrightarrow
+\text{mirror pair / fold wall}
+\longrightarrow
+\text{singleton fibre / no intrinsic wall}.
+\]
+
+\begin{remark}[Intrinsic versus ambient criticality]
+The three-anchor response image \(E_{\mathcal C}\) is a two-dimensional
+embedded surface in \(\mathbb R^3\). The map cannot be a submersion onto the
+ambient three-dimensional response space, yet it is a diffeomorphism onto its
+intrinsic image. This illustrates why WR-III structural regularity is defined
+relative to the realizable response image rather than by ambient surjectivity
+alone.
+\end{remark}
+
+\begin{remark}[Prior-art status]
+None of the trilateration facts above is claimed as new. Distance-based sensor
+localization and unique localizability are classical; in planar network
+localization, three or more noncollinear anchors play the standard role in
+eliminating geometric ambiguity \cite{AspnesEtAl2006,AndersonEtAl2010}.
+The WR-III contribution is the organization of this familiar inverse problem
+into refinement, fibre-diameter, conditional-rank, and bifurcation-wall
+diagnostics.
+\end{remark}
+
+
+\section{Prior-art boundary}
+
+The audit places WR-III next to several mature mathematical lines.
+
+\begin{itemize}
+\item Set-valued analysis already studies upper/lower hemicontinuity and
+inverse multifunctions. The open/closed-map criteria used here are
+infrastructure rather than novelty claims.
+
+\item Bifurcation and singularity theory use failure of local fibre
+triviality as the definition of bifurcation or atypical values. For proper
+submersions, Ehresmann gives local triviality; for nonproper maps, bifurcation
+values at infinity may occur. In analytic/algebraic settings, critical loci of
+augmented maps \((f,g)\), equivalently criticality of the added observable
+along fibres of \(f\), are standardly organized by relative polar varieties.
+Thus the conditional-rank set of Theorem~\ref{thm:conditional-rank} has direct
+prior-art relatives and is not claimed as a new singularity-theory object.
+
+\item Thom-type isotopy theorems and Hardt semialgebraic triviality provide
+stratified or tame local-triviality frameworks beyond smooth manifolds.
+
+\item Structural-identifiability geometry already uses parameter-fibre
+dimension, degree, and irreducible components to diagnose identifiability.
+
+\item Reeb-graph and Reeb-space constructions summarize changes in connected
+components of fibres and their topology.
+\end{itemize}
+
+WR-III therefore does not claim invention of fibre geometry, bifurcation
+sets, local triviality, or set-valued continuity. Its narrower target is the
+WREH-specific organization of nonempty response fibres downstream of WR-I and
+WR-II, together with protocol-refinement shrinkage, metric rigidity, and an
+explicit claim firewall.
+
+\section{Open obligations}
+
+Before WR-III can become a preprint:
+
+\begin{enumerate}
+\item complete a source-level audit of the conditional-rank construction
+against relative polar varieties and augmented-map singularity theory;
+\item determine useful fibre invariants beyond diameter and prove which of
+them remain monotone under protocol refinement;
+\item formulate a quantitative distance-to-bifurcation notion only after a
+response-space metric and regularity class are fixed;
+\item extend the refinement theorem from smooth proper maps to a justified
+Whitney/Thom or semialgebraic stratified setting;
+\item extend the range-only localization benchmark to noisy ranges and a
+bounded uncertainty model, and compare rigidity gain with standard localization
+error bounds;
+\item determine whether the rigidity-gain function
+\(G_{\Bcal\mid\Acal}\) has stable or computable bounds in a useful model
+class;
+\item build an interactive demo showing the monotone rigidity/nonmonotone-wall
+contrast.
+\end{enumerate}
+
+\section*{Conclusion}
+
+WR-I identifies response-equivalence classes. WR-II determines whether
+compatible responses admit global realizations. WR-III studies the geometry
+remaining inside those nonempty inverse fibres.
+
+The first exact chain is
+\[
+\text{refinement}
+\Longrightarrow
+\text{fibre inclusion}
+\Longrightarrow
+\text{nonincreasing diameter}.
+\]
+Compactness controls upper variation of fibres and fibre diameter. In the
+smooth proper setting, regular values carry locally trivial fibres, leaving
+critical values and attainable-response boundaries as natural containers for
+model-relative realizability walls.
+
+No wall introduced here is, without an additional physical bridge, a wall of
+spacetime or of the Universe.
+
+\begin{thebibliography}{99}
+
+\bibitem{MalachevskyWRI}
+A. A. Malachevsky,
+\emph{Response-Defined World Spaces: Response Equivalence,
+Finite-Resolution Separation, and Identifiability of Global Realizations},
+WR-I, WREH (2026).
+DOI: 10.5281/zenodo.23210258.
+
+\bibitem{MalachevskyWRII}
+A. A. Malachevsky,
+\emph{Finite Consistency and Global World Realizability},
+WR-II, WREH (2026).
+DOI: 10.5281/zenodo.23224154.
+
+\bibitem{AspnesEtAl2006}
+J. Aspnes, T. Eren, D. K. Goldenberg, A. S. Morse, W. Whiteley,
+Y. R. Yang, B. D. O. Anderson, and P. N. Belhumeur,
+\emph{A Theory of Network Localization},
+IEEE Transactions on Mobile Computing 5(12) (2006), 1663--1677.
+DOI: 10.1109/TMC.2006.174.
+
+\bibitem{AndersonEtAl2010}
+B. D. O. Anderson, I. Shames, G. Mao, and B. Fidan,
+\emph{Formal Theory of Noisy Sensor Network Localization},
+SIAM Journal on Discrete Mathematics 24(2) (2010), 684--698.
+DOI: 10.1137/100792366.
+
+\bibitem{AubinFrankowska}
+J.-P. Aubin and H. Frankowska,
+\emph{Set-Valued Analysis},
+Birkh\"auser, 1990.
+
+\bibitem{Ehresmann}
+C. Ehresmann,
+\emph{Les connexions infinit\'esimales dans un espace fibr\'e
+diff\'erentiable},
+Colloque de Topologie, Bruxelles, 1950.
+
+\end{thebibliography}
+
+\end{document}
