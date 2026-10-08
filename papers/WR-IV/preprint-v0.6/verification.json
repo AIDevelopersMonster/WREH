@@ -1,0 +1,11 @@
+{
+  "seed": 20261008,
+  "independent_RTS_batch_cases": 80,
+  "two_observation_example": {
+    "filtered_mean_1": 0.1,
+    "filtered_variance_1": 0.5,
+    "smoothed_mean_1": 0.36,
+    "smoothed_variance_1": 0.4
+  },
+  "result": "passed"
+}

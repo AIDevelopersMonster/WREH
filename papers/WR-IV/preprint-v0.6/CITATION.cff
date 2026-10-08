@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the WR-IV v0.6 preprint. Use the Zenodo DOI once assigned."
+type: article
+title: "WR-IV: Response-Conditioned Global Completion and the Status of the Past"
+version: "0.6"
+date-released: "2026-10-08"
+authors:
+  - family-names: "Malachevsky"
+    given-names: "A. A."
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+url: "https://github.com/AIDevelopersMonster/WREH/pull/5"
+license: "CC-BY-4.0"
+keywords:
+  - "world realizability"
+  - "Brownian bridge"
+  - "regular conditional distribution"
+  - "smoothing"
+  - "English and Russian"
+abstract: "Unpeer-reviewed expository technical preprint with complete parallel English and Russian texts. Classical benchmarks and elementary image properties are organized in a declared WREH framework; no theorem priority or physical past rewriting is claimed. Manuscript content is CC BY 4.0; executable code is MIT."

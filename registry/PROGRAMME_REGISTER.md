@@ -14,7 +14,7 @@
 1. **WR-I** — *Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations* — **PUBLISHED / FROZEN v0.3** — DOI: `10.5281/zenodo.23210258`.
 2. **WR-II** — *Finite Consistency and Global World Realizability* — **PUBLISHED / FROZEN v0.5** — DOI: `10.5281/zenodo.23224154`.
 3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23228682`.
-4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **ACTIVE / MATHEMATICAL SPINE v0.5 / REVIEWABLE_DRAFT**.
+4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **ACTIVE / COMPLETE BILINGUAL PREPRINT v0.6 / PUBLICATION_READY (expository preprint; deposit prepared, unpublished)**.
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — PLANNED.
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — PLANNED.
 7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — PLANNED.
@@ -88,46 +88,55 @@ projection layer:
 \mathfrak H_-(D)=\pi_-(\mathfrak C(D)).
 \]
 
-Active source: papers/WR-IV/WREH_WR-IV_Mathematical_Spine_v0.5.tex.
-Release status: REVIEWABLE_DRAFT. This repair does not close the branch or open WR-V.
+Active source: papers/WR-IV/preprint-v0.6/wriv-body.tex, with separate English and Russian entry points.
+Release status: PUBLICATION_READY for a complete, explicitly expository and unpeer-reviewed
+preprint. The Zenodo package is prepared; no WR-IV DOI is assigned and no deposit has
+been published. This does not close the branch, merge PR #5 or open WR-V.
 
-The v0.4 upstream bridge makes model-relative emptiness explicit for a full profile
-in the WR-II global defect; it does not turn a finite observation into a full-profile
-constraint or supply a new existence theorem. WR-III local-triviality walls transfer
-to historical families under a homeomorphism of the families over the response base.
-Historical projection can otherwise erase a wall. No physical forward dynamics is
-inferred from the response map. These are inherited consequences, not new branch ownership.
+The upstream bridge makes model-relative emptiness explicit for a full profile in the
+WR-II global defect; all finite restrictions can remain realizable. WR-IV does not
+supply a new existence theorem. WR-III local-triviality walls transfer under a
+homeomorphism of the total world/history families over the response base.
+Information-losing projections can erase them. The response map is not automatically
+physical dynamics, and the historical image family is not automatically a pullback bundle.
 
 WR-IV may study:
 - world rigidity versus past rigidity;
 - hidden-past versus observable-past ambiguity;
-- accumulated hard constraints with a fixed model, temporal cut and historical projection;
+- accumulated hard constraints with a fixed model, temporal cut and projection;
 - noninvertible-dynamics history spaces;
-- classical retrospective smoothing as an explicitly sourced benchmark.
+- classical retrospective smoothing as a sourced benchmark.
 
-The v0.5 diffusion benchmark declares the full past as restriction to [0,T).
-Exact endpoint evidence properly constrains this historical image through its limit at T.
-For a fixed earlier prefix ending at tau<T, the compatible prefix set can remain unchanged,
-even though its conditional variance decreases. Gaussian noisy endpoint likelihoods preserve
-path support. These are separate conclusions about separate objects.
+The v0.6 diffusion application declares full pre-endpoint history as restriction to
+[0,T). Exact endpoint data properly constrain this image through the limit at T.
+Each fixed earlier prefix [0,tau], tau<T, remains entirely compatible and its conditional
+law is equivalent to the prior restriction, despite smaller variance. Gaussian noisy
+likelihoods likewise preserve measure equivalence. Bounded admissible noise constrains
+the endpoint, and finite-resolution endpoint observations yield a separate bridge mixture.
+
+The complete preprint now includes a classical several-time RTS model, proof and exact
+two-observation example; 80 independently batch-conditioned cases verify the recursion.
+English and Russian PDFs share equation/result numbering, with an optional offline HTML.
 
 WR-IV must not:
-- interpret inference order as physical time without a bridge;
+- identify inference order with physical time without a bridge;
 - infer past rewriting, retrocausality or branching ontology;
-- rebrand elementary image properties, natural extensions, Gaussian conditioning or Brownian
-  bridges as new theorems;
-- infer strict set shrinkage for every historical projection from smaller covariance;
-- reopen WR-II existence or WR-III generic fibre geometry without a new historical obligation.
+- rebrand elementary images, natural extensions, Gaussian conditioning, Brownian bridges
+  or RTS smoothing as new discoveries;
+- infer strict historical-set contraction from smaller covariance;
+- reopen inherited existence or generic geometry under a new title.
 
-The v0.5 precision pass preserves all established theorem statements. The historical
-image family is not automatically a pullback bundle. Admissible noise support is now
-explicit: bounded noise gives an endpoint band; Gaussian noise permits every endpoint
-residual. A comparison of WR-II residual gaps with probability-based information remains
-an open WR-IV obligation. For finite protocol families Gamma vanishes, so it cannot by
-itself measure nonzero smoothing gains. This does not authorize WR-V or certify novelty.
+The comparison with the WR-II gap Gamma remains model-dependent. For finite protocol
+families Gamma vanishes even when covariance gain is positive, so it cannot alone be
+a universal information functional.
 
-Broader comparison with observability, identifiability, natural extensions, smoothing and
-partial-observation reconstruction remains open. Originality of the framework classification
-and a full cross-manuscript duplication review are not certified. The present corrected
-draft is suitable for renewed review; publication clearance is not issued.
+Targeted primary-source verification and comparison with the relevant deposited WR-I–III
+interfaces are complete for the stated claims. The complete text and source map identify
+elementary/classical provenance and do not claim theorem priority. Exhaustive originality
+of the wider framework classification is not certified. Further research novelty requires
+a nonduplicative result and a broader review tailored to that claim.
 
+PUBLICATION_READY here means the files, proofs, source mapping, parallel translation,
+rendering and deposit metadata are prepared for an expository Zenodo preprint. It is not
+journal-submission clearance, external peer review or a certificate of fundamental
+scientific novelty. WR-I–III remain frozen and the planned sequence is unchanged.

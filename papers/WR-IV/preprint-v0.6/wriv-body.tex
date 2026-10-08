@@ -1,0 +1,676 @@
+% Shared semantic source. Every numbered equation and theorem is identical
+% in the English and Russian builds; \Lang selects the parallel prose.
+% Copyright (c) 2026 A. A. Malachevsky. Content licence: CC BY 4.0.
+\begin{document}
+\maketitle
+\begin{abstract}
+\Lang{This paper separates three questions about data and the past: whether a globally compatible realization exists, which historical projections remain compatible, and how a probability law on those histories changes. In the WREH language, a declared world class is restricted by response data and then projected onto hidden histories and observable records. A full-profile realizability defect gives an empty historical class only relative to the declared model. Accumulated hard constraints give nested completion sets without modifying any retained history. Topological response walls transfer to historical families under a homeomorphism over the response base; information-losing projections can erase them. Two classical benchmarks make the distinctions explicit. The doubling map has a unique forward orbit but a Cantor family of full backward histories. For a diffusion with a deterministic initial state, an explicitly constructed regular Brownian-bridge kernel reduces interior variance from $2\kappa t$ to $2\kappa t(T-t)/T$, which remains positive for $0<t<T$. Exact endpoint data restrict full paths, while the compatible paths on any fixed earlier interval remain unchanged and their probability laws remain equivalent to the prior restrictions. Gaussian noisy observations also preserve measure equivalence. A worked two-observation example verifies the classical Rauch--Tung--Striebel recursion against batch conditioning. The contribution is a controlled framework exposition, with no new theorem-priority claim, physical past rewriting, or identification of evidence order with physical time.}
+{В статье разделены три вопроса о данных и прошлом: существует ли глобально совместимая реализация, какие её исторические проекции совместимы с данными и как меняется вероятностный закон этих историй. На языке WREH объявленный класс миров ограничивается данными откликов, после чего проецируется на скрытые истории и наблюдаемые записи. Дефект реализуемости полного профиля означает пустой исторический класс только относительно выбранной модели. Накопление жёстких ограничений порождает вложенные множества достраиваний без изменения сохраняемых историй. Топологические стены отклика переносятся на исторические семейства при гомеоморфизме над базой откликов; проекции с потерей информации могут скрывать эти стены. Различия показаны на двух классических примерах. Отображение удвоения имеет единственную будущую орбиту и канторово семейство полных обратных историй. Для диффузии с детерминированным начальным состоянием явно построенное регулярное ядро броуновского моста уменьшает дисперсию внутреннего состояния с $2\kappa t$ до $2\kappa t(T-t)/T$, остающуюся положительной при $0<t<T$. Точное конечное наблюдение ограничивает полные пути, но не исключает ни одного совместимого пути на фиксированном более раннем интервале; вероятностные законы таких фрагментов эквивалентны исходным. Гауссовские шумные наблюдения также сохраняют эквивалентность мер. Пример с двумя наблюдениями проверяет классическую рекурсию Рауха--Тунга--Штрибеля независимым пакетным условливанием. Вклад состоит в аккуратном изложении общей схемы; приоритет новых теорем, физическое переписывание прошлого и отождествление порядка накопления данных с физическим временем не заявляются.}
+\end{abstract}
+\begingroup\raggedright
+\noindent\textbf{\Lang{Keywords}{Ключевые слова}:}
+\Lang{global realizability; history projection; non-identifiability; natural extension; regular conditional law; Brownian bridge; fixed-interval smoothing.}
+{глобальная реализуемость; историческая проекция; неидентифицируемость; естественное расширение; регулярный условный закон; броуновский мост; сглаживание на фиксированном интервале.}\par\endgroup
+
+\smallskip
+\noindent\small\Lang{English and Russian parallel texts have the same equations and result numbering. This is an unpeer-reviewed preprint prepared for deposit; no WR-IV DOI has yet been assigned. Content: CC BY 4.0. Executable supplements: MIT.}
+{Английский и русский параллельные тексты имеют одинаковые формулы и нумерацию результатов. Препринт подготовлен к депонированию и не прошёл внешнее рецензирование; DOI WR-IV пока не присвоен. Текст: CC BY 4.0. Исполняемые приложения: MIT.}\normalsize
+\newpage
+\tableofcontents
+\newpage
+
+\section{\Lang{Introduction and scope}{Введение и границы утверждений}}
+\label{sec:intro}
+\Lang{An observation can improve an estimate of an earlier state without selecting a unique earlier history. It can also exclude complete trajectories while excluding none of their restrictions to a shorter interval. These statements concern different mathematical objects. Treating every reduction of uncertainty as a reduction of a set of possible histories obscures the distinction between compatibility, identifiability and probability.}
+{Наблюдение может улучшить оценку более раннего состояния, не выделяя единственную раннюю историю. Оно также может исключить полные траектории, не исключив ни одного их ограничения на более короткий интервал. Эти утверждения относятся к разным математическим объектам. Если любое уменьшение неопределённости считать сужением множества допустимых историй, теряется различие между совместимостью, идентифицируемостью и вероятностью.}
+
+\Lang{The question addressed here is conditional and model-relative: given a declared carrier of complete realizations, response data and a historical projection, what can be said about the resulting historical image? A ``world'' is simply an element of that carrier. It need not be a cosmological universe. The carrier can consist of paths of a stochastic process, deterministic orbits, or other complete objects for which the supplied temporal description is meaningful. Probability is additional structure on a carrier, not a consequence of calling its elements worlds.}
+{Рассматриваемый вопрос является условным и зависит от модели: что можно сказать об историческом образе, если заданы носитель полных реализаций, данные откликов и историческая проекция? «Мир» означает лишь элемент этого носителя и не обязан быть космологической Вселенной. Носитель может состоять из путей случайного процесса, детерминированных орбит или других полных объектов, для которых заданное временное описание осмысленно. Вероятность представляет собой дополнительную структуру на носителе и не возникает из самого названия его элементов мирами.}
+
+\subsection{\Lang{The upstream interface}{Связь с предыдущими работами}}
+\Lang{WR-I supplies response equivalence and the distinction between identifiable quantities and hidden representatives \cite[Sections 3--5]{WRI}. WR-II asks whether compatible finite response data possess a global realization \cite[Sections 3--7]{WRII}. WR-III studies the geometry of response fibres and failure of local triviality \cite[Sections 8--11]{WRIII}. WR-IV retains those interfaces and declares a historical projection. It uses the WR-II existence gate before discussing historical ambiguity and the WR-III topology only when a stated family-level bridge is available.}
+{WR-I задаёт эквивалентность по откликам и различие между идентифицируемыми величинами и скрытыми представителями \cite[Sections 3--5]{WRI}. WR-II выясняет, имеют ли совместимые конечные данные откликов глобальную реализацию \cite[Sections 3--7]{WRII}. WR-III изучает геометрию слоёв отклика и нарушение локальной тривиальности \cite[Sections 8--11]{WRIII}. WR-IV сохраняет эти связи и вводит историческую проекцию. Проверка существования из WR-II предшествует обсуждению исторической неоднозначности; топология WR-III используется только при явно сформулированной связи на уровне семейств.}
+
+\Lang{The temporal decomposition is supplied by the model. Neither a set-theoretic response map nor a refinement order generates physical time. The term ``past'' below always refers to the declared projection and temporal cut. Changing the cut changes the question; changing the carrier changes the model. These changes are not included in the refinement theorem.}
+{Временное разложение задаётся моделью. Ни теоретико-множественное отображение откликов, ни порядок уточнения данных не порождают физическое время. Слово «прошлое» далее всегда относится к объявленной проекции и временному срезу. Изменение среза меняет вопрос, а изменение носителя меняет модель. Такие изменения не входят в теорему об уточнении данных.}
+
+\subsection{\Lang{Contribution and claim ceiling}{Вклад и предел утверждений}}
+\Lang{The contribution is an explicit organization of existence, projected compatibility, observable rigidity and probabilistic smoothing within one declared interface. Elementary image properties are proved for completeness. The natural-extension, Gaussian-conditioning, Brownian-bridge and smoothing benchmarks are classical. They are included to test the interface and to identify situations where a plausible verbal inference fails. No priority is claimed for those results or for the general idea of retrospective inference. Section~\ref{sec:prior} gives a source and non-duplication map.}
+{Вклад состоит в явном согласовании существования, проецируемой совместимости, жёсткости наблюдаемых записей и вероятностного сглаживания в одной объявленной схеме. Элементарные свойства образов доказаны для полноты. Примеры естественного расширения, гауссовского условливания, броуновского моста и сглаживания являются классическими. Они проверяют схему и выявляют случаи, когда правдоподобный словесный вывод неверен. Приоритет этих результатов и общей идеи ретроспективного вывода не заявляется. В разделе~\ref{sec:prior} приведена карта источников и разграничения с предыдущими работами.}
+
+\Lang{No theorem here establishes physical creation, disappearance or rewriting of a past, retrocausality, branching ontology, or a physical interpretation of a realizability wall. Mathematical admissibility is not a proof of physical existence. The diffusion is an idealized inverse-problem benchmark, not experimental evidence for WREH as a physical theory. The practical use of the framework is to require an author to name the object that becomes more constrained and the assumptions that justify that statement.}
+{Ни одна теорема здесь не устанавливает физическое создание, исчезновение или переписывание прошлого, ретрокаузальность, ветвящуюся онтологию либо физический смысл стены реализуемости. Математическая допустимость не доказывает физического существования. Диффузия служит идеализированным примером обратной задачи, а не экспериментальным подтверждением WREH как физической теории. Практическая роль схемы состоит в требовании назвать объект, который становится более ограниченным, и условия, обосновывающие этот вывод.}
+
+\section{\Lang{Completion sets, historical images and realizability}{Множества достраиваний, исторические образы и реализуемость}}
+\label{sec:sets}
+\Lang{Let $\Wcal$ be a declared set of complete realizations and let $D$ denote data interpreted as hard constraints. Define the globally compatible class}
+{Пусть $\Wcal$ обозначает объявленное множество полных реализаций, а $D$ --- данные, понимаемые как жёсткие ограничения. Определим глобально совместимый класс}
+\begin{equation}\label{eq:completion}
+\Ccal(D)=\{W\in\Wcal:W\text{ \Lang{is compatible with}{совместим с} }D\}.
+\end{equation}
+\Lang{Compatibility includes all constraints of the declared model, not merely agreement with a selected finite list of responses. Assume a total historical projection}
+{Совместимость включает все ограничения объявленной модели, а не только совпадение выбранного конечного списка откликов. Предположим, что задана всюду определённая историческая проекция}
+\[
+\pi_-:\Wcal\longrightarrow\Hminus.
+\]
+\begin{definition}[\Lang{Past-completion set and rigidity}{Множество прошлых достраиваний и жёсткость}]
+\label{def:past}
+\Lang{The past-completion set is $\Pcal(D)=\pi_-(\Ccal(D))$. Data are world-rigid if $\Ccal(D)$ is a singleton and past-rigid if $\Pcal(D)$ is a singleton. An empty set is not a rigid set.}
+{Множество прошлых достраиваний равно $\Pcal(D)=\pi_-(\Ccal(D))$. Данные являются жёсткими на уровне мира, если $\Ccal(D)$ состоит из одного элемента, и жёсткими на уровне прошлого, если $\Pcal(D)$ состоит из одного элемента. Пустое множество не является жёстким.}
+\end{definition}
+
+\begin{proposition}[\Lang{World rigidity and past rigidity}{Жёсткость мира и жёсткость прошлого}]
+\label{prop:world-past}
+\Lang{World rigidity implies past rigidity. The converse need not hold.}
+{Жёсткость мира влечёт жёсткость прошлого. Обратное утверждение в общем случае неверно.}
+\end{proposition}
+\begin{proof}
+\Lang{The image of a singleton under a total map is a singleton. For the converse, take $\Wcal=\{(h_0,0),(h_0,1)\}$, $\Ccal(D)=\Wcal$ and $\pi_-(h_0,j)=h_0$. The historical image is a singleton although two worlds remain.}
+{Образ одноэлементного множества при всюду определённом отображении одноэлементен. Для опровержения обратного утверждения возьмём $\Wcal=\{(h_0,0),(h_0,1)\}$, $\Ccal(D)=\Wcal$ и $\pi_-(h_0,j)=h_0$. Исторический образ состоит из одного элемента, хотя остаются два мира.}
+\end{proof}
+
+\subsection{\Lang{The WR-II realizability gate}{Проверка реализуемости из WR-II}}
+\Lang{For a protocol family $\mathcal P$, let $R:\Wcal\to\mathcal Y=\prod_{P\in\mathcal P}Y_P$ be the full response map. For finite $\mathcal A\subseteq\mathcal P$, denote the restricted map by $R_{\mathcal A}$ and the restriction of a profile $y$ by $y_{\mathcal A}$. The inherited WR-II objects are}
+{Для семейства протоколов $\mathcal P$ пусть $R:\Wcal\to\mathcal Y=\prod_{P\in\mathcal P}Y_P$ обозначает полное отображение откликов. Для конечного $\mathcal A\subseteq\mathcal P$ обозначим ограниченное отображение через $R_{\mathcal A}$, а ограничение профиля $y$ через $y_{\mathcal A}$. Из WR-II наследуются объекты}
+\begin{equation}\label{eq:defect}
+\begin{aligned}
+\mathfrak C_{\mathrm{fin}}
+ &=\{y:y_{\mathcal A}\in R_{\mathcal A}(\Wcal)
+       \text{ \Lang{for every finite}{для всякого конечного} }\mathcal A\subseteq\mathcal P\},\\
+\mathfrak D_{\mathrm{fin}}&=\mathfrak C_{\mathrm{fin}}\setminus R(\Wcal).
+\end{aligned}
+\end{equation}
+\Lang{Full-profile data $D_y$ mean $\Ccal(D_y)=R^{-1}(y)$. Finite-profile data are a different object.}
+{Данные полного профиля $D_y$ означают $\Ccal(D_y)=R^{-1}(y)$. Данные конечного профиля представляют собой другой объект.}
+
+\begin{proposition}[\Lang{Existence precedes historical ambiguity}{Существование предшествует исторической неоднозначности}]
+\label{prop:realizability-gate}
+\Lang{For full-profile data and a total $\pi_-$,}
+{Для данных полного профиля и всюду определённой $\pi_-$,}
+\begin{equation}\label{eq:gate}
+\Pcal(D_y)=\varnothing
+\quad\Longleftrightarrow\quad R^{-1}(y)=\varnothing
+\quad\Longleftrightarrow\quad y\notin R(\Wcal).
+\end{equation}
+\Lang{In particular, $y\in\mathfrak D_{\mathrm{fin}}$ has no compatible historical image in the declared model.}
+{В частности, для $y\in\mathfrak D_{\mathrm{fin}}$ в объявленной модели нет совместимого исторического образа.}
+\end{proposition}
+\begin{proof}
+\Lang{An image under a total map is empty exactly when its domain is empty. A fibre is empty exactly when its base point is outside the image. The last assertion uses~\eqref{eq:defect}. No additional existence theorem is supplied by historical projection.}
+{Образ при всюду определённом отображении пуст в точности тогда, когда пусто его исходное множество. Слой пуст в точности тогда, когда точка базы не принадлежит образу. Последнее утверждение следует из~\eqref{eq:defect}. Историческая проекция не добавляет новой теоремы существования.}
+\end{proof}
+
+\begin{example}[\Lang{Every finite record can fit while the full profile fails}{Совместимость всех конечных записей при нереализуемом полном профиле}]
+\label{ex:finite-support}
+\Lang{Use the WR-II finite-support model \cite[Section 7]{WRII}: $\Wcal$ consists of binary sequences with finitely many ones, and $R_n(W)=W_n$. The target $y=(1,1,\ldots)$ is realized on every finite coordinate set by putting ones on those coordinates and zeros elsewhere. No finite-support sequence realizes the full target. Thus the full historical image is empty for every total historical projection, although every finite-data completion set is nonempty. This example demonstrates why the full-profile qualifier in Proposition~\ref{prop:realizability-gate} is necessary.}
+{Используем модель конечного носителя из WR-II \cite[Section 7]{WRII}: $\Wcal$ состоит из двоичных последовательностей с конечным числом единиц, а $R_n(W)=W_n$. Целевой профиль $y=(1,1,\ldots)$ реализуется на любом конечном наборе координат последовательностью с единицами на этих координатах и нулями на остальных. Ни одна последовательность с конечным носителем не реализует весь профиль. Поэтому полный исторический образ пуст для любой всюду определённой исторической проекции, хотя каждое множество достраиваний конечных данных непусто. Пример показывает необходимость оговорки о полном профиле в утверждении~\ref{prop:realizability-gate}.}
+\end{example}
+
+\begin{remark}[\Lang{Empty, ambiguous and probability-zero are distinct}{Пустота, неоднозначность и нулевая вероятность различны}]
+\label{rem:empty}
+\Lang{An empty completion class diagnoses incompatibility relative to $\Wcal$. A nonempty historical image with more than one element diagnoses historical ambiguity relative to $\pi_-$. A nonempty fibre can have prior probability zero; exact Brownian endpoints provide an example. ``Ghost past'' can serve as a mnemonic for model-relative emptiness, but it is not a physical conclusion and will not replace the mathematical condition.}
+{Пустой класс достраиваний диагностирует несовместимость относительно $\Wcal$. Непустой исторический образ, содержащий более одного элемента, диагностирует историческую неоднозначность относительно $\pi_-$. Непустой слой может иметь нулевую априорную вероятность; примером служат точные конечные значения броуновского процесса. «Призрачное прошлое» может быть мнемоническим названием модельной пустоты, но не физическим выводом и не заменой математического условия.}
+\end{remark}
+
+\section{\Lang{Refinement, observable records and resolution}{Уточнение данных, наблюдаемые записи и разрешение}}
+\label{sec:refinement}
+\Lang{Throughout refinement, fix $\Wcal$, $\pi_-$ and the temporal cut. Write $D\preceq D'$ if $D'$ retains all hard constraints of $D$ and possibly adds further ones. Revising a measurement, enlarging the model class, or moving the cut is not refinement in this sense.}
+{При уточнении фиксируются $\Wcal$, $\pi_-$ и временной срез. Запись $D\preceq D'$ означает, что $D'$ сохраняет все жёсткие ограничения $D$ и, возможно, добавляет новые. Пересмотр измерения, расширение класса моделей или перемещение среза не являются уточнением в этом смысле.}
+\begin{theorem}[\Lang{Completion refinement}{Уточнение достраиваний}]
+\label{thm:completion-refinement}
+\[
+D\preceq D'\quad\Longrightarrow\quad
+\Ccal(D')\subseteq\Ccal(D),\qquad
+\Pcal(D')\subseteq\Pcal(D).
+\]
+\end{theorem}
+\begin{proof}
+\Lang{A world satisfying every constraint of $D'$ satisfies every constraint of $D$. Images under the same map preserve inclusion. Both inclusions may be equalities; the smaller sets may be empty.}
+{Мир, удовлетворяющий всем ограничениям $D'$, удовлетворяет всем ограничениям $D$. Образы при одном и том же отображении сохраняют включение. Оба включения могут быть равенствами; меньшие множества могут быть пусты.}
+\end{proof}
+\begin{corollary}[\Lang{Consistent refinement preserves rigidity}{Совместимое уточнение сохраняет жёсткость}]
+\label{cor:rigidity-persistence}
+\Lang{If $\Pcal(D)=\{h\}$, $D\preceq D'$ and $\Ccal(D')\ne\varnothing$, then $\Pcal(D')=\{h\}$.}
+{Если $\Pcal(D)=\{h\}$, $D\preceq D'$ и $\Ccal(D')\ne\varnothing$, то $\Pcal(D')=\{h\}$.}
+\end{corollary}
+\begin{proof}
+\Lang{The refined historical image is a nonempty subset of a singleton.}
+{Уточнённый исторический образ является непустым подмножеством одноэлементного множества.}
+\end{proof}
+\begin{remark}[\Lang{Non-rewriting principle}{Принцип отсутствия переписывания}]
+\label{rem:non-rewriting}
+\Lang{For each retained $W\in\Ccal(D')$, the value $\pi_-(W)$ is the same before and after refinement. Set restriction removes incompatible objects; it does not alter any retained object. This is a statement about the mathematical operation, not a theorem about all possible physical mechanisms.}
+{Для каждого сохраняемого $W\in\Ccal(D')$ значение $\pi_-(W)$ одинаково до и после уточнения. Ограничение множества удаляет несовместимые объекты, но не меняет сохраняемые. Это утверждение о математической операции, а не теорема обо всех возможных физических механизмах.}
+\end{remark}
+
+\subsection{\Lang{Hidden histories and observable histories}{Скрытые и наблюдаемые истории}}
+\Lang{Let a fixed map $Q_-:\Hminus\to\mathcal O_-$ encode accessible historical records and put $\Ocal(D)=Q_-(\Pcal(D))$. Such records need not retain all hidden information.}
+{Пусть фиксированное отображение $Q_-:\Hminus\to\mathcal O_-$ кодирует доступные исторические записи; положим $\Ocal(D)=Q_-(\Pcal(D))$. Такие записи могут сохранять не всю скрытую информацию.}
+\begin{proposition}[\Lang{Observable rigidity}{Жёсткость наблюдаемого прошлого}]
+\label{prop:observable-rigidity}
+\Lang{$\Ocal(D)$ is a singleton exactly when $\Pcal(D)$ is nonempty and $Q_-$ is constant on it. Observable rigidity can coexist with hidden-past ambiguity.}
+{$\Ocal(D)$ состоит из одного элемента в точности тогда, когда $\Pcal(D)$ непусто, а $Q_-$ постоянно на нём. Жёсткость наблюдаемых записей может сосуществовать с неоднозначностью скрытого прошлого.}
+\end{proposition}
+\begin{proof}
+\Lang{A nonempty set has a singleton image exactly when the map is constant on that set. For ambiguity, take two distinct histories $h_1,h_2$ with $Q_-(h_1)=Q_-(h_2)$ and $\Pcal(D)=\{h_1,h_2\}$. Agreement for one pair would not suffice if additional histories had different records.}
+{Непустое множество имеет одноэлементный образ в точности тогда, когда отображение постоянно на этом множестве. Для примера неоднозначности возьмём две различные истории $h_1,h_2$ с $Q_-(h_1)=Q_-(h_2)$ и $\Pcal(D)=\{h_1,h_2\}$. Совпадения записей для одной пары было бы недостаточно, если бы другие истории давали иные записи.}
+\end{proof}
+
+\Lang{For example, two particle paths can agree at every declared record time and differ between those times. Their record histories agree even when their continuous hidden histories do not. This is a modelling choice about access, not a proof that the unrecorded segments have no physical value.}
+{Например, два пути частицы могут совпадать во все объявленные моменты записи и различаться между ними. Их истории записей совпадают, хотя непрерывные скрытые истории различны. Это модельное решение о доступе, а не доказательство отсутствия физического значения у незаписанных участков.}
+
+\subsection{\Lang{Finite resolution does not automatically define an equivalence}{Конечное разрешение не всегда задаёт эквивалентность}}
+\Lang{For a metric record space $(\mathcal O_-,d)$ and tolerance $\varepsilon>0$, consider the relation}
+{Для метрического пространства записей $(\mathcal O_-,d)$ и допуска $\varepsilon>0$ рассмотрим отношение}
+\[
+d(Q_-(h),Q_-(h'))\le\varepsilon.
+\]
+\Lang{It need not be transitive. Records $0,0.75\varepsilon,1.5\varepsilon$ give an immediate counterexample. This is the WR-I tolerance warning \cite[Section 8]{WRI}; exact observational classes and finite-resolution ambiguity are also explicitly distinguished in recent measurement-design work \cite[Sections III and V]{SimonsWashburn2026}.}
+{Оно может быть нетранзитивным. Записи $0,0.75\varepsilon,1.5\varepsilon$ дают непосредственный контрпример. Это предостережение о допусках из WR-I \cite[Section 8]{WRI}; точные наблюдательные классы и неоднозначность при конечном разрешении явно разграничиваются также в современной работе о проектировании измерений \cite[Sections III and V]{SimonsWashburn2026}.}
+
+\Lang{A declared quantizer $q:\mathcal O_-\to\mathcal B$ does give an equivalence by equality of bin labels. This equivalence depends on the binning and should not be confused with the pairwise metric-tolerance relation. Likewise, a statement that a historical diameter decreases requires a declared metric, and a statement that its probability uncertainty decreases requires a declared measure and functional. Cardinality alone supplies neither.}
+{Объявленный квантователь $q:\mathcal O_-\to\mathcal B$ действительно задаёт эквивалентность по равенству меток ячеек. Эта эквивалентность зависит от разбиения и не должна смешиваться с попарным отношением метрического допуска. Аналогично, утверждение об уменьшении диаметра исторического множества требует объявленной метрики, а утверждение об уменьшении вероятностной неопределённости --- меры и функционала. Одна лишь мощность множества не задаёт ни того, ни другого.}
+
+\section{\Lang{Topological historical families}{Топологические исторические семейства}}
+\label{sec:topology}
+\Lang{Suppose $\Wcal$, $\Hminus$ and $E=R(\Wcal)$ carry declared topologies and that $R$ and $\pi_-$ are continuous. For open $U\subseteq E$, form the response-indexed historical image family}
+{Предположим, что $\Wcal$, $\Hminus$ и $E=R(\Wcal)$ снабжены объявленными топологиями, а $R$ и $\pi_-$ непрерывны. Для открытого $U\subseteq E$ образуем историческое семейство, индексированное откликами:}
+\begin{equation}\label{eq:history-family}
+\mathcal H_U=\{(y,h)\in U\times\Hminus:h\in\pi_-(R^{-1}(y))\},
+\qquad p(y,h)=y.
+\end{equation}
+\Lang{Use the subspace topology from $U\times\Hminus$. Local triviality is not assumed. A point is structurally regular when its family admits a local fibre-bundle trivialization; the complementary locus is the WR-III structural wall \cite[Section 8]{WRIII}. The word wall supplies no codimension, smoothness or physical transition by itself.}
+{Используется топология подпространства $U\times\Hminus$. Локальная тривиальность не предполагается. Точка структурно регулярна, если семейство в её окрестности допускает локальную тривиализацию расслоения; дополнительное множество является структурной стеной в смысле WR-III \cite[Section 8]{WRIII}. Само слово «стена» не задаёт коразмерности, гладкости или физического перехода.}
+
+\begin{proposition}[\Lang{Conditional transfer of local triviality}{Условный перенос локальной тривиальности}]
+\label{prop:wall-transfer}
+\Lang{Consider the map}{Рассмотрим отображение}
+\[
+F:R^{-1}(U)\to\mathcal H_U,\qquad F(W)=(R(W),\pi_-(W)).
+\]
+\Lang{If $F$ is a homeomorphism, then $R:R^{-1}(U)\to U$ and $p:\mathcal H_U\to U$ have the same local-triviality locus.}
+{Если $F$ является гомеоморфизмом, то отображения $R:R^{-1}(U)\to U$ и $p:\mathcal H_U\to U$ имеют одинаковое множество точек локальной тривиальности.}
+\end{proposition}
+\begin{proof}
+\Lang{Since $p\circ F=R$, a trivialization $\phi:R^{-1}(V)\to V\times A$ for open $V\subseteq U$ transfers to $\phi\circ F^{-1}:p^{-1}(V)\to V\times A$. It still commutes with the base projections. Conversely use $F$. Thus a trivialization exists for one family exactly when it exists for the other.}
+{Поскольку $p\circ F=R$, тривиализация $\phi:R^{-1}(V)\to V\times A$ для открытого $V\subseteq U$ переносится в $\phi\circ F^{-1}:p^{-1}(V)\to V\times A$. Она по-прежнему согласована с проекциями на базу. В обратную сторону используется $F$. Поэтому тривиализация одного семейства существует в точности тогда, когда существует тривиализация другого.}
+\end{proof}
+
+\Lang{A collection of separate homeomorphisms between individual fibres does not establish a homeomorphism of total families. The stated hypothesis is sufficient, not claimed necessary. Also,~\eqref{eq:history-family} is not automatically a pullback bundle. A genuine pullback starts from a bundle $q:Z\to B$ and a map $f:U\to B$, giving $f^*Z=\{(u,z):f(u)=q(z)\}$ \cite[Section 1.2, p.~7]{SelickNotes}. Those data are absent from the image-family definition.}
+{Набор отдельных гомеоморфизмов между слоями не устанавливает гомеоморфизм полных семейств. Сформулированное условие достаточно; его необходимость не утверждается. Кроме того,~\eqref{eq:history-family} не является автоматически индуцированным расслоением. Подлинный pullback начинается с расслоения $q:Z\to B$ и отображения $f:U\to B$, задающих $f^*Z=\{(u,z):f(u)=q(z)\}$ \cite[Section 1.2, p.~7]{SelickNotes}. Эти данные отсутствуют в определении семейства образов.}
+
+\begin{example}[\Lang{A projection can erase a response wall}{Проекция может скрыть стену отклика}]
+\label{ex:wall-erasure}
+\Lang{The WR-III sphere-height response $R:S^2\to[-1,1]$, $R(x,y,z)=z$, has circular fibres for $-1<z<1$ and singleton fibres at $z=\pm1$ \cite[Section 10]{WRIII}. The endpoints are wall points: every relative neighbourhood includes fibres of different topological types. If $\pi_-$ is constant with value $h_0$, the historical family is $[-1,1]\times\{h_0\}$ and is trivial everywhere. The world wall disappears under historical projection.}
+{Отклик высоты сферы из WR-III, $R:S^2\to[-1,1]$, $R(x,y,z)=z$, имеет слои-окружности при $-1<z<1$ и одноэлементные слои при $z=\pm1$ \cite[Section 10]{WRIII}. Концы интервала являются точками стены: любая относительная окрестность содержит слои разных топологических типов. Если $\pi_-$ постоянно и равно $h_0$, историческое семейство имеет вид $[-1,1]\times\{h_0\}$ и всюду тривиально. Стена миров исчезает при исторической проекции.}
+\end{example}
+\Lang{This is an information-loss example without an assigned physical chronology. A response map is not thereby a forward-evolution map. The circle and the singleton are both connected, so even a visible wall need not change the number of connected components. Refinement of hard constraints and transfer of local-triviality walls are different operations.}
+{Это пример потери информации без заданной физической хронологии. Отображение отклика от этого не становится отображением эволюции вперёд. Окружность и одноэлементное множество оба связны, поэтому даже наблюдаемая стена не обязана менять число компонент связности. Уточнение жёстких ограничений и перенос стен локальной тривиальности являются разными операциями.}
+
+\section{\Lang{Deterministic dynamics and full backward histories}{Детерминированная динамика и полные обратные истории}}
+\label{sec:deterministic}
+\Lang{Let $T:X\to X$ be a deterministic map. A full backward history ending at $x_0$ is a sequence $(x_0,x_{-1},x_{-2},\ldots)$ with $T(x_{-n})=x_{-(n-1)}$ for all $n\ge1$. Define}
+{Пусть $T:X\to X$ --- детерминированное отображение. Полная обратная история, заканчивающаяся в $x_0$, есть последовательность $(x_0,x_{-1},x_{-2},\ldots)$, для которой $T(x_{-n})=x_{-(n-1)}$ при всех $n\ge1$. Определим}
+\begin{equation}\label{eq:natural-extension}
+\widehat X=\{(x_0,x_{-1},\ldots)\in X^{\mathbb N_0}:T(x_{-n})=x_{-(n-1)},\ n\ge1\},
+\quad p_0(\widehat x)=x_0.
+\end{equation}
+\Lang{For a continuous map, use the subspace topology inherited from the product. Histories over one present state form $p_0^{-1}(x_0)$, not the entire space $\widehat X$. The natural-extension shift sends $(x_0,x_{-1},\ldots)$ to $(T(x_0),x_0,x_{-1},\ldots)$; its inverse deletes the first coordinate. Thus the history-space dynamics is invertible even when $T$ on present states is not. This construction is classical; the circle-doubling case is the dyadic solenoid \cite[Section 1]{ClarkFokkink2004}.}
+{Для непрерывного отображения используется топология подпространства произведения. Истории над одним настоящим состоянием образуют $p_0^{-1}(x_0)$, а не всё пространство $\widehat X$. Сдвиг естественного расширения переводит $(x_0,x_{-1},\ldots)$ в $(T(x_0),x_0,x_{-1},\ldots)$; обратный сдвиг удаляет первую координату. Поэтому динамика пространства историй обратима даже тогда, когда $T$ на настоящих состояниях необратимо. Эта конструкция классическая; случай удвоения окружности представляет собой диадический соленоид \cite[Section 1]{ClarkFokkink2004}.}
+
+\begin{proposition}[\Lang{Forward uniqueness is not backward uniqueness}{Единственность будущего не означает единственности прошлого}]
+\label{prop:forward-backward}
+\Lang{The forward orbit of each $x_0$ is unique. Noninjectivity of $T$ does not guarantee existence or multiplicity of full backward histories over every $x_0$.}
+{Будущая орбита каждого $x_0$ единственна. Неинъективность $T$ не гарантирует существования или множественности полных обратных историй над каждым $x_0$.}
+\end{proposition}
+\begin{proof}
+\Lang{The future is $(x_0,T(x_0),T^2(x_0),\ldots)$. For a counterexample to automatic backward multiplicity, let $X=\mathbb N_0$, $T(0)=1$ and $T(n)=n$ for $n\ge1$. No history ends at $0$. Over $1$, the only full history is $(1,1,\ldots)$ because choosing predecessor $0$ prevents further extension. The next section gives genuine multiple full histories.}
+{Будущее равно $(x_0,T(x_0),T^2(x_0),\ldots)$. Для контрпримера к автоматической множественности прошлого положим $X=\mathbb N_0$, $T(0)=1$ и $T(n)=n$ при $n\ge1$. Ни одна история не заканчивается в $0$. Над $1$ имеется только полная история $(1,1,\ldots)$, поскольку выбор предшественника $0$ препятствует дальнейшему продолжению назад. Следующий раздел даёт пример подлинной множественности полных историй.}
+\end{proof}
+
+\section{\Lang{The doubling-map benchmark}{Пример отображения удвоения}}
+\label{sec:doubling}
+\Lang{Take $X=\mathbb R/\mathbb Z$ with its circle topology and $T(x)=2x\pmod1$. Let the world carrier be $\widehat X$, the present response be $p_0$, and the historical projection retain all negative coordinates. Each state has two immediate predecessors, but the following assertion concerns complete infinite histories.}
+{Возьмём $X=\mathbb R/\mathbb Z$ с топологией окружности и $T(x)=2x\pmod1$. Носитель миров равен $\widehat X$, отклик настоящего равен $p_0$, а историческая проекция сохраняет все отрицательные координаты. У каждого состояния два непосредственных предшественника, но следующее утверждение относится к полным бесконечным историям.}
+\begin{theorem}[\Lang{Cantor family over an exactly known present}{Канторово семейство над точно известным настоящим}]
+\label{thm:cantor-pasts}
+\Lang{For every $x_0\in X$, the fibre $p_0^{-1}(x_0)$ is homeomorphic to $\{0,1\}^{\mathbb N}$ with its product topology.}
+{Для каждого $x_0\in X$ слой $p_0^{-1}(x_0)$ гомеоморфен $\{0,1\}^{\mathbb N}$ с топологией произведения.}
+\end{theorem}
+\begin{proof}
+\Lang{Fix the representative $r_0\in[0,1)$ of $x_0$. For a bit sequence $\epsilon$, define}
+{Зафиксируем представитель $r_0\in[0,1)$ точки $x_0$. Для последовательности битов $\epsilon$ определим}
+\[
+r_n=\frac{r_{n-1}+\epsilon_n}{2},\qquad x_{-n}=[r_n].
+\]
+\Lang{These coordinates form a full history. Conversely, the unique representatives $r_n\in[0,1)$ of a history recover $\epsilon_n=2r_n-r_{n-1}\in\{0,1\}$. The correspondence is bijective. Each coordinate depends on finitely many bits, so the coding is continuous. The domain is compact and the target fibre is Hausdorff; a continuous bijection is therefore a homeomorphism. The branch labels are chosen over this fixed $x_0$; no globally continuous inverse branch on the circle is asserted.}
+{Эти координаты образуют полную историю. Обратно, единственные представители $r_n\in[0,1)$ заданной истории восстанавливают $\epsilon_n=2r_n-r_{n-1}\in\{0,1\}$. Соответствие биективно. Каждая координата зависит от конечного числа битов, поэтому кодирование непрерывно. Исходное пространство компактно, а целевой слой хаусдорфов; следовательно, непрерывная биекция является гомеоморфизмом. Метки ветвей выбраны над этим фиксированным $x_0$; существование глобально непрерывной обратной ветви на окружности не утверждается.}
+\end{proof}
+\begin{corollary}[\Lang{Finite branch records leave infinitely many choices}{Конечные записи ветвей оставляют бесконечно много выборов}]
+\label{cor:finite-backward}
+\Lang{Fixing any finite number of branch bits leaves a Cantor family of full histories.}
+{Фиксация любого конечного числа битов ветвления оставляет канторово семейство полных историй.}
+\end{corollary}
+\begin{proof}
+\Lang{Removing the fixed bit coordinates leaves countably infinitely many free coordinates, whose product is again $\{0,1\}^{\mathbb N}$. For a fixed initial block these encode progressively older predecessors.}
+{После удаления фиксированных битовых координат остаётся счётно бесконечное число свободных координат, произведение которых снова равно $\{0,1\}^{\mathbb N}$. При фиксации начального блока они кодируют всё более ранних предшественников.}
+\end{proof}
+\Lang{At depth $n$ there are $2^n$ distinct finite predecessor chains. A picture at finite depth is not a representation of all infinite histories. The Cantor assertion is topological and set-theoretic; it does not assign probabilities to branch choices and does not establish a physical branching ontology.}
+{На глубине $n$ имеется $2^n$ различных конечных цепочек предшественников. Рисунок конечной глубины не изображает все бесконечные истории. Утверждение о канторовом множестве является топологическим и теоретико-множественным; оно не задаёт вероятности выбора ветвей и не устанавливает физическую ветвящуюся онтологию.}
+
+\section{\Lang{The probability layer and Gaussian conditioning}{Вероятностный слой и гауссовское условливание}}
+\label{sec:gaussian}
+\Lang{A probability law on $\Wcal$ adds relative weights to realizations. It must be supplied separately from compatibility. Conditional laws on continuous observations require a kernel, because a singleton observed value can have probability zero.}
+{Вероятностный закон на $\Wcal$ добавляет относительные веса реализаций. Он задаётся отдельно от совместимости. Для условных законов при непрерывных наблюдениях требуется ядро, поскольку отдельное наблюдённое значение может иметь нулевую вероятность.}
+\begin{definition}[\Lang{Regular conditional kernel}{Регулярное условное ядро}]
+\label{def:rcd}
+\Lang{For measurable random elements $W,Y$ with laws $\mu,\nu$, a kernel $K_y$ is a regular conditional law of $W$ given $Y$ if $K_y$ is a probability measure for each $y$, $y\mapsto K_y(F)$ is measurable for each measurable $F$, and}
+{Для измеримых случайных элементов $W,Y$ с законами $\mu,\nu$ ядро $K_y$ является регулярным условным законом $W$ при заданном $Y$, если $K_y$ --- вероятностная мера для каждого $y$, функция $y\mapsto K_y(F)$ измерима для каждого измеримого $F$ и}
+\begin{equation}\label{eq:disintegration}
+\mathbb P(W\in F,Y\in A)=\int_A K_y(F)\,\nu(dy).
+\end{equation}
+\end{definition}
+\Lang{The identity determines a kernel only $\nu$-almost everywhere. Statements at a specified zero-probability value need a declared version or a regularity condition selecting one. We construct such a version for the Brownian endpoint, rather than divide by a zero probability.}
+{Это равенство определяет ядро только $\nu$-почти всюду. Утверждения при заданном значении нулевой вероятности требуют объявленной версии либо условия регулярности, выбирающего версию. Для броуновского конечного значения такая версия будет построена явно; деление на нулевую вероятность не используется.}
+
+\subsection{\Lang{Gaussian retrospective contraction}{Гауссовское ретроспективное уменьшение ковариации}}
+\Lang{Fix earlier data $A=a$ and work throughout under their declared conditional law. Suppose a past state $X\in\mathbb R^n$ and additional data $Z\in\mathbb R^m$ are jointly Gaussian under that law, with means $m_X,m_Z$ and covariance}
+{Зафиксируем более ранние данные $A=a$ и далее работаем под их объявленным условным законом. Пусть прошлое состояние $X\in\mathbb R^n$ и дополнительные данные $Z\in\mathbb R^m$ совместно гауссовские относительно этого закона, имеют средние $m_X,m_Z$ и ковариацию}
+\[
+\begin{pmatrix}P&C\\C^\top&S\end{pmatrix},\qquad S\succ0.
+\]
+\begin{theorem}[\Lang{Classical Gaussian covariance reduction}{Классическое уменьшение гауссовской ковариации}]
+\label{thm:gaussian-contraction}
+\Lang{A continuous conditional Gaussian kernel is}
+{Непрерывное условное гауссовское ядро имеет вид}
+\begin{equation}\label{eq:gaussian-kernel}
+X\mid Z=z\sim\mathcal N\bigl(m_X+CS^{-1}(z-m_Z),\ P_s\bigr),
+\quad P_s=P-CS^{-1}C^\top.
+\end{equation}
+\Lang{Degenerate Gaussian laws are allowed. Moreover,}
+{Вырожденные гауссовские законы допускаются. Кроме того,}
+\begin{equation}\label{eq:cov-gain}
+0\preceq P_s\preceq P,\qquad
+\Delta P=P-P_s=CS^{-1}C^\top\succeq0.
+\end{equation}
+\Lang{For any $v\in\mathbb R^n$, $v^\top\Delta Pv>0$ exactly when $C^\top v\ne0$.}
+{Для любого $v\in\mathbb R^n$ неравенство $v^\top\Delta Pv>0$ выполняется в точности тогда, когда $C^\top v\ne0$.}
+\end{theorem}
+\begin{proof}
+\Lang{Set $E=X-m_X-CS^{-1}(Z-m_Z)$. Direct multiplication gives $\Cov(E,Z)=0$. Joint Gaussianity, including possible degeneracy, implies independence of $E$ and $Z$. Its covariance is $P-CS^{-1}C^\top$, hence positive semidefinite. Translation of the independent residual gives~\eqref{eq:gaussian-kernel} and a measurable, weakly continuous version. Since $S^{-1}\succ0$,}
+{Положим $E=X-m_X-CS^{-1}(Z-m_Z)$. Прямое вычисление даёт $\Cov(E,Z)=0$. Совместная гауссовость, включая возможное вырождение, влечёт независимость $E$ и $Z$. Ковариация остатка равна $P-CS^{-1}C^\top$ и потому неотрицательно определена. Сдвиг независимого остатка даёт~\eqref{eq:gaussian-kernel} и измеримую, слабо непрерывную версию. Поскольку $S^{-1}\succ0$,}
+\[
+v^\top\Delta Pv=(C^\top v)^\top S^{-1}(C^\top v)
+\]
+\Lang{is positive precisely in the stated case. This is the standard Gaussian conditioning formula, also given in \cite[Appendix A.1, Lemma A.3]{SarkkaSvensson2023}.}
+{положительно в точности в указанном случае. Это стандартная формула гауссовского условливания, приведённая также в \cite[Appendix A.1, Lemma A.3]{SarkkaSvensson2023}.}
+\end{proof}
+
+\Lang{The assumption $S\succ0$ is used to invert the observation covariance. No extension by an unspecified inverse at singular $S$ is intended. A singular-observation treatment must restrict to the attainable observation subspace and specify its kernel separately. A zero cross-covariance $C=0$ gives no reduction. Positive residual covariance is not guaranteed by the general theorem; for example, observing $Z=X$ exactly can determine $X$.}
+{Условие $S\succ0$ используется для обращения ковариации наблюдений. Продолжение на сингулярное $S$ посредством неоговорённой обратной матрицы не предполагается. При сингулярных наблюдениях требуется ограничение на достижимое подпространство наблюдений и отдельное задание ядра. Нулевая перекрёстная ковариация $C=0$ не даёт уменьшения. Общая теорема не гарантирует положительной остаточной ковариации: например, точное наблюдение $Z=X$ может определить $X$.}
+
+\subsection{\Lang{What variance monotonicity does and does not say}{Что утверждает монотонность дисперсии}}
+\Lang{For nondegenerate scalar Gaussians, central intervals of a fixed probability become shorter when variance decreases. Their centres can move, so the intervals need not be nested. Scalar supports remain $\mathbb R$ as long as both variances are positive. These facts already rule out identifying covariance reduction with set restriction.}
+{Для невырожденных одномерных гауссовских законов центральные интервалы фиксированной вероятности становятся короче при уменьшении дисперсии. Их центры могут смещаться, поэтому интервалы не обязаны быть вложенными. Носители одномерных законов остаются равными $\mathbb R$, пока обе дисперсии положительны. Уже эти факты исключают отождествление уменьшения ковариации с ограничением множества.}
+
+\begin{proposition}[\Lang{General conditional variance decreases only on average}{Общее уменьшение условной дисперсии имеет усреднённый характер}]
+\label{prop:total-variance}
+\Lang{Let $X$ be scalar and square-integrable, and let $\mathcal G\subseteq\mathcal F$ be sigma-fields. Then}
+{Пусть $X$ --- квадратично интегрируемая скалярная случайная величина и $\mathcal G\subseteq\mathcal F$ --- сигма-алгебры. Тогда}
+\begin{equation}\label{eq:total-variance}
+\Var(X\mid\mathcal G)
+=\E[\Var(X\mid\mathcal F)\mid\mathcal G]
+ +\Var(\E[X\mid\mathcal F]\mid\mathcal G)
+\quad\text{a.s.}
+\end{equation}
+\Lang{Consequently the first term is at most the left side, but $\Var(X\mid\mathcal F)$ itself need not be pointwise smaller.}
+{Следовательно, первое слагаемое не превосходит левой части, но сама $\Var(X\mid\mathcal F)$ не обязана быть поточечно меньше.}
+\end{proposition}
+\begin{proof}
+\Lang{Write $X-\E[X\mid\mathcal G]=(X-\E[X\mid\mathcal F])+(\E[X\mid\mathcal F]-\E[X\mid\mathcal G])$. The conditional expectation of the cross term given $\mathcal G$ is zero by the tower property. Squaring and taking conditional expectations gives~\eqref{eq:total-variance}.}
+{Запишем $X-\E[X\mid\mathcal G]=(X-\E[X\mid\mathcal F])+(\E[X\mid\mathcal F]-\E[X\mid\mathcal G])$. Условное ожидание перекрёстного слагаемого относительно $\mathcal G$ равно нулю по свойству башни. Возведение в квадрат и условное усреднение дают~\eqref{eq:total-variance}.}
+\end{proof}
+\begin{example}[\Lang{A rare observation increases conditional variance}{Редкое наблюдение увеличивает условную дисперсию}]
+\label{ex:variance-increase}
+\Lang{Let $\mathbb P(X=0)=0.99$ and $\mathbb P(X=10)=\mathbb P(X=-10)=0.005$. The prior mean is zero and variance is $1$. Observing $Z=\mathbf1_{\{X\ne0\}}$ gives variance $100$ when $Z=1$ and zero when $Z=0$. The average posterior variance remains $1$. Thus the Gaussian pointwise conclusion must not be exported to arbitrary observations.}
+{Пусть $\mathbb P(X=0)=0.99$ и $\mathbb P(X=10)=\mathbb P(X=-10)=0.005$. Априорное среднее равно нулю, дисперсия равна $1$. Наблюдение $Z=\mathbf1_{\{X\ne0\}}$ даёт дисперсию $100$ при $Z=1$ и нуль при $Z=0$. Средняя апостериорная дисперсия остаётся равной $1$. Поэтому поточечный гауссовский вывод нельзя переносить на произвольные наблюдения.}
+\end{example}
+
+\section{\Lang{Exact-endpoint diffusion and regular Brownian bridges}{Диффузия с точным конечным значением и регулярные броуновские мосты}}
+\label{sec:bridge}
+\Lang{Fix $x_0\in\mathbb R$, $T>0$ and diffusivity $\kappa>0$. Let $B$ be standard Brownian motion and}
+{Зафиксируем $x_0\in\mathbb R$, $T>0$ и коэффициент диффузии $\kappa>0$. Пусть $B$ --- стандартное броуновское движение и}
+\begin{equation}\label{eq:diffusion}
+X_t=x_0+\sqrt{2\kappa}\,B_t,\qquad 0\le t\le T.
+\end{equation}
+\Lang{The initial state is deterministic. With only this state fixed, $X_t\sim\mathcal N(x_0,2\kappa t)$; this is the prior relative to the endpoint smoothing problem. The coefficient $\kappa$ has units of length squared per time; $D$ continues to denote evidence. The model is an idealized diffusion, not a fitted experimental system.}
+{Начальное состояние детерминировано. При фиксации только этого состояния $X_t\sim\mathcal N(x_0,2\kappa t)$; это априорный закон относительно задачи сглаживания по конечному наблюдению. Размерность $\kappa$ равна квадрату длины, делённому на время; $D$ по-прежнему обозначает данные. Модель является идеализированной диффузией, а не подгонкой экспериментальной системы.}
+
+\subsection{\Lang{The WREH dictionary}{Словарь WREH}}
+\Lang{Use the Polish carrier $\Wcal_T=C_{x_0}([0,T],\mathbb R)$ of continuous paths starting at $x_0$, with uniform topology and Borel sigma-field. Its prior path law is $\mu$. Fix $0<\tau<T$.}
+{Используем польский носитель $\Wcal_T=C_{x_0}([0,T],\mathbb R)$ непрерывных путей, начинающихся в $x_0$, с равномерной топологией и борелевской сигма-алгеброй. Априорный закон путей обозначен через $\mu$. Зафиксируем $0<\tau<T$.}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}Y@{}}
+\toprule
+\textbf{\Lang{Object}{Объект}}&\textbf{\Lang{Declaration}{Объявление}}\\\midrule
+\Lang{World and carrier}{Мир и носитель}&$w\in\Wcal_T$; \Lang{$\mu$ supplies probability weights.}{$\mu$ задаёт вероятностные веса.}\\
+\Lang{Protocol / response}{Протокол / отклик}&$R_{P_T}(w)=w(T)$.\\
+\Lang{Data}{Данные}&$D_b$: \Lang{the exact endpoint $b$; $x_0$ is part of the carrier.}{точное конечное значение $b$; $x_0$ включено в носитель.}\\
+\Lang{Completion fibre}{Слой достраиваний}&$\Ccal(D_b)=\{w\in\Wcal_T:w(T)=b\}=:C_b$.\\
+\Lang{Full pre-endpoint past}{Полное прошлое до конца}&$\pi_-(w)=w|_{[0,T)}$, \Lang{codomain $\pi_-(\Wcal_T)$.}{пространство значений $\pi_-(\Wcal_T)$.}\\
+\Lang{Earlier fragment}{Ранний фрагмент}&$\pi_\tau(w)=w|_{[0,\tau]}$, \Lang{codomain $C_{x_0}([0,\tau],\mathbb R)$.}{пространство значений $C_{x_0}([0,\tau],\mathbb R)$.}\\
+\Lang{Conditional law}{Условный закон}&$K_b$, \Lang{a measure with $K_b(C_b)=1$, not the set $C_b$ itself.}{мера с $K_b(C_b)=1$, а не само множество $C_b$.}\\
+\bottomrule
+\end{tabularx}
+\end{center}
+\Lang{The closed path space is Polish because it is a closed subspace of the continuous-function Banach space. The definition of admissible paths is distinct from the probability of an individual path. In particular $C_b\ne\varnothing$ although $\mu(C_b)=0$.}
+{Пространство путей является польским, поскольку это замкнутое подпространство банахова пространства непрерывных функций. Определение допустимых путей отлично от вероятности отдельного пути. В частности, $C_b\ne\varnothing$, хотя $\mu(C_b)=0$.}
+
+\subsection{\Lang{An explicit version at every endpoint}{Явная версия для каждого конечного значения}}
+\begin{proposition}[\Lang{Regular Brownian-bridge kernel}{Регулярное ядро броуновского моста}]
+\label{prop:bridge-kernel}
+\Lang{For every $b\in\mathbb R$, let $K_b$ be the law on $\Wcal_T$ of}
+{Для каждого $b\in\mathbb R$ пусть $K_b$ --- закон на $\Wcal_T$ процесса}
+\begin{equation}\label{eq:bridge-kernel}
+U_t^b=x_0+\frac{t}{T}(b-x_0)
++\sqrt{2\kappa}\left(B_t-\frac{t}{T}B_T\right),\qquad 0\le t\le T.
+\end{equation}
+\Lang{Then $b\mapsto K_b$ is weakly continuous, is a regular conditional law of $X$ given $X_T$, and satisfies $K_b(C_b)=1$ for every $b$. Its covariance is}
+{Тогда отображение $b\mapsto K_b$ слабо непрерывно, является регулярным условным законом $X$ при заданном $X_T$ и удовлетворяет $K_b(C_b)=1$ для каждого $b$. Его ковариация равна}
+\begin{equation}\label{eq:bridge-cov}
+\Cov_{K_b}(X_s,X_t)=2\kappa\left(\min(s,t)-\frac{st}{T}\right).
+\end{equation}
+\end{proposition}
+\begin{proof}
+\Lang{Put $V_t=B_t-tB_T/T$. For every $t$, $\Cov(V_t,B_T)=t-t=0$. Each finite-dimensional vector of $V$ is jointly Gaussian with $B_T$ and independent of it. Evaluations at a countable dense set of times generate the Borel sigma-field of continuous paths; hence the entire residual path is independent of $B_T$. Its covariance is $\min(s,t)-st/T$. Also,}
+{Положим $V_t=B_t-tB_T/T$. Для каждого $t$ имеем $\Cov(V_t,B_T)=t-t=0$. Любой конечномерный вектор $V$ совместно гауссовский с $B_T$ и независим от него. Вычисления значений на счётном плотном множестве моментов порождают борелевскую сигма-алгебру непрерывных путей; поэтому весь остаточный путь независим от $B_T$. Его ковариация равна $\min(s,t)-st/T$. Кроме того,}
+\[
+X_t=x_0+\frac{t}{T}(X_T-x_0)+\sqrt{2\kappa}\,V_t.
+\]
+\Lang{Independence gives~\eqref{eq:disintegration} with $W=X$, $Y=X_T$ and $\nu=\mathcal N(x_0,2\kappa T)$. The map $(b,v)\mapsto x_0+t(b-x_0)/T+\sqrt{2\kappa}\,v_t$ is continuous into path space. Its pushforward kernel is measurable; dominated convergence for bounded continuous path functionals proves weak continuity in $b$. At $0$ and $T$, the residual vanishes, so the path starts at $x_0$ and ends at $b$. Covariance gives~\eqref{eq:bridge-cov}. The residual construction is classical \cite[Theorem 22.1 and following remark]{Pitman2003}.}
+{Независимость даёт~\eqref{eq:disintegration} при $W=X$, $Y=X_T$ и $\nu=\mathcal N(x_0,2\kappa T)$. Отображение $(b,v)\mapsto x_0+t(b-x_0)/T+\sqrt{2\kappa}\,v_t$ непрерывно со значениями в пространстве путей. Порождаемое им ядро измеримо; предельный переход под знаком интеграла для ограниченных непрерывных функционалов пути доказывает слабую непрерывность по $b$. В моменты $0$ и $T$ остаток равен нулю, поэтому путь начинается в $x_0$ и заканчивается в $b$. Вычисление ковариации даёт~\eqref{eq:bridge-cov}. Конструкция через независимый остаток является классической \cite[Theorem 22.1 and following remark]{Pitman2003}.}
+\end{proof}
+
+\Lang{The notation $X\mid X_T=b$ will always mean this selected kernel. An arbitrary regular conditional version can be changed at a single $b$ without affecting disintegration. Weak continuity, together with the full support of the endpoint Gaussian law, removes that ambiguity among weakly continuous versions. There is no division by $\mathbb P(X_T=b)$.}
+{Запись $X\mid X_T=b$ далее всегда означает выбранное ядро. Произвольную регулярную условную версию можно изменить в одном $b$ без нарушения дезинтеграции. Слабая непрерывность вместе с полным носителем гауссовского закона конечного значения устраняет эту неоднозначность среди слабо непрерывных версий. Деление на $\mathbb P(X_T=b)$ отсутствует.}
+
+\subsection{\Lang{Variance reduction with residual path ambiguity}{Уменьшение дисперсии при остаточной неоднозначности пути}}
+\begin{theorem}[\Lang{The interior state is sharpened but not determined}{Внутреннее состояние уточняется, но не определяется однозначно}]
+\label{thm:brownian-bridge}
+\Lang{For the kernel above and every $0<t<T$,}
+{Для построенного ядра и каждого $0<t<T$,}
+\begin{equation}\label{eq:bridge-marginal}
+X_t\mid X_T=b\sim\mathcal N\left(x_0+\frac{t}{T}(b-x_0),\,
+2\kappa\frac{t(T-t)}{T}\right),
+\end{equation}
+\[
+0<2\kappa\frac{t(T-t)}{T}<2\kappa t.
+\]
+\end{theorem}
+\begin{proof}
+\Lang{Equation~\eqref{eq:bridge-kernel} gives the mean and Gaussianity, while~\eqref{eq:bridge-cov} gives the variance. Independently, $\Cov(X_t,X_T)=2\kappa t$ and $\Var(X_T)=2\kappa T$, so Theorem~\ref{thm:gaussian-contraction} gives}
+{Формула~\eqref{eq:bridge-kernel} задаёт среднее и гауссовость, а~\eqref{eq:bridge-cov} задаёт дисперсию. Независимо, $\Cov(X_t,X_T)=2\kappa t$ и $\Var(X_T)=2\kappa T$, поэтому теорема~\ref{thm:gaussian-contraction} даёт}
+\[
+2\kappa t-\frac{(2\kappa t)^2}{2\kappa T}=2\kappa\frac{t(T-t)}{T}.
+\]
+\Lang{Since $0<(T-t)/T<1$, both inequalities follow. At $t=0$ and $t=T$ the bridge variance is zero; these boundaries are excluded from the strict assertion.}
+{Поскольку $0<(T-t)/T<1$, следуют оба неравенства. При $t=0$ и $t=T$ дисперсия моста равна нулю; эти границы исключены из строгого утверждения.}
+\end{proof}
+\begin{corollary}[\Lang{A countable list of paths has zero bridge probability}{Счётный список путей имеет нулевую вероятность моста}]
+\label{cor:path-nonuniqueness}
+\Lang{$K_b$ is not a Dirac law and assigns zero probability to any countable family of trajectories. In particular the compatible full path class remains uncountable.}
+{$K_b$ не является мерой Дирака и приписывает нулевую вероятность любому счётному семейству траекторий. В частности, совместимый класс полных путей остаётся несчётным.}
+\end{corollary}
+\begin{proof}
+\Lang{Fix $t_*\in(0,T)$. Every specified path imposes one value at $t_*$, an event of probability zero under its nondegenerate Gaussian marginal. Countable unions remain null. Since $K_b(C_b)=1$, $C_b$ cannot be countable.}
+{Зафиксируем $t_*\in(0,T)$. Каждый заданный путь предписывает одно значение в $t_*$, а такое событие имеет нулевую вероятность при невырожденном гауссовском маргинальном законе. Счётные объединения остаются нулевыми. Поскольку $K_b(C_b)=1$, множество $C_b$ не может быть счётным.}
+\end{proof}
+
+\subsection{\Lang{Full histories and fixed earlier fragments}{Полные истории и фиксированные ранние фрагменты}}
+\begin{proposition}[\Lang{A smaller full fibre can have the same earlier image}{Меньший полный слой может иметь тот же ранний образ}]
+\label{prop:prefix-sets}
+\Lang{$C_b$ is a proper subset of $\Wcal_T$. The restriction $\pi_-$ to $[0,T)$ is injective, and $\pi_-(C_b)$ is a proper subset of $\pi_-(\Wcal_T)$ characterized by limit $b$ at $T$. For every fixed $0<\tau<T$, however,}
+{$C_b$ является собственным подмножеством $\Wcal_T$. Ограничение $\pi_-$ на $[0,T)$ инъективно, а $\pi_-(C_b)$ --- собственное подмножество $\pi_-(\Wcal_T)$, характеризуемое пределом $b$ в $T$. Однако для каждого фиксированного $0<\tau<T$,}
+\begin{equation}\label{eq:prefix-image}
+\pi_\tau(C_b)=\pi_\tau(\Wcal_T)=C_{x_0}([0,\tau],\mathbb R).
+\end{equation}
+\end{proposition}
+\begin{proof}
+\Lang{A linear path to $b$ lies in $C_b$, whereas a linear path to any $b'\ne b$ does not. Continuous paths agreeing before $T$ agree at $T$ by taking limits, proving injectivity. For a given prefix $h$, keep it on $[0,\tau]$ and put $w(t)=h(\tau)+(t-\tau)(b-h(\tau))/(T-\tau)$ for $\tau\le t\le T$. This continuous extension proves~\eqref{eq:prefix-image}.}
+{Линейный путь к $b$ принадлежит $C_b$, а линейный путь к любому $b'\ne b$ не принадлежит. Непрерывные пути, совпадающие до $T$, совпадают и в $T$ по переходу к пределу; это доказывает инъективность. Для заданного фрагмента $h$ сохраним его на $[0,\tau]$ и положим $w(t)=h(\tau)+(t-\tau)(b-h(\tau))/(T-\tau)$ при $\tau\le t\le T$. Это непрерывное продолжение доказывает~\eqref{eq:prefix-image}.}
+\end{proof}
+
+\Lang{One can say more about the probability laws of these fragments without confusing them with the sets. Put $\mu_\tau=(\pi_\tau)_*\mu$, $K_b^\tau=(\pi_\tau)_*K_b$, and define the transition density}
+{О вероятностных законах этих фрагментов можно сказать больше, не смешивая их с множествами. Положим $\mu_\tau=(\pi_\tau)_*\mu$, $K_b^\tau=(\pi_\tau)_*K_b$ и определим плотность перехода}
+\[
+p_s(z)=\frac{1}{\sqrt{4\pi\kappa s}}\exp\left(-\frac{z^2}{4\kappa s}\right),\qquad s>0.
+\]
+\begin{proposition}[\Lang{Equivalent laws on each fixed earlier interval}{Эквивалентные законы на каждом фиксированном раннем интервале}]
+\label{prop:prefix-equivalence}
+\Lang{For every $b\in\mathbb R$ and $0<\tau<T$,}
+{Для каждого $b\in\mathbb R$ и $0<\tau<T$,}
+\begin{equation}\label{eq:prefix-density}
+\frac{dK_b^\tau}{d\mu_\tau}(h)=
+\frac{p_{T-\tau}(b-h(\tau))}{p_T(b-x_0)}>0.
+\end{equation}
+\Lang{The two measures are equivalent, with the same null sets and topological support. Nevertheless their state variances differ as in~\eqref{eq:bridge-marginal}.}
+{Эти меры эквивалентны, имеют одинаковые нулевые множества и топологический носитель. Тем не менее дисперсии их состояний различаются согласно~\eqref{eq:bridge-marginal}.}
+\end{proposition}
+\begin{proof}
+\Lang{Independent increments imply that, given the prefix $h$, the endpoint has density $p_{T-\tau}(b-h(\tau))$. Its marginal density is $p_T(b-x_0)$. Their ratio defines a normalized prefix kernel by disintegration. For bounded continuous prefix functionals its integral is continuous in $b$: on compact $b$-sets the denominator has a positive lower bound and the numerator is bounded. This version agrees almost everywhere with the restriction of the kernel in Proposition~\ref{prop:bridge-kernel}; weak continuity and full support of the endpoint law make them agree everywhere. The strictly positive density gives mutual absolute continuity. Equivalent measures give positive mass to the same open sets, hence have the same support.}
+{Независимость приращений означает, что при заданном фрагменте $h$ конечное значение имеет плотность $p_{T-\tau}(b-h(\tau))$. Его маргинальная плотность равна $p_T(b-x_0)$. Их отношение задаёт нормированное ядро фрагментов через дезинтеграцию. Для ограниченных непрерывных функционалов фрагмента интеграл непрерывен по $b$: на компактных множествах значений $b$ знаменатель отделён от нуля, а числитель ограничен. Эта версия почти всюду совпадает с ограничением ядра из утверждения~\ref{prop:bridge-kernel}; слабая непрерывность и полный носитель закона конечного значения дают совпадение всюду. Строго положительная плотность обеспечивает взаимную абсолютную непрерывность. Эквивалентные меры приписывают положительную массу одним и тем же открытым множествам и потому имеют одинаковый носитель.}
+\end{proof}
+
+\Lang{On the full interval $[0,T]$ the laws $K_b$ and $\mu$ are instead singular, since $K_b(C_b)=1$ and $\mu(C_b)=0$. Thus extending the cut all the way to $T$ changes the measure-theoretic conclusion. Equivalence on every fixed shorter interval is consistent with singularity on the full path space. Positive variance alone would not prove any of these support or equivalence statements.}
+{На полном интервале $[0,T]$ законы $K_b$ и $\mu$, напротив, сингулярны, поскольку $K_b(C_b)=1$ и $\mu(C_b)=0$. Поэтому продвижение среза до самого $T$ меняет теоретико-мерный вывод. Эквивалентность на каждом фиксированном более коротком интервале совместима с сингулярностью на полном пространстве путей. Одна лишь положительная дисперсия не доказывала бы ни одного из этих утверждений о носителях или эквивалентности.}
+
+\begin{figure}[tbp]
+\centering\includegraphics[width=0.94\linewidth]{\figfile{variance}}
+\caption{\Lang{Analytic normalized state variance. With $q=t/T$ and $r=R/(2\kappa T)$, the prior gives $q$, an exact endpoint gives $q(1-q)$, and a Gaussian noisy endpoint gives $q-q^2/(1+r)$. Interior exact-bridge variance is positive. Curves are formulas, not empirical estimates.}
+{Аналитическая нормированная дисперсия состояния. При $q=t/T$ и $r=R/(2\kappa T)$ априорный закон даёт $q$, точное конечное значение --- $q(1-q)$, а гауссовское шумное конечное наблюдение --- $q-q^2/(1+r)$. Внутренняя дисперсия точного моста положительна. Кривые построены по формулам, а не по эмпирическим оценкам.}}
+\label{fig:variance}
+\end{figure}
+
+\section{\Lang{Noisy and finite-resolution endpoint data}{Шумные конечные данные и конечное разрешение}}
+\label{sec:noise}
+\Lang{Let $Y_T=X_T+\eta$ with independent $\eta\sim\mathcal N(0,R)$, $R>0$. Here $R$ without a subscript denotes scalar noise variance, while $R_{P_T}$ is the response map. The units of $R$ are length squared.}
+{Пусть $Y_T=X_T+\eta$ с независимым шумом $\eta\sim\mathcal N(0,R)$, $R>0$. Здесь $R$ без индекса обозначает скалярную дисперсию шума, а $R_{P_T}$ --- отображение отклика. Размерность $R$ равна квадрату длины.}
+\begin{proposition}[\Lang{Classical noisy smoothing law}{Классический закон сглаживания при шуме}]
+\label{prop:noisy-contraction}
+\Lang{For every observed $y$ in the continuous Gaussian version and $0<t<T$,}
+{Для каждого наблюдённого $y$ в непрерывной гауссовской версии и $0<t<T$,}
+\begin{align}
+\E[X_t\mid Y_T=y]&=x_0+\frac{2\kappa t}{2\kappa T+R}(y-x_0),\label{eq:noisy-mean}\\
+\Var(X_t\mid Y_T)&=2\kappa t\left(1-\frac{2\kappa t}{2\kappa T+R}\right).
+\label{eq:noisy-var}
+\end{align}
+\Lang{This variance lies strictly between the exact-bridge variance and the prior variance. It approaches them as $R\downarrow0$ and $R\to\infty$, respectively.}
+{Эта дисперсия строго больше дисперсии точного моста и строго меньше априорной дисперсии. Она стремится к ним при $R\downarrow0$ и $R\to\infty$ соответственно.}
+\end{proposition}
+\begin{proof}
+\Lang{The jointly Gaussian pair has $\Cov(X_t,Y_T)=2\kappa t$ and $\Var(Y_T)=2\kappa T+R$. Apply~\eqref{eq:gaussian-kernel}. Since $2\kappa T+R>2\kappa T>2\kappa t>0$, the inequalities and limits follow.}
+{Совместно гауссовская пара имеет $\Cov(X_t,Y_T)=2\kappa t$ и $\Var(Y_T)=2\kappa T+R$. Применим~\eqref{eq:gaussian-kernel}. Поскольку $2\kappa T+R>2\kappa T>2\kappa t>0$, следуют неравенства и предельные переходы.}
+\end{proof}
+
+\subsection{\Lang{Likelihood changes weights without necessarily removing paths}{Правдоподобие меняет веса, не обязательно удаляя пути}}
+\Lang{For each $y$ the likelihood and normalizer are}
+{Для каждого $y$ правдоподобие и нормировочный множитель равны}
+\[
+L_y(w)=\frac{1}{\sqrt{2\pi R}}e^{-(y-w(T))^2/(2R)},
+\qquad Z_y=\int L_y(w)\,\mu(dw).
+\]
+\begin{proposition}[\Lang{Equivalent noisy posterior}{Эквивалентная шумная апостериорная мера}]
+\label{prop:noisy-equivalence}
+\Lang{$0<Z_y<\infty$, and $d\mu_y/d\mu=L_y/Z_y$ defines an everywhere specified regular conditional path law given $Y_T=y$. It is equivalent to $\mu$ and has the same topological support.}
+{$0<Z_y<\infty$, а $d\mu_y/d\mu=L_y/Z_y$ задаёт регулярный условный закон путей при $Y_T=y$ для каждого $y$. Он эквивалентен $\mu$ и имеет тот же топологический носитель.}
+\end{proposition}
+\begin{proof}
+\Lang{The likelihood is strictly positive and bounded; $\mu$ is a probability measure. Conditioning the independent observation noise on each path and integrating proves disintegration with endpoint-observation density $Z_y$. Strict positivity gives $\mu_y(A)=0$ exactly when $\mu(A)=0$. The support statement follows as in Proposition~\ref{prop:prefix-equivalence}. This is the standard likelihood-based Bayesian inverse-problem construction \cite[Section 2 and Theorem 6.31]{Stuart2010}, specialized here and proved directly.}
+{Правдоподобие строго положительно и ограничено, а $\mu$ является вероятностной мерой. Условливание независимого наблюдательного шума на каждый путь с последующим интегрированием доказывает дезинтеграцию с плотностью наблюдения $Z_y$. Строгая положительность означает, что $\mu_y(A)=0$ в точности тогда, когда $\mu(A)=0$. Утверждение о носителе следует так же, как в утверждении~\ref{prop:prefix-equivalence}. Это стандартная байесовская конструкция обратной задачи через правдоподобие \cite[Section 2 and Theorem 6.31]{Stuart2010}, здесь специализированная и доказанная непосредственно.}
+\end{proof}
+
+\Lang{There is a corresponding hard-compatibility calculation, provided the noise variable is included in the worlds. For a declared admissible noise set $S\subseteq\mathbb R$,}
+{Соответствующее вычисление жёсткой совместимости возможно, если шумовая переменная включена в миры. Для объявленного множества допустимого шума $S\subseteq\mathbb R$,}
+\begin{equation}\label{eq:noise-set}
+\begin{aligned}
+J_y^S&=\{(w,\eta)\in\Wcal_T\times S:w(T)+\eta=y\},\\
+\operatorname{pr}_w(J_y^S)&=\{w\in\Wcal_T:y-w(T)\in S\}.
+\end{aligned}
+\end{equation}
+\Lang{Gaussian noise has full support, and the declared set $S=\mathbb R$ permits every residual. The projected compatibility class is all of $\Wcal_T$. If instead $S=[-a,a]$ with $a>0$, the image is $\{w:|w(T)-y|\le a\}$, an endpoint band. It is not a tube constraining the whole path. The bound $a$ is an amplitude, distinct from variance $R$. Support-based admissibility does not require positive probability for individual noise values.}
+{Гауссовский шум имеет полный носитель; объявленное множество $S=\mathbb R$ допускает любой остаток. Проецируемый класс совместимости равен всему $\Wcal_T$. Если вместо этого $S=[-a,a]$ при $a>0$, образ равен $\{w:|w(T)-y|\le a\}$, то есть полосе конечных значений. Это не трубка, ограничивающая весь путь. Граница $a$ является амплитудой и отлична от дисперсии $R$. Допустимость по носителю не требует положительной вероятности отдельных значений шума.}
+
+\subsection{\Lang{A finite-resolution hard observation}{Жёсткое наблюдение с конечным разрешением}}
+\Lang{A different model records that the true endpoint lies in $I=[b-a,b+a]$, $a>0$, without introducing additive noise. The compatible set is $C_I=\{w:w(T)\in I\}$. The event has positive probability and the ordinary conditional law is}
+{Другая модель фиксирует принадлежность истинного конечного значения интервалу $I=[b-a,b+a]$, $a>0$, без введения аддитивного шума. Совместимое множество равно $C_I=\{w:w(T)\in I\}$. Это событие имеет положительную вероятность, а обычный условный закон равен}
+\begin{equation}\label{eq:interval-mixture}
+\mu(\,\cdot\mid X_T\in I)=
+\frac{\int_I K_z(\,\cdot\,)p_T(z-x_0)\,dz}{\int_I p_T(z-x_0)\,dz}.
+\end{equation}
+\Lang{Every fixed earlier prefix still extends to an endpoint in $I$. Formula~\eqref{eq:interval-mixture} is a mixture of bridges, not a bridge pinned to the midpoint. Its variance must not be replaced by the exact-endpoint formula. Shrinking $a$ to zero gives the selected kernel weakly, by its weak continuity. Bounded measurement noise and a true-endpoint interval have related set projections but different likelihood models.}
+{Любой фиксированный ранний фрагмент по-прежнему продолжается до конечного значения в $I$. Формула~\eqref{eq:interval-mixture} является смесью мостов, а не мостом, закреплённым в середине интервала. Её дисперсию нельзя заменять формулой точного конечного значения. При уменьшении $a$ до нуля получается слабый предел выбранного ядра благодаря его слабой непрерывности. Ограниченный измерительный шум и интервал истинного конечного значения имеют родственные проекции множеств, но разные модели правдоподобия.}
+
+\begin{figure}[tbp]
+\centering\includegraphics[width=0.94\linewidth]{\figfile{densities}}
+\caption{\Lang{A later observation both shifts and narrows the earlier marginal. Parameters: $x_0=0$, $\kappa=1/2$, $T=1$, $t=0.6$, endpoint datum $2.5$, and noisy variance $R=0.5$. Means and variances are $(0,0.6)$, $(1.5,0.24)$ and $(1,0.36)$. Segments mark central intervals $m\pm2\sigma$ (about $95.45\%$ probability), whose lengths decrease without nesting. Every displayed density has support $\mathbb R$.}
+{Позднее наблюдение одновременно сдвигает и сужает ранний маргинальный закон. Параметры: $x_0=0$, $\kappa=1/2$, $T=1$, $t=0.6$, конечное наблюдение $2.5$ и дисперсия шума $R=0.5$. Средние и дисперсии равны $(0,0.6)$, $(1.5,0.24)$ и $(1,0.36)$. Отрезки показывают центральные интервалы $m\pm2\sigma$ с вероятностью около $95.45\%$: их длины уменьшаются без вложенности. Каждая изображённая плотность имеет носитель $\mathbb R$.}}
+\label{fig:densities}
+\end{figure}
+
+\section{\Lang{Several observation times: a classical RTS example}{Несколько моментов наблюдения: классический пример RTS}}
+\label{sec:rts}
+\Lang{The endpoint benchmark extends to several observations by ordinary Gaussian smoothing. To state exactly what is being used, sample the diffusion at $0=s_0<s_1<\cdots<s_m$, and write}
+{Пример конечного наблюдения переносится на несколько наблюдений обычным гауссовским сглаживанием. Чтобы точно указать используемый результат, рассмотрим диффузию в моменты $0=s_0<s_1<\cdots<s_m$ и запишем}
+\begin{equation}\label{eq:state-space}
+X_k=X_{k-1}+\xi_k,\qquad Y_k=X_k+\eta_k,
+\quad q_k=2\kappa(s_k-s_{k-1})>0,
+\end{equation}
+\Lang{where $X_0=x_0$ is deterministic, $\xi_k\sim\mathcal N(0,q_k)$, $\eta_k\sim\mathcal N(0,R_k)$, $R_k>0$, and all noises are mutually independent. The scalar random-walk specialization is sufficient here; no nonlinear smoothing method is proposed.}
+{где $X_0=x_0$ детерминировано, $\xi_k\sim\mathcal N(0,q_k)$, $\eta_k\sim\mathcal N(0,R_k)$, $R_k>0$, а все шумы взаимно независимы. Здесь достаточно скалярного случайного блуждания; метод нелинейного сглаживания не предлагается.}
+
+\subsection{\Lang{Forward filtering and backward smoothing}{Фильтрация вперёд и сглаживание назад}}
+\Lang{Let $m_k,p_k$ be the mean and variance of $X_k$ given $y_1,\ldots,y_k$, starting from $m_0=x_0,p_0=0$. The forward Kalman update in this model is}
+{Пусть $m_k,p_k$ --- среднее и дисперсия $X_k$ при $y_1,\ldots,y_k$, начиная с $m_0=x_0,p_0=0$. Обновление фильтра Калмана в этой модели имеет вид}
+\begin{equation}\label{eq:filter}
+\begin{aligned}
+m_k^-&=m_{k-1},&p_k^-&=p_{k-1}+q_k,& K_k&=\frac{p_k^-}{p_k^-+R_k},\\
+m_k&=m_k^-+K_k(y_k-m_k^-),&p_k&=(1-K_k)p_k^-.
+\end{aligned}
+\end{equation}
+\Lang{Initialize $m_m^s=m_m,p_m^s=p_m$. The classical Rauch--Tung--Striebel (RTS) backward recursion \cite[Section 3.2]{RauchTungStriebel1965}\cite[Section 12.2, Theorem 12.2]{SarkkaSvensson2023} becomes}
+{Начальные значения обратного прохода равны $m_m^s=m_m,p_m^s=p_m$. Классическая обратная рекурсия Рауха--Тунга--Штрибеля (RTS) \cite[Section 3.2]{RauchTungStriebel1965}\cite[Section 12.2, Theorem 12.2]{SarkkaSvensson2023} принимает вид}
+\begin{equation}\label{eq:rts}
+\begin{aligned}
+G_k&=\frac{p_k}{p_k+q_{k+1}},\\
+m_k^s&=m_k+G_k(m_{k+1}^s-m_k),\\
+p_k^s&=p_k+G_k^2(p_{k+1}^s-p_k-q_{k+1}),\qquad k=m-1,\ldots,0.
+\end{aligned}
+\end{equation}
+\Lang{To verify this specialization, conditional on observations through $k$ the pair $(X_k,X_{k+1})$ has covariance $\left(\begin{smallmatrix}p_k&p_k\\p_k&p_k+q_{k+1}\end{smallmatrix}\right)$. Gaussian conditioning gives mean $m_k+G_k(X_{k+1}-m_k)$ and variance $p_k-G_k^2(p_k+q_{k+1})$. Future observations are conditionally independent of $X_k$ given $X_{k+1}$ and the observations through $k$, by the declared state-space model. Conditional expectation and total variance therefore give~\eqref{eq:rts}. All denominators are positive. This is a direct proof of the stated classical specialization, not a new recursion.}
+{Для проверки этой специализации заметим, что при наблюдениях до $k$ пара $(X_k,X_{k+1})$ имеет ковариацию $\left(\begin{smallmatrix}p_k&p_k\\p_k&p_k+q_{k+1}\end{smallmatrix}\right)$. Гауссовское условливание даёт среднее $m_k+G_k(X_{k+1}-m_k)$ и дисперсию $p_k-G_k^2(p_k+q_{k+1})$. По объявленной модели будущие наблюдения условно независимы от $X_k$ при заданных $X_{k+1}$ и наблюдениях до $k$. Условное ожидание и полная дисперсия дают~\eqref{eq:rts}. Все знаменатели положительны. Это прямое доказательство указанной классической специализации, а не новая рекурсия.}
+
+\subsection{\Lang{A two-observation calculation and independent batch check}{Вычисление с двумя наблюдениями и независимая пакетная проверка}}
+\Lang{Take $m=2$, $x_0=0$, $q_1=q_2=R_1=R_2=1$, and $(y_1,y_2)=(0.2,1.4)$. Filtering and smoothing give}
+{Положим $m=2$, $x_0=0$, $q_1=q_2=R_1=R_2=1$ и $(y_1,y_2)=(0.2,1.4)$. Фильтрация и сглаживание дают}
+\[
+m_1=0.1,\quad p_1=0.5,\qquad m_2=0.88,\quad p_2=0.6,
+\]
+\[
+G_1=\frac13,\qquad m_1^s=0.36,\qquad p_1^s=0.4.
+\]
+\Lang{Independently, for $X_1$ and $Z=(Y_1,Y_2)^\top$ the prior covariance blocks are}
+{Независимо, для $X_1$ и $Z=(Y_1,Y_2)^\top$ априорные блоки ковариации равны}
+\[
+P=1,\quad C=(1,1),\quad
+S=\begin{pmatrix}2&1\\1&3\end{pmatrix},\quad
+S^{-1}=\frac15\begin{pmatrix}3&-1\\-1&2\end{pmatrix}.
+\]
+\Lang{Thus $CS^{-1}=(2/5,1/5)$ gives mean $(2/5)0.2+(1/5)1.4=0.36$ and variance $1-CS^{-1}C^\top=0.4$, agreeing with RTS. The later observation lowers the earlier variance from $0.5$ to $0.4$ and changes its mean from $0.1$ to $0.36$. These are exact finite-dimensional calculations, not fitted simulation results.}
+{Поэтому $CS^{-1}=(2/5,1/5)$ даёт среднее $(2/5)0.2+(1/5)1.4=0.36$ и дисперсию $1-CS^{-1}C^\top=0.4$, совпадающие с RTS. Позднее наблюдение уменьшает раннюю дисперсию с $0.5$ до $0.4$ и меняет среднее с $0.1$ на $0.36$. Это точные конечномерные вычисления, а не результаты подгонки моделирования.}
+
+\Lang{With Gaussian measurement noise, the likelihood of any finite observation vector is strictly positive for every path. The posterior path measure is therefore equivalent to the prior, as in Section~\ref{sec:noise}. Including unrestricted noise variables in the carrier likewise leaves every path compatible with the observation vector. If the state observations are instead exact, paths must interpolate the supplied values at the sample times, while the continuous segments between those times remain nonunique. Covariance, path compatibility and sampling resolution must still be reported separately.}
+{При гауссовском измерительном шуме правдоподобие любого конечного вектора наблюдений строго положительно для каждого пути. Поэтому апостериорная мера путей эквивалентна априорной, как в разделе~\ref{sec:noise}. Включение неограниченных шумовых переменных в носитель также сохраняет совместимость каждого пути с вектором наблюдений. Если же наблюдения состояний точны, пути должны проходить через заданные значения в моменты отсчётов, но непрерывные участки между этими моментами остаются неоднозначными. Ковариацию, совместимость путей и разрешение отсчётов по-прежнему необходимо описывать отдельно.}
+
+\section{\Lang{Prior work, non-duplication and limits}{Предыдущие работы, разграничение и ограничения}}
+\label{sec:prior}
+\Lang{The distinctions used here belong to established mathematical traditions. Kalman's realization and observability theory relates hidden states to input-output information \cite[Sections 4--5]{Kalman1963}; a record projection that forgets hidden information is not a new observability concept. Bayesian inverse problems explicitly distinguish candidate objects from their posterior probabilities \cite[Sections 1--2]{Stuart2010}. Inverse limits and solenoids supply the deterministic history benchmark. Gaussian smoothing supplies the stochastic one. The present paper brings these into the WREH global-completion interface, rather than replacing their theories.}
+{Используемые различия принадлежат устоявшимся математическим направлениям. Теория реализации и наблюдаемости Калмана связывает скрытые состояния с информацией входов и выходов \cite[Sections 4--5]{Kalman1963}; проекция записей, теряющая скрытую информацию, не является новым понятием наблюдаемости. Байесовские обратные задачи явно различают объекты-кандидаты и их апостериорные вероятности \cite[Sections 1--2]{Stuart2010}. Обратные пределы и соленоиды дают детерминированный пример историй, а гауссовское сглаживание --- стохастический. Эта статья включает их в схему глобальных достраиваний WREH, не заменяя соответствующие теории.}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}YY@{}}
+\toprule
+\textbf{\Lang{Ingredient}{Компонент}}&\textbf{\Lang{Inherited / classical}{Унаследованное / классическое}}&\textbf{\Lang{Role in this paper}{Роль в статье}}\\\midrule
+\Lang{Response equivalence}{Эквивалентность откликов}&WR-I; \Lang{identifiability; observational quotients.}{идентифицируемость; наблюдательные фактор-классы.}&\Lang{Restrict the declared carrier, then project to histories.}{Ограничить носитель и спроецировать на истории.}\\
+\Lang{Full-profile existence}{Существование полного профиля}&WR-II; \Lang{finite/global consistency.}{конечная/глобальная согласованность.}&\Lang{Gate historical ambiguity by nonempty completion.}{Проверить непустоту перед обсуждением неоднозначности.}\\
+\Lang{Structural walls}{Структурные стены}&WR-III; \Lang{local bundle triviality.}{локальная тривиальность расслоений.}&\Lang{State a sufficient transfer condition and show erasure.}{Задать достаточное условие переноса и пример скрытия.}\\
+\Lang{Infinite pasts}{Бесконечные прошлые}&\Lang{Natural extensions and dyadic solenoids.}{Естественные расширения и диадические соленоиды.}&\Lang{Separate deterministic future from backward ambiguity.}{Разделить детерминированное будущее и неоднозначное прошлое.}\\
+\Lang{Conditional laws}{Условные законы}&\Lang{Gaussian residuals; Brownian bridges; Bayes.}{Гауссовские остатки; броуновские мосты; Байес.}&\Lang{Separate exact fibres, null events, supports and variance.}{Разделить точные слои, нулевые события, носители и дисперсию.}\\
+\Lang{Several-time smoothing}{Многовременное сглаживание}&\Lang{Classical RTS recursion.}{Классическая рекурсия RTS.}&\Lang{Give a fully specified reproducible application.}{Дать полностью заданное воспроизводимое применение.}\\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+
+\Lang{Accordingly, the set and image propositions are elementary consequences of definitions, and the wall-transfer result is conjugation of trivializations. The benchmark proofs are self-contained applications of standard mathematics. The controlled contribution is the declared interface and the explicit comparison of several meanings of ``the past becomes more definite''. No result in the table is presented as a newly discovered mathematical theorem. A targeted source audit supports the stated results; it cannot certify that the wider architecture is unprecedented in every field.}
+{Следовательно, утверждения о множествах и образах являются элементарными следствиями определений, а перенос стен --- сопряжением тривиализаций. Доказательства примеров представляют собой самодостаточные применения стандартной математики. Ограниченный вклад состоит в объявленной схеме и явном сопоставлении нескольких смыслов фразы «прошлое становится более определённым». Ни один результат таблицы не представлен как вновь открытая математическая теорема. Целевой аудит источников поддерживает сформулированные результаты, но не удостоверяет беспрецедентность общей архитектуры во всех областях.}
+
+\subsection{\Lang{A realizability gap is not automatically information gain}{Разрыв реализуемости не является автоматически информационным выигрышем}}
+\Lang{WR-II defines $\Gamma(y)=\delta_{\mathrm{glob}}(y)-\delta_{\mathrm{fin}}(y)$ when both normalized residual radii are finite \cite[Section 10]{WRII}. For a finite protocol family the two radii coincide, so $\Gamma=0$. The two-observation example above nevertheless has positive covariance gain. Moreover, WR-II's radii depend on declared protocol metrics and scales, while probabilistic information quantities depend on a probability model and reference law. Therefore $\Gamma$ alone is not a universal surprisal or information gain.}
+{WR-II определяет $\Gamma(y)=\delta_{\mathrm{glob}}(y)-\delta_{\mathrm{fin}}(y)$, когда оба нормированных радиуса остатка конечны \cite[Section 10]{WRII}. Для конечного семейства протоколов эти радиусы совпадают, поэтому $\Gamma=0$. Однако приведённый пример с двумя наблюдениями имеет положительный ковариационный выигрыш. Кроме того, радиусы WR-II зависят от объявленных метрик и масштабов протоколов, тогда как вероятностные информационные величины зависят от вероятностной модели и эталонного закона. Поэтому одна лишь $\Gamma$ не является универсальной неожиданностью или информационным выигрышем.}
+
+\Lang{Any comparison must specify which random objects, data law, information functional and calibration are held fixed. Such a comparison remains future work. No information-theoretic identification or next programme branch is established by this preprint.}
+{Любое сопоставление должно указать фиксируемые случайные объекты, закон данных, информационный функционал и калибровку. Такое сопоставление остаётся будущей работой. Препринт не устанавливает информационно-теоретического отождествления и не открывает следующую ветвь программы.}
+
+\subsection{\Lang{Inference order and physical time}{Порядок вывода и физическое время}}
+\Lang{Data can be acquired later, processed out of order, reanalysed, or combined with records concerning other times. The order $D\preceq D'$ describes retained constraints. The index $t$ in~\eqref{eq:diffusion} describes the model's internal time. No map equating these orders is supplied. This is a scope statement, not an impossibility theorem about all models. Retrodiction is an inference about an earlier index, not a backwards physical influence asserted by the conditioning operation.}
+{Данные могут быть получены позже, обработаны в другом порядке, повторно проанализированы или объединены с записями о других моментах. Порядок $D\preceq D'$ описывает сохраняемые ограничения. Индекс $t$ в~\eqref{eq:diffusion} описывает внутреннее время модели. Отображение, отождествляющее эти порядки, не задано. Это оговорка о границах статьи, а не теорема невозможности для всех моделей. Ретроспективная оценка представляет собой вывод о более раннем индексе, а не утверждаемое условливанием физическое влияние назад во времени.}
+
+\section{\Lang{Conclusions and research questions}{Выводы и исследовательские вопросы}}
+\label{sec:conclusion}
+\Lang{A present response, existence of a global completion, uniqueness of a hidden historical projection and uniqueness of accessible records are distinct statements. An empty full-profile fibre signifies model-relative incompatibility. A nonempty ambiguous historical fibre signifies non-identifiability at a specified projection. Neither is interchangeable with a probability-zero event.}
+{Отклик настоящего, существование глобального достраивания, единственность скрытой исторической проекции и единственность доступных записей являются разными утверждениями. Пустой слой полного профиля означает несовместимость относительно модели. Непустой неоднозначный исторический слой означает неидентифицируемость при заданной проекции. Ни одно из этих понятий не взаимозаменяемо с событием нулевой вероятности.}
+
+\Lang{Hard-constraint accumulation nests compatible sets without changing retained histories. A local-triviality wall transfers under the stated bridge between families. A projection that loses information can erase a wall. The doubling map provides a classical example of a unique deterministic future with a Cantor family of full pasts. None of these facts chooses a physical ontology.}
+{Накопление жёстких ограничений создаёт вложенность совместимых множеств без изменения сохраняемых историй. Стены локальной тривиальности переносятся лишь при заданной связи между семействами и могут исчезать при проекции с потерей информации. Отображение удвоения даёт классический пример единственного детерминированного будущего при канторовом семействе полных прошлых. Ни один из этих фактов не выбирает физическую онтологию.}
+
+\Lang{The diffusion benchmark answers the central question precisely. An exact endpoint reduces interior variance but does not determine a trajectory. It restricts the full path fibre and the full pre-endpoint image. On every fixed earlier interval, both the compatible path set and the measure-equivalence class remain unchanged. Noisy Gaussian endpoint data preserve full path-measure equivalence. These simultaneous conclusions are compatible because they refer to different objects and cuts.}
+{Диффузионный пример даёт точный ответ на центральный вопрос. Точное конечное значение уменьшает внутреннюю дисперсию, но не определяет траекторию. Оно ограничивает полный слой путей и полный образ до конечного момента. На каждом фиксированном раннем интервале сохраняются и множество совместимых путей, и класс эквивалентности мер. Шумные гауссовские конечные данные сохраняют эквивалентность мер полных путей. Эти одновременные выводы совместимы, поскольку относятся к разным объектам и срезам.}
+
+\Lang{Open research questions concern model-dependent historical metrics, finite-resolution record structures, projections that retain enough topology for nontrivial wall transfer, and non-Gaussian smoothing with explicit failure criteria. Physical applications require a justified carrier, observation process and temporal model. A stronger novelty claim would require a correspondingly broader literature comparison and a nonduplicative technical result. These are future directions, not missing hypotheses concealed in the present theorems.}
+{Открытые исследовательские вопросы относятся к модельным историческим метрикам, структурам записей при конечном разрешении, проекциям, сохраняющим достаточно топологии для нетривиального переноса стен, и негауссовскому сглаживанию с явными критериями отказа. Для физических применений необходимы обоснованные носитель, процесс наблюдения и временная модель. Более сильное заявление о новизне потребовало бы более широкого сравнения с литературой и технического результата, не дублирующего известные работы. Это будущие направления, а не недостающие условия, скрытые в настоящих теоремах.}
+
+\appendix
+\section{\Lang{Reproducibility and the supplementary demonstration}{Воспроизводимость и дополнительная демонстрация}}
+\label{sec:reproduce}
+\Lang{The deposit package contains both language versions, their shared LaTeX source, two analytic figures per language, a script regenerating the figures and independently checking RTS against batch conditioning, and a self-contained bilingual HTML demonstration. The HTML runs locally without network requests. Its plots show analytic marginal laws and finitely many seeded sample paths; samples are illustrations, not proofs or an enumeration of compatible histories.}
+{Пакет депонирования содержит обе языковые версии, их общий исходный текст LaTeX, по два аналитических рисунка на каждом языке, скрипт восстановления рисунков и независимой проверки RTS пакетным условливанием, а также автономную двуязычную HTML-демонстрацию. HTML работает локально без сетевых запросов. Графики показывают аналитические маргинальные законы и конечное число выборочных путей с фиксируемым начальным числом генератора; выборки служат иллюстрациями, а не доказательствами или перечислением совместимых историй.}
+
+\Lang{The diffusion panel exposes $x_0,b,\kappa,T,t/T,R$ and switches between exact and Gaussian noisy endpoint observations. The finite-depth doubling panel illustrates branch labels while stating the infinite-history limitation. A realizability panel reproduces the finite-support example. The topology panel displays the sphere-height fibre and a constant historical projection. Each panel states its carrier and mathematical scope.}
+{Панель диффузии позволяет изменять $x_0,b,\kappa,T,t/T,R$ и выбирать точное либо гауссовское шумное конечное наблюдение. Панель удвоения конечной глубины иллюстрирует метки ветвей и оговаривает ограничение на изображение бесконечных историй. Панель реализуемости воспроизводит пример конечного носителя. Топологическая панель показывает слой высоты сферы и постоянную историческую проекцию. Каждая панель указывает носитель и математические границы.}
+
+\Lang{Compile from the package root using XeLaTeX twice on each wrapper. Nimbus Roman, Sans and Mono PS fonts provide Latin and Cyrillic text; mathematical equations are shared. Running the verification script tests boundary limits, positive interior variances, the numerical RTS example, and additional positive-variance random-walk models against independent batch Gaussian conditioning. It does not replace proof review.}
+{Из корневого каталога пакета каждый языковой файл компилируется XeLaTeX дважды. Шрифты Nimbus Roman, Sans и Mono PS обеспечивают латинский и кириллический текст; математические формулы общие. Скрипт проверки тестирует граничные пределы, положительность внутренних дисперсий, численный пример RTS и дополнительные модели случайного блуждания с положительными дисперсиями посредством независимого пакетного гауссовского условливания. Это не заменяет рецензирование доказательств.}
+
+\Lang{The English and Russian files are parallel manifestations of this version, not successive revisions. The package includes a file checksum manifest and an audit recording exact source locators, claim boundaries and render checks. Upstream DOI records identify WR-I--III; no unpublished WR-IV DOI is fabricated. There are no experimental datasets, fitted model parameters or new smoothing algorithm in this release.}
+{Английский и русский файлы являются параллельными представлениями этой версии, а не последовательными редакциями. Пакет включает контрольные суммы файлов и аудит с точными локаторами источников, границами утверждений и проверками вёрстки. DOI предыдущих работ идентифицируют WR-I--III; неопубликованный DOI WR-IV не выдумывается. В этом выпуске нет экспериментальных наборов данных, подогнанных параметров модели или нового алгоритма сглаживания.}
+
+\clearpage
+\begin{english}
+\renewcommand{\refname}{\Lang{References}{Литература}}
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{WRI} A. A. Malachevsky. \emph{Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations}. WR-I, WREH, v0.3 (2026). \href{https://doi.org/10.5281/zenodo.23210258}{doi:10.5281/zenodo.23210258}.
+\bibitem{WRII} A. A. Malachevsky. \emph{Finite Consistency and Global World Realizability}. WR-II, WREH, v0.5 (2026). \href{https://doi.org/10.5281/zenodo.23224154}{doi:10.5281/zenodo.23224154}.
+\bibitem{WRIII} A. A. Malachevsky. \emph{Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls}. WR-III, WREH, v0.6 (2026). \href{https://doi.org/10.5281/zenodo.23228682}{doi:10.5281/zenodo.23228682}.
+\bibitem{Kalman1963} R. E. Kalman. Mathematical Description of Linear Dynamical Systems. \emph{Journal of the Society for Industrial and Applied Mathematics, Series A: Control} 1(2) (1963), 152--192. \href{https://doi.org/10.1137/0301010}{doi:10.1137/0301010}.
+\bibitem{Stuart2010} A. M. Stuart. Inverse problems: A Bayesian perspective. \emph{Acta Numerica} 19 (2010), 451--559. \href{https://doi.org/10.1017/S0962492910000061}{doi:10.1017/S0962492910000061}.
+\bibitem{ClarkFokkink2004} A. Clark and R. Fokkink. Embedding solenoids. \emph{Fundamenta Mathematicae} 181(2) (2004), 111--124. \href{https://doi.org/10.4064/fm181-2-2}{doi:10.4064/fm181-2-2}.
+\bibitem{Pitman2003} J. W. Pitman. \emph{Brownian Bridge}. Stat205B: Probability Theory, Lecture 22, Spring 2003, University of California, Berkeley; scribe T. Chen. \url{https://www.stat.berkeley.edu/~pitman/s205s03/b_bridge.pdf}.
+\bibitem{RauchTungStriebel1965} H. E. Rauch, F. Tung, and C. T. Striebel. Maximum Likelihood Estimates of Linear Dynamic Systems. \emph{AIAA Journal} 3(8) (1965), 1445--1450. \href{https://doi.org/10.2514/3.3166}{doi:10.2514/3.3166}.
+\bibitem{SarkkaSvensson2023} S. S\"arkk\"a and L. Svensson. \emph{Bayesian Filtering and Smoothing}, 2nd ed. Cambridge University Press, 2023. \href{https://doi.org/10.1017/9781108917407}{doi:10.1017/9781108917407}.
+\bibitem{SelickNotes} P. Selick. \emph{Fibre Bundles; Characteristic Classes; K-theory}. Undated lecture notes, University of Toronto, Section 1.2, p.~7. \url{https://www.math.toronto.edu/selick/fibre.pdf}.
+\bibitem{SimonsWashburn2026} M. Simons and J. Washburn. \emph{Finite-Resolution Identifiability and Measurement Design for Molecular Conformer Spectroscopy}. arXiv:2608.02637v1 (2026). \href{https://doi.org/10.48550/arXiv.2608.02637}{doi:10.48550/arXiv.2608.02637}.
+\end{thebibliography}
+\end{english}
+\end{document}

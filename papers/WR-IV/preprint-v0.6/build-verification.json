@@ -1,0 +1,16 @@
+{
+  "result": "passed",
+  "pages": {
+    "EN": 16,
+    "RU": 18
+  },
+  "matching_numbered_labels": 62,
+  "numbered_equations": 22,
+  "bibliographic_entries": 11,
+  "final_latex_warnings": [],
+  "source_languages": [
+    "en",
+    "ru"
+  ],
+  "visual_review": "All pages of both delivered PDFs inspected; formula, dictionary, figures and bibliography checked"
+}

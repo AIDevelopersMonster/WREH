@@ -1,85 +1,54 @@
 # WR-IV — Response-Conditioned Global Completion and the Status of the Past
 
-**Programme and community:** World Realizability & Epistemic Horizons (WREH)  
-**Upstream:** WR-I DOI 10.5281/zenodo.23210258; WR-II DOI 10.5281/zenodo.23224154; WR-III DOI 10.5281/zenodo.23228682  
-**State:** ACTIVE / MATHEMATICAL SPINE v0.5  
-**Release status:** REVIEWABLE_DRAFT
+**Programme:** World Realizability & Epistemic Horizons (WREH)  
+**State:** ACTIVE / COMPLETE BILINGUAL PREPRINT v0.6  
+**Release status:** PUBLICATION_READY for an expository, unpeer-reviewed Zenodo preprint  
+**Deposit status:** Prepared; not published; no WR-IV DOI assigned.
 
 ## Current files
 
-- [v0.5 LaTeX](WREH_WR-IV_Mathematical_Spine_v0.5.tex)
-- [v0.5 PDF](WREH_WR-IV_Mathematical_Spine_v0.5.pdf)
+- [English PDF — 16 pages](preprint-v0.6/WREH_WR-IV_Preprint_v0.6_EN.pdf)
+- [Russian PDF — 18 pages](preprint-v0.6/WREH_WR-IV_Preprint_v0.6_RU.pdf)
+- [English LaTeX entry point](preprint-v0.6/WREH_WR-IV_Preprint_v0.6_EN.tex)
+- [Russian LaTeX entry point](preprint-v0.6/WREH_WR-IV_Preprint_v0.6_RU.tex)
+- [Shared bilingual body](preprint-v0.6/wriv-body.tex)
+- [Offline bilingual HTML demonstration](preprint-v0.6/WREH_WR-IV_Demo_v0.6_EN-RU.html)
+- [Release README and build instructions](preprint-v0.6/README.md)
+- [Zenodo fields and deposit instructions](preprint-v0.6/ZENODO_DEPOSIT.md)
+- [Technical audit in Russian](preprint-v0.6/AUDIT_RU.md)
+- [Source and provenance map](preprint-v0.6/SOURCE_MAP.md)
 - [Theorem and dependency map](THEOREM_MAP.md)
-- [Independent v0.2 audit](../../reviews/WR-IV/WREH_WR-IV_v0.2_Independent_Audit_RU.md)
-- [v0.3 repair and source audit](../../reviews/WR-IV/WREH_WR-IV_Repair_Audit_v0.3.md)
 
-- [Reviewer 1 response and v0.4 audit](../../reviews/WR-IV/WREH_WR-IV_Reviewer_1_Response_v0.4_RU.md)
+Earlier v0.1–v0.5 sources, PDFs and reviewer responses remain dated snapshots. The English and Russian v0.6 PDFs are language manifestations of one work, with matching result/equation numbering and bibliography.
 
-- [Second reviewer response and v0.5 audit](../../reviews/WR-IV/WREH_WR-IV_Reviewer_2_Response_v0.5_RU.md)
+## Declared objects and upstream interfaces
 
-The v0.1/v0.2/v0.3/v0.4 sources and earlier audits are retained as dated snapshots.
+World completions C(D) are restricted by response data, then mapped by a fixed historical projection to H_-(D), and by a record map to observable histories. Hard refinement fixes the carrier, temporal cut and projections.
 
-## Declared objects
+- WR-I DOI [10.5281/zenodo.23210258](https://doi.org/10.5281/zenodo.23210258): response equivalence and identifiability.
+- WR-II DOI [10.5281/zenodo.23224154](https://doi.org/10.5281/zenodo.23224154): full-profile existence gate. Empty global fibres have empty historical images, while all finite fibres can remain nonempty.
+- WR-III DOI [10.5281/zenodo.23228682](https://doi.org/10.5281/zenodo.23228682): local-triviality walls. Transfer requires a homeomorphism of total families over the response base; information loss can erase walls.
 
-\[
-\mathfrak C(D)=\{W\in\mathcal W:W\text{ is compatible with }D\},
-\qquad
-\mathfrak H_-(D)=\pi_-(\mathfrak C(D)).
-\]
+The historical image family is not automatically a pullback bundle. Model-relative emptiness does not imply physical disappearance of the past.
 
-WR-IV separates global-world multiplicity, hidden-past multiplicity and observable-record
-multiplicity. Hard-constraint refinement keeps the model, temporal cut and projection fixed.
+## Complete benchmarks
 
-## Explicit upstream bridges
+The doubling map has a classical Cantor fibre of full backward histories and a deterministic future. The Gaussian theorem states covariance contraction and its directional strictness conditions. General conditional variance contracts only on average; a pointwise counterexample is supplied.
 
-The WR-II gate applies to a full response profile: an empty world fibre has an empty
-historical image. A defect of the full profile does not make every finite-data fibre
-empty, and it implies no disappearance of a physical past.
+The Brownian regular kernel is explicitly constructed for every endpoint value. Exact endpoint data constrain full pre-endpoint histories, while every fixed earlier continuous prefix stays compatible. The corresponding prefix laws are equivalent to the prior restrictions despite smaller variance. Independent Gaussian noise preserves path-law equivalence; bounded noise gives an endpoint band. Finite endpoint resolution is treated as a mixture of bridges, separately from measurement noise.
 
-WR-III structural walls transfer when the response-indexed world and history families
-are homeomorphic over the response base. A constant historical projection of the
-WR-III sphere-height example erases the world-fibre wall. A response map is not thereby
-identified with physical dynamics. The historical image family is not assumed to be a
-locally trivial bundle or identified with a pullback bundle.
+Section 10 now supplies the classical RTS recursion, proof for the declared random-walk model, a two-observation calculation and an independent batch check. Finite-resolution ambiguity, calibrated probability models and the limitations of the WR-II gap Gamma are addressed without opening WR-V.
 
-## Benchmarks
+## Publication and novelty boundary
 
-The doubling-map fibre is a classical Cantor family of full pasts with a deterministic future.
-Gaussian smoothing and Brownian bridges are classical retrospective-inference benchmarks.
+PUBLICATION_READY refers to the complete, checked expository preprint and deposit package. It does not certify journal suitability, external peer review, an exhaustive novelty survey, or new theorem priority. Elementary image results and classical benchmarks are identified as such. The controlled contribution is WREH's declared comparison of existence, historical compatibility, records and probabilistic uncertainty.
 
-For an exact diffusion endpoint, the full pre-endpoint historical class is properly constrained.
-A fixed earlier fragment may retain the same compatibility set while its conditional variance
-decreases. Gaussian noisy endpoint data preserve path-measure support.
-A regular conditional kernel is constructed explicitly for every endpoint value.
-Section 7.2 gives a WREH dictionary separating carrier, fibre, historical projections
-and the conditional path law. The several-time application remains open and explicitly
-uses the classical linear Gaussian RTS recursion. The bridge law is displayed in numbered
-equation (1), and the existing dictionary table has clearer headers and row spacing.
-Admissible bounded noise restricts endpoint compatibility, whereas Gaussian full-support
-noise leaves the path compatibility class unchanged.
+Targeted source verification and comparison with the relevant deposited WR-I–III interfaces are completed. Originality of the wider classification is not certified. No physical past rewriting, retrocausality, branching ontology or emergence of time is inferred.
 
-A proposed comparison with the WR-II gap Gamma remains an open, model-dependent
-question: the gap vanishes for finite protocol families and cannot alone quantify
-nonzero covariance gain. No information-theoretic identification or WR-V handoff is made.
+The draft PR remains open and unmerged. WR-I–III remain frozen; WR-V remains planned.
 
-## Claim ceiling and publication gate
+## Validation and reuse
 
-No past creation or rewriting, retrocausality, branching ontology, emergent time, or
-cosmological conclusion is claimed. The current results are elementary consequences
-and classical benchmarks organized within WREH; no new theorem priority is claimed.
+Both PDFs compile with XeLaTeX without warnings or unresolved references; all pages were visually inspected. There are 62 matching numbered labels, 22 equations and 11 bibliographic entries. Eighty RTS models agree with independent batch conditioning. The optional HTML passes bilingual desktop/mobile and mathematical QA with no external page requests or JavaScript errors.
 
-The manuscript is ready for renewed review, not publication clearance. Broader prior-art
-comparison and cross-manuscript duplication review remain open. No merge or WR-V transition
-is authorized by this repaired draft.
-
-## Reproduce the PDF
-
-From this directory:
-
-~~~sh
-pdflatex -interaction=nonstopmode -halt-on-error WREH_WR-IV_Mathematical_Spine_v0.5.tex
-pdflatex -interaction=nonstopmode -halt-on-error WREH_WR-IV_Mathematical_Spine_v0.5.tex
-~~~
-
-Required packages include amsmath, amssymb, amsthm, geometry, hyperref, microtype, booktabs and tabularx.
-
+See the release README for reproduction. Research content is CC BY 4.0; executable scripts/HTML are MIT.

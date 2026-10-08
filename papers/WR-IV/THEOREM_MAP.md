@@ -1,97 +1,51 @@
-# WR-IV theorem and dependency map — v0.5
+# WR-IV theorem and dependency map — complete preprint v0.6
 
-Active source: [WREH_WR-IV_Mathematical_Spine_v0.5.tex](WREH_WR-IV_Mathematical_Spine_v0.5.tex).
-Release status: REVIEWABLE_DRAFT. Earlier v0.1/v0.2/v0.3/v0.4 sources are historical snapshots.
-R identifiers are programme aliases; printed LaTeX numbering is shown below.
+Active source: [shared bilingual body](preprint-v0.6/wriv-body.tex), with English and Russian entry points in the same directory. Printed numbering is identical between languages.
 
-## Inherited objects
+Release status: PUBLICATION_READY for a complete expository, unpeer-reviewed preprint; Zenodo deposit is prepared, not published. Earlier versions are snapshots. R1–R16 remain programme aliases rather than claims of new theorem priority.
 
-WR-I supplies response equivalence; WR-II supplies global-completion existence discipline;
-WR-III supplies fibre/refinement language and its local-triviality definition of a structural wall. WR-IV declares the historical projection and states the conditional bridge to historical families.
+## Inherited interface
 
-\[
-\mathfrak C(D)=\{W\in\mathcal W:W\text{ is compatible with }D\},\quad
-\mathfrak H_-(D)=\pi_-(\mathfrak C(D)),\quad
-\mathfrak O_-(D)=Q_-(\mathfrak H_-(D)).
-\]
+WR-I owns response equivalence; WR-II owns finite/global existence discipline; WR-III owns generic response-fibre geometry and local-triviality walls. WR-IV declares a history projection, with fixed carrier/cut/projection under refinement, and distinguishes image sets from probability laws.
 
-Refinement fixes the model, temporal cut, and projection. Empty refined fibres are permitted;
-persistence of rigidity requires a nonempty refined fibre.
-
-| Alias | Printed location / label | Statement and required conditions | Provenance |
+| Alias | Printed v0.6 location / label | Conditions and statement | Provenance |
 |---|---|---|---|
-| R1 | Proposition 2.3 / prop:world-past | Singleton world fibre has singleton historical image | Elementary image property |
-| R2 | Proposition 2.4 / prop:converse | Same past can accompany two distinct worlds; explicit two-world example | Elementary counterexample |
-| R3 | Theorem 3.1 / thm:completion-refinement | \(D\preceq D'\Rightarrow\mathfrak C(D')\subseteq\mathfrak C(D)\) and historical image inclusion; fixed model/projection, accumulated hard constraints | Definition consequence |
-| R4 | Corollary 3.2 / cor:rigidity-persistence | Past rigidity persists under nonempty refinement | Definition consequence |
-| R5 | Proposition 4.1 / prop:observable-rigidity | Observable rigidity iff the historical fibre is nonempty and \(Q_-\) is constant on it; explicit ambiguity counterexample | Elementary image property |
-| R6 | Proposition 5.1 / prop:forward-backward | Unique forward orbit; noninjectivity alone does not ensure multiple full backward histories | Elementary dynamics; counterexample supplied |
-| R7 | Theorem 6.1 / thm:cantor-pasts | Doubling-map fibre over fixed present state is homeomorphic to \(\{0,1\}^{\mathbb N}\); circle/product topologies and chosen branch labels | Classical dyadic-solenoid benchmark; self-contained proof |
-| R8 | Corollary 6.2 / cor:finite-backward | Finitely many fixed bits leave countably infinitely many free bits | Product-space consequence |
-| R9 | Remark 8.1 | No bridge identifying inference order with temporal order is specified | Scope convention, not impossibility theorem |
-| R10 | Theorem 7.1 / thm:gaussian-contraction | Fixed earlier data law; jointly Gaussian \(X,Z\), \(S\succ0\); \(P_s=P-CS^{-1}C^\top\succeq0\) and \(P_s\preceq P\) | Classical Gaussian conditioning; residual proof |
-| R11 | Theorem 7.1 and Definition 7.2 | \(\Delta P=CS^{-1}C^\top\); directional strictness iff \(C^\top v\ne0\) | Classical consequence |
-| R12 | Theorem 7.4 / thm:brownian-bridge | Deterministic \(x_0\), fixed \(T>0\), \(\kappa>0\), \(0<t<T\); continuous regular kernel \(K_b\); variance \(2\kappa t(T-t)/T\) | Classical Brownian bridge |
-| R13 | Corollary 7.5 / cor:path-nonuniqueness; Remark 7.6 | Brownian bridge is non-Dirac; countable path sets have zero mass; full pre-\(T\) historical image is properly constrained by endpoint limit | Classical bridge plus explicit compatibility interpretation |
-| R14 | Proposition 7.7 / prop:noisy-contraction; Remark 7.8 | Independent Gaussian noise \(R>0\); variance \(2\kappa t(1-2\kappa t/(2\kappa T+R))\); positive Gaussian likelihood preserves path support; bounded admissible noise gives an endpoint band | Classical conditioning and direct Bayes argument |
-| R15 | Proposition 2.5 / prop:realizability-gate; Remark 2.6 / rem:empty-past | For a total historical projection and full-profile data, historical fibre empty iff world fibre empty iff response unrealizable; finite fibres may remain nonempty | Elementary image property plus WR-II §§3–7; no new existence criterion |
-| R16 | Proposition 4.2 / prop:wall-transfer; Remark 4.3 / rem:wall-erasure | A homeomorphism of response-indexed families over U transfers local triviality both ways; constant projection can erase a world wall | Elementary conjugation of trivializations; WR-III §§8,10 |
+| R1 | Proposition 2.2 / prop:world-past | Singleton world fibre implies singleton historical image | Elementary image property |
+| R2 | Proposition 2.2 / prop:world-past, converse example | Two worlds may carry the same past | Elementary counterexample; merged exposition |
+| R3 | Theorem 3.1 / thm:completion-refinement | Accumulated hard constraints on fixed model/cut/projection give nested C(D), H_-(D) | Definition consequence |
+| R4 | Corollary 3.2 / cor:rigidity-persistence | Past rigidity persists only for nonempty refined fibre | Definition consequence |
+| R5 | Proposition 3.4 / prop:observable-rigidity | Observable rigidity iff nonempty historical image has constant record map | Elementary projection |
+| R6 | Proposition 5.1 / prop:forward-backward | Unique forward orbit; noninjectivity need not supply a full backward history over every present | Standard dynamics; explicit counterexample |
+| R7 | Theorem 6.1 / thm:cantor-pasts | Fixed-present doubling-map fibre is homeomorphic to the binary product Cantor space | Classical natural extension; self-contained coding |
+| R8 | Corollary 6.2 / cor:finite-backward | Finitely fixed bits leave infinitely many free bits | Product-space consequence |
+| R9 | §11.2 | Evidence order does not specify a physical-time bridge | Scope convention, not impossibility theorem |
+| R10 | Theorem 7.2 / thm:gaussian-contraction | Joint Gaussian law at fixed earlier data; S positive definite; P_s=P−CS⁻¹Cᵀ is PSD and no larger than P | Classical Gaussian residual argument |
+| R11 | Theorem 7.2, equation (8) | Directional strictness iff Cᵀv≠0; residual can be singular | Classical consequence |
+| R12 | Theorem 8.2 / thm:brownian-bridge | Fixed x₀, κ,T>0, 0<t<T; all-endpoint kernel; variance 2κt(T−t)/T | Classical bridge |
+| R13 | Corollary 8.3 / cor:path-nonuniqueness; Proposition 8.4 / prop:prefix-sets | Non-Dirac law; countable path sets null; full pre-T image constrained while each fixed earlier prefix set is unchanged | Classical law plus explicit image interpretation |
+| R14 | Propositions 9.1–9.2 / prop:noisy-contraction, prop:noisy-equivalence | Independent Gaussian noise R>0; explicit mean/variance; equivalent posterior path measure. Admissible bounded noise instead restricts endpoint compatibility | Classical conditioning and Bayes |
+| R15 | Proposition 2.3 / prop:realizability-gate; Example 2.4; Remark 2.5 | Total historical projection and full-profile data: empty history iff empty world fibre iff response unrealizable | WR-II gate; elementary image property |
+| R16 | Proposition 4.1 / prop:wall-transfer; Example 4.2 / ex:wall-erasure | Homeomorphism of total families over base transfers local triviality; constant historical projection can erase wall | Conjugation of trivializations; WR-III example |
 
-## Explicit application result and its limit
+## Additional complete exposition in v0.6
 
-For \(\mathcal W_T=C_{x_0}([0,T],\mathbb R)\), exact endpoint data give
-\[
-\mathfrak C(x_0,b)=\{w\in\mathcal W_T:w(T)=b\}\subsetneq\mathcal W_T.
-\]
-For the full past projection \(\pi_-(w)=w|_{[0,T)}\), continuity makes the restriction
-injective; the projected class is properly reduced by the limit \(b\) at \(T\).
-Residual bridge paths remain nonunique.
+These supporting results do not establish new programme ownership or priority:
 
-For any fixed earlier fragment \([0,\tau]\), \(\tau<T\), compatible fragments are
-unchanged: each continuous prefix can be continued to \(b\). The corresponding conditional
-state variance still decreases. Thus the application obligation is satisfied for the
-declared full pre-endpoint history; it does not establish strict set contraction for every
-earlier projection or for noisy path supports.
+- Definition 7.1 / def:rcd: regular conditional distributions and almost-everywhere version discipline.
+- Proposition 7.3 / prop:total-variance: average conditional-variance contraction; Example 7.4 disproves arbitrary pointwise contraction.
+- Proposition 8.1 / prop:bridge-kernel, equations (11)–(12): explicit weakly continuous regular path kernel and covariance, valid for every endpoint.
+- Proposition 8.5 / prop:prefix-equivalence, equation (15): positive transition-density derivative makes fixed-prefix laws equivalent despite reduced covariance.
+- §9.2, equation (19): finite-resolution endpoint data give a mixture of bridges; distinct from bounded-noise likelihoods.
+- §10, equations (20)–(22): classical scalar filtering/RTS model, proof, exact two-observation example and independent batch conditioning.
 
-## Claim and novelty ceiling
+## Scientific and release limits
 
-R1–R16 are elementary consequences, standard benchmarks, or scope conventions.
-No theorem-priority claim is made. WREH organizes world/past/record multiplicity;
-originality of the wider classification still needs comparison with observability,
-identifiability, natural extensions, smoothing, and partial-observation reconstruction.
-No past rewriting, retrocausality, branching ontology, or cosmological inference follows.
+Compatibility sets, projected images, null events, measure supports, means and covariance are different objects. Shrinking covariance does not imply strict set shrinkage. A full-profile WR-II defect is not a defect of every finite restriction. The historical image family is not assumed to be a pullback bundle. Structural walls are local-triviality failures, not universal component-count or physical-transition claims.
 
-## Open next work
+The source audit maps 11 references and the relevant deposited upstream interfaces in [SOURCE_MAP.md](preprint-v0.6/SOURCE_MAP.md). No theorem-priority or exhaustive originality claim is made. The WR-II gap Gamma alone cannot measure information gain: it vanishes for finite protocol families with positive smoothing gain.
 
-- Broader prior-art and cross-manuscript duplication review.
-- Several-time linear Gaussian state-space example using the standard RTS backward recursion; explicitly separate historical sets and posterior laws.
-- Finite-resolution observable-past equivalence.
-- Nonduplicative metric/topological results and HTML demonstration.
+## Validation and next research
 
-Adding observations or a new example does not itself establish research novelty.
+The bilingual PDFs share 62 numbered labels and 22 equations. Eighty RTS cases match independent batch conditioning. The offline HTML illustrates four declared benchmarks and passes desktop/mobile checks.
 
-
-## Limits of the new upstream bridges
-
-- R15 concerns the complete profile y. WR-II's finite-support example has empty full
-  fibre over (1,1,...) and nonempty fibres for every finite restriction.
-- R16 requires a homeomorphism of the total families over the response base. Separate
-  fibre homeomorphisms do not by themselves establish this family-level condition.
-- A structural wall is a failure of local bundle triviality; it need not, by definition,
-  change the number of connected components or describe a physical transition.
-- The Brownian dictionary distinguishes the set C(D_b) from the law K_b and the full
-  pre-T history from a fixed earlier fragment. Regular conditioning on a null endpoint
-  event is distinct from a mathematically empty compatibility fibre.
-
-## v0.5 precision changes
-
-- Equation (1), `eq:bridge-kernel`, gives the same bridge construction as v0.4;
-  the v0.4 formula was already correct in source and rendered PDF.
-- The dictionary was already a tabularx table; only headers and row spacing change.
-- Section 4.1 distinguishes the image family from a pullback bundle, with an author-hosted
-  lecture-note definition. Proposition 4.2 and its hypotheses remain unchanged.
-- Remark 7.8 defines joint compatibility for a declared noise set S and its path image.
-  Gaussian S=R yields all paths; S=[-a,a] gives |w(T)-y|<=a, an endpoint constraint.
-- Section 10 item 5 leaves a probability-model-dependent comparison with Gamma open.
-  WR-II's finite-family collapse prevents using Gamma alone as a universal information gain.
-- No new R alias, theorem priority, physical interpretation or downstream branch is added.
+Further research requires a genuinely nonduplicative theorem or calibrated information model and a broader literature review appropriate to that claim. This preprint does not merge PR #5 or open WR-V.

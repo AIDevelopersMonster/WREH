@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{fontspec,polyglossia}
+\defaultfontfeatures{Extension=.otf}
+\setmainfont{NimbusRoman}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic]
+\setsansfont{NimbusSans}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic]
+\setmonofont{NimbusMonoPS}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.85]
+\newfontfamily\cyrillicfont{NimbusRoman}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Script=Cyrillic]
+\newfontfamily\cyrillicfontsf{NimbusSans}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Script=Cyrillic]
+\newfontfamily\cyrillicfonttt{NimbusMonoPS}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Script=Cyrillic,Scale=0.85]
+\def\ruCode{ru}
+\ifx\wrehLang\ruCode
+  \setdefaultlanguage{russian}\setotherlanguage{english}
+  \newcommand{\Lang}[2]{#2}
+\else
+  \setdefaultlanguage{english}\setotherlanguage{russian}
+  \newcommand{\Lang}[2]{#1}
+\fi
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,tabularx,longtable,array,graphicx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage{enumitem,xcolor}
+\usepackage[hidelinks,unicode]{hyperref}
+\definecolor{wrehblue}{RGB}{22,71,105}
+\newtheorem{definition}{\Lang{Definition}{Определение}}[section]
+\newtheorem{proposition}[definition]{\Lang{Proposition}{Утверждение}}
+\newtheorem{theorem}[definition]{\Lang{Theorem}{Теорема}}
+\newtheorem{corollary}[definition]{\Lang{Corollary}{Следствие}}
+\theoremstyle{definition}
+\newtheorem{example}[definition]{\Lang{Example}{Пример}}
+\newtheorem{remark}[definition]{\Lang{Remark}{Замечание}}
+\newcommand{\Wcal}{\mathcal W}
+\newcommand{\Ccal}{\mathfrak C}
+\newcommand{\Hminus}{\mathcal H_-}
+\newcommand{\Pcal}{\mathfrak H_-}
+\newcommand{\Ocal}{\mathfrak O_-}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\figfile}[1]{figures/#1_\wrehLang.pdf}
+\setlength{\emergencystretch}{2em}
+\setlist[enumerate]{itemsep=3pt,topsep=4pt}
+\renewcommand{\arraystretch}{1.18}
+\hypersetup{
+ pdftitle={\Lang{WR-IV: Response-Conditioned Global Completion and the Status of the Past}{WR-IV: Глобальное достраивание при заданных откликах и статус прошлого}},
+ pdfauthor={A. A. Malachevsky},
+ pdfsubject={WREH; bilingual technical preprint v0.6; unpeer-reviewed},
+ pdfkeywords={historical projection, global realizability, Brownian bridge, conditional distribution, smoothing, epistemic horizons}
+}
+\title{\color{wrehblue}\textbf{WR-IV}\\[5pt]
+\Lang{Response-Conditioned Global Completion\\and the Status of the Past}{Глобальное достраивание при заданных откликах\\и статус прошлого}\\[9pt]
+\large\Lang{Technical preprint v0.6}{Технический препринт v0.6}}
+\author{A. A. Malachevsky\\
+\small\href{https://orcid.org/0009-0008-6009-3196}{ORCID: 0009-0008-6009-3196}\\
+\small World Realizability \& Epistemic Horizons (WREH)}
+\date{\Lang{8 October 2026}{8 октября 2026 года}}

@@ -1,0 +1,51 @@
+{
+  "result": "passed",
+  "runtime_errors": [],
+  "external_page_requests": [],
+  "viewport_checks": [
+    "1400x1100",
+    "390x844"
+  ],
+  "languages": [
+    "en",
+    "ru"
+  ],
+  "core_check": {
+    "exact": {
+      "mean": 1.5,
+      "variance": 0.24
+    },
+    "noisy": {
+      "mean": 0.9999999999999999,
+      "variance": 0.36
+    },
+    "endpoints": [
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5
+    ],
+    "mean": 0.9947389110054333,
+    "variance": 0.35941101488369875,
+    "branches": 8,
+    "zero": 0,
+    "terminal": 0
+  },
+  "sampled_law_check": "Seeded marginal mean and variance within specified tolerances; illustration only"
+}
