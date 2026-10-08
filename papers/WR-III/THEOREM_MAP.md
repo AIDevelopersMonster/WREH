@@ -92,9 +92,9 @@ Status: PROVED.
 
 ### R9 — Proper smooth regularity
 
-For a proper smooth response map between manifolds, realizable regular values are structurally regular by Ehresmann local triviality.
+For a proper smooth response map between manifolds, realizable regular values are structurally regular by Ehresmann local triviality. The proof now explicitly establishes a response neighborhood contained in the image before applying Ehresmann.
 
-Status: PROVED, subject to detailed proof audit of the local-surjectivity step.
+Status: PROVED / AUDIT REPAIRED.
 
 ### R10 — Rigidity is not structural regularity
 
@@ -119,3 +119,17 @@ All three are model-relative mathematical objects.
 - refinement effects on walls;
 - non-toy inverse-problem benchmark;
 - interactive demo.
+
+
+## Audit consequence
+
+The phrase **structural wall** is WREH vocabulary for a standard bifurcation / atypical-value locus: failure of local fibre triviality. No theorem-priority claim is made for that object.
+
+The next genuinely programme-specific obligation is not another generic fibre theorem. It is to determine how **protocol refinement transforms rigidity and bifurcation loci**.
+
+Prior-art controls now explicitly include:
+- set-valued inverse maps and hemicontinuity;
+- Ehresmann and bifurcation sets;
+- Thom / stratified isotopy and Hardt semialgebraic triviality;
+- identifiability fibre geometry;
+- Reeb-type fibre topology summaries.
