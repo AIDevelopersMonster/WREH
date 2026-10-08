@@ -14,7 +14,7 @@
 1. **WR-I** — *Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations* — **PUBLISHED / FROZEN v0.3** — DOI: `10.5281/zenodo.23210258`.
 2. **WR-II** — *Finite Consistency and Global World Realizability* — **PUBLISHED / FROZEN v0.5** — DOI: `10.5281/zenodo.23224154`.
 3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23228682`.
-4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **ACTIVE / MATHEMATICAL SPINE v0.4 / REVIEWABLE_DRAFT**.
+4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **ACTIVE / MATHEMATICAL SPINE v0.5 / REVIEWABLE_DRAFT**.
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — PLANNED.
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — PLANNED.
 7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — PLANNED.
@@ -88,7 +88,7 @@ projection layer:
 \mathfrak H_-(D)=\pi_-(\mathfrak C(D)).
 \]
 
-Active source: papers/WR-IV/WREH_WR-IV_Mathematical_Spine_v0.4.tex.
+Active source: papers/WR-IV/WREH_WR-IV_Mathematical_Spine_v0.5.tex.
 Release status: REVIEWABLE_DRAFT. This repair does not close the branch or open WR-V.
 
 The v0.4 upstream bridge makes model-relative emptiness explicit for a full profile
@@ -105,7 +105,7 @@ WR-IV may study:
 - noninvertible-dynamics history spaces;
 - classical retrospective smoothing as an explicitly sourced benchmark.
 
-The v0.4 diffusion benchmark declares the full past as restriction to [0,T).
+The v0.5 diffusion benchmark declares the full past as restriction to [0,T).
 Exact endpoint evidence properly constrains this historical image through its limit at T.
 For a fixed earlier prefix ending at tau<T, the compatible prefix set can remain unchanged,
 even though its conditional variance decreases. Gaussian noisy endpoint likelihoods preserve
@@ -118,6 +118,13 @@ WR-IV must not:
   bridges as new theorems;
 - infer strict set shrinkage for every historical projection from smaller covariance;
 - reopen WR-II existence or WR-III generic fibre geometry without a new historical obligation.
+
+The v0.5 precision pass preserves all established theorem statements. The historical
+image family is not automatically a pullback bundle. Admissible noise support is now
+explicit: bounded noise gives an endpoint band; Gaussian noise permits every endpoint
+residual. A comparison of WR-II residual gaps with probability-based information remains
+an open WR-IV obligation. For finite protocol families Gamma vanishes, so it cannot by
+itself measure nonzero smoothing gains. This does not authorize WR-V or certify novelty.
 
 Broader comparison with observability, identifiability, natural extensions, smoothing and
 partial-observation reconstruction remains open. Originality of the framework classification

@@ -1,7 +1,7 @@
-# WR-IV theorem and dependency map — v0.4
+# WR-IV theorem and dependency map — v0.5
 
-Active source: [WREH_WR-IV_Mathematical_Spine_v0.4.tex](WREH_WR-IV_Mathematical_Spine_v0.4.tex).
-Release status: REVIEWABLE_DRAFT. Earlier v0.1/v0.2/v0.3 sources are historical snapshots.
+Active source: [WREH_WR-IV_Mathematical_Spine_v0.5.tex](WREH_WR-IV_Mathematical_Spine_v0.5.tex).
+Release status: REVIEWABLE_DRAFT. Earlier v0.1/v0.2/v0.3/v0.4 sources are historical snapshots.
 R identifiers are programme aliases; printed LaTeX numbering is shown below.
 
 ## Inherited objects
@@ -33,7 +33,7 @@ persistence of rigidity requires a nonempty refined fibre.
 | R11 | Theorem 7.1 and Definition 7.2 | \(\Delta P=CS^{-1}C^\top\); directional strictness iff \(C^\top v\ne0\) | Classical consequence |
 | R12 | Theorem 7.4 / thm:brownian-bridge | Deterministic \(x_0\), fixed \(T>0\), \(\kappa>0\), \(0<t<T\); continuous regular kernel \(K_b\); variance \(2\kappa t(T-t)/T\) | Classical Brownian bridge |
 | R13 | Corollary 7.5 / cor:path-nonuniqueness; Remark 7.6 | Brownian bridge is non-Dirac; countable path sets have zero mass; full pre-\(T\) historical image is properly constrained by endpoint limit | Classical bridge plus explicit compatibility interpretation |
-| R14 | Proposition 7.7 / prop:noisy-contraction; Remark 7.8 | Independent Gaussian noise \(R>0\); variance \(2\kappa t(1-2\kappa t/(2\kappa T+R))\); positive likelihood preserves path support | Classical conditioning and direct Bayes argument |
+| R14 | Proposition 7.7 / prop:noisy-contraction; Remark 7.8 | Independent Gaussian noise \(R>0\); variance \(2\kappa t(1-2\kappa t/(2\kappa T+R))\); positive Gaussian likelihood preserves path support; bounded admissible noise gives an endpoint band | Classical conditioning and direct Bayes argument |
 | R15 | Proposition 2.5 / prop:realizability-gate; Remark 2.6 / rem:empty-past | For a total historical projection and full-profile data, historical fibre empty iff world fibre empty iff response unrealizable; finite fibres may remain nonempty | Elementary image property plus WR-II §§3–7; no new existence criterion |
 | R16 | Proposition 4.2 / prop:wall-transfer; Remark 4.3 / rem:wall-erasure | A homeomorphism of response-indexed families over U transfers local triviality both ways; constant projection can erase a world wall | Elementary conjugation of trivializations; WR-III §§8,10 |
 
@@ -82,3 +82,16 @@ Adding observations or a new example does not itself establish research novelty.
 - The Brownian dictionary distinguishes the set C(D_b) from the law K_b and the full
   pre-T history from a fixed earlier fragment. Regular conditioning on a null endpoint
   event is distinct from a mathematically empty compatibility fibre.
+
+## v0.5 precision changes
+
+- Equation (1), `eq:bridge-kernel`, gives the same bridge construction as v0.4;
+  the v0.4 formula was already correct in source and rendered PDF.
+- The dictionary was already a tabularx table; only headers and row spacing change.
+- Section 4.1 distinguishes the image family from a pullback bundle, with an author-hosted
+  lecture-note definition. Proposition 4.2 and its hypotheses remain unchanged.
+- Remark 7.8 defines joint compatibility for a declared noise set S and its path image.
+  Gaussian S=R yields all paths; S=[-a,a] gives |w(T)-y|<=a, an endpoint constraint.
+- Section 10 item 5 leaves a probability-model-dependent comparison with Gamma open.
+  WR-II's finite-family collapse prevents using Gamma alone as a universal information gain.
+- No new R alias, theorem priority, physical interpretation or downstream branch is added.
