@@ -1092,42 +1092,53 @@ diagnostics.
 The audit places WR-III next to several mature mathematical lines.
 
 \begin{itemize}
-\item Set-valued analysis already studies upper/lower hemicontinuity and
-inverse multifunctions. The open/closed-map criteria used here are
+\item \textbf{Set-valued analysis.} Upper/lower hemicontinuity, compact-valued
+correspondences, and inverse multifunctions are classical
+\cite{AubinFrankowska}. The open/closed-map criteria used here are
 infrastructure rather than novelty claims.
 
-\item Bifurcation and singularity theory use failure of local fibre
-triviality as the definition of bifurcation or atypical values. For proper
-submersions, Ehresmann gives local triviality; for nonproper maps, bifurcation
-values at infinity may occur. In analytic/algebraic settings, critical loci of
-augmented maps \((f,g)\), equivalently criticality of the added observable
-along fibres of \(f\), are standardly organized by relative polar varieties.
-Thus the conditional-rank set of Theorem~\ref{thm:conditional-rank} has direct
-prior-art relatives and is not claimed as a new singularity-theory object.
+\item \textbf{Bifurcation and singularity theory.} Failure of local fibre
+triviality is standardly encoded by bifurcation or atypical-value sets
+\cite{Klepczarek2023,DinhJelonek2021}. For proper submersions Ehresmann gives
+local triviality; without properness, bifurcation values at infinity may occur.
 
-\item Thom-type isotopy theorems and Hardt semialgebraic triviality provide
-stratified or tame local-triviality frameworks beyond smooth manifolds.
+\item \textbf{Relative polar geometry.} In complex analytic settings, critical
+loci of augmented maps \((f,g)\), equivalently criticality of an added
+observable along fibres of \(f\), are organized by relative polar varieties
+and discriminants \cite{Massey2008}. Thus the conditional-rank set of
+Theorem~\ref{thm:conditional-rank} has direct prior-art relatives and is not
+claimed as a new singularity-theory object.
 
-\item Structural-identifiability geometry already uses parameter-fibre
-dimension, degree, and irreducible components to diagnose identifiability.
+\item \textbf{Stratified and semialgebraic triviality.} Thom-type isotopy
+theorems and Hardt's semialgebraic local-triviality theorem provide
+stratified/tame frameworks beyond smooth manifolds
+\cite{DinhJelonek2021,Hardt1980}.
 
-\item Reeb-graph and Reeb-space constructions summarize changes in connected
-components of fibres and their topology.
+\item \textbf{Identifiability geometry.} Parameter-fibre dimension, degree, and
+components are already used to diagnose structural identifiability
+\cite{BatesHauensteinMeshkat2019}. Fibre geometry itself is not new.
+
+\item \textbf{Reeb constructions.} Reeb graphs and related quotient
+constructions summarize changes in connected components of level sets/fibres,
+with a developed stability theory \cite{BauerLandiMemoli2021}.
+
+\item \textbf{Range-based localization.} Trilateration, graph rigidity, and
+unique localizability from anchors are classical
+\cite{AspnesEtAl2006,AndersonEtAl2010}. The benchmark below is not a novelty
+claim for localization theory.
 \end{itemize}
 
-WR-III therefore does not claim invention of fibre geometry, bifurcation
-sets, local triviality, or set-valued continuity. Its narrower target is the
-WREH-specific organization of nonempty response fibres downstream of WR-I and
-WR-II, together with protocol-refinement shrinkage, metric rigidity, and an
-explicit claim firewall.
-
+The defensible contribution of WR-III is therefore architectural: it places
+nonempty response fibres downstream of WR-I identifiability and WR-II
+realizability, proves monotonicity of rigidity under protocol refinement,
+separates that monotonic behavior from non-monotone bifurcation-wall geometry,
+and demonstrates the distinction in a standard inverse problem.
 \section{Open obligations}
 
-Before WR-III can become a preprint:
+The present document is ready for external proof review. The remaining
+research obligations for later versions are:
 
 \begin{enumerate}
-\item complete a source-level audit of the conditional-rank construction
-against relative polar varieties and augmented-map singularity theory;
 \item determine useful fibre invariants beyond diameter and prove which of
 them remain monotone under protocol refinement;
 \item formulate a quantitative distance-to-bifurcation notion only after a
@@ -1140,7 +1151,7 @@ error bounds;
 \item determine whether the rigidity-gain function
 \(G_{\Bcal\mid\Acal}\) has stable or computable bounds in a useful model
 class;
-\item build an interactive demo showing the monotone rigidity/nonmonotone-wall
+\item build an interactive demo showing the monotone-rigidity/nonmonotone-wall
 contrast.
 \end{enumerate}
 
@@ -1158,10 +1169,13 @@ The first exact chain is
 \Longrightarrow
 \text{nonincreasing diameter}.
 \]
-Compactness controls upper variation of fibres and fibre diameter. In the
-smooth proper setting, regular values carry locally trivial fibres, leaving
-critical values and attainable-response boundaries as natural containers for
-model-relative realizability walls.
+Compactness controls upper variation of fibres and fibre diameter. Under
+protocol refinement, rigidity is monotone after pullback, whereas structural
+bifurcation walls may be created or resolved. In the smooth proper setting,
+new refined walls above coarse-regular responses require conditional rank loss
+of the added response block along coarse fibres. The range-only localization
+benchmark realizes the full circle-to-mirror-pair-to-singleton refinement
+ladder in closed form.
 
 No wall introduced here is, without an additional physical bridge, a wall of
 spacetime or of the Universe.
@@ -1197,7 +1211,46 @@ DOI: 10.1137/100792366.
 \bibitem{AubinFrankowska}
 J.-P. Aubin and H. Frankowska,
 \emph{Set-Valued Analysis},
-Birkh\"auser, 1990.
+Birkh\"auser, 2009.
+DOI: 10.1007/978-0-8176-4848-0.
+
+\bibitem{Klepczarek2023}
+M. Klepczarek,
+\emph{Estimating the set of bifurcation values of a smooth function},
+Mathematische Zeitschrift 303 (2023), 46.
+DOI: 10.1007/s00209-022-03196-0.
+
+\bibitem{DinhJelonek2021}
+S. T. Dinh and Z. Jelonek,
+\emph{Thom Isotopy Theorem for Nonproper Maps and Computation of Sets of
+Stratified Generalized Critical Values},
+Discrete \& Computational Geometry 65 (2021), 279--304.
+DOI: 10.1007/s00454-019-00087-w.
+
+\bibitem{Massey2008}
+D. B. Massey,
+\emph{Enriched Relative Polar Curves and Discriminants},
+in \emph{Singularities I: Algebraic and Analytic Aspects},
+Contemporary Mathematics 474 (2008), 107--144.
+DOI: 10.1090/conm/474/09255.
+
+\bibitem{Hardt1980}
+R. M. Hardt,
+\emph{Semi-Algebraic Local-Triviality in Semi-Algebraic Mappings},
+American Journal of Mathematics 102(2) (1980), 291--302.
+DOI: 10.2307/2374240.
+
+\bibitem{BatesHauensteinMeshkat2019}
+D. J. Bates, J. D. Hauenstein, and N. Meshkat,
+\emph{Identifiability and numerical algebraic geometry},
+PLOS ONE 14(12) (2019), e0226299.
+DOI: 10.1371/journal.pone.0226299.
+
+\bibitem{BauerLandiMemoli2021}
+U. Bauer, C. Landi, and F. M\'emoli,
+\emph{The Reeb Graph Edit Distance is Universal},
+Foundations of Computational Mathematics 21 (2021), 1441--1464.
+DOI: 10.1007/s10208-020-09488-3.
 
 \bibitem{Ehresmann}
 C. Ehresmann,
