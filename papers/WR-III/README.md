@@ -3,7 +3,8 @@
 **Full title:** Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls  
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
 **Upstream:** WR-I DOI 10.5281/zenodo.23210258; WR-II DOI 10.5281/zenodo.23224154  
-**Status:** PUBLICATION_READY / PREPRINT CANDIDATE v0.6
+**DOI:** https://doi.org/10.5281/zenodo.23228682  
+**Status:** PUBLISHED / FROZEN v0.6
 
 ## New mathematical target
 
@@ -73,8 +74,8 @@ The HTML is explanatory material only. Formal claims and proofs remain in the ma
 
 ## Current candidate
 
-Canonical review candidate source:
+Canonical published source:
 
-`papers/WR-III/WREH_WR-III_Preprint_Candidate_v0.6.tex`
+`papers/WR-III/WREH_WR-III_v0.6.tex`
 
-External proof-review corrections have been incorporated. English and Russian v0.6 PDFs have passed compile, preflight, font-embedding, cross-reference, and visual render audit. DOI/deposition remains pending.
+External proof-review corrections were incorporated before publication. English and Russian DOI-stamped v0.6 PDFs passed compile, preflight, font-embedding, cross-reference, and visual render audit. The Zenodo record is the archival publication record.
