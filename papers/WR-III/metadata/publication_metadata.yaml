@@ -40,8 +40,8 @@ publication:
   release_status: "published and frozen at v0.6"
   english_pdf_pages: 15
   russian_pdf_pages: 17
-  english_pdf_sha256: "614bcb660a6b10df5cbdf3070b3d74d78bf50aa839f40e845d453889e33cb137"
-  russian_pdf_sha256: "c8d74950b0b6469881ffad7e01aced6835abf5b3abfa21bf7f831d117679313c"
+  english_pdf_sha256: "1e578fee0734ea55e277257b807b41fb686fb045cf69220bc77eff56d5ed2480"
+  russian_pdf_sha256: "b800c7b98f9908ab65f8509460f357935a940f816c90434169d8789685010b74"
   english_tex_sha256: "9f1abd9b11e90db51be8c5ed01e6e56b88daab9947dd1260059259f8a127fdfd"
   russian_tex_sha256: "0d695548502e70ae9d797a5a306d24ea52fad4af344557ddcf639d116fd13739"
-  companion_html_sha256: "c17d71c6a5a15489e88ee838e12520dc19fa904082eb29926332cec9157ee760"
+  companion_html_sha256: "6c7da6c4a85fbf940a700dcb604244899383db5d67b6d8a5c6470d62ee4452c3"
