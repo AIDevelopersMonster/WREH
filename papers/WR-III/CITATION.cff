@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use WR-III, please cite this work."
+title: "Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls"
+type: article
+authors:
+  - family-names: "Malachevsky"
+    given-names: "A. A."
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+version: "0.6"
+date-released: "2026-10-08"
+license: CC-BY-4.0
+repository-code: "https://github.com/AIDevelopersMonster/WREH"
+abstract: "WR-III studies the geometry of nonempty response fibres under protocol refinement, proving monotone rigidity shrinkage while structural bifurcation walls may be created or resolved, with a planar range-only localization benchmark."
