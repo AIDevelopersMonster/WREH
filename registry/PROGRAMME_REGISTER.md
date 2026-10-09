@@ -16,7 +16,7 @@
 3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23228682`.
 4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23248138`.
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — **ACTIVE / MATHEMATICAL DRAFT v0.3 / REVIEWABLE_DRAFT**.
-6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — **ACTIVE / MATHEMATICAL DRAFT v0.1 / REVIEWABLE_DRAFT**.
+6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — **ACTIVE / MATHEMATICAL DRAFT v0.2 / REVIEWABLE_DRAFT**.
 7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — PLANNED.
 8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — PLANNED.
 9. **WR-IX** — *Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?* — PLANNED.
@@ -194,10 +194,12 @@ Revision v0.3 checks the WR-II finite-obstruction/full-finite-defect boundary an
 
 WR-VI opens on 9 October 2026 under its canonical title, *The Aquarium Bounds: Physical Constraints as Boundaries of World Space*. It constructs an explicit constraint record for the instrument-completion class: observed responses, row-coupling structural assumptions, externally supplied hard bounds, their uncertainty and allowed relaxations remain separate.
 
-Active source: `papers/WR-VI/draft-v0.1/wrvi-body.tex`; parallel English/Russian PDFs. Status: **REVIEWABLE_DRAFT**. The first benchmark is a finite classical reversible three-state transition model. Known detailed balance and all prepared-input means still leave a transition interval. A stationary activity cap creates an empty/singleton/nonunique threshold. Requiring irreducibility excludes the threshold singleton; response tolerance and cap uncertainty change inference in separately proved ways.
+Active source: `papers/WR-VI/draft-v0.2/wrvi-body.tex`; parallel English/Russian PDFs. Status: **REVIEWABLE_DRAFT**. The first benchmark is a finite classical reversible three-state transition model. Known detailed balance and all prepared-input means still leave a transition interval. A stationary activity cap creates an empty/singleton/nonunique threshold. Requiring irreducibility excludes the threshold singleton; response tolerance and cap uncertainty change inference in separately proved ways.
 
 The new obligation is coupled admissibility, not a new quotient, general wall geometry, global completion theorem or smoothing method. The seven proofs are finite elementary/classical arguments with no priority claim. Activity is dimensionless, not energy, entropy production or a rate. No real physical cap, causal speed limit, quantum or gravitational result is certified. Complete-world uniqueness requires a further declared lift.
 
 WR-V v0.3 remains unchanged at `d0afad65108abee8b561e02af6fe3392c6057487`. The branch `paper-wr-vi-v0.1-spine` is stacked on `paper-wr-v-v0.1-spine`; no merge, publication or DOI follows from opening the next paper. WR-VI must be retargeted and its inherited dependency audited after the upstream PR is resolved.
 
 WR-VII may inherit independently justified constraint classes only after physical units and protocols are constructed. WR-VII–IX remain planned. WREH is both the programme and community and remains distinct from Boundary Compensation.
+
+WR-VI v0.2 responds to the supplied v0.1 review: unchanged seven proof blocks; explicit WR-II v0.5 Example 10.19 nonattainment analogy and WR-V v0.3 §9 handoff; concrete cap interval N=[1/6,1/4]. The matrix concern is checked against rendered 3×3 arrays, not PDF extraction alone. WR-VI v0.1 remains an immutable historical draft. The supplied review does not establish reviewer identity, independence or external peer-review status.

@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact fractions; no random sampling",
+  "feasible_lattice_matrices": 4147,
+  "exact_response_lattice_matrices": 7,
+  "continuous_fibre_checks": 301,
+  "activity_cap_checks": 601,
+  "tolerance_witness_checks": 15,
+  "quantifier_checks": 140,
+  "threshold": "1/6",
+  "threshold_matrix_irreducible": false,
+  "dual_certificate_at_cap_3_20": {
+    "coefficient_vector": [
+      "1",
+      "0",
+      "0"
+    ],
+    "gap": "-1/60"
+  },
+  "energy_counterexample": {
+    "mean": "0",
+    "mean_square": "4/3"
+  },
+  "concrete_quantifier_example": {
+    "cap_interval": [
+      "1/6",
+      "1/4"
+    ],
+    "full_width": "1/12",
+    "robust_class": "singleton P*",
+    "possible_t_interval": [
+      "-1/12",
+      "-1/24"
+    ],
+    "t_interval_length": "1/24",
+    "right_endpoint_edges": [
+      "1/12",
+      "5/24",
+      "1/12"
+    ],
+    "right_endpoint_activity": "1/4",
+    "demo_centre": "5/24",
+    "demo_half_width": "1/24",
+    "status": "PASS"
+  },
+  "scope": "finite witnesses; general propositions rely on manuscript proofs"
+}

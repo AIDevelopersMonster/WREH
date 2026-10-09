@@ -13,7 +13,7 @@ WREH develops a mathematically explicit language for response-defined world spac
 - **Founding document:** WREH-00 — *Manifesto and Research Programme*
 - **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6
 - **Latest publication:** WR-IV, DOI [10.5281/zenodo.23248138](https://doi.org/10.5281/zenodo.23248138)
-- **Current technical work:** WR-VI v0.1 — **REVIEWABLE_DRAFT**; upstream WR-V v0.3 remains a separate review draft
+- **Current technical work:** WR-VI v0.2 — **REVIEWABLE_DRAFT**; upstream WR-V v0.3 remains a separate review draft
 - **Next scientific gate:** review of coupled physical/model restrictions, the activity-threshold benchmark and uncertain-cap inference; independent evidence is needed for a physical application
 
 ## Quick navigation

@@ -1,6 +1,6 @@
 # WR-VI v0.2 — result and dependency map
 
-Common source: `draft-v0.2/wrvi-body.tex`. EN/RU share labels and assigned numbers.
+Common source: `wrvi-body.tex`. EN/RU share labels and assigned numbers.
 
 | Label | Object/result | Assumptions | Provenance and scope |
 |---|---|---|---|
