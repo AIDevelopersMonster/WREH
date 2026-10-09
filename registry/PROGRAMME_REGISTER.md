@@ -17,7 +17,7 @@
 4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23248138`.
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — **ACTIVE / MATHEMATICAL DRAFT v0.3 / REVIEWABLE_DRAFT**.
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — **PUBLISHED / FROZEN v0.2** — DOI: `10.5281/zenodo.23254619`.
-7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — **ACTIVE / MATHEMATICAL DRAFT v0.1 / REVIEWABLE_DRAFT**.
+7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — **ACTIVE / MATHEMATICAL DRAFT v0.2 / REVIEWABLE_DRAFT**.
 8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — PLANNED.
 9. **WR-IX** — *Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?* — PLANNED.
 
@@ -209,7 +209,7 @@ WR-VI v0.2 responds to the supplied v0.1 review: unchanged seven proof blocks; e
 
 The author reported DOI `10.5281/zenodo.23254619` and explicitly instructed opening the seventh article on 9 October 2026. The public record and all deposited MD5 checksums were verified. HTML is byte-identical; both PDFs agree in extracted scientific text and every page raster at 700 px, while their C2PA-bearing containers differ in bytes. The post-publication check records remaining archive/version/licence-description follow-ups. Publishing WR-VI does not merge draft PR #7 or publish WR-V.
 
-WR-VII preserves the canonical title *Energy-Time Frontiers of World Realizability*. Active source: `papers/WR-VII/draft-v0.1/wrvii-body.tex`; parallel EN/RU, analytic figure and offline HTML. Status: **REVIEWABLE_DRAFT**; no WR-VII DOI, external peer review or deposit.
+WR-VII preserves the canonical title *Energy-Time Frontiers of World Realizability*. Active source: `papers/WR-VII/draft-v0.2/wrvii-body.tex`; parallel EN/RU, analytic figure and offline HTML. Status: **REVIEWABLE_DRAFT**; no WR-VII DOI, external peer review or deposit.
 
 New obligation: construct a calibrated unit-bearing quantum response and energy-duration feasibility frontier. The closed pure finite-dimensional unitary carrier, prepared state, projector, clock and hard spectral-diameter cap are explicit assumptions. This is a new carrier, not a silent quantum reduction of the classical WR-V/VI transition kernels. D is in joules, τ in seconds; dimensionless activity remains unchanged upstream.
 
@@ -218,3 +218,5 @@ The action certificate has an endpoint-safe proof and a sharp freely controlled 
 Claim ceiling: established quantum speed-limit, Pauli and concentration tools with self-contained proofs, no priority certification, apparatus experiment, global maximum energy, universal lifetime, gravitational/cosmological wall or unique complete-world lift. Targeted sources and inaccessible full texts are recorded honestly. Earlier audits do not certify these new proofs. WR-VIII and WR-IX remain planned; WREH and BC remain distinct.
 
 The WR-VII branch `paper-wr-vii-v0.1-spine` is stacked on `paper-wr-vi-v0.1-spine` at `2865474c79a120f29cda754d1137cb3939adadfa`. Retargeting/merging waits for explicit upstream resolution and renewed dependency audit; opening this article does not merge or certify earlier PRs.
+
+WR-VII v0.2 addresses one distinct supplied review in two byte-identical attachments. All seven proof blocks, numbered statements, thirteen equations and original reference texts are unchanged. New positioning concerns static orthogonalization only; diameter constancy is pointwise on the constrained frontier fibre. The WR-III response boundary uses fixed E,τ, 0<C<π/2 and M=(0,1), without claiming a structural wall. The attained minimum circle differs from the excluded minimizers of WR-II Example 10.19 and WR-VI v0.2 Corollary 5.3. Added primary references and three synthetic resource-comparison witnesses do not certify independent peer review, priority or publication. Historical v0.1 is frozen.
