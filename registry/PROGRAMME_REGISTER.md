@@ -15,7 +15,7 @@
 2. **WR-II** — *Finite Consistency and Global World Realizability* — **PUBLISHED / FROZEN v0.5** — DOI: `10.5281/zenodo.23224154`.
 3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23228682`.
 4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23248138`.
-5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — **ACTIVE / MATHEMATICAL DRAFT v0.1 / REVIEWABLE_DRAFT**.
+5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — **ACTIVE / MATHEMATICAL DRAFT v0.2 / REVIEWABLE_DRAFT**.
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — PLANNED.
 7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — PLANNED.
 8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — PLANNED.
@@ -157,8 +157,10 @@ for finite carriers and positive likelihood rows. Input labels, successor labels
 full global realizations remain different types. Zero-likelihood conditional rows are
 not identifiable parameters.
 
-Active source: `papers/WR-V/draft-v0.1/wrv-body.tex`; parallel English/Russian PDFs.
-Release status: **REVIEWABLE_DRAFT**. No external peer review, deposit or WR-V DOI.
+Active source: `papers/WR-V/draft-v0.2/wrv-body.tex`; parallel English/Russian PDFs.
+Release status: **REVIEWABLE_DRAFT**. The supplied proof-review is addressed in v0.2; independent external peer review, deposit and WR-V DOI are not established. All original numbered results are preserved.
+
+Revision v0.2 explicitly preserves the nonexclusive four-label architecture. Full rank gives uniform identification; pointwise boundary selection can occur at deficient rank. The reviewer proposal of four disjoint fibre states and automatic monograph/journal readiness is not adopted.
 
 New obligation: determine the class of experimental transition models consistent with
 outcome data, then identify which calibrated post-experiment probes constrain that class.

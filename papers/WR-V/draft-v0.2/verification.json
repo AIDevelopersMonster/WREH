@@ -1,0 +1,11 @@
+{
+  "arithmetic": "exact fractions; no sampling",
+  "simplex_cases": 861,
+  "curve_cases": 891,
+  "instrument_models": 3,
+  "original_triangle_assignments": 0,
+  "split_triangle_assignments": 8,
+  "positive_likelihood_posterior": "729/730",
+  "status": "PASS",
+  "scope": "finite benchmarks; not a proof of general theorems"
+}
