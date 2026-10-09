@@ -11,10 +11,10 @@ WREH develops a mathematically explicit language for response-defined world spac
 - **Programme:** ACTIVE
 - **Repository:** public programme repository
 - **Founding document:** WREH-00 — *Manifesto and Research Programme*
-- **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6
-- **Latest publication:** WR-IV, DOI [10.5281/zenodo.23248138](https://doi.org/10.5281/zenodo.23248138)
-- **Current technical work:** WR-VI v0.2 — **REVIEWABLE_DRAFT**; upstream WR-V v0.3 remains a separate review draft
-- **Next scientific gate:** review of coupled physical/model restrictions, the activity-threshold benchmark and uncertain-cap inference; independent evidence is needed for a physical application
+- **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6, WR-VI v0.2
+- **Latest publication:** WR-VI, DOI [10.5281/zenodo.23254619](https://doi.org/10.5281/zenodo.23254619)
+- **Current technical work:** WR-VII v0.1 — **REVIEWABLE_DRAFT**; upstream WR-V v0.3 remains a separate review draft
+- **Next scientific gate:** review of unit-bearing quantum response completion, the action frontier, generator ambiguity and finite confidence; independently calibrated apparatus constraints are needed for a physical application
 
 ## Quick navigation
 
@@ -43,6 +43,9 @@ WREH develops a mathematically explicit language for response-defined world spac
 - [WR-V result/dependency map](papers/WR-V/THEOREM_MAP.md)
 - [WR-VI — The Aquarium Bounds](papers/WR-VI/README.md)
 - [WR-VI result/dependency map](papers/WR-VI/THEOREM_MAP.md)
+- [WR-VI publication identity check](reviews/WR-VI/WREH_WR-VI_Post_Publication_Check_v0.2.md)
+- [WR-VII — Energy-Time Frontiers](papers/WR-VII/README.md)
+- [WR-VII result/dependency map](papers/WR-VII/THEOREM_MAP.md)
 
 ## Core mathematical idea
 

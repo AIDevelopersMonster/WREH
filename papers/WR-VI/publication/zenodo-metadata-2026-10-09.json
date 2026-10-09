@@ -1,0 +1,45 @@
+{
+  "id": 23254619,
+  "doi": "10.5281/zenodo.23254619",
+  "conceptdoi": "10.5281/zenodo.23254618",
+  "created": "2026-10-09T05:18:38.571533+00:00",
+  "modified": "2026-10-09T05:18:39.063827+00:00",
+  "metadata": {
+    "title": "WR-VI: The Aquarium Bounds: Physical Constraints as Boundaries of World Space Constraint-conditioned transition completion Mathematical draft v0.2",
+    "publication_date": "2026-10-09",
+    "version": null,
+    "creators": [
+      {
+        "name": "Malachevsky, A. A.",
+        "affiliation": null,
+        "orcid": "0009-0008-6009-3196"
+      }
+    ],
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "resource_type": {
+      "title": "Preprint",
+      "type": "publication",
+      "subtype": "preprint"
+    }
+  },
+  "files": [
+    {
+      "key": "WREH_WR-VI_Demo_v0.2_EN-RU.html",
+      "size": 14178,
+      "checksum": "md5:41b7ba17e96e6b2182ae0651bcb77b78"
+    },
+    {
+      "key": "WREH_WR-VI_Draft_v0.2_RU.pdf",
+      "size": 134497,
+      "checksum": "md5:c273bbdb18c108d1868e91aa79aa9390"
+    },
+    {
+      "key": "WREH_WR-VI_Draft_v0.2_EN.pdf",
+      "size": 124503,
+      "checksum": "md5:74a982b328a38ed172b821a39e742065"
+    }
+  ],
+  "verified_from": "https://zenodo.org/api/records/23254619"
+}
