@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact fractions; no random sampling",
+  "feasible_lattice_matrices": 4147,
+  "exact_response_lattice_matrices": 7,
+  "continuous_fibre_checks": 301,
+  "activity_cap_checks": 601,
+  "tolerance_witness_checks": 15,
+  "quantifier_checks": 140,
+  "threshold": "1/6",
+  "threshold_matrix_irreducible": false,
+  "dual_certificate_at_cap_3_20": {
+    "coefficient_vector": [
+      "1",
+      "0",
+      "0"
+    ],
+    "gap": "-1/60"
+  },
+  "energy_counterexample": {
+    "mean": "0",
+    "mean_square": "4/3"
+  },
+  "scope": "finite witnesses; general propositions rely on manuscript proofs"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "constraint_cases": 192,
+  "languages": [
+    "ru",
+    "en"
+  ],
+  "viewport_checks": [
+    "desktop 1360px",
+    "mobile 390px"
+  ],
+  "keyboard": "PASS",
+  "javascript_errors": [],
+  "external_page_requests": [],
+  "browser": "155.0.8059.39",
+  "visual_review": "PASS",
+  "visual_review_date": "2026-10-09",
+  "visual_review_scope": "four EN/RU desktop 1360px/mobile 390px screenshots"
+}

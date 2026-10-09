@@ -16,14 +16,14 @@
 3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23228682`.
 4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23248138`.
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — **ACTIVE / MATHEMATICAL DRAFT v0.3 / REVIEWABLE_DRAFT**.
-6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — PLANNED.
+6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — **ACTIVE / MATHEMATICAL DRAFT v0.1 / REVIEWABLE_DRAFT**.
 7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — PLANNED.
 8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — PLANNED.
 9. **WR-IX** — *Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?* — PLANNED.
 
 ## Current publication gate
 
-WR-I–IV are published and frozen. WR-V is open as a review draft after the author's explicit transition instruction on 8 October 2026.
+WR-I–IV are published and frozen. WR-V remains an unmerged review draft after the author's explicit transition instruction on 8 October 2026. The author's separate instruction “Делаем 6 статью” on 9 October 2026 opens WR-VI; it does not publish or certify WR-V.
 
 - WR-I DOI: `10.5281/zenodo.23210258`
 - WR-II DOI: `10.5281/zenodo.23224154`
@@ -186,6 +186,18 @@ WR-V must not:
 WR-V hands a declared instrument-completion class to WR-VI. Physically admissible
 restrictions on that class require independent construction and justification. WR-IX
 needs explicit accessible protocols and resources before strengthening relative
-indistinguishability to a horizon claim. These downstream branches remain planned.
+indistinguishability to a horizon claim. WR-VI is now separately opened by the author's instruction; WR-IX remains planned.
 
 Revision v0.3 checks the WR-II finite-obstruction/full-finite-defect boundary and WR-IV v0.6 Proposition 2.3 / Remark 2.5. It retains the classical claim ceiling: no undeclared global trajectory lift or diagonal-operator quantum reduction is added. The supplied v0.2 review is addressed with explicit provenance and open sampling/quantum/decision obligations.
+
+## WR-V -> WR-VI handoff
+
+WR-VI opens on 9 October 2026 under its canonical title, *The Aquarium Bounds: Physical Constraints as Boundaries of World Space*. It constructs an explicit constraint record for the instrument-completion class: observed responses, row-coupling structural assumptions, externally supplied hard bounds, their uncertainty and allowed relaxations remain separate.
+
+Active source: `papers/WR-VI/draft-v0.1/wrvi-body.tex`; parallel English/Russian PDFs. Status: **REVIEWABLE_DRAFT**. The first benchmark is a finite classical reversible three-state transition model. Known detailed balance and all prepared-input means still leave a transition interval. A stationary activity cap creates an empty/singleton/nonunique threshold. Requiring irreducibility excludes the threshold singleton; response tolerance and cap uncertainty change inference in separately proved ways.
+
+The new obligation is coupled admissibility, not a new quotient, general wall geometry, global completion theorem or smoothing method. The seven proofs are finite elementary/classical arguments with no priority claim. Activity is dimensionless, not energy, entropy production or a rate. No real physical cap, causal speed limit, quantum or gravitational result is certified. Complete-world uniqueness requires a further declared lift.
+
+WR-V v0.3 remains unchanged at `d0afad65108abee8b561e02af6fe3392c6057487`. The branch `paper-wr-vi-v0.1-spine` is stacked on `paper-wr-v-v0.1-spine`; no merge, publication or DOI follows from opening the next paper. WR-VI must be retargeted and its inherited dependency audited after the upstream PR is resolved.
+
+WR-VII may inherit independently justified constraint classes only after physical units and protocols are constructed. WR-VII–IX remain planned. WREH is both the programme and community and remains distinct from Boundary Compensation.

@@ -1,0 +1,61 @@
+{
+  "EN": {
+    "pages": 8,
+    "bytes": 78648,
+    "warnings": [],
+    "numbered_labels": 28,
+    "numbered_equations": 12,
+    "bibliographic_entries": 7
+  },
+  "RU": {
+    "pages": 9,
+    "bytes": 88278,
+    "warnings": [],
+    "numbered_labels": 28,
+    "numbered_equations": 12,
+    "bibliographic_entries": 7
+  },
+  "assigned_labels": {
+    "sec:scope": "1",
+    "sec:constraints": "2",
+    "eq:completion": "1",
+    "def:record": "2.1",
+    "sec:markov": "3",
+    "eq:balance": "2",
+    "prop:energy": "3.1",
+    "eq:flows": "3",
+    "eq:response": "4",
+    "sec:certificates": "4",
+    "prop:dual": "4.1",
+    "eq:dual": "5",
+    "sec:benchmark": "5",
+    "eq:matrix": "6",
+    "eq:means": "7",
+    "thm:interval": "5.1",
+    "eq:interval": "8",
+    "eq:activity": "9",
+    "thm:threshold": "5.2",
+    "eq:capinterval": "10",
+    "eq:singleton": "11",
+    "cor:irreducible": "5.3",
+    "sec:uncertainty": "6",
+    "prop:tolerance": "6.1",
+    "eq:quantifiers": "12",
+    "prop:quantifiers": "6.2",
+    "sec:physical": "7",
+    "sec:handoff": "8"
+  },
+  "assigned_bibliography": {
+    "WRI": "1",
+    "WRII": "2",
+    "WRIII": "3",
+    "WRIV": "4",
+    "WRV": "5",
+    "LP": "6",
+    "BV": "7"
+  },
+  "parallel_numbering": "PASS",
+  "visual_review": "PASS",
+  "visual_review_date": "2026-10-09",
+  "visual_review_scope": "all 17 EN/RU PDF pages; matrix, threshold, table and bibliography"
+}
