@@ -13,8 +13,8 @@ WREH develops a mathematically explicit language for response-defined world spac
 - **Founding document:** WREH-00 — *Manifesto and Research Programme*
 - **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6, WR-VI v0.2
 - **Latest author-reported publication:** WR-VII, DOI [10.5281/zenodo.23264253](https://doi.org/10.5281/zenodo.23264253); deposited record/version/files pending direct verification
-- **Current technical work:** WR-VIII v0.1 — **REVIEWABLE_DRAFT**; upstream WR-V v0.3 remains a separate review draft
-- **Next scientific gate:** independent review of the explicit FLRW distance/rate completion, calibration and restricted global lifts; real catalogue/covariance, matter and perturbation inputs are needed for observational inference
+- **Current technical work:** WR-VIII v0.2 — **PREPRINT_READY (technical package)**; bilingual publication files prepared, no VIII DOI yet; upstream WR-V v0.3 remains a separate review draft
+- **Next scientific gate:** external scientific review of the explicit FLRW distance/rate completion, calibration and restricted global lifts; real catalogue/covariance, matter and perturbation inputs are needed for observational inference
 
 ## Quick navigation
 

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "work": "WR-VIII",
+  "version": "0.2",
+  "audited_parent_sha": "6120d9b37196f9cee4f00bebc2ec1d84d43d44f0",
+  "english_selected_equation_blocks_identical_to_v0_1": true,
+  "translated_equation_prose": [
+    "eq:fibre",
+    "eq:topology"
+  ],
+  "equation_blocks": 18,
+  "proof_blocks": 7,
+  "labels": 38,
+  "references": 13,
+  "label_set_preserved": true,
+  "original_bibliography_numbers_preserved": true,
+  "language_equation_and_result_numbering": "PASS",
+  "author_ORCID_version_licence_metadata": "PASS",
+  "build_visual_and_demo_checks": "PASS",
+  "historical_source_preservation": "New version directory; no draft-v0.1 mutation",
+  "deposit_recorded": false,
+  "doi_assigned": false,
+  "external_peer_review_established": false,
+  "upstream_integration": "PR #9 remains stacked on open PR #8; pinned VII source; separate from preprint readiness",
+  "decision": "PUBLICATION_READY for stated bilingual kinematic/synthetic preprint package; not external peer review"
+}
