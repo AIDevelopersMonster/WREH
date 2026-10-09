@@ -1,0 +1,16 @@
+{
+  "paper": "WR-IX",
+  "version": "0.1",
+  "date": "2026-10-09",
+  "source_base_commit": "3963c3b71f464b7de85750fd4a51d680943d5162",
+  "base_branch": "paper-wr-viii-v0.1-spine",
+  "upstream_pr": 9,
+  "upstream_status": "open draft, stacked on PR #8",
+  "wr_viii_version_doi": "10.5281/zenodo.23266980",
+  "wr_viii_deposit_verified": true,
+  "wr_vii_doi": "10.5281/zenodo.23264253",
+  "wr_vii_deposit_status": "author-reported; version/files pending direct verification",
+  "review_type": "AI-assisted automated technical audit; independent external scientific peer review not established",
+  "frozen_upstream_sources_modified": false,
+  "first_cycle": "final technical draft; not certification that all nine are published"
+}

@@ -11,10 +11,10 @@ WREH develops a mathematically explicit language for response-defined world spac
 - **Programme:** ACTIVE
 - **Repository:** public programme repository
 - **Founding document:** WREH-00 — *Manifesto and Research Programme*
-- **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6, WR-VI v0.2
-- **Latest author-reported publication:** WR-VII, DOI [10.5281/zenodo.23264253](https://doi.org/10.5281/zenodo.23264253); deposited record/version/files pending direct verification
-- **Current technical work:** WR-VIII v0.2 — **PREPRINT_READY (technical package)**; bilingual publication files prepared, no VIII DOI yet; upstream WR-V v0.3 remains a separate review draft
-- **Next scientific gate:** external scientific review of the explicit FLRW distance/rate completion, calibration and restricted global lifts; real catalogue/covariance, matter and perturbation inputs are needed for observational inference
+- **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6, WR-VI v0.2, WR-VIII v0.2
+- **Latest verified publication:** WR-VIII v0.2, DOI [10.5281/zenodo.23266980](https://doi.org/10.5281/zenodo.23266980); public API and all three file checksums verified. Earlier WR-VII remains author-reported pending deposited-file verification
+- **Current technical work:** WR-IX v0.1 — **REVIEWABLE_DRAFT**; final technical article of the first cycle, bilingual LaTeX/PDF, proofs and offline demonstration; no IX DOI yet; upstream WR-V v0.3 remains a separate review draft
+- **Next scientific gate:** external scientific review of the explicit observer access record, winding protocol, time--energy frontier and future-tail construction; real apparatus/matter inputs are required for physical application
 
 ## Quick navigation
 
@@ -49,6 +49,9 @@ WREH develops a mathematically explicit language for response-defined world spac
 - [WR-VII publication check status](reviews/WR-VII/WREH_WR-VII_Post_Publication_Check_2026-10-09.md)
 - [WR-VIII — The Cosmological Fibre](papers/WR-VIII/README.md)
 - [WR-VIII result/dependency map](papers/WR-VIII/THEOREM_MAP.md)
+- [WR-VIII deposited-file verification](reviews/WR-VIII/WREH_WR-VIII_Post_Publication_Check_v0.2.md)
+- [WR-IX — Epistemic Horizons](papers/WR-IX/README.md)
+- [WR-IX result/dependency map](papers/WR-IX/THEOREM_MAP.md)
 
 ## Core mathematical idea
 

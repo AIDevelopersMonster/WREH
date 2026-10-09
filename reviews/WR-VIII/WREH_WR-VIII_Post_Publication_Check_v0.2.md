@@ -1,0 +1,9 @@
+# WR-VIII v0.2 — post-publication check
+
+Verified version DOI: **10.5281/zenodo.23266980**; concept DOI: 10.5281/zenodo.23266979. Record publication date 9 October 2026, preprint, Malachevsky A. A., ORCID 0009-0008-6009-3196. Public API fetched directly; browser search retrieval was unavailable. API snapshot evidence is summarized in `publication-verification-v0.2.json`.
+
+All three deposited files downloaded and advertised size/MD5 checked: EN PDF (9 pages), RU PDF (10 pages), publication ZIP. ZIP SHA-256 `455b998f251f42b9f3c69f4dcefa604a02270c52e671c7c65632c22fc73a039e` matches the prepared 42-file archive byte for byte. HTML and all source/verification files are in that archive; there is no separate HTML file in the public record. Both PDFs have byte differences and C2PA markers, but their extracted scientific text and every page raster at 700 px are identical to the repository v0.2 release. This is content identity evidence, not a parsing of every differing container byte.
+
+Metadata follow-ups, without altering deposited science: title currently begins “WR-VIII: he Cosmological Fibre” and ends with “orld Realizability”; keyword begins “LRW”; explicit version field is absent. Suggested title: **WR-VIII: The Cosmological Fibre: Universes Compatible with Our Universe Today**. Suggested version: **0.2**; keyword **FLRW**. Clarify the split licence (content CC BY 4.0, executable code/HTML MIT) in the description. No Zenodo metadata mutation was performed.
+
+Status: **PUBLISHED / FROZEN v0.2**. Deposit is not independent external scientific peer review, journal acceptance or publication of other drafts. VIII PR #9 is open on VII PR #8. Versioned sources retain historical pre-deposit status; this active record supersedes it as publication metadata. Opening IX does not merge/retarget upstream PRs.

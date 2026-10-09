@@ -1,0 +1,37 @@
+{
+  "title": "WR-IX: Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-10-09",
+  "version": "0.1",
+  "creators": [
+    {
+      "name": "Malachevsky, A. A.",
+      "orcid": "0009-0008-6009-3196",
+      "affiliation": "World Realizability & Epistemic Horizons (WREH)"
+    }
+  ],
+  "description": "Bilingual mathematical draft. An explicit observer access record, strict tagged null-return certificate in a flat cubic torus, ideal detector time-energy frontier, and smooth future tails with the same supplied past but finite versus infinite conformal reach. Model-relative and protocol-relative; no actual cosmological fit, physically complete observer class, prescribed matter-law realization or universal knowledge bound. AI-assisted drafting and automated technical audit are disclosed; independent external scientific peer review is not established. Research content/figures CC BY 4.0; executable code and HTML MIT. No deposit is asserted by this prepared metadata.",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "epistemic horizons",
+    "observer access",
+    "resource certificates",
+    "FLRW",
+    "cosmic topology",
+    "future histories"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23266980",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/AIDevelopersMonster/WREH",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "proof_blocks": 8,
+  "numbered_equations": 12,
+  "source_labels": 32,
+  "inline_math_expressions": 156,
+  "parallel_inline_math": "IDENTICAL",
+  "claim_ceiling": "declared observer protocols; ideal kinematics and detector",
+  "upstream_snapshot": "3963c3b71f464b7de85750fd4a51d680943d5162",
+  "frozen_upstream_preservation": "Verified separately by Git tree comparison before commit",
+  "wr_ix_doi": null
+}

@@ -18,12 +18,12 @@
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — **ACTIVE / MATHEMATICAL DRAFT v0.3 / REVIEWABLE_DRAFT**.
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — **PUBLISHED / FROZEN v0.2** — DOI: `10.5281/zenodo.23254619`.
 7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — **PUBLISHED (AUTHOR-REPORTED) / SOURCE FROZEN v0.2** — reported DOI `10.5281/zenodo.23264253`; deposited version/files pending direct verification.
-8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — **ACTIVE / PREPRINT v0.2 / PREPRINT_READY (TECHNICAL PACKAGE)**.
-9. **WR-IX** — *Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?* — PLANNED.
+8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — **PUBLISHED / FROZEN v0.2** — DOI `10.5281/zenodo.23266980`.
+9. **WR-IX** — *Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?* — **ACTIVE / MATHEMATICAL DRAFT v0.1 / REVIEWABLE_DRAFT**.
 
 ## Current publication gate
 
-WR-I–IV and WR-VI v0.2 are published and frozen. WR-V remains an unmerged review draft after the author's explicit transition instruction on 8 October 2026. The author's separate instruction “Делаем 6 статью” on 9 October 2026 opens WR-VI; it does not publish or certify WR-V.
+WR-I–IV, WR-VI v0.2 and WR-VIII v0.2 are published and frozen. WR-V remains an unmerged review draft after the author's explicit transition instruction on 8 October 2026. The author's separate instruction “Делаем 6 статью” on 9 October 2026 opens WR-VI; it does not publish or certify WR-V.
 
 - WR-I DOI: `10.5281/zenodo.23210258`
 - WR-II DOI: `10.5281/zenodo.23224154`
@@ -34,6 +34,8 @@ WR-I–IV and WR-VI v0.2 are published and frozen. WR-V remains an unmerged revi
 WR-IV PR #5 is merged into `main` at `a82ca16675a6b3f358d800963fa7ff0c4e5385bb`. The published PDFs/HTML match the merged source snapshot by size and published MD5. See `reviews/WR-IV/WREH_WR-IV_Post_Publication_Check_v0.6.md` for the separate metadata/archive follow-ups. WR-V requires review of its newly declared experimental transition interface; no WR-V publication readiness or DOI is asserted.
 
 WR-III inherits the WR-I response maps and quotients together with the WR-II data-compatible fibre language. Its new target is not existence, but the geometry and regularity of **nonempty** admissible world fibres as response data vary and protocols are refined.
+
+Prior handoff entries below preserve the status at their original date. The latest WR-VIII -> WR-IX entry controls the current transition.
 
 ## WR-I -> WR-II handoff
 
@@ -235,3 +237,13 @@ A real combined CMB/BAO/SN/lensing/growth inference needs observations, covarian
 
 
 WR-VIII v0.2 corrects the abstract hypotheses and the z>0 magnitude domain, states the joint interval-box premise, clarifies local versus global torus distances and the extra C∞ future baseline, and adds Heavens/Jimenez/Verde (2014) as calibration prior art. No theorem number or equation number changes. All seven proofs remain self-contained; automated checks are not external peer review. The pinned parent is 6120d9b37196f9cee4f00bebc2ec1d84d43d44f0. The author instructed bilingual publication preparation on 9 October 2026; an actual Zenodo deposit and DOI are not yet recorded.
+
+## WR-VIII -> WR-IX handoff
+
+The author supplied VIII DOI `10.5281/zenodo.23266980` and explicitly opened the ninth/final technical article of the first cycle. The Zenodo API verifies the version DOI, date, author/ORCID and three deposited files. All advertised MD5 checksums pass. The v0.2 ZIP is byte-identical to the prepared archive; the EN/RU scientific text and all nineteen page rasters at 700 px match. PDF bytes differ, with C2PA markers present in deposited containers. Record title/keyword typos and missing explicit version are recorded as metadata follow-ups. No external peer review follows from deposit. Frozen VIII versioned sources retain historical pre-deposit wording.
+
+WR-IX v0.1 introduces an observer access record with explicit complete-protocol time and energy certificates, a calibrated tagged winding response in a flat expanding torus, a strict finite-return criterion, a detector time--energy frontier, and smooth future tails with opposite conformal convergence. The exact quotient and compact finite separation remain WR-I property; no new general realizability, geometry, smoothing, instrument or quantum speed-limit claim is made. The packet/clock/threshold carrier is independent of WR-VII's Hamiltonian carrier. Compact future bumps from VIII cannot alone change conformal-tail convergence type.
+
+Active source: `papers/WR-IX/draft-v0.1/wrix-body.tex`; complete English/Russian PDFs share numbering and proofs. Status **REVIEWABLE_DRAFT**; no IX deposit or DOI, journal acceptance or independent external peer review is established. Current compatibility does not determine a permanent future winding horizon without a future dynamical class. This is a conditional kinematic/ideal-apparatus benchmark, not a theorem about all physically possible observations.
+
+Opening the final article completes drafting of the numbered first-cycle sequence, not publication or peer review of all nine papers. WR-V remains a review draft; VII's deposit remains author-reported pending direct file verification. IX is stacked on the exact VIII source head `3963c3b71f464b7de85750fd4a51d680943d5162`; PR #9 remains open and stacked on PR #8. No upstream merge or retarget is performed. Renew dependency audit before any later integration into main. The manifesto's possible later synthesis remains a separate obligation; WREH remains distinct from BC.
