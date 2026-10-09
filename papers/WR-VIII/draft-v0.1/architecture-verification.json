@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "baseline_commit": "f011aec8546705be1e6bd2bd0c5925da96861179",
+  "frozen_papers_files": 250,
+  "allowed_existing_papers_metadata_change": [
+    "papers/WR-VII/README.md"
+  ],
+  "versioned_scientific_snapshots_unchanged": true,
+  "canonical_title": "The Cosmological Fibre: Universes Compatible with Our Universe Today",
+  "new_obligation": "Explicit unit-bearing FLRW distance/rate response carrier, completion, calibration and conditional global lifts",
+  "WR_IX": "PLANNED",
+  "WREH_BC_separation": "Programme and community identity preserved; no BC cosmological object silently imported",
+  "WR_VII_publication": "Author-reported DOI; direct deposited metadata/files verification pending external access"
+}

@@ -3,7 +3,7 @@
 **Calibrated quantum responses, action bounds and generator ambiguity.**
 World Realizability & Epistemic Horizons — research programme and community.
 
-Opened by the author on 9 October 2026 after WR-VI publication, DOI [10.5281/zenodo.23254619](https://doi.org/10.5281/zenodo.23254619). Current release: **v0.2 / REVIEWABLE_DRAFT**. No WR-VII DOI or deposit; no independent peer review or theorem-priority assertion.
+Opened by the author on 9 October 2026 after WR-VI publication, DOI [10.5281/zenodo.23254619](https://doi.org/10.5281/zenodo.23254619). Frozen source: **v0.2**. Publication DOI [10.5281/zenodo.23264253](https://doi.org/10.5281/zenodo.23264253) was reported by the author on 9 October 2026. **Deposited version, files and metadata remain pending direct verification** because the public record/API were inaccessible. Historical source status REVIEWABLE_DRAFT is unchanged; no independent peer review or theorem-priority assertion.
 
 The new task is an explicit response model with actual energy and duration, after WR-VI's dimensionless activity constraint. A spectral-diameter action certificate gives the sharp qubit resource frontier. The complete constant-generator class retains revival windows and a circle even at the frontier. Additional protocols distinguish generator parameters; final tomography alone fails at complete transfer. Closed response intervals and fixed iid repetitions have separate deterministic and confidence-qualified certificates.
 
@@ -19,8 +19,10 @@ The new task is an explicit response model with actual energy and duration, afte
 - [External scientific review request](../../reviews/WR-VII/REVIEW_REQUEST_v0.2.md)
 - [Versioned checksum manifest](draft-v0.2/SHA256SUMS)
 
-The energy resource is spectral diameter, not consumed work, mean energy or the state's energy variance. The cap, clock, dynamics and response calibration are independently supplied assumptions; a hardware control alphabet can shrink the attainable set. No global maximum energy, universal lifetime, Planck/gravitational cutoff or unique full-world lift follows. WR-VIII and WR-IX remain planned. WREH remains distinct from Boundary Compensation.
+The energy resource is spectral diameter, not consumed work, mean energy or the state's energy variance. The cap, clock, dynamics and response calibration are independently supplied assumptions; a hardware control alphabet can shrink the attainable set. No global maximum energy, universal lifetime, Planck/gravitational cutoff or unique full-world lift follows. WR-VIII v0.1 is separately open; WR-IX remains planned. WREH remains distinct from Boundary Compensation.
 
 The branch `paper-wr-vii-v0.1-spine` is stacked on `paper-wr-vi-v0.1-spine`. Earlier scientific snapshots remain immutable. Publishing WR-VI does not merge its PR or certify/publish the separate WR-V draft. Re-audit dependency routing before a later merge into main.
 
 v0.2 responds to the supplied review with static QSL positioning and explicit WR-I/II/III/VI bridges. Both attached review files are byte-identical and count as one distinct text; reviewer identity and independence are not established. Seven proof blocks, numbered statements and thirteen equations are unchanged. v0.1 remains a frozen historical snapshot.
+
+See the [publication access/check report](../../reviews/WR-VII/WREH_WR-VII_Post_Publication_Check_2026-10-09.md) and [machine-readable verification status](publication/publication-verification-2026-10-09.json). Versioned v0.1/v0.2 sources, PDFs, metadata and manifests remain immutable.

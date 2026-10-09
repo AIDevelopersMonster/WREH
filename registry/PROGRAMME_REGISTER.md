@@ -17,8 +17,8 @@
 4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23248138`.
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — **ACTIVE / MATHEMATICAL DRAFT v0.3 / REVIEWABLE_DRAFT**.
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — **PUBLISHED / FROZEN v0.2** — DOI: `10.5281/zenodo.23254619`.
-7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — **ACTIVE / MATHEMATICAL DRAFT v0.2 / REVIEWABLE_DRAFT**.
-8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — PLANNED.
+7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — **PUBLISHED (AUTHOR-REPORTED) / SOURCE FROZEN v0.2** — reported DOI `10.5281/zenodo.23264253`; deposited version/files pending direct verification.
+8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — **ACTIVE / MATHEMATICAL DRAFT v0.1 / REVIEWABLE_DRAFT**.
 9. **WR-IX** — *Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?* — PLANNED.
 
 ## Current publication gate
@@ -201,7 +201,7 @@ The new obligation is coupled admissibility, not a new quotient, general wall ge
 
 WR-V v0.3 remains unchanged at `d0afad65108abee8b561e02af6fe3392c6057487`. The branch `paper-wr-vi-v0.1-spine` is stacked on `paper-wr-v-v0.1-spine`; no merge, publication or DOI follows from opening the next paper. WR-VI must be retargeted and its inherited dependency audited after the upstream PR is resolved.
 
-WR-VII may inherit independently justified constraint classes only after physical units and protocols are constructed. WR-VII is now separately open; WR-VIII and WR-IX remain planned. WREH is both the programme and community and remains distinct from Boundary Compensation.
+WR-VII may inherit independently justified constraint classes only after physical units and protocols are constructed. WR-VII publication is now author-reported, WR-VIII is separately open, and WR-IX remains planned. WREH is both the programme and community and remains distinct from Boundary Compensation.
 
 WR-VI v0.2 responds to the supplied v0.1 review: unchanged seven proof blocks; explicit WR-II v0.5 Example 10.19 nonattainment analogy and WR-V v0.3 §9 handoff; concrete cap interval N=[1/6,1/4]. The matrix concern is checked against rendered 3×3 arrays, not PDF extraction alone. WR-VI v0.1 remains an immutable historical draft. The supplied review does not establish reviewer identity, independence or external peer-review status.
 
@@ -209,14 +209,26 @@ WR-VI v0.2 responds to the supplied v0.1 review: unchanged seven proof blocks; e
 
 The author reported DOI `10.5281/zenodo.23254619` and explicitly instructed opening the seventh article on 9 October 2026. The public record and all deposited MD5 checksums were verified. HTML is byte-identical; both PDFs agree in extracted scientific text and every page raster at 700 px, while their C2PA-bearing containers differ in bytes. The post-publication check records remaining archive/version/licence-description follow-ups. Publishing WR-VI does not merge draft PR #7 or publish WR-V.
 
-WR-VII preserves the canonical title *Energy-Time Frontiers of World Realizability*. Active source: `papers/WR-VII/draft-v0.2/wrvii-body.tex`; parallel EN/RU, analytic figure and offline HTML. Status: **REVIEWABLE_DRAFT**; no WR-VII DOI, external peer review or deposit.
+WR-VII preserves the canonical title *Energy-Time Frontiers of World Realizability*. Active source: `papers/WR-VII/draft-v0.2/wrvii-body.tex`; parallel EN/RU, analytic figure and offline HTML. Historical source status: **REVIEWABLE_DRAFT**. The author reported publication DOI `10.5281/zenodo.23264253` on 9 October 2026; public record/version/files remain pending direct verification. No independent external peer review is established.
 
 New obligation: construct a calibrated unit-bearing quantum response and energy-duration feasibility frontier. The closed pure finite-dimensional unitary carrier, prepared state, projector, clock and hard spectral-diameter cap are explicit assumptions. This is a new carrier, not a silent quantum reduction of the classical WR-V/VI transition kernels. D is in joules, τ in seconds; dimensionless activity remains unchanged upstream.
 
 The action certificate has an endpoint-safe proof and a sharp freely controlled qubit witness. The full constant-qubit generator fibre has separated revival windows. The exact resource frontier fixes the diameter but leaves a circle of generators. Final tomography identifies that circle for a nonorthogonal final state; complete transfer retains generator ambiguity until calibrated intermediate-time probes on fresh preparations are supplied. Closed response intervals and fixed iid repetitions have separate deterministic and confidence-qualified certificates.
 
-Claim ceiling: established quantum speed-limit, Pauli and concentration tools with self-contained proofs, no priority certification, apparatus experiment, global maximum energy, universal lifetime, gravitational/cosmological wall or unique complete-world lift. Targeted sources and inaccessible full texts are recorded honestly. Earlier audits do not certify these new proofs. WR-VIII and WR-IX remain planned; WREH and BC remain distinct.
+Claim ceiling: established quantum speed-limit, Pauli and concentration tools with self-contained proofs, no priority certification, apparatus experiment, global maximum energy, universal lifetime, gravitational/cosmological wall or unique complete-world lift. Targeted sources and inaccessible full texts are recorded honestly. Earlier audits do not certify these new proofs. WR-VIII is now separately open; WR-IX remains planned; WREH and BC remain distinct.
 
 The WR-VII branch `paper-wr-vii-v0.1-spine` is stacked on `paper-wr-vi-v0.1-spine` at `2865474c79a120f29cda754d1137cb3939adadfa`. Retargeting/merging waits for explicit upstream resolution and renewed dependency audit; opening this article does not merge or certify earlier PRs.
 
 WR-VII v0.2 addresses one distinct supplied review in two byte-identical attachments. All seven proof blocks, numbered statements, thirteen equations and original reference texts are unchanged. New positioning concerns static orthogonalization only; diameter constancy is pointwise on the constrained frontier fibre. The WR-III response boundary uses fixed E,τ, 0<C<π/2 and M=(0,1), without claiming a structural wall. The attained minimum circle differs from the excluded minimizers of WR-II Example 10.19 and WR-VI v0.2 Corollary 5.3. Added primary references and three synthetic resource-comparison witnesses do not certify independent peer review, priority or publication. Historical v0.1 is frozen.
+
+## WR-VII -> WR-VIII handoff
+
+The author supplied DOI `10.5281/zenodo.23264253` for article VII and explicitly instructed opening VIII on 9 October 2026. Public DOI/record/API requests were inaccessible or timed out. Publication is therefore author-reported; deposited version, files, metadata and hashes remain pending direct verification. The source v0.2 at f011aec8546705be1e6bd2bd0c5925da96861179 is frozen. See the separate VII publication report and JSON status. This access limitation does not prove DOI invalidity, and publication does not merge PR #8.
+
+WR-VIII retains the canonical title *The Cosmological Fibre: Universes Compatible with Our Universe Today*. Active source: `papers/WR-VIII/draft-v0.1/wrviii-body.tex`; English 9 pages and complete Russian translation 10 pages, 18 shared equations, seven proofs, analytic figures and offline HTML. Status **REVIEWABLE_DRAFT**; no VIII DOI, actual survey fit or independent peer review.
+
+New obligation: a unit-bearing first-branch FLRW metric-distance-rate response carrier. An exact increasing calibrated distance profile admits the full curvature/expansion family. Independent calibrated rates refine/select it; free SN/BAO scales retain joint scale ambiguity. A declared polynomial profile gives an exact finite inverse, rank-three map and sharp deterministic interval intersection. Copied classical patch responses allow distinct flat Euclidean/torus lifts; smooth future bumps allow distinct kinematic temporal lifts.
+
+The standard geometry and CBL identity are attributed, not priority-claimed. Exact derivatives, calibration, positive rates and the strict branch cap are premises. A background singleton is not a unique complete world; an empty model fibre is not universal physical impossibility. Torus equivalence is restricted to supplied paths/classical fields; global modes, quantum states and future accessibility require other protocols. Future bumps need not satisfy one fixed matter evolution law. No spacetime edge, general structural wall, new gravity theory or actual-Universe identification follows.
+
+A real combined CMB/BAO/SN/lensing/growth inference needs observations, covariance/joint likelihood, nuisance/ruler calibration, selection, derivative uncertainty, perturbations and a matter carrier. WR-IX remains planned. WREH remains a programme and community distinct from BC. The VIII branch `paper-wr-viii-v0.1-spine` is stacked on `paper-wr-vii-v0.1-spine` at f011aec; no previous PR merge or retarget is performed. Re-audit dependencies before any later merge into main.

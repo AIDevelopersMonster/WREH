@@ -1,0 +1,71 @@
+{
+  "symbolic": {
+    "status": "PASS",
+    "identities": 4
+  },
+  "curved_distance_integration": {
+    "status": "PASS",
+    "cases": 360,
+    "max_relative_error": 4.1485317395330617e-16
+  },
+  "finite_parameter_inversion": {
+    "status": "PASS",
+    "cases": 90
+  },
+  "central_difference_rank": {
+    "status": "PASS",
+    "cases": 45,
+    "parameters": "u,v,q; c=1 for rank scaling"
+  },
+  "interval_endpoints": {
+    "status": "PASS",
+    "cases": 135,
+    "candidate_equivalence_checks": 26595,
+    "global_branch_clipped_intervals": 3,
+    "open_global_upper_bound_preserved": true
+  },
+  "calibration_scaling": {
+    "status": "PASS",
+    "cases": 540
+  },
+  "incompatible_rates": {
+    "status": "PASS",
+    "z1": 1.0,
+    "H1": 100,
+    "q1": 0.0,
+    "z2": 0.5,
+    "H2": 100,
+    "q2": -2.218213801225383
+  },
+  "torus_patch_aliases": {
+    "status": "PASS",
+    "checks": 46800,
+    "scope": "finite lattice witnesses; full injectivity follows from norm proof"
+  },
+  "future_matching": {
+    "status": "PASS",
+    "histories": 4,
+    "time_points": 1501,
+    "analytic_derivative_upper_bound": 128,
+    "scope": "synthetic time unit; b=e^(16-1/((t-.3)(.8-t))) on (.3,.8)"
+  },
+  "unit_passport": {
+    "synthetic": true,
+    "c_km_per_s": 299792.458,
+    "H0_km_per_s_per_Mpc": 70,
+    "u_Mpc": 4282.7494,
+    "v_Mpc": -642.4124099999999,
+    "Z": 1.5,
+    "q_open_upper_bound": 0.7399699387212394,
+    "q_interval": [
+      -0.05591695501730103,
+      0.054809688581315
+    ],
+    "rate_interval_km_per_s_per_Mpc": [
+      98,
+      102
+    ]
+  },
+  "status": "PASS",
+  "scope": "Finite synthetic witnesses accompany self-contained proofs; no catalogue fit, confidence calibration, matter admissibility or exhaustive novelty certificate."
+}
