@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "baseline_commit": "ef8d584a1e6c68d274503f0b81d72044e34e95ed",
+  "proof_blocks_unchanged": 5,
+  "numbered_labels_unchanged": 34,
+  "numbered_equations_unchanged": 13,
+  "bibliography_entries_unchanged": 8,
+  "actual_EN_RU_numbering_matches_v0_2": "PASS",
+  "numbering_evidence": "v0.3 persistent assigned-number report equals canonical v0.1 numbers; v0.2 verified equality to v0.1 retained",
+  "frozen_scientific_files_byte_comparison": 122,
+  "finite_probe_obstruction_not_full_finite_defect": "checked against WR-II §§3–6",
+  "WR_IV_reference_numbers": "Proposition 2.3; Remark 2.5, v0.6 EN PDF p.4",
+  "scope": "version diff and targeted source/type check; not independent external peer review"
+}

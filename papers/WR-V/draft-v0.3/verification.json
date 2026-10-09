@@ -1,0 +1,25 @@
+{
+  "arithmetic": "exact fractions; no sampling",
+  "simplex_cases": 861,
+  "curve_cases": 891,
+  "instrument_models": 3,
+  "original_triangle_assignments": 0,
+  "split_triangle_assignments": 8,
+  "positive_likelihood_posterior": "729/730",
+  "joint_probe_incompatibility": {
+    "m": "1/4",
+    "n2": "1/2",
+    "affine_candidate": [
+      "1",
+      "-1/2",
+      "1/2"
+    ],
+    "status": "PASS"
+  },
+  "zero_likelihood_support_sizes": [
+    2,
+    1
+  ],
+  "status": "PASS",
+  "scope": "finite benchmarks; not a proof of general theorems"
+}

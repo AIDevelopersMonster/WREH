@@ -1,6 +1,6 @@
 # WR-V v0.3 — result and dependency map
 
-Common source: `draft-v0.3/wrv-body.tex`; English/Russian result numbers match.
+Common source: `wrv-body.tex`; English/Russian result numbers match.
 
 | Source label | Object/result | Essential assumptions | Provenance / dependency |
 |---|---|---|---|
