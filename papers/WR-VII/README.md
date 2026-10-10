@@ -1,5 +1,7 @@
 # WR-VII — Energy-Time Frontiers of World Realizability
 
+**First-cycle integration:** PUBLISHED / FROZEN v0.2; integrated into `main` on 10 October 2026. [Publication](https://doi.org/10.5281/zenodo.23264253) · [cycle closure](../../docs/FIRST-CYCLE/README.md) · [final video](https://youtu.be/yf_N_LX28E0).
+
 **Calibrated quantum responses, action bounds and generator ambiguity.**
 World Realizability & Epistemic Horizons — research programme and community.
 
@@ -19,9 +21,9 @@ The new task is an explicit response model with actual energy and duration, afte
 - [External scientific review request](../../reviews/WR-VII/REVIEW_REQUEST_v0.2.md)
 - [Versioned checksum manifest](draft-v0.2/SHA256SUMS)
 
-The energy resource is spectral diameter, not consumed work, mean energy or the state's energy variance. The cap, clock, dynamics and response calibration are independently supplied assumptions; a hardware control alphabet can shrink the attainable set. No global maximum energy, universal lifetime, Planck/gravitational cutoff or unique full-world lift follows. WR-VIII v0.2 is a verified deposit; WR-IX v0.2 completes first-cycle technical drafting. WREH remains distinct from Boundary Compensation.
+The energy resource is spectral diameter, not consumed work, mean energy or the state's energy variance. The cap, clock, dynamics and response calibration are independently supplied assumptions; a hardware control alphabet can shrink the attainable set. No global maximum energy, universal lifetime, Planck/gravitational cutoff or unique full-world lift follows. WR-VIII v0.2 is a verified deposit; WR-IX v0.2 is published and completes the first technical cycle. WREH remains distinct from Boundary Compensation.
 
-The branch `paper-wr-vii-v0.1-spine` is stacked on `paper-wr-vi-v0.1-spine`. Earlier scientific snapshots remain immutable. Publishing WR-VI does not merge its PR or certify external scientific review of WR-V. Re-audit dependency routing before a later merge into main.
+The VII head is integrated into `main` through PR #11. PR #8 merged that head into its original VI base; the intermediate merge commit is also preserved in `main`. Earlier scientific snapshots remain immutable. Repository integration does not certify external scientific review.
 
 v0.2 responds to the supplied review with static QSL positioning and explicit WR-I/II/III/VI bridges. Both attached review files are byte-identical and count as one distinct text; reviewer identity and independence are not established. Seven proof blocks, numbered statements and thirteen equations are unchanged. v0.1 remains a frozen historical snapshot.
 

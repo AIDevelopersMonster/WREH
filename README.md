@@ -8,13 +8,14 @@ WREH develops a mathematically explicit language for response-defined world spac
 
 ## Current status
 
-- **Programme:** ACTIVE
-- **Repository:** public programme repository
-- **Founding document:** WREH-00 — *Manifesto and Research Programme*
-- **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6, WR-V v0.3, WR-VI v0.2, WR-VII v0.2, WR-VIII v0.2
-- **Latest verified publication:** WR-VIII v0.2, DOI [10.5281/zenodo.23266980](https://doi.org/10.5281/zenodo.23266980); public API and all three file checksums verified. WR-V v0.3 and WR-VII v0.2 deposits also directly verified on 10 October
-- **Current technical work:** WR-IX v0.2 — **PUBLICATION_READY (technical preprint package)**; final technical article of the first cycle, bilingual LaTeX/PDF, proofs and offline demonstration; [saved Zenodo draft](https://zenodo.org/records/23272637?preview=1), reserved DOI 10.5281/zenodo.23272637, publication pending author confirmation; V/VII deposited packages directly verified
-- **Next scientific gate:** external scientific review of the explicit observer access record, winding protocol, time--energy frontier and future-tail construction; real apparatus/matter inputs are required for physical application
+- **Programme:** ACTIVE; the next stage requires a separately declared scope.
+- **First technical cycle:** **CLOSED / PUBLISHED / INTEGRATED**, 10 October 2026.
+- **Published and frozen:** all nine articles WR-I–IX; English and Russian manifestations belong to the same respective version.
+- **Repository integration:** PR #6–10 and #11 are merged; every existing branch head is included in `main`, including superseded audit histories.
+- **Latest publication:** WR-IX v0.2, DOI [10.5281/zenodo.23272637](https://doi.org/10.5281/zenodo.23272637).
+- **First-cycle index and handoff:** [all nine publications, closure checks and next-stage questions](docs/FIRST-CYCLE/README.md).
+- **Final video:** [WREH: какие миры совместимы с наблюдениями? Девять статей о границах познания](https://youtu.be/yf_N_LX28E0).
+- **Scientific status:** deposited technical preprints; independent external scientific peer review is not established. Integration does not certify physical realism or exhaustive novelty.
 
 ## Quick navigation
 
@@ -107,7 +108,7 @@ Boundary Compensation (BC) and WREH remain distinct programmes. No finite-dimens
 8. **WR-VIII** — The Cosmological Fibre
 9. **WR-IX** — Epistemic Horizons
 
-Technical drafting of the nine-article first cycle is complete. Publication, independent review and PR integration remain separate gates: V and VII deposited files are now directly verified; all open PR dependencies remain separate. The sequence is obligation-driven; numbering does not authorize a new claim.
+All nine articles of the first technical cycle are published and integrated into `main`. Versioned scientific packages remain frozen. The [closure record](docs/FIRST-CYCLE/README.md) separates completed repository/publication work from open scientific questions. The sequence is obligation-driven; numbering does not authorize a new claim.
 
 ## Contribution discipline
 

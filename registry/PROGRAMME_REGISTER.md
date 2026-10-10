@@ -19,23 +19,23 @@
 6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — **PUBLISHED / FROZEN v0.2** — DOI: `10.5281/zenodo.23254619`.
 7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — **PUBLISHED / FROZEN v0.2** — DOI `10.5281/zenodo.23264253` (deposit files verified 10 October 2026).
 8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — **PUBLISHED / FROZEN v0.2** — DOI `10.5281/zenodo.23266980`.
-9. **WR-IX** — *Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?* — **ACTIVE / PREPRINT v0.2 / PUBLICATION_READY (technical package)**.
+9. **WR-IX** — *Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?* — **PUBLISHED / FROZEN v0.2** — DOI `10.5281/zenodo.23272637`.
 
-## Current publication gate
+## Current publication and integration gate — 10 October 2026
 
-WR-I–VIII are deposited; WR-V v0.3 and WR-VII v0.2 files were directly verified on 10 October 2026. WR-V publication DOI is `10.5281/zenodo.23251956`; its open PR integration remains separate. Historical transition entries below retain their original knowledge status. The author's separate instruction “Делаем 6 статью” on 9 October 2026 opens WR-VI; that transition itself did not certify WR-V publication.
+**FIRST_CYCLE_CLOSED / ALL_NINE_PUBLISHED / ALL_BRANCH_HEADS_IN_MAIN.**
 
-- WR-I DOI: `10.5281/zenodo.23210258`
-- WR-II DOI: `10.5281/zenodo.23224154`
-- WR-III DOI: `10.5281/zenodo.23228682`
-- WR-IV DOI: `10.5281/zenodo.23248138`
-- WR-VI DOI: `10.5281/zenodo.23254619`
+The public Zenodo records identify all nine version DOIs listed above. IX v0.2 is published, superseding the saved-draft status in the historical entries below. The first-cycle source packages remain frozen; current project pages and citation pointers may be updated separately.
 
-WR-IV PR #5 is merged into `main` at `a82ca16675a6b3f358d800963fa7ff0c4e5385bb`. The published PDFs/HTML match the merged source snapshot by size and published MD5. See `reviews/WR-IV/WREH_WR-IV_Post_Publication_Check_v0.6.md` for the separate metadata/archive follow-ups. WR-V requires review of its newly declared experimental transition interface; no WR-V publication readiness or DOI is asserted.
+PR #6 (V), #7 (VI), #9 (VIII) and #10 (IX) were merged into `main`. PR #8 (VII) was merged into its original VI base; PR #11 integrates the same VII head into `main`. Commit `fa52ae33697d915078f7e2f07cb673a55a7f5a89` includes the historical I/III heads and the intermediate VI merge as additional parents without altering the scientific tree. Every existing branch head is an ancestor of `main`.
 
-WR-III inherits the WR-I response maps and quotients together with the WR-II data-compatible fibre language. Its new target is not existence, but the geometry and regularity of **nonempty** admissible world fibres as response data vary and protocols are refined.
+The [first-cycle closure and publication index](../docs/FIRST-CYCLE/README.md) records validation, historical-manifest scope, archival metadata limitations and the next-stage handoff. [Final explanatory video](https://youtu.be/yf_N_LX28E0), supplied by the author on 10 October 2026.
 
-Prior handoff entries below preserve the status at their original date. The WR-IX v0.2 first-cycle drafting entry controls the current status; earlier handoffs remain historical.
+The programme remains ACTIVE; the nine-article first technical cycle is CLOSED. A monograph or second cycle requires its own scope, new obligation and novelty/source review. No WR-X is opened by closure. Independent external scientific review, empirical application and physical-realism tests remain research/evaluation obligations, not completed certifications.
+
+## Historical handoff log
+
+The entries below preserve the knowledge and authorizations at their original milestones. Their older draft, DOI-pending and unmerged-PR statements are historical and are superseded by the current gate above.
 
 ## WR-I -> WR-II handoff
 
@@ -263,3 +263,7 @@ The authenticated dashboard exposed a previously unrecorded WR-V deposit. Direct
 ## IX Zenodo draft saved (10 October 2026)
 
 WR-IX v0.2 draft record `23272637` is saved, with reserved version DOI `10.5281/zenodo.23272637`, pending registration/publication. Canonical/translated titles, version, author/ORCID, WREH community, both languages, eight distinct keywords, bilingual description and scoped licences are verified in the preview. All four uploaded-file MD5 values match the prepared files; the source ZIP has 55 members and 54 SHA-256 entries. Publication is awaiting final author confirmation; no public IX deposit, journal acceptance or independent external scientific review is asserted. The technical first-cycle sequence is complete; upstream PR integration remains open. Frozen scientific package: commit `162dddf25ca59662addd86bab8a361f494958d48`.
+
+## First-cycle repository closure (10 October 2026)
+
+All branch histories are integrated and all article publication pointers are reconciled. No first-cycle PR remains open. Frozen mathematical statements, proof blocks, PDFs, figures and demos are unchanged. The explicit handoff owns future scientific questions; closure is not a new theorem or an external peer-review decision.

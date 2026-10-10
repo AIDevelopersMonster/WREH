@@ -1,5 +1,7 @@
 # WR-V — Experiment and Realization Selection
 
+**First-cycle integration:** PUBLISHED / FROZEN v0.3; integrated into `main` on 10 October 2026. [Publication](https://doi.org/10.5281/zenodo.23251956) · [cycle closure](../../docs/FIRST-CYCLE/README.md) · [final video](https://youtu.be/yf_N_LX28E0).
+
 **Full title:** *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class*.
 **Programme and community:** World Realizability & Epistemic Horizons (WREH).
 **State:** PUBLISHED / source frozen v0.3.
@@ -45,11 +47,11 @@ The arguments are elementary/classical and have no mathematical priority claim. 
 
 WR-I–IV remain published/frozen. WR-IV was published on 8 October 2026 at [10.5281/zenodo.23248138](https://doi.org/10.5281/zenodo.23248138); see the [post-publication check](../../reviews/WR-IV/WREH_WR-IV_Post_Publication_Check_v0.6.md).
 
-WR-V inherits response/compatibility discipline and adds experimental transition descriptions. WR-VI may impose independently justified physical admissibility conditions on their completion class. WR-IX will need a stated accessible protocol family and resource regime. Neither downstream paper is opened by this draft.
+WR-V inherits response/compatibility discipline and adds experimental transition descriptions. Published WR-VI imposes declared admissibility restrictions; published WR-IX declares an accessible protocol family and resource regime. All first-cycle dependencies are integrated into `main`.
 
 The next scientific gate remains review of this interface and proofs, with a problem-specific novelty audit before stronger claims. Deposit does not certify external scientific review.
 
-On 9 October 2026 the author separately instructed opening [WR-VI](../WR-VI/README.md). It is a stacked successor draft; this transition itself did not establish WR-V publication; the separate deposit is now directly verified.
+On 9 October 2026 the author separately instructed opening [WR-VI](../WR-VI/README.md). Opening the successor did not itself establish WR-V publication; the separate deposit was subsequently verified. PR #6 is now merged into `main`.
 
 ## Revision history
 
@@ -60,4 +62,4 @@ The [v0.2 source and PDFs](draft-v0.2/README.md) remain an immutable historical 
 The [v0.1 source and PDFs](draft-v0.1/README.md) remain historical files. Its archive/manifest applies to commit `61b1a9613b745deebcb46e493e8372dbb3ae19a5`, including the then-current project documentation.
 
 
-See [deposited-file verification](../../reviews/WR-V/WREH_WR-V_Post_Publication_Check_v0.3_2026-10-10.md). All historical versioned files remain unchanged; PR integration remains separate.
+See [deposited-file verification](../../reviews/WR-V/WREH_WR-V_Post_Publication_Check_v0.3_2026-10-10.md). All historical versioned files remain unchanged; PR integration is complete.

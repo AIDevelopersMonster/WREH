@@ -1,0 +1,320 @@
+{
+  "record_id": 23272637,
+  "doi": "10.5281/zenodo.23272637",
+  "version": "0.2",
+  "public": true,
+  "files": [
+    {
+      "key": "WREH_WR-IX_Publication_Package_v0.2_EN-RU.zip",
+      "size": 542919,
+      "checksum": "md5:844dcc0120c3787fcd2bcd47b0c1d836",
+      "sha256": "d5e39bb77f2e812d1209d0c45b945e4115b0cd33d1bb77a25000b3822330bdc8",
+      "status": "PASS"
+    },
+    {
+      "key": "WREH_WR-IX_Preprint_v0.2_RU.pdf",
+      "size": 129637,
+      "checksum": "md5:c10ae64c9e40592dbc93f2296fc7c03a",
+      "sha256": "07d30e0fd7164b55dba7b8995ed56a8192fa0ba108f20e77c1dee6d1e614911b",
+      "status": "PASS",
+      "repository_bytes_identical": true
+    },
+    {
+      "key": "WREH_WR-IX_Preprint_v0.2_EN.pdf",
+      "size": 112476,
+      "checksum": "md5:fe429a6824337c7214257a3ac6689711",
+      "sha256": "9f5721fb119ae23b8e7141976e0ce1889a6ad305115bc3cd449e58724a6a3e65",
+      "status": "PASS",
+      "repository_bytes_identical": true
+    },
+    {
+      "key": "WREH_WR-IX_Demo_v0.2_EN-RU.html",
+      "size": 15267,
+      "checksum": "md5:3a39106d0b974d1c746ed87f266923b8",
+      "sha256": "2c11b3df8fae68aa6b35c8cf771596087fa80689e48cf1e20bc930da8195f341",
+      "status": "PASS",
+      "repository_bytes_identical": true
+    }
+  ],
+  "archive_members": 55,
+  "source_comparisons": [
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/README.md",
+      "repository_path": "papers/WR-IX/README.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/THEOREM_MAP.md",
+      "repository_path": "papers/WR-IX/THEOREM_MAP.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/CHANGELOG.md",
+      "repository_path": "papers/WR-IX/preprint-v0.2/CHANGELOG.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/CITATION.cff",
+      "repository_path": "papers/WR-IX/preprint-v0.2/CITATION.cff",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/DEPOSIT_DESCRIPTION_EN-RU.md",
+      "repository_path": "papers/WR-IX/preprint-v0.2/DEPOSIT_DESCRIPTION_EN-RU.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/LICENSE-CODE.txt",
+      "repository_path": "papers/WR-IX/preprint-v0.2/LICENSE-CODE.txt",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/LICENSE-CONTENT.md",
+      "repository_path": "papers/WR-IX/preprint-v0.2/LICENSE-CONTENT.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/LICENSES.md",
+      "repository_path": "papers/WR-IX/preprint-v0.2/LICENSES.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/README.md",
+      "repository_path": "papers/WR-IX/preprint-v0.2/README.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/SHA256SUMS",
+      "repository_path": "papers/WR-IX/preprint-v0.2/SHA256SUMS",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/SOURCE_MAP.md",
+      "repository_path": "papers/WR-IX/preprint-v0.2/SOURCE_MAP.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/SOURCE_PROVENANCE.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/SOURCE_PROVENANCE.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/THEOREM_MAP.md",
+      "repository_path": "papers/WR-IX/preprint-v0.2/THEOREM_MAP.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/WREH_WR-IX_Demo_v0.2_EN-RU.html",
+      "repository_path": "papers/WR-IX/preprint-v0.2/WREH_WR-IX_Demo_v0.2_EN-RU.html",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/WREH_WR-IX_Preprint_v0.2_EN.pdf",
+      "repository_path": "papers/WR-IX/preprint-v0.2/WREH_WR-IX_Preprint_v0.2_EN.pdf",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/WREH_WR-IX_Preprint_v0.2_EN.tex",
+      "repository_path": "papers/WR-IX/preprint-v0.2/WREH_WR-IX_Preprint_v0.2_EN.tex",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/WREH_WR-IX_Preprint_v0.2_RU.pdf",
+      "repository_path": "papers/WR-IX/preprint-v0.2/WREH_WR-IX_Preprint_v0.2_RU.pdf",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/WREH_WR-IX_Preprint_v0.2_RU.tex",
+      "repository_path": "papers/WR-IX/preprint-v0.2/WREH_WR-IX_Preprint_v0.2_RU.tex",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/ZENODO_DEPOSIT.md",
+      "repository_path": "papers/WR-IX/preprint-v0.2/ZENODO_DEPOSIT.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/adversarial-verification.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/adversarial-verification.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/architecture-verification.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/architecture-verification.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/build-verification.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/build-verification.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/demo-verification.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/demo-verification.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/figures/frontier-ru.pdf",
+      "repository_path": "papers/WR-IX/preprint-v0.2/figures/frontier-ru.pdf",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/figures/frontier-ru.png",
+      "repository_path": "papers/WR-IX/preprint-v0.2/figures/frontier-ru.png",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/figures/frontier.pdf",
+      "repository_path": "papers/WR-IX/preprint-v0.2/figures/frontier.pdf",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/figures/frontier.png",
+      "repository_path": "papers/WR-IX/preprint-v0.2/figures/frontier.png",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/figures/tails-ru.pdf",
+      "repository_path": "papers/WR-IX/preprint-v0.2/figures/tails-ru.pdf",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/figures/tails-ru.png",
+      "repository_path": "papers/WR-IX/preprint-v0.2/figures/tails-ru.png",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/figures/tails.pdf",
+      "repository_path": "papers/WR-IX/preprint-v0.2/figures/tails.pdf",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/figures/tails.png",
+      "repository_path": "papers/WR-IX/preprint-v0.2/figures/tails.png",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/package.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/package.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/requirements.txt",
+      "repository_path": "papers/WR-IX/preprint-v0.2/requirements.txt",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/revision-baseline.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/revision-baseline.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/revision-verification.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/revision-verification.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/scripts/audit_checks.py",
+      "repository_path": "papers/WR-IX/preprint-v0.2/scripts/audit_checks.py",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/scripts/build.py",
+      "repository_path": "papers/WR-IX/preprint-v0.2/scripts/build.py",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/scripts/figure.py",
+      "repository_path": "papers/WR-IX/preprint-v0.2/scripts/figure.py",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/scripts/package.py",
+      "repository_path": "papers/WR-IX/preprint-v0.2/scripts/package.py",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/scripts/reproduce.py",
+      "repository_path": "papers/WR-IX/preprint-v0.2/scripts/reproduce.py",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/scripts/verify_demo.cjs",
+      "repository_path": "papers/WR-IX/preprint-v0.2/scripts/verify_demo.cjs",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/scripts/verify_source.py",
+      "repository_path": "papers/WR-IX/preprint-v0.2/scripts/verify_source.py",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/verification.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/verification.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/wrix-body.tex",
+      "repository_path": "papers/WR-IX/preprint-v0.2/wrix-body.tex",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/wrix-preamble.tex",
+      "repository_path": "papers/WR-IX/preprint-v0.2/wrix-preamble.tex",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/papers/WR-IX/preprint-v0.2/zenodo_metadata.json",
+      "repository_path": "papers/WR-IX/preprint-v0.2/zenodo_metadata.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/reviews/WR-IX/REVIEW_REQUEST.md",
+      "repository_path": "reviews/WR-IX/REVIEW_REQUEST.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/reviews/WR-IX/WREH_WR-IX_Reviewer_Response_v0.2_EN-RU.md",
+      "repository_path": "reviews/WR-IX/WREH_WR-IX_Reviewer_Response_v0.2_EN-RU.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/reviews/WR-IX/WREH_WR-IX_Technical_Audit_v0.2_EN-RU.md",
+      "repository_path": "reviews/WR-IX/WREH_WR-IX_Technical_Audit_v0.2_EN-RU.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/reviews/WR-V/WREH_WR-V_Post_Publication_Check_v0.3_2026-10-10.md",
+      "repository_path": "reviews/WR-V/WREH_WR-V_Post_Publication_Check_v0.3_2026-10-10.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/reviews/WR-V/publication-verification-v0.3-2026-10-10.json",
+      "repository_path": "reviews/WR-V/publication-verification-v0.3-2026-10-10.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/reviews/WR-VII/WREH_WR-VII_Post_Publication_Check_v0.2_2026-10-10.md",
+      "repository_path": "reviews/WR-VII/WREH_WR-VII_Post_Publication_Check_v0.2_2026-10-10.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/reviews/WR-VII/publication-verification-v0.2-2026-10-10.json",
+      "repository_path": "reviews/WR-VII/publication-verification-v0.2-2026-10-10.json",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/reviews/WR-VIII/WREH_WR-VIII_Post_Publication_Check_v0.2.md",
+      "repository_path": "reviews/WR-VIII/WREH_WR-VIII_Post_Publication_Check_v0.2.md",
+      "matches_frozen_commit": true
+    },
+    {
+      "path": "WREH_WR-IX_v0.2_publication/reviews/WR-VIII/publication-verification-v0.2.json",
+      "repository_path": "reviews/WR-VIII/publication-verification-v0.2.json",
+      "matches_frozen_commit": true
+    }
+  ],
+  "all_source_members_match": true,
+  "reference_commit": "162dddf25ca59662addd86bab8a361f494958d48",
+  "review_type": "AI-assisted publication identity check; not independent external scientific peer review"
+}

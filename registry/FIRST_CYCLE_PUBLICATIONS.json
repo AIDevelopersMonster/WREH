@@ -1,0 +1,100 @@
+{
+  "programme": "World Realizability & Epistemic Horizons",
+  "code": "WREH",
+  "cycle": 1,
+  "closure_date": "2026-10-10",
+  "cycle_status": "CLOSED_PUBLISHED_INTEGRATED",
+  "final_video": "https://youtu.be/yf_N_LX28E0",
+  "articles": [
+    {
+      "code": "WR-I",
+      "canonical_title": "Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations",
+      "version": "0.3",
+      "doi": "10.5281/zenodo.23210258",
+      "zenodo_record_id": 23210258,
+      "status": "PUBLISHED_FROZEN",
+      "repository_integration": "MAIN",
+      "independent_external_peer_review": "NOT_ESTABLISHED"
+    },
+    {
+      "code": "WR-II",
+      "canonical_title": "Finite Consistency and Global World Realizability",
+      "version": "0.5",
+      "doi": "10.5281/zenodo.23224154",
+      "zenodo_record_id": 23224154,
+      "status": "PUBLISHED_FROZEN",
+      "repository_integration": "MAIN",
+      "independent_external_peer_review": "NOT_ESTABLISHED"
+    },
+    {
+      "code": "WR-III",
+      "canonical_title": "Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls",
+      "version": "0.6",
+      "doi": "10.5281/zenodo.23228682",
+      "zenodo_record_id": 23228682,
+      "status": "PUBLISHED_FROZEN",
+      "repository_integration": "MAIN",
+      "independent_external_peer_review": "NOT_ESTABLISHED"
+    },
+    {
+      "code": "WR-IV",
+      "canonical_title": "Response-Conditioned Global Completion and the Status of the Past",
+      "version": "0.6",
+      "doi": "10.5281/zenodo.23248138",
+      "zenodo_record_id": 23248138,
+      "status": "PUBLISHED_FROZEN",
+      "repository_integration": "MAIN",
+      "independent_external_peer_review": "NOT_ESTABLISHED"
+    },
+    {
+      "code": "WR-V",
+      "canonical_title": "Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class",
+      "version": "0.3",
+      "doi": "10.5281/zenodo.23251956",
+      "zenodo_record_id": 23251956,
+      "status": "PUBLISHED_FROZEN",
+      "repository_integration": "MAIN",
+      "independent_external_peer_review": "NOT_ESTABLISHED"
+    },
+    {
+      "code": "WR-VI",
+      "canonical_title": "The Aquarium Bounds: Physical Constraints as Boundaries of World Space",
+      "version": "0.2",
+      "doi": "10.5281/zenodo.23254619",
+      "zenodo_record_id": 23254619,
+      "status": "PUBLISHED_FROZEN",
+      "repository_integration": "MAIN",
+      "independent_external_peer_review": "NOT_ESTABLISHED"
+    },
+    {
+      "code": "WR-VII",
+      "canonical_title": "Energy-Time Frontiers of World Realizability",
+      "version": "0.2",
+      "doi": "10.5281/zenodo.23264253",
+      "zenodo_record_id": 23264253,
+      "status": "PUBLISHED_FROZEN",
+      "repository_integration": "MAIN",
+      "independent_external_peer_review": "NOT_ESTABLISHED"
+    },
+    {
+      "code": "WR-VIII",
+      "canonical_title": "The Cosmological Fibre: Universes Compatible with Our Universe Today",
+      "version": "0.2",
+      "doi": "10.5281/zenodo.23266980",
+      "zenodo_record_id": 23266980,
+      "status": "PUBLISHED_FROZEN",
+      "repository_integration": "MAIN",
+      "independent_external_peer_review": "NOT_ESTABLISHED"
+    },
+    {
+      "code": "WR-IX",
+      "canonical_title": "Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?",
+      "version": "0.2",
+      "doi": "10.5281/zenodo.23272637",
+      "zenodo_record_id": 23272637,
+      "status": "PUBLISHED_FROZEN",
+      "repository_integration": "MAIN",
+      "independent_external_peer_review": "NOT_ESTABLISHED"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # WR-IV — Response-Conditioned Global Completion and the Status of the Past
 
+**First-cycle integration:** PUBLISHED / FROZEN v0.6; integrated into `main` on 10 October 2026. [Publication](https://doi.org/10.5281/zenodo.23248138) · [cycle closure](../../docs/FIRST-CYCLE/README.md) · [final video](https://youtu.be/yf_N_LX28E0).
+
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
 **State:** PUBLISHED / FROZEN v0.6
 **Publication:** 8 October 2026; expository, unpeer-reviewed preprint
@@ -47,7 +49,7 @@ PUBLICATION_READY refers to the complete, checked expository preprint and deposi
 
 Targeted source verification and comparison with the relevant deposited WR-I–III interfaces are completed. Originality of the wider classification is not certified. No physical past rewriting, retrocausality, branching ontology or emergence of time is inferred.
 
-PR #5 is merged into `main`. WR-I–IV remain frozen; the author has authorized [WR-V](../WR-V/README.md) as the next mathematical review draft. This transition does not alter the WR-IV scientific text or its checksums.
+PR #5 is merged into `main`. All nine first-cycle articles are now published, frozen and integrated; see the [closure record](../../docs/FIRST-CYCLE/README.md). This integration does not alter the WR-IV scientific text or its checksums.
 
 ## Validation and reuse
 

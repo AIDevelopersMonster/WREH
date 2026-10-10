@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "baseline": "63e2888dc732f558ded2ea058cccc7dc2a691097",
+  "frozen_files_identical": 381,
+  "integration_manifest_entries": 381,
+  "historical_manifests": [
+    {
+      "path": "papers/WR-IV/preprint-v0.6/SHA256SUMS.txt",
+      "original_commit": "a82ca16675a6b3f358d800963fa7ff0c4e5385bb",
+      "version_local_checks": 34,
+      "historical_snapshot_checks": 0,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-IX/draft-v0.1/SHA256SUMS",
+      "original_commit": "ab79c05433dd50a6a51385709492e26e6e9a3cfc",
+      "version_local_checks": 40,
+      "historical_snapshot_checks": 6,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-IX/preprint-v0.2/SHA256SUMS",
+      "original_commit": "162dddf25ca59662addd86bab8a361f494958d48",
+      "version_local_checks": 43,
+      "historical_snapshot_checks": 11,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-V/draft-v0.1/SHA256SUMS",
+      "original_commit": "61b1a9613b745deebcb46e493e8372dbb3ae19a5",
+      "version_local_checks": 18,
+      "historical_snapshot_checks": 6,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-V/draft-v0.2/SHA256SUMS",
+      "original_commit": "ef8d584a1e6c68d274503f0b81d72044e34e95ed",
+      "version_local_checks": 21,
+      "historical_snapshot_checks": 5,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-V/draft-v0.3/SHA256SUMS",
+      "original_commit": "d0afad65108abee8b561e02af6fe3392c6057487",
+      "version_local_checks": 21,
+      "historical_snapshot_checks": 6,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-VI/draft-v0.1/SHA256SUMS",
+      "original_commit": "5c579262b9d1e99b6f93c0d8122a33ed1ae63d26",
+      "version_local_checks": 20,
+      "historical_snapshot_checks": 5,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-VI/draft-v0.2/SHA256SUMS",
+      "original_commit": "2865474c79a120f29cda754d1137cb3939adadfa",
+      "version_local_checks": 20,
+      "historical_snapshot_checks": 4,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-VII/draft-v0.1/SHA256SUMS",
+      "original_commit": "c9988c3332cb50e9c2837af82eb50f89d98e9ca8",
+      "version_local_checks": 26,
+      "historical_snapshot_checks": 3,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-VII/draft-v0.2/SHA256SUMS",
+      "original_commit": "f011aec8546705be1e6bd2bd0c5925da96861179",
+      "version_local_checks": 28,
+      "historical_snapshot_checks": 5,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-VIII/draft-v0.1/SHA256SUMS",
+      "original_commit": "6120d9b37196f9cee4f00bebc2ec1d84d43d44f0",
+      "version_local_checks": 28,
+      "historical_snapshot_checks": 5,
+      "status": "PASS"
+    },
+    {
+      "path": "papers/WR-VIII/preprint-v0.2/SHA256SUMS",
+      "original_commit": "3963c3b71f464b7de85750fd4a51d680943d5162",
+      "version_local_checks": 37,
+      "historical_snapshot_checks": 4,
+      "status": "PASS"
+    }
+  ],
+  "branches": [
+    {
+      "branch": "origin/main",
+      "head": "fa52ae33697d915078f7e2f07cb673a55a7f5a89",
+      "commits_outside_main": 0
+    },
+    {
+      "branch": "origin/paper-wr-i-v0.3-audit",
+      "head": "7de86b378c8292b3f8ec861db2013fc6f4005131",
+      "commits_outside_main": 0
+    },
+    {
+      "branch": "origin/paper-wr-iii-v0.1-spine",
+      "head": "6abe3556e2988712f613b1c8db3bec9fd7d7337c",
+      "commits_outside_main": 0
+    },
+    {
+      "branch": "origin/paper-wr-ix-v0.1-spine",
+      "head": "63e2888dc732f558ded2ea058cccc7dc2a691097",
+      "commits_outside_main": 0
+    },
+    {
+      "branch": "origin/paper-wr-v-v0.1-spine",
+      "head": "d0afad65108abee8b561e02af6fe3392c6057487",
+      "commits_outside_main": 0
+    },
+    {
+      "branch": "origin/paper-wr-vi-v0.1-spine",
+      "head": "289e82b0c1745474d0d45945d6d7b0656c0eea58",
+      "commits_outside_main": 0
+    },
+    {
+      "branch": "origin/paper-wr-vii-v0.1-spine",
+      "head": "f011aec8546705be1e6bd2bd0c5925da96861179",
+      "commits_outside_main": 0
+    },
+    {
+      "branch": "origin/paper-wr-viii-v0.1-spine",
+      "head": "3963c3b71f464b7de85750fd4a51d680943d5162",
+      "commits_outside_main": 0
+    }
+  ],
+  "relative_links_checked": 141,
+  "publication_entries": 9,
+  "proofs_changed": false,
+  "review_type": "Repository integration and publication identity checks; not independent external scientific peer review",
+  "date": "2026-10-10",
+  "reproduction_scripts_passed": 9,
+  "public_doi_records_verified": 9,
+  "open_first_cycle_pull_requests": 0,
+  "scope": "Frozen package/manuscript/demo files; current pointers and new closure metadata are outside historical package manifests."
+}

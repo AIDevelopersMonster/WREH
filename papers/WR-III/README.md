@@ -1,5 +1,7 @@
 # WR-III — Geometry of Admissible World Fibres
 
+**First-cycle integration:** PUBLISHED / FROZEN v0.6; integrated into `main` on 10 October 2026. [Publication](https://doi.org/10.5281/zenodo.23228682) · [cycle closure](../../docs/FIRST-CYCLE/README.md) · [final video](https://youtu.be/yf_N_LX28E0).
+
 **Full title:** Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls  
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
 **Upstream:** WR-I DOI 10.5281/zenodo.23210258; WR-II DOI 10.5281/zenodo.23224154  

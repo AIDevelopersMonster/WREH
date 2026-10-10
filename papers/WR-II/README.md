@@ -1,5 +1,7 @@
 # WR-II — Finite Consistency and Global World Realizability
 
+**First-cycle integration:** PUBLISHED / FROZEN v0.5; integrated into `main` on 10 October 2026. [Publication](https://doi.org/10.5281/zenodo.23224154) · [cycle closure](../../docs/FIRST-CYCLE/README.md) · [final video](https://youtu.be/yf_N_LX28E0).
+
 **Programme:** World Realizability & Epistemic Horizons (WREH)  
 **Upstream:** WR-I — DOI: 10.5281/zenodo.23210258  
 **Current version:** v0.5  

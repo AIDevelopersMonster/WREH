@@ -1,0 +1,47 @@
+[
+  {
+    "script": "papers/WR-IV/preprint-v0.6/scripts/reproduce.py",
+    "exit_code": 0,
+    "last_output": "PASS"
+  },
+  {
+    "script": "papers/WR-V/draft-v0.3/scripts/reproduce.py",
+    "exit_code": 0,
+    "last_output": "PASS"
+  },
+  {
+    "script": "papers/WR-VI/draft-v0.2/scripts/reproduce.py",
+    "exit_code": 0,
+    "last_output": "PASS"
+  },
+  {
+    "script": "papers/WR-VII/draft-v0.2/scripts/reproduce.py",
+    "exit_code": 0,
+    "last_output": "PASS"
+  },
+  {
+    "script": "papers/WR-VIII/preprint-v0.2/scripts/reproduce.py",
+    "exit_code": 0,
+    "last_output": "PASS"
+  },
+  {
+    "script": "papers/WR-VIII/preprint-v0.2/scripts/audit_checks.py",
+    "exit_code": 0,
+    "last_output": "PASS"
+  },
+  {
+    "script": "papers/WR-IX/preprint-v0.2/scripts/reproduce.py",
+    "exit_code": 0,
+    "last_output": "PASS"
+  },
+  {
+    "script": "papers/WR-IX/preprint-v0.2/scripts/audit_checks.py",
+    "exit_code": 0,
+    "last_output": "PASS"
+  },
+  {
+    "script": "papers/WR-IX/preprint-v0.2/scripts/verify_source.py",
+    "exit_code": 0,
+    "last_output": "PASS"
+  }
+]

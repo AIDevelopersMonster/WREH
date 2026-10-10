@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite this specific bilingual preprint version. External scientific peer review is not established; no DOI has yet been assigned."
+type: article
+title: "WR-VIII: The Cosmological Fibre: Universes Compatible with Our Universe Today"
+version: "0.2"
+date-released: "2026-10-09"
+authors:
+  - family-names: Malachevsky
+    given-names: A. A.
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+repository-code: "https://github.com/AIDevelopersMonster/WREH"
+license: CC-BY-4.0
+keywords:
+  - cosmological response
+  - FLRW
+  - curvature degeneracy
+  - calibration
+  - cosmic topology
+
+doi: "10.5281/zenodo.23266980"
+url: "https://doi.org/10.5281/zenodo.23266980"
