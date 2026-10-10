@@ -4,7 +4,7 @@
 
 **Статья IX:** *Эпистемические горизонты: что наблюдатель внутри мира вообще может различить?*
 
-Final technical article of the manifesto's first cycle. Active **v0.2 / PUBLICATION_READY (technical preprint package)**; no IX deposit or DOI and no established independent external scientific peer review.
+Final technical article of the manifesto's first cycle. Active **v0.2 / PUBLICATION_READY (technical preprint package)**; a saved Zenodo draft with reserved DOI (see below), pending publication; no established independent external scientific peer review.
 
 - [Complete bilingual package](preprint-v0.2/README.md)
 - [English PDF](preprint-v0.2/WREH_WR-IX_Preprint_v0.2_EN.pdf)
@@ -25,3 +25,7 @@ Stacked on exact VIII head `3963c3b71f464b7de85750fd4a51d680943d5162`, with VIII
 Version 0.2 preserves all eight proof blocks, twelve numbered equations and numbered statements. It corrects the proposed WR-II reference to v0.5 Example 10.19, distinguishes the unattained reach infimum from unbounded resource suprema, cites WR-VIII §7 for the cubic quotient, and separates length S from conformal time S/c. The supplied reviewer text does not establish reviewer authorship or independence. The canonical title is unchanged. This completes technical drafting of the first cycle only.
 
 Publication reconciliation, 10 October 2026: WR-V v0.3 DOI 10.5281/zenodo.23251956 and WR-VII v0.2 DOI 10.5281/zenodo.23264253 were verified directly, including deposited archives and standalone files. Earlier pending/unpublished status is superseded. Frozen scientific files and numbered IX mathematics are unchanged.
+
+## Saved Zenodo draft
+
+[Preview v0.2](https://zenodo.org/records/23272637?preview=1) — **DRAFT / NOT PUBLISHED**, reserved DOI `10.5281/zenodo.23272637` (registration pending). Four files and metadata verified; final author confirmation remains. See [draft verification](../../reviews/WR-IX/WREH_WR-IX_Zenodo_Draft_v0.2_2026-10-10.md). The frozen pre-deposit scientific package remains unchanged.

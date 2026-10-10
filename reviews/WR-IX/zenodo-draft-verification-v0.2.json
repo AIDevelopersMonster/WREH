@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "record": 23272637,
+  "files": [
+    {
+      "file": "WREH_WR-IX_Preprint_v0.2_RU.pdf",
+      "bytes": 129637,
+      "md5": "c10ae64c9e40592dbc93f2296fc7c03a",
+      "sha256": "07d30e0fd7164b55dba7b8995ed56a8192fa0ba108f20e77c1dee6d1e614911b"
+    },
+    {
+      "file": "WREH_WR-IX_Preprint_v0.2_EN.pdf",
+      "bytes": 112476,
+      "md5": "fe429a6824337c7214257a3ac6689711",
+      "sha256": "9f5721fb119ae23b8e7141976e0ce1889a6ad305115bc3cd449e58724a6a3e65"
+    },
+    {
+      "file": "WREH_WR-IX_Publication_Package_v0.2_EN-RU.zip",
+      "bytes": 542919,
+      "md5": "844dcc0120c3787fcd2bcd47b0c1d836",
+      "sha256": "d5e39bb77f2e812d1209d0c45b945e4115b0cd33d1bb77a25000b3822330bdc8"
+    },
+    {
+      "file": "WREH_WR-IX_Demo_v0.2_EN-RU.html",
+      "bytes": 15267,
+      "md5": "3a39106d0b974d1c746ed87f266923b8",
+      "sha256": "2c11b3df8fae68aa6b35c8cf771596087fa80689e48cf1e20bc930da8195f341"
+    }
+  ],
+  "scientific_status": "PUBLICATION_READY (technical preprint package)",
+  "zenodo_state": "DRAFT / NOT PUBLISHED",
+  "reserved_version_doi": "10.5281/zenodo.23272637",
+  "doi_registration": "Pending publication",
+  "preview_url": "https://zenodo.org/records/23272637?preview=1",
+  "edit_url": "https://zenodo.org/uploads/23272637",
+  "version": "0.2",
+  "community": "wreh",
+  "source_commit": "162dddf25ca59662addd86bab8a361f494958d48",
+  "archive_members": 55,
+  "archive_sha256_entries": 54,
+  "external_peer_review": "Not established",
+  "next_action": "Author confirmation of final public publication/community submission"
+}

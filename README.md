@@ -13,7 +13,7 @@ WREH develops a mathematically explicit language for response-defined world spac
 - **Founding document:** WREH-00 — *Manifesto and Research Programme*
 - **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6, WR-V v0.3, WR-VI v0.2, WR-VII v0.2, WR-VIII v0.2
 - **Latest verified publication:** WR-VIII v0.2, DOI [10.5281/zenodo.23266980](https://doi.org/10.5281/zenodo.23266980); public API and all three file checksums verified. WR-V v0.3 and WR-VII v0.2 deposits also directly verified on 10 October
-- **Current technical work:** WR-IX v0.2 — **PUBLICATION_READY (technical preprint package)**; final technical article of the first cycle, bilingual LaTeX/PDF, proofs and offline demonstration; no IX DOI yet; V/VII deposited packages directly verified
+- **Current technical work:** WR-IX v0.2 — **PUBLICATION_READY (technical preprint package)**; final technical article of the first cycle, bilingual LaTeX/PDF, proofs and offline demonstration; [saved Zenodo draft](https://zenodo.org/records/23272637?preview=1), reserved DOI 10.5281/zenodo.23272637, publication pending author confirmation; V/VII deposited packages directly verified
 - **Next scientific gate:** external scientific review of the explicit observer access record, winding protocol, time--energy frontier and future-tail construction; real apparatus/matter inputs are required for physical application
 
 ## Quick navigation
