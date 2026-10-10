@@ -9,3 +9,5 @@
 - Added a qualified closing sentence for the technical first cycle.
 - Preserved all numbered statements, 12 equations, 8 proof blocks and 32 labels of v0.1.
 - Canonical title preserved; historical v0.1 unchanged. Technical preprint package PUBLICATION_READY; no established independent external scientific peer review or actual IX deposit/DOI.
+
+- Deposit preparation revealed WR-V publication. Public API/file checks establish WR-V v0.3 DOI 10.5281/zenodo.23251956 and WR-VII v0.2 DOI 10.5281/zenodo.23264253; correct §8 and bibliography while preserving all proof/equation/statement blocks. Separate publication checks accompany the package.

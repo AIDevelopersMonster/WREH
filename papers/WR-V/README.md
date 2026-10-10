@@ -2,8 +2,8 @@
 
 **Full title:** *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class*.
 **Programme and community:** World Realizability & Epistemic Horizons (WREH).
-**State:** ACTIVE / mathematical draft v0.3.
-**Release status:** REVIEWABLE_DRAFT. Supplied proof-review addressed; independent external peer review not established. No publication or WR-V DOI.
+**State:** PUBLISHED / source frozen v0.3.
+**Publication:** [10.5281/zenodo.23251956](https://doi.org/10.5281/zenodo.23251956), 9 October 2026. Record and all four deposited files directly verified on 10 October; source/archive v0.3 is frozen. Historical source status REVIEWABLE_DRAFT remains in deposited files; independent external peer review is not established.
 
 ## New obligation
 
@@ -47,9 +47,9 @@ WR-I–IV remain published/frozen. WR-IV was published on 8 October 2026 at [10.
 
 WR-V inherits response/compatibility discipline and adds experimental transition descriptions. WR-VI may impose independently justified physical admissibility conditions on their completion class. WR-IX will need a stated accessible protocol family and resource regime. Neither downstream paper is opened by this draft.
 
-The next scientific gate is review of this new interface and proofs, with a problem-specific novelty audit before making a stronger research claim. REVIEWABLE_DRAFT does not mean publication-ready.
+The next scientific gate remains review of this interface and proofs, with a problem-specific novelty audit before stronger claims. Deposit does not certify external scientific review.
 
-On 9 October 2026 the author separately instructed opening [WR-VI](../WR-VI/README.md). It is a stacked successor draft; this instruction leaves WR-V v0.3 and its publication/review status unchanged.
+On 9 October 2026 the author separately instructed opening [WR-VI](../WR-VI/README.md). It is a stacked successor draft; this transition itself did not establish WR-V publication; the separate deposit is now directly verified.
 
 ## Revision history
 
@@ -58,3 +58,6 @@ v0.3 (9 October 2026) distinguishes a finite probe obstruction from the full-fin
 The [v0.2 source and PDFs](draft-v0.2/README.md) remain an immutable historical snapshot at commit `ef8d584a1e6c68d274503f0b81d72044e34e95ed`. v0.2 clarified normalization, component indices and hard selection, and reformatted (6).
 
 The [v0.1 source and PDFs](draft-v0.1/README.md) remain historical files. Its archive/manifest applies to commit `61b1a9613b745deebcb46e493e8372dbb3ae19a5`, including the then-current project documentation.
+
+
+See [deposited-file verification](../../reviews/WR-V/WREH_WR-V_Post_Publication_Check_v0.3_2026-10-10.md). All historical versioned files remain unchanged; PR integration remains separate.

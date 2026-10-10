@@ -28,7 +28,7 @@ Findings are premise traps tested during preparation and resolved in the deliver
 | IX-10 | C1 | §6 after Thm6.1 | Matching background D alone does not copy the torus's current classical patch | Current topology compatibility has an additional spatial bound | Add `L>2cZ/H`; choose `L>\max\{c/H,2cZ/H\}` and preserve the explicit patch-copy premise | narrows |
 | IX-11 | C1 | Prop7.1, Example7.2, (11)–(12) | Every S∞n>L while inf S∞n=L; TLn and En diverge | Strict infimum test and ∀∃→∃∀ swap are false | Pointwise strict comparison for every γ; supremum for exclusion; explicit n-family and no uniform budget claim | clarifies |
 | IX-12 | C3 | §§1,3,8 | Repeated generic quotient/compact proof would duplicate WR-I; launch energy is not VII spectral diameter | Numbering is not new ownership | Supporting elementary lemma only; exact anti-duplication/source map; distinct carriers | clarifies |
-| IX-13 | C4 | §8, bibliography [8]–[9] | VII DOI remains author-reported; VIII is now a verified deposit; IX has no DOI | Avoid false publication/review status | Qualified VII annotation; verified VIII version DOI; IX PUBLICATION_READY (technical preprint package); no made-up DOI | clarifies |
+| IX-13 | C4 | §8, bibliography [6], [8]–[9] | V, VII and VIII are verified deposits; IX has no DOI | Avoid false publication/review status | Verified V/VII/VIII version DOIs; IX PUBLICATION_READY (technical preprint package); no made-up DOI | clarifies |
 | IX-14 | C5 | Proof5.1, bibliography, RU paragraph8 | Long inline formula caused an overfull RU line; long DOI caused loose lines | Reproducible bilingual PDF hygiene | Unnumbered shared display for detector inequality; same-font breakable VIII DOI; ragged bibliography | none |
 
 ## Proof audit / проверка доказательств
@@ -59,7 +59,7 @@ Machine reports accompany the source: three symbolic identities; 160 independent
 - Scientific choices outside the carrier: remain open; not repaired by stronger prose.
 - Numbered equations/theorems changed after initial draft: none; assumptions/scope and one unnumbered proof display clarified before release.
 - Claim set: explicitly limited at initial release; no inherited paper's frozen scientific claim set changed.
-- Bibliography: targeted primary formula sources and stated programme maps verified; exhaustive novelty and VII deposited-file verification remain partial.
+- Bibliography: targeted primary formula sources and stated programme maps verified; exhaustive novelty remains outside this technical release; V/VII deposited-file identity is now separately verified.
 - Metadata: IX author/title/date/licences/absence of DOI checked; VIII version deposit verified; Zenodo VIII metadata corrections prepared, not submitted.
 - Compilation/render inspection: see `build-verification.json`; browser check: see `demo-verification.json`.
 - Release status: **PUBLICATION_READY (technical preprint package)**. This is a complete review package, not a claimed independently externally reviewed or published IX article.
@@ -82,3 +82,5 @@ Scope: reviewer-proposed prose was audited before adoption. All numbered stateme
 Минимальные исправления ограничены пояснениями. Ошибочная фраза об инфимуме ресурсов не перенесена: при n=2 достигаются T₂=2 log 2/H₀ и E₂=2E_d, тогда как супремумы ресурсов бесконечны. Точная ссылка WR-II — пример 10.19. Внешнее научное рецензирование не удостоверяется заголовком входного текста или выставленными баллами.
 
 Final release gate: no unresolved C0–C4 within the declared claim ceiling; all C5 checks must pass in the final build/render reports. Broader novelty and physical protocol completeness are expressly not claimed. Equations/statements/proofs unchanged; explanatory scope clarified; upstream versioned sources preserved. Bibliography verification is targeted primary-source verification, not an exhaustive novelty review. Metadata is prepared; IX DOI absent. Release status: **PUBLICATION_READY** (technical preprint package).
+
+Publication reconciliation, 10 October 2026: WR-V v0.3 DOI 10.5281/zenodo.23251956 and WR-VII v0.2 DOI 10.5281/zenodo.23264253 were verified directly, including deposited archives and standalone files. Earlier pending/unpublished status is superseded. Frozen scientific files and numbered IX mathematics are unchanged.

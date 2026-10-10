@@ -11,7 +11,7 @@ def included_files():
         if p.is_file() and '__pycache__' not in p.parts and p.name!='SHA256SUMS':
             assert p.suffix in {'.md','.tex','.pdf','.png','.py','.cjs','.json','.txt','.cff','.html'},p
             entries.append(p)
-    extras=[ROOT.parent/'README.md',ROOT.parent/'THEOREM_MAP.md',REPO/'reviews/WR-IX/WREH_WR-IX_Technical_Audit_v0.2_EN-RU.md',REPO/'reviews/WR-IX/REVIEW_REQUEST.md',REPO/'reviews/WR-IX/WREH_WR-IX_Reviewer_Response_v0.2_EN-RU.md',REPO/'reviews/WR-VIII/WREH_WR-VIII_Post_Publication_Check_v0.2.md',REPO/'reviews/WR-VIII/publication-verification-v0.2.json']
+    extras=[ROOT.parent/'README.md',ROOT.parent/'THEOREM_MAP.md',REPO/'reviews/WR-IX/WREH_WR-IX_Technical_Audit_v0.2_EN-RU.md',REPO/'reviews/WR-IX/REVIEW_REQUEST.md',REPO/'reviews/WR-IX/WREH_WR-IX_Reviewer_Response_v0.2_EN-RU.md',REPO/'reviews/WR-VIII/WREH_WR-VIII_Post_Publication_Check_v0.2.md',REPO/'reviews/WR-VIII/publication-verification-v0.2.json',REPO/'reviews/WR-V/WREH_WR-V_Post_Publication_Check_v0.3_2026-10-10.md',REPO/'reviews/WR-V/publication-verification-v0.3-2026-10-10.json',REPO/'reviews/WR-VII/WREH_WR-VII_Post_Publication_Check_v0.2_2026-10-10.md',REPO/'reviews/WR-VII/publication-verification-v0.2-2026-10-10.json']
     return entries+extras
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--output-dir',required=True);args=ap.parse_args()
