@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "WR-VIII: The Cosmological Fibre: Universes Compatible with Our Universe Today — Distance responses, curvature completion and global ambiguity (v0.2)",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "publication_date": "2026-10-09",
+    "version": "0.2",
+    "creators": [
+      {
+        "name": "Malachevsky, A. A.",
+        "orcid": "0009-0008-6009-3196"
+      }
+    ],
+    "description": "<p>Bilingual preprint v0.2: English article and complete Russian translation in one deposit package. On a finite redshift interval, a calibrated transverse-distance profile D in C²[0,Z], D(0)=0 and D′&gt;0 throughout admits an explicit first-branch FLRW curvature/positive-expansion completion family. Independently calibrated positive expansion-rate responses refine or exclude it. Free supernova and BAO calibration scales retain a joint scale symmetry. An exact polynomial family gives finite inversion, rank and deterministic interval certificates for a stipulated joint Cartesian box. Restricted classical patch protocols admit Euclidean/large-torus spatial lifts, and an additionally smooth kinematic baseline admits distinct future extensions.</p><p>Полный русский перевод включён в тот же комплект. Версия v0.2 учитывает замечания автоматизированного предпубликационного аудита: уточнены условия аннотации, область формулы звёздных величин, совместные интервальные ограничения, локальная метрика тора и дополнительная гладкость будущего. Все примеры и иллюстрации аналитические или синтетические.</p><p>Standard distance/curvature identities and ruler/candle/clock calibration prior art are attributed. The automated audit is not independent external scientific peer review. No observational fit, new gravity theory, fixed-matter admissibility, exhaustive priority certification or identification of the actual Universe is claimed. Mathematical compatibility is conditional on the declared kinematic carrier. Content and original analytic figures: CC BY 4.0. Executable scripts and HTML code: MIT.</p>",
+    "license": "cc-by-4.0",
+    "keywords": [
+      "WREH",
+      "cosmological response",
+      "FLRW",
+      "curvature degeneracy",
+      "calibration",
+      "cosmic topology",
+      "kinematic completion"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23264253",
+        "relation": "references",
+        "resource_type": "publication-preprint"
+      }
+    ]
+  },
+  "prepared_only": true,
+  "doi_assigned": false,
+  "related_WR_VII_doi_status": "author-reported; deposited record/version/files pending direct verification",
+  "external_peer_review_established": false
+}

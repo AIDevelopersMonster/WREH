@@ -1,0 +1,19 @@
+{
+  "work": "WR-VIII",
+  "version": "0.2",
+  "date": "2026-10-09",
+  "repository": "https://github.com/AIDevelopersMonster/WREH",
+  "pull_request": "https://github.com/AIDevelopersMonster/WREH/pull/9",
+  "branch": "paper-wr-viii-v0.1-spine",
+  "audited_parent_sha": "6120d9b37196f9cee4f00bebc2ec1d84d43d44f0",
+  "historical_source": "papers/WR-VIII/draft-v0.1/",
+  "revised_source": "papers/WR-VIII/preprint-v0.2/",
+  "cited_WR_VII_frozen_source_sha": "f011aec8546705be1e6bd2bd0c5925da96861179",
+  "upstream_PR": 8,
+  "upstream_integration_status": "open stacked dependency; no merge or retarget performed",
+  "mathematical_dependency": "All seven formal results have self-contained proofs; upstream merge is not a premise",
+  "audit_kind": "Separately reproduced AI-assisted automated prepublication audit",
+  "external_scientific_peer_review_established": false,
+  "doi_assigned": false,
+  "deposit_recorded": false
+}

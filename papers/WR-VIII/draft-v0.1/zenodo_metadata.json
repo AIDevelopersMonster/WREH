@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "WR-VIII: The Cosmological Fibre: Universes Compatible with Our Universe Today — Distance responses, curvature completion and global ambiguity (v0.1)",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "publication_date": "2026-10-09",
+    "version": "0.1",
+    "creators": [
+      {
+        "name": "Malachevsky, A. A.",
+        "orcid": "0009-0008-6009-3196"
+      }
+    ],
+    "description": "<p>English mathematical draft and complete Russian translation. A first-branch FLRW kinematic carrier admits an explicit curvature/expansion completion class for an ideal calibrated distance profile. Independent expansion rates refine it. Free supernova and BAO calibration scales retain a joint scale symmetry. A polynomial distance benchmark gives finite identification and deterministic interval certificates. Restricted classical patch protocols admit distinct flat spatial topologies, and smooth kinematic histories admit different futures.</p><p>Полный русский перевод включён в ту же запись. Работа разделяет идентификацию фона на наблюдаемом интервале, абсолютную калибровку, глобальную топологию и временное продолжение. Рисунки и демонстрация являются аналитическими и синтетическими, а не подгонкой космологических каталогов.</p><p>REVIEWABLE_DRAFT. Standard cosmological identities are attributed. No new gravity theory, observational fit, fixed-matter admissibility, exhaustive novelty certification or independent peer review is claimed. This version has not been deposited. Content and original analytic figures: CC BY 4.0. Executable scripts and HTML code: MIT.</p>",
+    "license": "cc-by-4.0",
+    "keywords": [
+      "WREH",
+      "cosmological response",
+      "FLRW",
+      "curvature degeneracy",
+      "calibration",
+      "cosmic topology",
+      "kinematic completion"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23264253",
+        "relation": "references",
+        "resource_type": "publication-preprint"
+      }
+    ]
+  },
+  "prepared_only": true,
+  "doi_assigned": false,
+  "related_WR_VII_doi_status": "author-reported; deposited record/version/files pending direct verification"
+}

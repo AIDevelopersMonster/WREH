@@ -12,9 +12,9 @@ WREH develops a mathematically explicit language for response-defined world spac
 - **Repository:** public programme repository
 - **Founding document:** WREH-00 — *Manifesto and Research Programme*
 - **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6, WR-VI v0.2
-- **Latest publication:** WR-VI, DOI [10.5281/zenodo.23254619](https://doi.org/10.5281/zenodo.23254619)
-- **Current technical work:** WR-VII v0.2 — **REVIEWABLE_DRAFT**; upstream WR-V v0.3 remains a separate review draft
-- **Next scientific gate:** review of unit-bearing quantum response completion, the action frontier, generator ambiguity and finite confidence; independently calibrated apparatus constraints are needed for a physical application
+- **Latest author-reported publication:** WR-VII, DOI [10.5281/zenodo.23264253](https://doi.org/10.5281/zenodo.23264253); deposited record/version/files pending direct verification
+- **Current technical work:** WR-VIII v0.2 — **PREPRINT_READY (technical package)**; bilingual publication files prepared, no VIII DOI yet; upstream WR-V v0.3 remains a separate review draft
+- **Next scientific gate:** external scientific review of the explicit FLRW distance/rate completion, calibration and restricted global lifts; real catalogue/covariance, matter and perturbation inputs are needed for observational inference
 
 ## Quick navigation
 
@@ -46,6 +46,9 @@ WREH develops a mathematically explicit language for response-defined world spac
 - [WR-VI publication identity check](reviews/WR-VI/WREH_WR-VI_Post_Publication_Check_v0.2.md)
 - [WR-VII — Energy-Time Frontiers](papers/WR-VII/README.md)
 - [WR-VII result/dependency map](papers/WR-VII/THEOREM_MAP.md)
+- [WR-VII publication check status](reviews/WR-VII/WREH_WR-VII_Post_Publication_Check_2026-10-09.md)
+- [WR-VIII — The Cosmological Fibre](papers/WR-VIII/README.md)
+- [WR-VIII result/dependency map](papers/WR-VIII/THEOREM_MAP.md)
 
 ## Core mathematical idea
 

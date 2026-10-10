@@ -1,0 +1,78 @@
+{
+  "audited_parent_sha": "6120d9b37196f9cee4f00bebc2ec1d84d43d44f0",
+  "revision": "WR-VIII v0.2",
+  "scope": "Separate derivations and adversarial witnesses; no empirical fit or external peer review",
+  "generic_CBL_derivative": "PASS: arbitrary differentiable D,H, including sign and dimensional c",
+  "finite_Jacobian_and_low_z_limit": "PASS: full determinant; curvature sensitivity vanishes quadratically at zstar=0",
+  "scale_null_direction": "PASS: infinitesimal null vector (u,v,-2k,rd,-5/ln(10)) with free calibrations",
+  "nonpolynomial_completions": {
+    "cases": 48,
+    "max_absolute_error": 2.220446049250313e-16,
+    "clock_checks": 48
+  },
+  "abstract_counterexample": {
+    "D": "z^3 on [0,1]",
+    "strictly_increasing": true,
+    "Dprime0": 0,
+    "Hflat": "1/(3 z^2), not finite at z=0",
+    "targets": "v0.1 abstract overstatement, corrected in v0.2; not Theorem 3.1"
+  },
+  "magnitude_domain": {
+    "D_L_at_z0": 0,
+    "magnitude_at_z0": "not finite",
+    "positive_distance_domain": "0<z<=Z, under Dprime>0 and D(0)=0"
+  },
+  "open_cap": {
+    "D": "z on [0,1]",
+    "cap": 1,
+    "H_at_cap_at_Z": 0,
+    "pointwise_rate_at_z_half_for_k1": 0.8660254037844386,
+    "global_member": false
+  },
+  "interval_cases": {
+    "exact_flat": {
+      "kind": "singleton",
+      "value": 0.0
+    },
+    "incompatible_exact": {
+      "kind": "empty"
+    },
+    "global_cap_clipping": {
+      "kind": "interval",
+      "lower": -12.0,
+      "upper": 1,
+      "upper_closed": false
+    },
+    "boundary_only": {
+      "kind": "empty"
+    },
+    "local_but_globally_excluded": {
+      "kind": "empty"
+    },
+    "touching_intervals_singleton": {
+      "kind": "singleton",
+      "value": 0
+    }
+  },
+  "joint_vs_marginal": "PASS: compatible marginal box does not certify an incompatible joint pair",
+  "torus_edges": {
+    "injectivity_inequality": "L>2R",
+    "equality_alias": "x=R e1 and y=-R e1 alias when L=2R",
+    "shortcut_witness": {
+      "R": 1.0,
+      "L": 3.0,
+      "Euclidean_distance": 2.0,
+      "global_torus_distance": 1.0
+    },
+    "interpretation": "Not a counterexample to restricted-path Theorem 7.1"
+  },
+  "future_witness": {
+    "histories": 3,
+    "time_samples": 2001,
+    "analytic_bprime_bound_tau1": 0.29305022221974686,
+    "safe_lambda_bound_Hb1": 3.412384377071515,
+    "Ricci_difference_at_t1_5_c_tau1": "-192 lambda exp(-4), nonzero",
+    "interpretation": "Same anchored past; distinct curvature invariants later; no fixed matter law"
+  },
+  "status": "PASS"
+}

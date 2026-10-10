@@ -1,0 +1,286 @@
+\maketitle
+\begin{abstract}
+\Lang{Cosmological responses constrain a declared model class before they identify a global universe. We construct an explicit FLRW kinematic carrier on a finite observed redshift interval. Every calibrated transverse-distance profile $D\in C^2[0,Z]$ with $D(0)=0$ and $D'(z)>0$ throughout admits a one-parameter family of constant-curvature completions, with a different positive expansion history for each admissible curvature. An independently calibrated expansion-rate response selects the curvature within that carrier; inconsistent rates can make its fibre empty. Relative supernova distances and BAO ratios retain an absolute-scale ambiguity when their calibration scale is free. A three-parameter polynomial distance family gives a finite-dimensional benchmark with an exact fibre, an explicit rank calculation and sharp interval certificates. Even an identified flat background admits globally different spatial lifts: Euclidean space and sufficiently large cubic tori agree on the supplied classical observed patch. Smooth future extensions give a separate ambiguity when a matter evolution law is not supplied. Standard distance and curvature identities are attributed to established cosmology; no new gravity theory, observational fit or identification of the actual Universe is claimed. The bilingual package includes analytic figures, synthetic reproduction and an offline demonstration.}
+{Космологические отклики сначала ограничивают заданный класс моделей, а затем позволяют обсуждать идентификацию глобальной Вселенной. Мы строим явный кинематический носитель FLRW на конечном наблюдаемом интервале красных смещений. Каждый калиброванный профиль поперечных расстояний $D\in C^2[0,Z]$ с $D(0)=0$ и всюду $D'(z)>0$ допускает однопараметрическое семейство достраиваний постоянной кривизны с различными положительными историями расширения. Независимо калиброванный отклик скорости расширения выбирает кривизну в этом носителе; несовместимые скорости могут сделать его слой пустым. Относительные расстояния сверхновых и отношения BAO сохраняют неоднозначность абсолютного масштаба при свободной калибровке. Трёхпараметрическое семейство полиномиальных расстояний даёт конечномерный пример с точным слоем, явным расчётом ранга и точными интервальными сертификатами. Даже идентифицированный плоский фон допускает глобально различные пространственные поднятия: евклидово пространство и достаточно большие кубические торы совпадают на заданном классическом наблюдаемом участке. Гладкие продолжения будущего дают отдельную неоднозначность, если закон эволюции материи не задан. Стандартные тождества расстояний и кривизны атрибутированы известной космологии; новая теория гравитации, подгонка наблюдений или идентификация реальной Вселенной не заявляются. Двуязычный комплект включает аналитические рисунки, синтетическое воспроизведение и автономную демонстрацию.}
+\end{abstract}
+\noindent\textbf{\Lang{Keywords}{Ключевые слова}:} FLRW; \Lang{cosmological response; curvature completion; calibration; topology; model-relative identification}{космологический отклик; достраивание кривизны; калибровка; топология; идентификация относительно модели}.
+\par\smallskip\noindent\small\Lang{Scope: kinematic background, complete EN/RU text, synthetic benchmarks. Preprint v0.2; no WR-VIII DOI; external peer review is not established. Content CC BY 4.0; code MIT.}{Область: кинематический фон, полный текст EN/RU, синтетические примеры. Препринт v0.2; DOI WR-VIII пока нет; внешнее рецензирование не установлено. Текст CC BY 4.0; код MIT.}\normalsize
+\newpage\tableofcontents\newpage
+
+\section{\Lang{The new obligation: a cosmological response carrier}{Новая задача: носитель космологических откликов}}\label{sec:scope}
+\Lang{WR-I supplies response equivalence and identifiable quantities \cite{WRI}; WR-II separates finite fitting from global realization \cite{WRII}; WR-III studies nonempty fibre geometry \cite{WRIII}; WR-IV separates observed history from its full lift \cite{WRIV}. WR-V adds experimental transitions \cite{WRV}; WR-VI and WR-VII require independently justified physical constraints and calibrated resources \cite{WRVI,WRVII}. The WREH manifesto assigns this paper a cosmological obligation \cite{Manifesto}. A quantum speed certificate alone does not supply a cosmological response map.}
+{WR-I задаёт эквивалентность откликов и идентифицируемые величины \cite{WRI}; WR-II разделяет конечное согласование и глобальную реализацию \cite{WRII}; WR-III изучает геометрию непустых слоёв \cite{WRIII}; WR-IV различает наблюдаемую историю и её полное поднятие \cite{WRIV}. WR-V добавляет экспериментальные переходы \cite{WRV}; WR-VI и WR-VII требуют независимо обоснованных физических ограничений и калиброванных ресурсов \cite{WRVI,WRVII}. Манифест WREH задаёт этой статье космологическую задачу \cite{Manifesto}. Один квантовый сертификат скорости не задаёт космологическое отображение откликов.}
+\Lang{We supply standard distance and expansion-rate responses of a declared homogeneous, isotropic background. ``Today'' identifies the observer's information at a fixed reception time; it does not mean that the synthetic examples fit current surveys. The actual cosmological fibre needs an observational data vector, covariance or justified error set, nuisance parameters, survey selection and a specified matter/perturbation model. Those inputs are not invented here.}
+{Мы задаём стандартные отклики расстояний и скорости расширения выбранного однородного изотропного фона. «Сегодня» означает информацию наблюдателя в фиксированный момент приёма; это не означает, что синтетические примеры описывают современные обзоры. Реальному космологическому слою нужны наблюдательный вектор, ковариация или обоснованное множество ошибок, вспомогательные параметры, отбор обзора и заданная модель материи и возмущений. Эти входы здесь не выдумываются.}
+\Lang{Three objects remain separate: background parameters on the observed interval; a metric and fields on the observed patch; a global spatial/time extension. We compute the first fibre and construct explicit ambiguities of the latter lifts. Existing distance and curvature identities \cite{Hogg,CBL} are used as established tools. The new programme deliverable is an audited completion contract and reproducible benchmark, without a priority claim for those tools.}
+{Три объекта разделены: параметры фона на наблюдаемом интервале; метрика и поля наблюдаемого участка; глобальное пространственное и временное продолжение. Мы вычисляем первый слой и строим явную неоднозначность последующих поднятий. Известные тождества расстояний и кривизны \cite{Hogg,CBL} используются как установленные инструменты. Новый результат для программы --- проверяемый контракт достраивания и воспроизводимый пример, без заявления приоритета на эти инструменты.}
+
+\section{\Lang{Metric, branch and calibrated response record}{Метрика, ветвь и паспорт калиброванных откликов}}\label{sec:carrier}
+\Lang{Fix $Z>0$, reception time $t_0=0$, $c>0$, and $z\in[0,Z]$. A kinematic FLRW background has constant present curvature $\kappa$ (length$^{-2}$), positive $H\in C^1[0,Z]$ (time$^{-1}$), and scale-factor normalization $a(0)=1$. With comoving radial length $\chi$, its local metric and clock reconstruction are}
+{Зафиксируем $Z>0$, момент приёма $t_0=0$, $c>0$ и $z\in[0,Z]$. Кинематический фон FLRW имеет постоянную современную кривизну $\kappa$ (длина$^{-2}$), положительную $H\in C^1[0,Z]$ (время$^{-1}$) и нормировку масштаба $a(0)=1$. Для сопутствующей радиальной длины $\chi$ локальная метрика и восстановление часов имеют вид}
+\begin{equation}\label{eq:metric}
+ \begin{gathered}
+ ds^2=-c^2dt^2+a(t)^2\bigl[d\chi^2+S_\kappa(\chi)^2d\Omega^2\bigr],\\
+ t(z)=-\int_0^z\frac{du}{(1+u)H(u)},\quad a(t(z))=\frac1{1+z}.
+ \end{gathered}
+\end{equation}
+\begin{equation}\label{eq:distance}
+ \begin{gathered}
+ \chi(z)=c\int_0^z\frac{du}{H(u)},\qquad D(z)=S_\kappa(\chi(z)),\\
+ S_\kappa(x)=\begin{cases}
+ \sin(\sqrt\kappa x)/\sqrt\kappa,&\kappa>0,\\
+ x,&\kappa=0,\\
+ \sinh(\sqrt{-\kappa}x)/\sqrt{-\kappa},&\kappa<0.
+ \end{cases}
+ \end{gathered}
+\end{equation}
+\Lang{For $\kappa>0$ impose $\chi(Z)<\pi/(2\sqrt\kappa)$, the strictly increasing branch of $S_\kappa$. This restriction concerns transverse comoving distance $D$, not the angular-distance turnover. It excludes conjugate/turning branches instead of silently continuing across them. The familiar curvature-density convention is $\Omega_k=-\kappa c^2/H(0)^2$.}
+{При $\kappa>0$ потребуем $\chi(Z)<\pi/(2\sqrt\kappa)$, то есть строго возрастающую ветвь $S_\kappa$. Ограничение относится к поперечному сопутствующему расстоянию $D$, а не к повороту углового расстояния. Сопряжённые и поворотные ветви исключаются, а не продолжаются незаметно. Обычная конвенция параметра кривизны имеет вид $\Omega_k=-\kappa c^2/H(0)^2$.}
+\Lang{Distance duality, standard propagation and independently justified luminosity/ruler calibration are supplied assumptions. Under them the background responses are \cite{Hogg}}
+{Двойственность расстояний, стандартное распространение и независимо обоснованная калибровка светимости и линейки являются заданными предпосылками. При них фоновые отклики равны \cite{Hogg}}
+\begin{equation}\label{eq:responses}
+ D_L(z)=(1+z)D(z),\qquad D_A(z)=\frac{D(z)}{1+z},\qquad
+ R_H(z)=H(z),\qquad D_H(z)=\frac c{H(z)}.
+\end{equation}
+\Lang{An exact profile here is an ideal calibrated function, including its derivative. Finitely many distance samples do not supply $D'$ unless a justified interpolation/model family is declared. A kinematic metric is not automatically an admissible solution for a prescribed matter equation of state, energy condition or perturbation spectrum. Each such condition defines a smaller, separately checked carrier.}
+{Точный профиль здесь --- идеальная калиброванная функция, включая производную. Конечное число расстояний не задаёт $D'$ без обоснованной интерполяции или заданного семейства моделей. Кинематическая метрика не становится автоматически допустимым решением при заданном уравнении состояния материи, энергетическом условии или спектре возмущений. Каждое такое условие задаёт меньший носитель, проверяемый отдельно.}
+\begin{definition}[\Lang{Observed-interval completion}{Достраивание наблюдаемого интервала}]\label{def:fibre}
+\Lang{For a protocol set $\mathcal A$ and response record $\mathcal D=(J_P)_{P\in\mathcal A}$, define the kinematic fibre in the above carrier $\mathcal W_{\rm kin}$ by}
+{Для множества протоколов $\mathcal A$ и паспорта откликов $\mathcal D=(J_P)_{P\in\mathcal A}$ определим кинематический слой в указанном носителе $\mathcal W_{\rm kin}$ как}
+\begin{equation}\label{eq:fibre}
+ \mathfrak C_{\rm kin}(\mathcal D)=\{(\kappa,H)\in\mathcal W_{\rm kin}:R_P(\kappa,H)\in J_P\text{\Lang{ for every }{ для всех }}P\in\mathcal A\}.
+\end{equation}
+\Lang{A spatial topology, unobserved epoch or matter decomposition is an additional lift, with its own admissibility and response rules.}
+{Пространственная топология, ненаблюдаемая эпоха или разложение материи являются дополнительным поднятием со своими условиями допустимости и правилами отклика.}
+\end{definition}
+
+\section{\Lang{The exact distance fibre and curvature selection}{Точный слой расстояний и выбор кривизны}}\label{sec:exact}
+\begin{theorem}[\Lang{All first-branch distance completions}{Все достраивания расстояний на первой ветви}]\label{thm:completion}
+\Lang{Let $D\in C^2[0,Z]$, $D(0)=0$, and $D'(z)>0$ throughout. In the carrier of Section~\ref{sec:carrier}, the entire exact distance fibre is}
+{Пусть $D\in C^2[0,Z]$, $D(0)=0$ и всюду $D'(z)>0$. В носителе раздела~\ref{sec:carrier} полный точный слой расстояний равен}
+\begin{equation}\label{eq:completion}
+ \{(\kappa,H_\kappa):\kappa\in K_D\},\qquad
+ K_D=\left(-\infty,\frac1{D(Z)^2}\right),\qquad
+ H_\kappa(z)=\frac{c\sqrt{1-\kappa D(z)^2}}{D'(z)}.
+\end{equation}
+\Lang{In particular $H_\kappa(0)=c/D'(0)$ for every member.}
+{В частности, $H_\kappa(0)=c/D'(0)$ для каждого элемента.}
+\end{theorem}
+\begin{proof}
+\Lang{On the declared branch $S_\kappa'(x)>0$ and $S_\kappa'(x)^2=1-\kappa S_\kappa(x)^2$. Differentiate~\eqref{eq:distance} to obtain}
+{На заданной ветви $S_\kappa'(x)>0$ и $S_\kappa'(x)^2=1-\kappa S_\kappa(x)^2$. Дифференцируя~\eqref{eq:distance}, получаем}
+\begin{equation}\label{eq:derivative}
+ D'(z)=\frac c{H(z)}\sqrt{1-\kappa D(z)^2}.
+\end{equation}
+\Lang{Positivity at $Z$ forces $\kappa<D(Z)^{-2}$, and solving gives the unique $H_\kappa$ for fixed $\kappa$. Conversely, for any $\kappa\in K_D$ let $F_\kappa(y)=\int_0^y(1-\kappa s^2)^{-1/2}ds$. Then $\chi(z)=F_\kappa(D(z))$ has derivative $c/H_\kappa(z)$ and initial value zero. $F_\kappa$ is the inverse of the chosen branch of $S_\kappa$; for positive $\kappa$ its value at $D(Z)$ is strictly below $\pi/(2\sqrt\kappa)$. Thus~\eqref{eq:distance} holds on the whole interval. $H_\kappa$ is positive and $C^1$, and~\eqref{eq:metric} defines the scale factor on its reconstructed time interval.}
+{Положительность в $Z$ требует $\kappa<D(Z)^{-2}$, а разрешение равенства даёт единственную $H_\kappa$ при фиксированной $\kappa$. Обратно, для любой $\kappa\in K_D$ положим $F_\kappa(y)=\int_0^y(1-\kappa s^2)^{-1/2}ds$. Тогда $\chi(z)=F_\kappa(D(z))$ имеет производную $c/H_\kappa(z)$ и нулевое начальное значение. $F_\kappa$ обратна выбранной ветви $S_\kappa$; при положительной $\kappa$ её значение в $D(Z)$ строго меньше $\pi/(2\sqrt\kappa)$. Поэтому~\eqref{eq:distance} выполнено на всём интервале. $H_\kappa$ положительна и относится к $C^1$, а~\eqref{eq:metric} задаёт масштабный фактор на восстановленном временном интервале.}
+\end{proof}
+\Lang{This is an explicit completion formulation of standard FLRW geometry \cite{Hogg,CBL}. The open endpoint is essential: at equality the reconstructed $H(Z)$ vanishes while the carrier requires $H>0$. Distinct $\kappa$ give distinct present spatial curvature and distinct $H(z)$ for $z>0$, although every distance response in~\eqref{eq:responses} agrees.}
+{Это явная формулировка достраивания стандартной геометрии FLRW \cite{Hogg,CBL}. Открытый конец существенен: при равенстве восстановленная $H(Z)$ обращается в ноль, тогда как носитель требует $H>0$. Разные $\kappa$ дают различную современную пространственную кривизну и разные $H(z)$ при $z>0$, хотя все отклики расстояний в~\eqref{eq:responses} совпадают.}
+
+\begin{corollary}[\Lang{Independent rates select a background or exclude the carrier}{Независимые скорости выбирают фон или исключают носитель}]\label{cor:selection}
+\Lang{For the exact $D$ of Theorem~\ref{thm:completion}, one independent exact rate $h_*>0$ at $0<z_*\leq Z$ selects at most one member. Its candidate curvature is}
+{Для точной $D$ теоремы~\ref{thm:completion} одна независимая точная скорость $h_*>0$ при $0<z_*\leq Z$ выбирает не более одного элемента. Кандидат кривизны равен}
+\begin{equation}\label{eq:estimator}
+ \widehat\kappa(z_*)=\frac{1-[h_*D'(z_*)/c]^2}{D(z_*)^2}.
+\end{equation}
+\Lang{The member exists exactly when $\widehat\kappa\in K_D$. Several such rates have a common completion exactly when their candidates agree and belong to $K_D$.}
+{Элемент существует тогда и только тогда, когда $\widehat\kappa\in K_D$. Несколько таких скоростей имеют общее достраивание тогда и только тогда, когда их кандидаты совпадают и принадлежат $K_D$.}
+\end{corollary}
+\begin{proof}
+\Lang{Equation~\eqref{eq:derivative} fixes~\eqref{eq:estimator}. Conversely, substituting an admissible candidate into~\eqref{eq:completion} reproduces each supplied positive rate; Theorem~\ref{thm:completion} supplies the common distance profile.}
+{Равенство~\eqref{eq:derivative} фиксирует~\eqref{eq:estimator}. Обратно, подстановка допустимого кандидата в~\eqref{eq:completion} воспроизводит каждую заданную положительную скорость; теорема~\ref{thm:completion} обеспечивает общий профиль расстояний.}
+\end{proof}
+\Lang{The curvature estimator is the Clarkson--Bassett--Lu identity \cite{CBL}, expressed in dimensional $\kappa$. It is not a new curvature test. Their geometric consistency function becomes}
+{Оценка кривизны является тождеством Кларксона--Бассетта--Лу \cite{CBL}, выраженным через размерную $\kappa$. Это не новый тест кривизны. Их геометрическая функция согласованности принимает вид}
+\begin{equation}\label{eq:cbl}
+ \mathcal C(z)=1+\frac{H^2}{c^2}(DD''-D'^2)+\frac{HH'}{c^2}DD',\qquad
+ \widehat\kappa'(z)=-\frac{2D'(z)}{D(z)^3}\mathcal C(z),\quad z>0.
+\end{equation}
+\Lang{Thus $\mathcal C=0$ enforces a constant candidate on this branch. Passing the test identifies a background only within the declared carrier; it does not prove global FLRW symmetry among all spacetime models. A rate inferred from the same distance data after assuming curvature is not an independent selecting response. Derivatives and their errors need independent justification.}
+{Поэтому $\mathcal C=0$ обеспечивает постоянство кандидата на этой ветви. Прохождение теста идентифицирует фон только в заданном носителе; оно не доказывает глобальную симметрию FLRW среди всех моделей пространства-времени. Скорость, выведенная из тех же расстояний после предположения о кривизне, не является независимым выбирающим откликом. Производным и их ошибкам нужно отдельное обоснование.}
+
+\section{\Lang{Calibration is part of the fibre}{Калибровка является частью слоя}}\label{sec:calibration}
+\Lang{Real distance channels carry nuisance scales. For an ideal common supernova absolute magnitude $M$ and a free BAO ruler $r_d>0$, we use the following background observables.}
+{Реальные каналы расстояний содержат вспомогательные масштабы. Для идеальной общей абсолютной звёздной величины сверхновых $M$ и свободной линейки BAO $r_d>0$ используем следующие фоновые наблюдаемые.}
+\Lang{The magnitude response is defined only for $0<z\leq Z$, so that $D_L(z)>0$; it has no finite value at $z=0$.}{Отклик звёздной величины определён только при $0<z\leq Z$, когда $D_L(z)>0$; при $z=0$ конечного значения нет.}
+\begin{equation}\label{eq:relative}
+ m(z)=M+5\log_{10}\frac{D_L(z)}{10\,{\rm pc}},\qquad
+ R_\perp(z)=\frac{D(z)}{r_d},\qquad R_\parallel(z)=\frac c{H(z)r_d}.
+\end{equation}
+\Lang{These expressions are background interfaces, not a survey likelihood. BAO analyses report such distance/ruler ratios with model and fiducial-processing assumptions \cite{DESI}; a calibrated ratio does not supply a calibrated ruler length.}
+{Эти выражения являются интерфейсами фона, а не правдоподобием обзора. Анализы BAO сообщают такие отношения расстояния к линейке с предпосылками модели и обработки в опорной космологии \cite{DESI}; калиброванное отношение не задаёт калиброванную длину линейки.}
+\begin{proposition}[\Lang{A joint scale ambiguity}{Совместная неоднозначность масштаба}]\label{prop:scale}
+\Lang{If $M$ and $r_d$ are free, then for every $\lambda>0$ the transformation}
+{Если $M$ и $r_d$ свободны, то для любого $\lambda>0$ преобразование}
+\begin{equation}\label{eq:scale}
+ (D,H,\kappa,r_d,M)\longmapsto
+ (\lambda D,H/\lambda,\kappa/\lambda^2,\lambda r_d,M-5\log_{10}\lambda)
+\end{equation}
+\Lang{preserves the metric-distance relation and all responses in~\eqref{eq:relative}. It changes the absolute length/time scale; an independently calibrated absolute rate or ruler can constrain it.}
+{сохраняет связь метрики с расстояниями и все отклики~\eqref{eq:relative}. Оно меняет абсолютный масштаб длины и времени; независимо калиброванные абсолютная скорость или линейка могут его ограничить.}
+\end{proposition}
+\begin{proof}
+\Lang{The new radial integral is $\lambda\chi$, and $S_{\kappa/\lambda^2}(\lambda\chi)=\lambda S_\kappa(\chi)$. The first-branch inequality is unchanged. Both BAO ratios cancel $\lambda$, while the magnitude shift cancels the change of $D_L$. An absolute rate transforms as $H/\lambda$ and therefore is not preserved.}
+{Новый радиальный интеграл равен $\lambda\chi$, и $S_{\kappa/\lambda^2}(\lambda\chi)=\lambda S_\kappa(\chi)$. Неравенство первой ветви сохраняется. В обоих отношениях BAO множитель $\lambda$ сокращается, а сдвиг звёздной величины компенсирует изменение $D_L$. Абсолютная скорость преобразуется как $H/\lambda$ и поэтому не сохраняется.}
+\end{proof}
+\Lang{The need for an absolute clock or Hubble anchor in ruler/candle inference has prior observational treatment \cite{HJV}; the symmetry proved here is not a priority claim.}{Необходимость абсолютных часов или калибровки Хаббла при выводе по линейкам и стандартным свечам ранее рассматривалась на наблюдательных данных \cite{HJV}; доказанная здесь симметрия не является заявкой на приоритет.}
+\Lang{Absolute-scale ambiguity and curvature/expansion ambiguity are different. With freely calibrated scales, ``more channels'' need not provide the missing absolute input. This is an application of WR-I's response contract; the scaling symmetry is not claimed as a new cosmological discovery.}
+{Неоднозначность абсолютного масштаба и неоднозначность кривизны и расширения различны. При свободных калибровочных масштабах «больше каналов» не обязательно даёт недостающий абсолютный вход. Это применение контракта откликов WR-I; симметрия масштаба не заявляется как новое космологическое открытие.}
+
+\section{\Lang{A finite-dimensional cosmological benchmark}{Конечномерный космологический пример}}\label{sec:finite}
+\Lang{Take the three-parameter kinematic family $(u,v,\kappa)$ with $u>0$, $\min\{u,u+2vZ\}>0$, and $\kappa<(uZ+vZ^2)^{-2}$. Both $u$ and $v$ are lengths. The profiles are}
+{Рассмотрим трёхпараметрическое кинематическое семейство $(u,v,\kappa)$ при $u>0$, $\min\{u,u+2vZ\}>0$ и $\kappa<(uZ+vZ^2)^{-2}$. Параметры $u$ и $v$ имеют размерность длины. Профили равны}
+\begin{equation}\label{eq:polynomial}
+ D(z)=uz+vz^2,\qquad
+ H(z)=\frac{c\sqrt{1-\kappa(uz+vz^2)^2}}{u+2vz}.
+\end{equation}
+\Lang{The polynomial is an exact declared benchmark over $[0,Z]$, not a cosmographic truncation whose omitted terms are ignored. Its use for measured data would need its own model-error assessment.}
+{Полином является точно заданным примером на $[0,Z]$, а не космографическим усечением с игнорируемыми остаточными членами. Применение к измеренным данным требует отдельной оценки модельной ошибки.}
+\begin{theorem}[\Lang{Two distance samples fix shape, not curvature}{Два расстояния фиксируют форму, но не кривизну}]\label{thm:finite}
+\Lang{For $0<z_1<z_2\leq Z$, exact distances $y_i=D(z_i)>0$ fix}
+{При $0<z_1<z_2\leq Z$ точные расстояния $y_i=D(z_i)>0$ фиксируют}
+\begin{equation}\label{eq:inversion}
+ v=\frac{y_2/z_2-y_1/z_1}{z_2-z_1},\qquad
+ u=\frac{z_2y_1/z_1-z_1y_2/z_2}{z_2-z_1}.
+\end{equation}
+\Lang{If the resulting $u,v$ satisfy the declared positivity conditions, the distance fibre is exactly the open interval $\kappa<(uZ+vZ^2)^{-2}$; otherwise it is empty. Adding one exact independent $H(z_*)$, $0<z_*\leq Z$, gives a locally full-rank three-parameter response map and at most one admissible member.}
+{Если полученные $u,v$ удовлетворяют заданным условиям положительности, слой расстояний является в точности открытым интервалом $\kappa<(uZ+vZ^2)^{-2}$; иначе он пуст. Добавление одной точной независимой $H(z_*)$, $0<z_*\leq Z$, даёт локально полноранговое отображение трёх параметров и не более одного допустимого элемента.}
+\end{theorem}
+\begin{proof}
+\Lang{Divide $y_i$ by $z_i$ and solve the two affine equations. Their Jacobian determinant is $z_1z_2(z_2-z_1)\ne0$. They do not depend on $\kappa$, whose entire admissible interval is supplied by Theorem~\ref{thm:completion}. For the third response,}
+{Разделим $y_i$ на $z_i$ и решим два аффинных уравнения. Определитель их якобиана равен $z_1z_2(z_2-z_1)\ne0$. Они не зависят от $\kappa$, полный допустимый интервал которой задаёт теорема~\ref{thm:completion}. Для третьего отклика}
+\begin{equation}\label{eq:rank}
+ \frac{\partial H(z_*)}{\partial\kappa}
+ =-\frac{cD(z_*)^2}{2D'(z_*)\sqrt{1-\kappa D(z_*)^2}}<0,\qquad
+ \det DR=z_1z_2(z_2-z_1)\frac{\partial H(z_*)}{\partial\kappa}\ne0.
+\end{equation}
+\Lang{The triangular response Jacobian has rank three, and Corollary~\ref{cor:selection} gives the stronger global at-most-one statement in this family.}
+{Треугольный якобиан откликов имеет ранг три, а следствие~\ref{cor:selection} даёт более сильное глобальное утверждение «не более одного» в этом семействе.}
+\end{proof}
+\Lang{Rank is conditional on the exact finite model and absolute calibration. This is not identification of all expansion histories from two distance samples. At least the residual global lifts below remain.}
+{Ранг обусловлен точной конечной моделью и абсолютной калибровкой. Это не идентификация всех историй расширения по двум расстояниям. Как минимум сохраняются рассматриваемые ниже глобальные поднятия.}
+
+\section{\Lang{Sharp rate-interval certificates and synthetic units}{Точные сертификаты интервалов скоростей и синтетические единицы}}\label{sec:interval}
+\begin{proposition}[\Lang{Exact projected curvature interval}{Точный проекционный интервал кривизны}]\label{prop:interval}
+\Lang{Keep an exact $D$ satisfying Theorem~\ref{thm:completion}. At finitely many $z_i>0$, supply separately calibrated rate intervals $0<h_i^-\leq h_i^+$, with the joint admissible set stipulated to be their Cartesian product. The projected compatible curvature set is exactly}
+{Сохраним точную $D$, удовлетворяющую теореме~\ref{thm:completion}. При конечном числе $z_i>0$ зададим отдельно калиброванные интервалы скоростей $0<h_i^-\leq h_i^+$, совместное допустимое множество которых по условию является их декартовым произведением. Проекция совместимого класса на кривизну в точности равна}
+\begin{equation}\label{eq:interval}
+ K_{\mathcal D}=K_D\cap\bigcap_i[\kappa_i^-,\kappa_i^+],\qquad
+ \kappa_i^- =\frac{1-(h_i^+D'_i/c)^2}{D_i^2},\quad
+ \kappa_i^+ =\frac{1-(h_i^-D'_i/c)^2}{D_i^2}.
+\end{equation}
+\Lang{The fibre is empty, a singleton, or an interval precisely as this intersection is. An additional independently justified hard prior intersects the same set.}
+{Слой пуст, является синглтоном или интервалом в точности в соответствии с этим пересечением. Дополнительное независимо обоснованное жёсткое ограничение пересекается с тем же множеством.}
+\end{proposition}
+\begin{proof}
+\Lang{For $z_i>0$, $H_\kappa(z_i)>0$ is strictly decreasing in $\kappa$. Solving $h_i^-\leq H_\kappa(z_i)\leq h_i^+$ gives the displayed closed interval. A common $\kappa\in K_D$ generates the exact $D$ and all admitted rates by Theorem~\ref{thm:completion}, so the intersection is sufficient as well as necessary.}
+{При $z_i>0$ положительная $H_\kappa(z_i)$ строго убывает по $\kappa$. Разрешение $h_i^-\leq H_\kappa(z_i)\leq h_i^+$ даёт указанный замкнутый интервал. Общая $\kappa\in K_D$ порождает точную $D$ и все допустимые скорости по теореме~\ref{thm:completion}; поэтому пересечение достаточно, а не только необходимо.}
+\end{proof}
+\Lang{These are deterministic admissibility intervals. Their confidence or joint coverage is not supplied by the algebra. Correlated measurements need a joint error set. If distances or derivatives are uncertain too, varying them independently gives at most an outer necessary screen until one jointly realizable distance profile is constructed. Failure excludes the supplied carrier/calibration combination.}
+{Это детерминированные интервалы допустимости. Их доверительная вероятность или совместное покрытие не задаются алгеброй. Коррелированным измерениям нужно совместное множество ошибок. Если расстояния или производные тоже неопределённы, их независимое варьирование даёт лишь внешний необходимый фильтр, пока не построен совместно реализуемый профиль расстояний. Неудача исключает заданную комбинацию носителя и калибровки.}
+\Lang{For a synthetic unit-bearing benchmark set $c=299\,792.458$ km/s, $H_0=70$ km/s/Mpc, $Z=1.5$, and}
+{Для синтетического примера с физическими единицами положим $c=299\,792.458$ км/с, $H_0=70$ км/с/Мпк, $Z=1.5$ и}
+\begin{equation}\label{eq:benchmark}
+ \begin{gathered}
+ u=\frac c{H_0}=4282.7494\,{\rm Mpc},\quad v=-0.15u,\quad f(z)=z-0.15z^2,\\
+ q=\kappa u^2,\qquad \frac{H_q(z)}{H_0}=\frac{\sqrt{1-qf(z)^2}}{1-0.30z}.
+ \end{gathered}
+\end{equation}
+\Lang{Every admissible $q$ has the same $D=uf$ and $H(0)=H_0$. The branch bound is $q<f(1.5)^{-2}\approx0.739970$. At $z=1$ the synthetic flat member has $H=100$ km/s/Mpc. A rate interval $[98,102]$ gives}
+{Все допустимые $q$ имеют одинаковые $D=uf$ и $H(0)=H_0$. Граница ветви равна $q<f(1.5)^{-2}\approx0.739970$. При $z=1$ синтетический плоский элемент имеет $H=100$ км/с/Мпк. Интервал скорости $[98,102]$ даёт}
+\begin{equation}\label{eq:numeric}
+ q\in\left[\frac{1-1.02^2}{0.85^2},\frac{1-0.98^2}{0.85^2}\right]
+ \approx[-0.05591696,\ 0.05480969].
+\end{equation}
+\Lang{An exact rate $100$ selects $q=0$ within this background family. For example, an exact second rate $H(0.5)=100$ instead gives $q=(1-(0.85\cdot100/70)^2)/0.4625^2<0$, so it cannot coexist with that exact flat rate at $z=1$. No actual catalogue is represented by these witnesses.}
+{Точная скорость $100$ выбирает $q=0$ в этом семействе фона. Например, точная вторая скорость $H(0.5)=100$ вместо этого даёт $q=(1-(0.85\cdot100/70)^2)/0.4625^2<0$, поэтому она не может сосуществовать с указанной точной плоской скоростью при $z=1$. Эти свидетели не представляют реальный каталог.}
+\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{figures/distance-fibre\wrehFigureSuffix.pdf}
+\caption{\Lang{Analytic synthetic curves: identical calibrated distances and distinct expansion histories for $q=-0.2,0,0.2$. Units are Mpc and km/s/Mpc; no measurements are plotted.}{Аналитические синтетические кривые: одинаковые калиброванные расстояния и различные истории расширения при $q=-0.2,0,0.2$. Единицы --- Мпк и км/с/Мпк; измерения не нанесены.}}\label{fig:fibre}
+\end{figure}
+
+\section{\Lang{Global spatial lifts of a flat background}{Глобальные пространственные поднятия плоского фона}}\label{sec:topology}
+\Lang{The topology question is separately declared, in the established cosmic-topology setting \cite{Luminet}. Fix a positive scale factor on a time interval $I$, normalized by $a(0)=1$, and compare the flat spatial sections $\mathbb R^3$ and the cubic torus $T_L^3=\mathbb R^3/(L\mathbb Z)^3$ with the same local metric $-c^2dt^2+a(t)^2d\mathbf x^2$. The torus is locally FLRW; global isotropy about every point is not imposed as an additional topology condition.}
+{Вопрос топологии задаётся отдельно в известной постановке космической топологии \cite{Luminet}. Зафиксируем положительный масштабный фактор на временном интервале $I$ с нормировкой $a(0)=1$ и сравним плоские пространственные сечения $\mathbb R^3$ и кубический тор $T_L^3=\mathbb R^3/(L\mathbb Z)^3$ с одинаковой локальной метрикой $-c^2dt^2+a(t)^2d\mathbf x^2$. Тор локально относится к FLRW; глобальная изотропия относительно каждой точки не налагается как дополнительное условие топологии.}
+\begin{theorem}[\Lang{A finite observed patch does not fix flat topology}{Конечный наблюдаемый участок не фиксирует плоскую топологию}]\label{thm:topology}
+\Lang{Suppose the supplied classical protocols depend only on the metric and copied classical source fields in $I\times\overline{B_R(0)}$, and all used light paths lie in that patch. For each $L>2R$, Euclidean space and $T_L^3$ admit identical protocol responses on this patch, while their spatial topologies and total volumes differ. In the flat distance benchmark one may take $R=\chi(Z)=D(Z)$.}
+{Пусть заданные классические протоколы зависят только от метрики и скопированных классических полей источников в $I\times\overline{B_R(0)}$, а все используемые световые пути лежат в этом участке. Для каждого $L>2R$ евклидово пространство и $T_L^3$ допускают одинаковые отклики протоколов на участке, хотя их пространственные топологии и полные объёмы различаются. В плоском примере расстояний можно взять $R=\chi(Z)=D(Z)$.}
+\end{theorem}
+\begin{proof}
+\Lang{If $\mathbf x,\mathbf y\in\overline{B_R}$ have the same torus image, then $\mathbf x-\mathbf y=L\mathbf n$ for an integer vector $\mathbf n$. For $\mathbf n\ne0$, its norm is at least $L>2R$, contradicting $\|\mathbf x-\mathbf y\|\leq2R$. Hence the quotient is injective on the ball and is a local isometry there; its time-product restriction preserves the metric and the copied fields. Every stipulated protocol functional therefore agrees. Spatial $\mathbb R^3$ is noncompact and simply connected, whereas $T_L^3$ is compact with fundamental group $\mathbb Z^3$ and present volume $L^3$. Homogeneous classical fields provide explicit global copies on both spaces.}
+{Если $\mathbf x,\mathbf y\in\overline{B_R}$ имеют одинаковый образ на торе, то $\mathbf x-\mathbf y=L\mathbf n$ для целочисленного вектора $\mathbf n$. При $\mathbf n\ne0$ его норма не меньше $L>2R$, что противоречит $\|\mathbf x-\mathbf y\|\leq2R$. Следовательно, факторизация инъективна на шаре и является там локальной изометрией; её ограничение с временным множителем сохраняет метрику и скопированные поля. Поэтому каждый оговорённый функционал протокола совпадает. Пространство $\mathbb R^3$ некомпактно и односвязно, тогда как $T_L^3$ компактно с фундаментальной группой $\mathbb Z^3$ и современным объёмом $L^3$. Однородные классические поля дают явные глобальные копии на обоих пространствах.}
+\end{proof}
+\begin{equation}\label{eq:topology}
+ L>2\chi(Z)\quad\Longrightarrow\quad
+ \mathbb R^3\ \text{\Lang{and}{и}}\ T_L^3\ \text{\Lang{share the declared observed patch}{совпадают на заданном участке}},\qquad
+ V(T_L^3,t_0)=L^3.
+\end{equation}
+\Lang{The quotient preserves the restricted metric tensor, not necessarily globally shortest distances between arbitrary pairs in the ball. For example, $R=1$ and $L=3$ give Euclidean distance $2$ between $\pm\mathbf e_1$, but torus distance $1$; the shorter wrapped path is outside the stipulated patch.}{Факторизация сохраняет ограниченный метрический тензор, но не обязательно глобальные кратчайшие расстояния между произвольными парами точек шара. Например, при $R=1$ и $L=3$ расстояние в евклидовом пространстве между $\pm\mathbf e_1$ равно $2$, а на торе --- $1$; более короткий обходящий путь выходит за оговорённый участок.}
+\Lang{This proves a witness for the stipulated local classical responses. A stochastic perturbation prior, global eigenmode spectrum or quantum state can carry additional topology-dependent information and requires another response model. Failing $L>2R$ only removes this sufficient witness; it does not prove detectability. The restriction is finite and protocol-dependent, not an in-principle equivalence for every future observer. WR-IX owns that stronger accessibility question.}
+{Это доказывает свидетель для оговорённых локальных классических откликов. Стохастическая модель возмущений, глобальный спектр мод или квантовое состояние могут содержать дополнительную информацию о топологии и требуют другого отображения откликов. Нарушение $L>2R$ лишь убирает этот достаточный свидетель; оно не доказывает обнаружимость. Ограничение конечно и зависит от протокола, а не является принципиальной эквивалентностью для каждого будущего наблюдателя. Более сильный вопрос доступности относится к WR-IX.}
+\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{figures/refinement-lifts\wrehFigureSuffix.pdf}
+\caption{\Lang{Left: synthetic curvature-prior interval, refinement by a rate interval, and the exact flat rate. Right: a two-dimensional cross-section illustrating the injective ball inside a cubic torus domain; the full construction is three-dimensional. No cosmological data fit is shown.}{Слева: синтетический исходный интервал кривизны, уточнение интервалом скорости и точная плоская скорость. Справа: двумерное сечение, иллюстрирующее инъективный шар внутри кубической фундаментальной области тора; полная конструкция трёхмерна. Подгонка космологических данных не показана.}}\label{fig:lifts}
+\end{figure}
+
+\begin{samepage}
+\section{\Lang{A separate temporal lift}{Отдельное временное поднятие}}\label{sec:future}
+\begin{proposition}[\Lang{Past agreement permits different kinematic futures}{Совпадение прошлого допускает разные кинематические будущие}]\label{prop:future}
+\Lang{Let $a_b>0$ be $C^\infty$ on $I=(-T_-,T_+)$, $a_b(0)=1$, and $\mathcal H_b=\dot a_b/a_b>0$. Choose a nonzero smooth dimensionless bump $b$ with compact support in $(0,T_+)$. Then a nontrivial interval of $\lambda$ gives}
+{Пусть $a_b>0$ относится к $C^\infty$ на $I=(-T_-,T_+)$, $a_b(0)=1$ и $\mathcal H_b=\dot a_b/a_b>0$. Выберем ненулевую гладкую безразмерную функцию $b$ с компактным носителем в $(0,T_+)$. Тогда нетривиальный интервал $\lambda$ задаёт}
+\begin{equation}\label{eq:future}
+ a_\lambda(t)=a_b(t)e^{\lambda b(t)},\qquad
+ \mathcal H_\lambda(t)=\mathcal H_b(t)+\lambda\dot b(t)>0,
+ \qquad a_\lambda(t)=a_b(t)\quad(t\leq0).
+\end{equation}
+\Lang{These histories agree in all supplied past-patch responses and differ in the future.}
+{Эти истории совпадают во всех заданных откликах прошлого участка и различаются в будущем.}
+\end{proposition}
+\begin{proof}
+\Lang{The bump vanishes together with all derivatives near $t=0$ and outside its compact support. Positivity and smooth matching follow immediately. Let $h_{\min}>0$ be the minimum of $\mathcal H_b$ on the support and $B=\|\dot b\|_\infty>0$. For $|\lambda|<h_{\min}/B$, the new expansion rate stays positive there and equals the original elsewhere. Distinct $\lambda$ give distinct scale histories where $b\ne0$, with the same normalization and anchored clock. Past metric and copied source responses are unchanged.}
+{Функция $b$ вместе со всеми производными обращается в ноль вблизи $t=0$ и вне компактного носителя. Положительность и гладкое согласование следуют непосредственно. Пусть $h_{\min}>0$ --- минимум $\mathcal H_b$ на носителе, а $B=\|\dot b\|_\infty>0$. При $|\lambda|<h_{\min}/B$ новая скорость расширения остаётся положительной на носителе и совпадает с исходной вне его. Разные $\lambda$ дают разные масштабные истории там, где $b\ne0$, при одинаковой нормировке и привязанных часах. Прошлая метрика и отклики скопированных источников сохраняются.}
+\end{proof}
+\end{samepage}
+\Lang{The smooth baseline is an additional assumption in this proposition. Theorem~\ref{thm:completion}, which assumes only $D\in C^2$, supplies a $C^2$ scale factor and does not by itself guarantee a $C^\infty$ baseline.}{Гладкий базовый профиль является дополнительной предпосылкой этого утверждения. Теорема~\ref{thm:completion}, предполагающая лишь $D\in C^2$, задаёт масштабный фактор класса $C^2$ и сама по себе не гарантирует базового профиля класса $C^\infty$.}
+\Lang{This is a conditional kinematic lift. A supplied matter evolution law and complete initial data may enforce a unique future or exclude the bump histories. No family of solutions to one fixed matter law is asserted. WR-IV's distinction between a projection and a full history is applied, rather than re-proved as a cosmological law.}
+{Это условное кинематическое поднятие. Заданный закон эволюции материи и полные начальные данные могут обеспечить единственное будущее или исключить истории с добавленной функцией. Семейство решений одного фиксированного закона материи не заявляется. Здесь применяется различие WR-IV между проекцией и полной историей, а не доказывается заново космологический закон.}
+
+\section{\Lang{What is supplied and what a data analysis still needs}{Что задано и что ещё нужно анализу данных}}\label{sec:ceiling}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.19\linewidth}YY@{}}\toprule
+\Lang{Channel/object}{Канал/объект}&\Lang{Supplied here}{Задано здесь}&\Lang{Separate obligation}{Отдельная задача}\\\midrule
+\Lang{Supernova distances}{Расстояния сверхновых}&$D_L$, \Lang{ideal magnitude and free zero point}{идеальная величина и свободная нулевая точка}&\Lang{Catalogue, populations, dust, selection, covariance, absolute calibration}{Каталог, популяции, пыль, отбор, ковариация, абсолютная калибровка}\\
+BAO&$D/r_d$, $c/(Hr_d)$&\Lang{Ruler physics, fiducial processing, covariance and joint likelihood}{Физика линейки, опорная обработка, ковариация и совместное правдоподобие}\\
+\Lang{Independent rates}{Независимые скорости}&\Lang{Exact or deterministic intervals}{Точные значения или детерминированные интервалы}&\Lang{Clock model, calibration, derivative control, correlated errors}{Модель часов, калибровка, контроль производных, коррелированные ошибки}\\
+CMB, \Lang{lensing, growth}{линзирование, рост}&\Lang{No full response engine}{Полного расчёта откликов нет}&\Lang{Perturbations, primordial fields, transfer functions and observations}{Возмущения, начальные поля, функции переноса и наблюдения}\\
+\Lang{Global lift}{Глобальное поднятие}&\Lang{Explicit flat topology and kinematic future witnesses}{Явные свидетели плоской топологии и кинематического будущего}&\Lang{Matter admissibility, global fields, full-time extension and broader protocols}{Допустимость материи, глобальные поля, полное временное продолжение и более широкие протоколы}\\\bottomrule
+\end{tabularx}\normalsize
+\end{center}
+\Lang{An empty $\mathfrak C_{\rm kin}$ rejects a declared model/data/calibration combination; it is not the WR-II statement that no full physical world can realize the observations. A singleton $(\kappa,H)$ is an identified background on a supplied interval; Sections~\ref{sec:topology}--\ref{sec:future} exhibit residual lifts. A curvature-admissibility endpoint is a branch/model boundary; no spacetime edge or WR-III structural wall is inferred without its own total-family analysis.}
+{Пустой $\mathfrak C_{\rm kin}$ отвергает заданную комбинацию модели, данных и калибровки; это не утверждение WR-II о невозможности полного физического мира, реализующего наблюдения. Синглтон $(\kappa,H)$ является идентифицированным фоном на заданном интервале; разделы~\ref{sec:topology}--\ref{sec:future} показывают остаточные поднятия. Конец допустимости кривизны является границей ветви или модели; край пространства-времени или структурная стена WR-III без собственного анализа полного семейства не выводятся.}
+\Lang{The present paper opens the cosmological interface and leaves the actual combined CMB/BAO/SN/lensing fibre as a documented next work package. Its finite benchmark introduces a physical response map, rather than renaming the nonnegative transition inverse problem of WR-V. Its classical quotient witness is separate from WR-VII's quantum generator circle. WREH remains both a research programme and community, distinct from Boundary Compensation; WR-IX remains planned.}
+{Эта статья открывает космологический интерфейс и оставляет реальный совместный слой CMB/BAO/SN/линзирования как документированный следующий пакет работ. Конечный пример вводит физическое отображение откликов, а не переименовывает неотрицательную обратную задачу переходов WR-V. Классический факторный свидетель отделён от квантовой окружности генераторов WR-VII. WREH остаётся исследовательской программой и сообществом, отдельными от Boundary Compensation; WR-IX остаётся плановой.}
+
+\section{\Lang{Reproduction, failure criteria and review gate}{Воспроизведение, критерии неудачи и рецензионный этап}}\label{sec:reproduction}
+\Lang{Reproduction independently integrates $c/H_\kappa$ and applies the curved distance function, checks the finite response Jacobian, interval inversion and incompatible-rate witnesses, verifies the joint calibration transformation, and checks lattice aliases and future matching. The finite checks accompany the seven proof blocks; they are not their premises. Figures and browser outputs are analytic/synthetic. The offline demonstration exposes curvature selection, interval refinement, the open branch cap and the sufficient torus-patch condition.}
+{Воспроизведение независимо интегрирует $c/H_\kappa$ и применяет функцию расстояния кривого пространства, проверяет якобиан конечных откликов, интервальную инверсию и свидетели несовместимых скоростей, совместное калибровочное преобразование, решёточные совпадения и согласование будущего. Конечные проверки сопровождают семь доказательных блоков, а не являются их предпосылками. Рисунки и результаты браузера аналитические и синтетические. Автономная демонстрация показывает выбор кривизны, интервальное уточнение, открытую границу ветви и достаточное условие участка тора.}
+\Lang{Failure criteria are an undeclared distance/ruler calibration, a derivative inferred without error control, circular use of $H$, a closed-geometry branch crossing, a positivity violation, a hidden matter prior, or a universal topology/horizon inference from a restricted patch. A covariance likelihood cannot silently become a hard exact interval. Existing source identities do not establish novelty; their relevant primary sections and access status are recorded separately.}
+{Критерии неудачи: незаданная калибровка расстояния или линейки, производная без контроля ошибок, круговое использование $H$, пересечение ветви замкнутой геометрии, нарушение положительности, скрытое условие материи или универсальный вывод о топологии или горизонте из ограниченного участка. Ковариационное правдоподобие не становится незаметно жёстким точным интервалом. Известные тождества источников не устанавливают новизну; релевантные первичные разделы и доступность записаны отдельно.}
+\Lang{WR-VII publication DOI 10.5281/zenodo.23264253 was reported by the author on 9 October 2026. Direct record and file verification was unavailable during this preparation and is a separate pending check; the frozen v0.2 source is cited explicitly. No DOI is assigned to WR-VIII. Preprint v0.2 incorporates the separately reproduced automated prepublication audit. This does not establish independent external scientific peer review. Actual survey inference and matter-model admissibility remain outside the supplied kinematic carrier.}
+{Автор сообщил DOI публикации WR-VII 10.5281/zenodo.23264253 9 октября 2026 года. Прямая проверка записи и файлов при подготовке была недоступна и остаётся отдельной задачей; замороженный источник v0.2 указан явно. DOI WR-VIII не присвоен. Препринт v0.2 учитывает замечания отдельно воспроизведённого автоматизированного предпубликационного аудита. Это не устанавливает независимого внешнего научного рецензирования. Вывод по реальному обзору и допустимость модели материи остаются за пределами заданного кинематического носителя.}
+
+\begingroup\small\raggedright
+\begin{thebibliography}{13}\setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}
+\bibitem{WRI} A. A. Malachevsky. \emph{Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations}. WR-I, WREH, v0.3 (2026). \href{https://doi.org/10.5281/zenodo.23210258}{doi:10.5281/zenodo.23210258}.
+\bibitem{WRII} A. A. Malachevsky. \emph{Finite Consistency and Global World Realizability}. WR-II, WREH, v0.5 (2026). \href{https://doi.org/10.5281/zenodo.23224154}{doi:10.5281/zenodo.23224154}.
+\bibitem{WRIII} A. A. Malachevsky. \emph{Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls}. WR-III, WREH, v0.6 (2026). \href{https://doi.org/10.5281/zenodo.23228682}{doi:10.5281/zenodo.23228682}.
+\bibitem{WRIV} A. A. Malachevsky. \emph{Response-Conditioned Global Completion and the Status of the Past}. WR-IV, WREH, v0.6 (2026). \href{https://doi.org/10.5281/zenodo.23248138}{doi:10.5281/zenodo.23248138}.
+\bibitem{WRV} A. A. Malachevsky. \emph{Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class}. WR-V, WREH, \Lang{draft v0.3 (2026), repository snapshot d0afad6. No established DOI.}{редакция v0.3 (2026), снимок репозитория d0afad6. DOI не установлен.}
+\bibitem{WRVI} A. A. Malachevsky. \emph{The Aquarium Bounds: Physical Constraints as Boundaries of World Space}. WR-VI, WREH, v0.2 (2026). \href{https://doi.org/10.5281/zenodo.23254619}{doi:10.5281/zenodo.23254619}.
+\bibitem{WRVII} A. A. Malachevsky. \emph{Energy-Time Frontiers of World Realizability}. WR-VII, WREH, \Lang{frozen source v0.2 (2026), repository snapshot f011aec. Author-reported publication:}{замороженный источник v0.2 (2026), снимок репозитория f011aec. Публикация по сообщению автора:} \href{https://doi.org/10.5281/zenodo.23264253}{doi:10.5281/zenodo.23264253}; \Lang{deposited version and files pending direct verification.}{депонированная версия и файлы ожидают прямой проверки.}
+\bibitem{Manifesto} A. A. Malachevsky. \emph{World Realizability \& Epistemic Horizons: Manifesto and Research Programme}. WREH-00, v0.1 (2026). \Lang{Repository}{Репозиторий}: \href{https://github.com/AIDevelopersMonster/WREH}{github.com/AIDevelopersMonster/WREH}.
+\bibitem{Hogg} D. W. Hogg. \emph{Distance measures in cosmology}. \Lang{Author manuscript, version 4 (2000).}{Авторская рукопись, версия 4 (2000).} \href{https://arxiv.org/abs/astro-ph/9905116v4}{arXiv:astro-ph/9905116v4}, \Lang{Sections 4--7 and 10.}{Разделы 4--7 и 10.}
+\bibitem{CBL} C. Clarkson, B. A. Bassett and T. H.-C. Lu. A general test of the Copernican Principle. \emph{Physical Review Letters} \textbf{101} (2008), 011301. \href{https://doi.org/10.1103/PhysRevLett.101.011301}{doi:10.1103/PhysRevLett.101.011301}. \href{https://arxiv.org/abs/0712.3457v2}{arXiv:0712.3457v2}.
+\bibitem{Luminet} J.-P. Luminet. The Status of Cosmic Topology after Planck Data. \emph{Universe} \textbf{2}(1) (2016), 1. \href{https://doi.org/10.3390/universe2010001}{doi:10.3390/universe2010001}. \href{https://arxiv.org/abs/1601.03884v2}{arXiv:1601.03884v2}, \Lang{Sections 2--3.}{Разделы 2--3.}
+\bibitem{DESI} DESI Collaboration. \emph{New DESI DR2 Lyman-alpha Results Shed Light on Dark Energy}. \Lang{Official response-interface description, 30 July 2026, accessed 9 October 2026.}{Официальное описание интерфейса откликов, 30 июля 2026 года; дата обращения: 9 октября 2026 года.} \href{https://www.desi.lbl.gov/2026/07/30/new-desi-dr2-lyman-alpha-results-shed-light-on-dark-energy/}{desi.lbl.gov: DR2 Lyman-alpha results}. \Lang{No numerical survey result is imported here.}{Численные результаты обзора здесь не используются.}
+\bibitem{HJV} A. Heavens, R. Jimenez and L. Verde. Standard rulers, candles, and clocks from the low-redshift Universe. \emph{Physical Review Letters} \textbf{113} (2014), 241302. \href{https://doi.org/10.1103/PhysRevLett.113.241302}{doi:10.1103/PhysRevLett.113.241302}. \href{https://arxiv.org/abs/1409.6217v2}{arXiv:1409.6217v2}.
+\end{thebibliography}\endgroup

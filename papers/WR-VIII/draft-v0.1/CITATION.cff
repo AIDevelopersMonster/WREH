@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the version reviewed. This is an unpublished kinematic cosmological draft."
+type: article
+title: "WR-VIII: The Cosmological Fibre: Universes Compatible with Our Universe Today"
+version: "0.1"
+date-released: "2026-10-09"
+authors:
+  - family-names: Malachevsky
+    given-names: A. A.
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+repository-code: "https://github.com/AIDevelopersMonster/WREH"
+license: CC-BY-4.0
+keywords:
+  - cosmological response
+  - FLRW
+  - curvature degeneracy
+  - calibration
+  - cosmic topology

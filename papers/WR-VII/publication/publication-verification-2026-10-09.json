@@ -1,0 +1,56 @@
+{
+  "status": "PENDING_EXTERNAL_ACCESS",
+  "reported_by": "author in conversation",
+  "reported_on": "2026-10-09",
+  "author_reported_article": "WR-VII",
+  "author_reported_doi": "10.5281/zenodo.23264253",
+  "doi_invented": false,
+  "record_id_inferred_from_reported_doi": 23264253,
+  "frozen_local_source_version": "0.2",
+  "frozen_local_source_commit": "f011aec8546705be1e6bd2bd0c5925da96861179",
+  "deposited_version": "UNVERIFIED",
+  "record_metadata": "NOT_RETRIEVED",
+  "published_file_checksums": "NOT_RETRIEVED",
+  "doi_resolution": "NOT_VERIFIED",
+  "author_orcid_licence_agreement": "NOT_CHECKED_AGAINST_PUBLIC_RECORD",
+  "local_payload_candidates": {
+    "WREH_WR-VII_Draft_v0.2_EN.pdf": {
+      "bytes": 106699,
+      "local_sha256": "f67385143b66b4e89e0b172042b5163b44c2a56d08994c20be3fa571e4f1d203",
+      "published_match": "NOT_CHECKED"
+    },
+    "WREH_WR-VII_Draft_v0.2_RU.pdf": {
+      "bytes": 116201,
+      "local_sha256": "042d8b08a7888ea369403c6437d4c4399acaae35c1b3d16e92c7d107f850b79f",
+      "published_match": "NOT_CHECKED"
+    },
+    "WREH_WR-VII_Demo_v0.2_EN-RU.html": {
+      "bytes": 18021,
+      "local_sha256": "53ca186b05bcf7b5e702f0d509af09a86aa370763eb388d6c443bc023d97ddce",
+      "published_match": "NOT_CHECKED"
+    }
+  },
+  "observed_access_failures": [
+    {
+      "channel": "web source retrieval",
+      "urls": [
+        "https://doi.org/10.5281/zenodo.23264253",
+        "https://zenodo.org/records/23264253",
+        "https://zenodo.org/api/records/23264253",
+        "https://zenodo.org/records/23264253/export/json"
+      ],
+      "result": "Internal Error / not accessible; repeated final DOI and API retrieval also unavailable"
+    },
+    {
+      "channel": "direct urllib API",
+      "result": "25-second timeout"
+    },
+    {
+      "channel": "direct curl record",
+      "result": "25-second timeout; zero bytes; HTTP 000; exit 28"
+    }
+  ],
+  "control": "Previously verified WR-VI public API also unavailable now; access failure does not establish DOI invalidity",
+  "external_peer_review": "NOT_ESTABLISHED",
+  "next_check": "Retrieve actual record metadata and every deposited file; verify real DOI, version, title, creator/ORCID, licences and published checksums against the exact source. Preserve byte and scientific-content comparisons separately if signed PDF containers differ."
+}

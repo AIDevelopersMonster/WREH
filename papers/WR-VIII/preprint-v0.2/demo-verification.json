@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scenarios": 442,
+  "languages": [
+    "EN",
+    "RU"
+  ],
+  "viewports": [
+    "1360x1024",
+    "390x844"
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "horizontal_overflow": false,
+  "independent_curved_distance_integration": "Simpson 1000 subintervals for admissible candidate",
+  "visual_review": "PASS",
+  "visual_review_scope": "EN/RU desktop and mobile full-page screenshots inspected; no clipping or overlap",
+  "review_kind": "AI-assisted visual inspection; not external scientific peer review"
+}
