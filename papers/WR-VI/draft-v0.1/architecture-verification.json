@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "baseline_commit": "d0afad65108abee8b561e02af6fe3392c6057487",
+  "upstream_scientific_files_byte_comparison": 144,
+  "new_WR_VI_proof_blocks": 7,
+  "canonical_title_preserved": true,
+  "WR_V_status": "unchanged review draft; no merge or DOI",
+  "stacked_PR_base": "paper-wr-v-v0.1-spine",
+  "WREH_programme_and_community": true,
+  "downstream_WR_VII_IX": "planned; not opened",
+  "scope": "new author-approved branch; no physical-wall certification"
+}

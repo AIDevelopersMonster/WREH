@@ -1,0 +1,272 @@
+\maketitle
+\begin{abstract}
+\Lang{Responses identify a transition law only relative to a declared admissible class. WR-VI adds an explicit constraint layer to the experimental completion interface of WR-V and asks what a boundary of that class actually certifies. We separate observed responses, structural restrictions and externally justified hard bounds. A finite classical construction couples transition rows through conservation support and detailed balance. A three-state reversible benchmark has identical calibrated mean responses for an entire interval of transition matrices. A bound on stationary transition activity then produces an empty class, a singleton or a nontrivial interval, with an exact threshold and an elementary infeasibility certificate. The selected matrix at the threshold is reducible: an additional irreducibility requirement removes it and changes the threshold's attainability. Positive response tolerance destroys this exact singleton. When the activity cap is uncertain, universal admissibility and admissibility for at least one cap have different quantifiers; a unique universally admissible candidate does not establish unique inference about the actual unknown cap. These are self-contained finite-model calculations using established Markov-chain and convex-feasibility tools. No physical constant, cosmological horizon or boundary of reality is derived.}
+{Отклики идентифицируют закон перехода только относительно заданного класса допустимости. WR-VI добавляет явный слой ограничений к схеме экспериментального достраивания WR-V и выясняет, что именно удостоверяет граница такого класса. Различаются наблюдаемые отклики, структурные ограничения и независимо обоснованные жёсткие границы. Конечная классическая конструкция связывает строки переходов через носитель сохранения и детальный баланс. В обратимом примере с тремя состояниями целый интервал матриц имеет одинаковые калиброванные средние отклики. Ограничение стационарной активности переходов затем даёт пустой класс, одноэлементный класс или нетривиальный интервал; порог и сертификат несовместимости вычисляются точно. Отобранная на пороге матрица приводима: дополнительное требование неприводимости исключает её и меняет достижимость порога. Положительный допуск отклика разрушает эту точную одноэлементность. При неопределённой границе активности допустимость для всех границ и допустимость хотя бы для одной границы имеют разные кванторы; единственность универсально допустимого кандидата не устанавливает единственности вывода о фактической неизвестной границе. Это самостоятельные конечные модельные вычисления с использованием известных инструментов теории марковских цепей и выпуклой допустимости. Физическая константа, космологический горизонт или граница реальности не выводятся.}
+\end{abstract}
+\noindent\textbf{\Lang{Keywords}{Ключевые слова}:} \Lang{physical admissibility; reversible transitions; activity bound; constrained completion; uncertain constraints; model boundary.}{физическая допустимость; обратимые переходы; граница активности; достраивание при ограничениях; неопределённые ограничения; граница модели.}
+
+\smallskip
+\begingroup\small\raggedright
+\noindent\Lang{Parallel EN/RU texts share all result and equation numbers. REVIEWABLE\_DRAFT; formal external peer-review status unverified; no WR-VI DOI. Content CC BY 4.0; code MIT.}{Параллельные тексты EN/RU имеют общие номера результатов и формул. REVIEWABLE\_DRAFT; статус внешнего рецензирования не подтверждён; DOI WR-VI не присвоен. Текст CC BY 4.0; код MIT.}\par\endgroup
+\newpage\tableofcontents\newpage
+
+\section{\Lang{The Aquarium question and the new obligation}{Вопрос о границах аквариума и новая задача}}
+\label{sec:scope}
+\Lang{The founding WREH programme uses ``Aquarium Bounds'' for candidate restrictions on the space of admissible worlds, without positing a surrounding space or an observer outside the Universe. A mathematical boundary can arise because an adopted carrier, constitutive assumption or response fit ceases to be admissible. Establishing a boundary of physical realizability is a stronger obligation. The present draft addresses the former precisely and records what would be needed for the latter.}
+{Учредительная программа WREH использует название «Границы аквариума» для предполагаемых ограничений пространства допустимых миров, не постулируя окружающего пространства или наблюдателя вне Вселенной. Математическая граница может возникать из-за утраты допустимости выбранного носителя, определяющего предположения или согласования с откликом. Установление границы физической реализуемости представляет собой более сильную задачу. Настоящая редакция точно рассматривает первую задачу и фиксирует требования ко второй.}
+
+\Lang{WR-I supplies response equivalence and identifiable quantities \cite{WRI}; WR-II distinguishes finite obstruction from failure of full global completion \cite{WRII}; WR-III supplies geometry of nonempty response fibres \cite{WRIII}; WR-IV distinguishes full realizations from history projections \cite{WRIV}. WR-V declares finite outcome-plus-successor instruments and calibrated transition probes \cite{WRV}. Its Section~9 hands off the question of emptiness, uniqueness or multiplicity after independently justified admissibility restrictions are imposed; equation~\eqref{eq:completion} below makes that finite constraint interface explicit. Here the new obligation is to construct restrictions that couple instrument rows and to distinguish selection by measured responses from selection that also uses those restrictions. Generic quotient, rank, gluing and smoothing theorems remain upstream results.}
+{WR-I задаёт эквивалентность по откликам и идентифицируемые величины \cite{WRI}; WR-II различает конечное препятствие и несостоятельность полного глобального достраивания \cite{WRII}; WR-III задаёт геометрию непустых слоёв отклика \cite{WRIII}; WR-IV различает полные реализации и исторические проекции \cite{WRIV}. WR-V вводит конечные инструменты исхода и последующего состояния и калиброванные зонды перехода \cite{WRV}. Его раздел~9 передаёт вопрос о пустоте, единственности или множественности после наложения независимо обоснованных ограничений допустимости; уравнение~\eqref{eq:completion} ниже явно задаёт эту конечную схему ограничений. Новая задача здесь --- построить ограничения, связывающие строки инструмента, и отличить отбор по измеренным откликам от отбора с дополнительным использованием таких ограничений. Общие теоремы о факторах, ранге, склейке и сглаживании остаются результатами предыдущих статей.}
+
+\Lang{Our principal carrier is a finite classical transition matrix. It is a projected description, not a complete world. One experiment step is specified without assigning it a physical duration. The benchmark's activity is a dimensionless probability of changing a label under a fixed distribution, not energy, entropy production, dissipation or a rate per second. Conservation and equilibrium assumptions require separate justification in any application. No causal speed limit, quantum restriction or gravitational boundary is proved.}
+{Основной носитель здесь --- конечная классическая матрица перехода. Она представляет проекционное описание, а не полный мир. Один шаг эксперимента задаётся без приписывания физической длительности. Активность в примере --- безразмерная вероятность смены метки при фиксированном распределении, а не энергия, производство энтропии, диссипация или скорость в секунду. Предположения сохранения и равновесия требуют отдельного обоснования в приложении. Предел скорости причинного влияния, квантовое ограничение или гравитационная граница не доказываются.}
+
+\section{\Lang{Separate data, restrictions and their justification}{Разделение данных, ограничений и их обоснования}}
+\label{sec:constraints}
+\Lang{For a declared finite instrument carrier $\mathcal M$, let $R:\mathcal M\to\mathcal Y$ be a calibrated response map. Data $y$ and a deterministic tolerance $\varepsilon\geq0$ define $\mathcal F_\varepsilon(y)=\{M\in\mathcal M:\|R(M)-y\|_\infty\leq\varepsilon\}$. Declare a structural subset $\mathcal S\subseteq\mathcal M$ and a family of hard-bound subsets $\mathcal A_\theta$. The constraint-conditioned completion class is}
+{Для заданного конечного носителя инструментов $\mathcal M$ пусть $R:\mathcal M\to\mathcal Y$ обозначает калиброванное отображение отклика. Данные $y$ и детерминированный допуск $\varepsilon\geq0$ задают $\mathcal F_\varepsilon(y)=\{M\in\mathcal M:\|R(M)-y\|_\infty\leq\varepsilon\}$. Зададим структурное подмножество $\mathcal S\subseteq\mathcal M$ и семейство подмножеств жёстких границ $\mathcal A_\theta$. Класс достраиваний при ограничениях равен}
+\begin{equation}\label{eq:completion}
+ \mathcal C_{\theta,\varepsilon}(y)=\mathcal F_\varepsilon(y)\cap\mathcal S\cap\mathcal A_\theta.
+\end{equation}
+\Lang{The subscript $\theta$ names supplied model information. It is neither inferred by writing~\eqref{eq:completion} nor a physical time coordinate. A constraint may itself be estimated experimentally, but that separate data source and its uncertainty must be stated. ``Physical admissibility'' names an application obligation; the set construction alone cannot discharge it.}
+{Индекс $\theta$ обозначает заданную модельную информацию. Запись~\eqref{eq:completion} не выводит её из данных и не делает координатой физического времени. Само ограничение может оцениваться экспериментально, но требуется указать отдельный источник данных и его неопределённость. «Физическая допустимость» обозначает задачу приложения; сама конструкция множества её не решает.}
+
+\begin{definition}[\Lang{Constraint record}{Паспорт ограничения}]\label{def:record}
+\Lang{A restriction is accompanied by its carrier and units, algebraic condition, physical/model status, source of justification, uncertainty set and allowed relaxation. Absence of any required part is an open obligation, not permission to infer a universal physical law.}
+{Ограничение сопровождается указанием носителя и единиц, алгебраического условия, физического или модельного статуса, источника обоснования, множества неопределённости и допустимого ослабления. Отсутствие необходимого пункта является открытой задачей, а не разрешением выводить универсальный физический закон.}
+\end{definition}
+
+\Lang{Three diagnostics must be kept apart. If $\mathcal F_\varepsilon(y)$ is empty, the data already fail on the declared carrier. If it is nonempty but~\eqref{eq:completion} is empty, at least one added restriction conflicts with the compatible class. If the intersection is a singleton, uniqueness holds only conditional on every used restriction. Dropping a bound while keeping the carrier fixed tests its contribution; changing the carrier is a different model comparison. Such finite conflicts are finite obstructions, not the full-finite defect of WR-II.}
+{Следует различать три диагностики. Если $\mathcal F_\varepsilon(y)$ пусто, данные уже несовместимы с заданным носителем. Если оно непусто, но~\eqref{eq:completion} пусто, хотя бы одно добавленное ограничение конфликтует с совместимым классом. Если пересечение одноэлементно, единственность условна относительно всех использованных ограничений. Снятие границы при фиксированном носителе проверяет её вклад; смена носителя является другим сравнением моделей. Такие конечные конфликты --- конечные препятствия, а не полный конечный дефект WR-II.}
+
+\Lang{A boundary must name its ambient space and topology. Below, ``threshold'' means a change of feasibility as a scalar cap varies with exact data fixed. We do not promote that threshold into a generic fibre-wall theorem; WR-III owns the geometry. A restriction is an inequality in parameter space before it can be interpreted as any spatial wall.}
+{Для границы необходимо назвать объемлющее пространство и топологию. Ниже «порог» означает изменение допустимости при изменении скалярной границы и фиксированных точных данных. Этот порог не объявляется общей теоремой о стенах слоёв; геометрия относится к WR-III. Ограничение сначала является неравенством в пространстве параметров и лишь при дополнительном обосновании может интерпретироваться как пространственная стена.}
+
+\section{\Lang{A finite conservation and reversibility interface}{Конечная схема сохранения и обратимости}}
+\label{sec:markov}
+\Lang{Take $X=S=\{0,\ldots,n-1\}$ and a single immediate outcome of likelihood one. This is an explicit specialization of the WR-V instrument: $I(r,j\mid i)=P_{ij}$. Thus $P_{ij}\geq0$ and $\sum_jP_{ij}=1$. Different prepared input labels are different rows of one transition model. Assume a known distribution $\pi_i>0$, $\sum_i\pi_i=1$, and separately declare detailed balance}
+{Положим $X=S=\{0,\ldots,n-1\}$ и зададим единственный непосредственный исход с правдоподобием один. Это явная специализация инструмента WR-V: $I(r,j\mid i)=P_{ij}$. Следовательно, $P_{ij}\geq0$ и $\sum_jP_{ij}=1$. Разные подготовленные входные метки соответствуют разным строкам одной модели перехода. Предположим известным распределение $\pi_i>0$, $\sum_i\pi_i=1$ и отдельно зададим детальный баланс}
+\begin{equation}\label{eq:balance}
+ \pi_iP_{ij}=\pi_jP_{ji}.
+\end{equation}
+\Lang{It implies stationarity by summing over $i$. This is the standard reversible Markov-chain condition \cite[Section 1.6, Proposition 1.20]{LP}. Stationarity alone is weaker: a directed three-cycle preserves a uniform distribution but violates~\eqref{eq:balance}. We require neither irreducibility nor a physical derivation of an equilibrium bath. Calling a particular physical process reversible would require that extra bridge.}
+{Суммирование по $i$ даёт стационарность. Это стандартное условие обратимой марковской цепи \cite[Section 1.6, Proposition 1.20]{LP}. Одна стационарность слабее: ориентированный трёхцикл сохраняет равномерное распределение, но нарушает~\eqref{eq:balance}. Неприводимость и физическое построение равновесного резервуара не предполагаются. Объявление конкретного физического процесса обратимым потребовало бы дополнительного обоснования.}
+
+\Lang{For supplied label energies $E_i$, exact pathwise conservation is the support condition $P_{ij}=0$ whenever $E_i\ne E_j$. This condition is physically appropriate only if the labels specify the relevant total energy and the step includes no unmodelled work or exchange. It is not derived from a vanishing mean change.}
+{Для заданных энергий меток $E_i$ точное сохранение на каждом переходе означает условие носителя $P_{ij}=0$ при $E_i\ne E_j$. Физическое применение корректно лишь тогда, когда метки задают соответствующую полную энергию, а шаг не включает неучтённой работы или обмена. Это условие не выводится из нулевого среднего изменения.}
+
+\begin{proposition}[\Lang{Mean balance is not pathwise conservation}{Средний баланс не равен сохранению на каждом переходе}]\label{prop:energy}
+\Lang{For row-stochastic $P$ and full-support $\pi$, pathwise conservation of $E$ is equivalent to $\sum_{i,j}\pi_iP_{ij}(E_j-E_i)^2=0$. By contrast, $\pi P=\pi$ always gives $\sum_{i,j}\pi_iP_{ij}(E_j-E_i)=0$, even when energy-changing transitions occur.}
+{Для стохастической по строкам матрицы $P$ и $\pi$ полного носителя сохранение $E$ на каждом переходе эквивалентно $\sum_{i,j}\pi_iP_{ij}(E_j-E_i)^2=0$. Однако из $\pi P=\pi$ всегда следует $\sum_{i,j}\pi_iP_{ij}(E_j-E_i)=0$, даже при наличии переходов с изменением энергии.}
+\end{proposition}
+\begin{proof}
+\Lang{Every summand of the squared expression is nonnegative. It vanishes exactly on the required support because $\pi_i>0$. The mean expression is $(\pi P)E-\pi E$. For a counterexample take $E=(0,1,2)$, uniform $\pi$ and $P_{ij}=1/3$: the mean change is zero but the squared change is $4/3$.}
+{Каждое слагаемое квадратичного выражения неотрицательно. Оно обращается в ноль ровно на требуемом носителе, поскольку $\pi_i>0$. Среднее выражение равно $(\pi P)E-\pi E$. Контрпример: $E=(0,1,2)$, равномерное $\pi$ и $P_{ij}=1/3$; среднее изменение равно нулю, а средний квадрат изменения равен $4/3$.}
+\end{proof}
+
+\Lang{Define equilibrium flows $w_{ij}=\pi_iP_{ij}$. For a declared undirected allowed-edge graph $G$, detailed balance and conservation support give}
+{Определим равновесные потоки $w_{ij}=\pi_iP_{ij}$. Для заданного неориентированного графа допустимых рёбер $G$ детальный баланс и носитель сохранения задают}
+\begin{equation}\label{eq:flows}
+ w_{ij}=w_{ji}\geq0,\qquad
+ w_{ij}=0\ ((i,j)\notin G,\ i\ne j),\qquad
+ w_{ii}=\pi_i-\sum_{j\ne i}w_{ij}\geq0.
+\end{equation}
+\Lang{Only edges between equal energies are allowed if exact conservation is imposed. Self-loops are allowed. Independent edge variables determine all rows simultaneously; they are not independent successor simplices. Each inequality and the energy assignment remains part of the model record.}
+{При точном сохранении допустимы только рёбра между равными энергиями. Петли разрешены. Независимые рёберные переменные одновременно определяют все строки; это уже не независимые последующие симплексы. Каждое неравенство и назначение энергий остаются частью паспорта модели.}
+
+\Lang{A calibrated binary successor probe has click probabilities $f_j\in[0,1]$. For repeated preparations of input $i$ its ideal response is}
+{Калиброванный бинарный последующий зонд имеет вероятности срабатывания $f_j\in[0,1]$. При повторных подготовках входа $i$ его идеальный отклик равен}
+\begin{equation}\label{eq:response}
+ q_i=\sum_jP_{ij}f_j
+ =f_i+\frac{1}{\pi_i}\sum_{j\ne i}w_{ij}(f_j-f_i).
+\end{equation}
+\Lang{These probabilities are not a single-run outcome or exact finite-sample frequencies. Equation~\eqref{eq:response} is affine in the shared edge variables. The inherited WR-V kernel criterion can be applied after eliminating structural equalities; ordinary unconstrained row rank is no longer the whole identification question.}
+{Эти вероятности не являются исходом одного запуска или точными частотами конечной выборки. Уравнение~\eqref{eq:response} аффинно по общим рёберным переменным. Наследуемый критерий ядра WR-V применяется после исключения структурных равенств; обычный ранг несвязанных строк уже не исчерпывает задачу идентификации.}
+
+\section{\Lang{Auditable linear feasibility certificates}{Проверяемые сертификаты линейной допустимости}}
+\label{sec:certificates}
+\Lang{For finite linear restrictions, vectorize the unknown instrument or use edge coordinates. Collect normalization, structural equations and exact data as $Az=d$, and nonnegative coordinates and bounds as $z\geq0$, $Hz\leq h$. With response tolerance, replace exact response rows by the two appropriate inequalities. This gives standard linear feasibility, not a new optimization principle \cite[Sections 2.2.4, 4.3 and 5.8.3]{BV}.}
+{Для конечных линейных ограничений векторизуем неизвестный инструмент либо используем рёберные координаты. Нормировку, структурные уравнения и точные данные соберём в $Az=d$, а неотрицательность координат и границы --- в $z\geq0$, $Hz\leq h$. При допуске отклика точные строки данных заменяются двумя соответствующими неравенствами. Получается стандартная линейная допустимость, а не новый принцип оптимизации \cite[Sections 2.2.4, 4.3 and 5.8.3]{BV}.}
+
+\begin{proposition}[\Lang{A sufficient infeasibility certificate}{Достаточный сертификат несовместимости}]\label{prop:dual}
+\Lang{If vectors $\lambda$ and $\mu\geq0$ satisfy}
+{Если векторы $\lambda$ и $\mu\geq0$ удовлетворяют условиям}
+\begin{equation}\label{eq:dual}
+ A^T\lambda+H^T\mu\geq0,\qquad d^T\lambda+h^T\mu<0,
+\end{equation}
+\Lang{then $\{z\geq0:Az=d,Hz\leq h\}$ is empty.}
+{то $\{z\geq0:Az=d,Hz\leq h\}$ пусто.}
+\end{proposition}
+\begin{proof}
+\Lang{A feasible $z$ would give $0\leq z^T(A^T\lambda+H^T\mu)=d^T\lambda+\mu^THz\leq d^T\lambda+\mu^Th<0$, a contradiction.}
+{Допустимое $z$ дало бы $0\leq z^T(A^T\lambda+H^T\mu)=d^T\lambda+\mu^THz\leq d^T\lambda+\mu^Th<0$, то есть противоречие.}
+\end{proof}
+
+\Lang{This is a one-way certificate with a direct proof; classical theorems of alternatives give broader converse results under their stated formulations. A numerical solver declaring infeasibility without a verified residual or exact witness is not such a certificate. For a nonempty compact polytope, coordinate minima and maxima identify a singleton exactly when every coordinate range is zero. This elementary diagnostic applies after the existence gate, without interpreting solver precision as exact equality.}
+{Это достаточный сертификат с прямым доказательством; классические теоремы альтернатив дают более широкие обратные результаты в своих формулировках. Ответ численного решателя о несовместимости без проверенного остатка или точного свидетельства не является таким сертификатом. Для непустого компактного многогранника минимумы и максимумы координат удостоверяют одноэлементность ровно тогда, когда все координатные диапазоны нулевые. Эта элементарная диагностика применяется после проверки существования, без отождествления точности решателя с точным равенством.}
+
+\Lang{Compactness holds for the full row-stochastic carrier with finitely many closed linear restrictions: entries lie in $[0,1]$. It need not survive a strict requirement such as irreducibility. This distinction becomes decisive at the benchmark threshold.}
+{Компактность сохраняется для полного носителя стохастических по строкам матриц при конечном числе замкнутых линейных ограничений: элементы лежат в $[0,1]$. Она может утрачиваться при строгом требовании, например неприводимости. Это различие оказывается решающим на пороге примера.}
+
+\section{\Lang{Three states: a complete activity-threshold calculation}{Три состояния: полное вычисление порога активности}}
+\label{sec:benchmark}
+\Lang{Set $n=3$, $\pi=(1/3,1/3,1/3)$ and use all undirected edges. If energy conservation is included, all three labels have the same supplied energy; the probe $f$ below is not energy. Detailed balance gives the symmetric row-stochastic family}
+{Положим $n=3$, $\pi=(1/3,1/3,1/3)$ и используем все неориентированные рёбра. Если включено сохранение энергии, все три метки имеют одну заданную энергию; следующий зонд $f$ не обозначает энергию. Детальный баланс задаёт семейство симметричных стохастических по строкам матриц}
+\begin{equation}\label{eq:matrix}
+ P(a,b,c)=\begin{pmatrix}
+ 1-a-b & a & b \\
+ a & 1-a-c & c \\
+ b & c & 1-b-c
+ \end{pmatrix},\qquad
+ \begin{gathered}a,b,c\geq0,\\a+b\leq1,\ a+c\leq1,\ b+c\leq1.\end{gathered}
+\end{equation}
+\Lang{The parameters $a,b,c$ are transition probabilities, three times the corresponding flows. Repeated preparations of all three inputs and one binary probe with $f=(0,1/2,1)$ give}
+{Параметры $a,b,c$ --- вероятности перехода, в три раза превышающие соответствующие потоки. Повторные подготовки всех трёх входов и один бинарный зонд $f=(0,1/2,1)$ дают}
+\begin{equation}\label{eq:means}
+ q=(a/2+b,\;1/2-a/2+c/2,\;1-b-c/2).
+\end{equation}
+\Lang{Fix the exact data $q^*=(1/4,1/2,3/4)$. All three prepared-input responses are specified. Their stationary weighted mean is fixed by $\pi P=\pi$, so they do not supply three independent edge constraints.}
+{Зафиксируем точные данные $q^*=(1/4,1/2,3/4)$. Указаны отклики для всех трёх подготовленных входов. Их стационарное взвешенное среднее фиксировано условием $\pi P=\pi$, поэтому они не задают три независимых ограничения на рёбра.}
+
+\begin{theorem}[\Lang{An ambiguous reversible completion interval}{Неоднозначный интервал обратимых достраиваний}]\label{thm:interval}
+\Lang{The complete feasible class of~\eqref{eq:matrix} with responses $q^*$ is}
+{Полный допустимый класс~\eqref{eq:matrix} с откликами $q^*$ равен}
+\begin{equation}\label{eq:interval}
+ (a,b,c)=(1/6+2t,\;1/6-t,\;1/6+2t),\qquad -1/12\leq t\leq1/6.
+\end{equation}
+\end{theorem}
+\begin{proof}
+\Lang{The middle response gives $c=a$. The first gives $b=1/4-a/2$; the last then follows. Put $a=1/6+2t$. Nonnegative edges require $t\geq-1/12$ and $t\leq1/6$. The diagonal entries are $2/3-t$, $2/3-4t$, $2/3-t$; their nonnegativity adds no stronger bound. Conversely every point of this interval satisfies all constraints and all three responses.}
+{Средний отклик даёт $c=a$. Первый даёт $b=1/4-a/2$; последний тогда следует автоматически. Положим $a=1/6+2t$. Неотрицательность рёбер требует $t\geq-1/12$ и $t\leq1/6$. Диагональные элементы равны $2/3-t$, $2/3-4t$, $2/3-t$; их неотрицательность не добавляет более сильной границы. Обратно, каждая точка этого интервала удовлетворяет всем ограничениям и всем трём откликам.}
+\end{proof}
+
+\Lang{Define stationary activity as the probability that a step changes its label when the input law is $\pi$. Supply an independently justified cap $\nu\geq0$:}
+{Определим стационарную активность как вероятность смены метки за шаг при входном законе $\pi$. Зададим независимо обоснованную границу $\nu\geq0$:}
+\begin{equation}\label{eq:activity}
+ \alpha(P)=\sum_i\pi_i\sum_{j\ne i}P_{ij}
+ =\frac23(a+b+c)=\frac13+2t,\qquad \alpha(P)\leq\nu.
+\end{equation}
+\Lang{This cap is a hard model restriction, not a consequence of $q^*$ or a fitted regularization preference. Minimizing activity without evidence for a hard cap would select a candidate by a decision rule, not establish identifiability.}
+{Эта граница --- жёсткое ограничение модели, а не следствие $q^*$ или предпочтение регуляризации. Минимизация активности без основания для жёсткой границы выбрала бы кандидата по правилу решения, но не установила бы идентифицируемость.}
+
+\begin{theorem}[\Lang{Conditional selection and infeasibility threshold}{Порог условного отбора и несовместимости}]\label{thm:threshold}
+\Lang{With~\eqref{eq:matrix}, exact $q^*$ and the activity cap, the completion class is empty for $\nu<1/6$, is a singleton for $\nu=1/6$, and for $\nu>1/6$ is the nontrivial interval}
+{При~\eqref{eq:matrix}, точном $q^*$ и границе активности класс достраиваний пуст при $\nu<1/6$, одноэлементен при $\nu=1/6$, а при $\nu>1/6$ равен нетривиальному интервалу}
+\begin{equation}\label{eq:capinterval}
+ -1/12\leq t\leq\min\{1/6,\;\nu/2-1/6\}.
+\end{equation}
+\Lang{The singleton matrix is}
+{Единственная матрица на пороге равна}
+\begin{equation}\label{eq:singleton}
+ P_* = P(0,1/4,0)=\begin{pmatrix}
+ 3/4 & 0 & 1/4 \\
+ 0 & 1 & 0 \\
+ 1/4 & 0 & 3/4
+ \end{pmatrix}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+\Lang{Equation~\eqref{eq:activity} converts the cap into $t\leq\nu/2-1/6$. Intersect with~\eqref{eq:interval}. Its left endpoint is admissible precisely when $\nu\geq1/6$. Equality leaves that endpoint alone. For a direct infeasibility certificate, $c=a$ and $a/2+b=1/4$ imply $\alpha=1/6+a\geq1/6$. Combining this with $\alpha\leq\nu<1/6$ gives a strict contradiction. This certificate uses declared detailed balance and the exact responses; dropping either changes the problem.}
+{Уравнение~\eqref{eq:activity} превращает границу в $t\leq\nu/2-1/6$. Пересечём её с~\eqref{eq:interval}. Левый конец допустим ровно при $\nu\geq1/6$. Равенство оставляет только этот конец. Прямой сертификат несовместимости: из $c=a$ и $a/2+b=1/4$ следует $\alpha=1/6+a\geq1/6$. Совместно с $\alpha\leq\nu<1/6$ получается строгое противоречие. Сертификат использует заданный детальный баланс и точные отклики; снятие любого из них меняет задачу.}
+\end{proof}
+
+\begin{corollary}[\Lang{An additional strict assumption changes attainment}{Дополнительное строгое предположение меняет достижимость}]\label{cor:irreducible}
+\Lang{If irreducibility is also required, the threshold class is empty at $\nu=1/6$. For every $\nu>1/6$ it is nonempty and nonunique. The infimum feasible activity is still $1/6$, but it is not attained.}
+{Если дополнительно требуется неприводимость, класс на пороге $\nu=1/6$ пуст. Для каждого $\nu>1/6$ он непуст и неоднозначен. Инфимум допустимой активности по-прежнему равен $1/6$, но не достигается.}
+\end{corollary}
+\begin{proof}
+\Lang{At $t=-1/12$, state 1 is isolated. For every $-1/12<t\leq1/6$, the edges $a=c>0$ connect all states, including the right endpoint where $b=0$. Excluding the left endpoint turns~\eqref{eq:capinterval} into a half-open interval whenever $\nu>1/6$. Its activity values approach $1/6$ from above.}
+{При $t=-1/12$ состояние 1 изолировано. Для каждого $-1/12<t\leq1/6$ рёбра $a=c>0$ связывают все состояния, в том числе на правом конце с $b=0$. Исключение левого конца превращает~\eqref{eq:capinterval} в полуоткрытый интервал при $\nu>1/6$. Активности приближаются к $1/6$ сверху.}
+\end{proof}
+
+\Lang{In the Euclidean topology inherited by~\eqref{eq:interval}, the irreducible interval is nonclosed: a minimizing sequence converges to the excluded $P_*$. This is analogous to WR-II v0.5, Example~10.19 \cite{WRII}, where finite-support profiles approach the excluded all-ones target with residual $1/(N+1)$. The common point is an unattained infimum on a nonclosed admissible set; the carriers and objectives differ.}
+{В евклидовой топологии, наследуемой интервалом~\eqref{eq:interval}, неприводимый интервал незамкнут: минимизирующая последовательность сходится к исключённой $P_*$. Это аналогично примеру~10.19 WR-II v0.5 \cite{WRII}, где профили с конечным носителем приближают исключённый профиль из единиц с невязкой $1/(N+1)$. Общий момент --- недостигаемый инфимум на незамкнутом допустимом множестве; носители и целевые функции различаются.}
+
+\Lang{The same data therefore yield different selection verdicts under different explicit assumptions. This is an audit of the admissibility record, not a paradox or a thermodynamic phase transition. A separately calibrated probe $g=(0,0,1)$ at input 0 would measure $b$ and fix $t=1/6-b$ on the original interval. Such an observation is different evidence from imposing an activity cap.}
+{Поэтому одни данные дают разные вердикты отбора при разных явных предположениях. Это проверка паспорта допустимости, а не парадокс или термодинамический фазовый переход. Отдельный калиброванный зонд $g=(0,0,1)$ при входе 0 измерил бы $b$ и зафиксировал $t=1/6-b$ на исходном интервале. Такое наблюдение является иным свидетельством, чем наложение границы активности.}
+
+\section{\Lang{Response tolerance and uncertain caps}{Допуск отклика и неопределённые границы}}
+\label{sec:uncertainty}
+\begin{proposition}[\Lang{Positive response tolerance defeats the threshold singleton}{Положительный допуск отклика разрушает пороговую одноэлементность}]\label{prop:tolerance}
+\Lang{Retain detailed balance and $\nu=1/6$, but replace exact $q^*$ by $\|Pf-q^*\|_\infty\leq\varepsilon$ for any $\varepsilon>0$. The compatible class is nonunique.}
+{Сохраним детальный баланс и $\nu=1/6$, но заменим точное $q^*$ условием $\|Pf-q^*\|_\infty\leq\varepsilon$ для любого $\varepsilon>0$. Совместимый класс неоднозначен.}
+\end{proposition}
+\begin{proof}
+\Lang{Every $P(0,b,0)$ with $\max\{0,1/4-\varepsilon\}\leq b\leq1/4$ is row-stochastic and symmetric. Its responses are $(b,1/2,1-b)$ and its activity is $2b/3\leq1/6$. The interval has positive length for every $\varepsilon>0$. It is a contained witness family, not a claim to parameterize the entire tolerance class.}
+{Каждая $P(0,b,0)$ с $\max\{0,1/4-\varepsilon\}\leq b\leq1/4$ стохастична по строкам и симметрична. Её отклики равны $(b,1/2,1-b)$, а активность $2b/3\leq1/6$. Интервал имеет положительную длину при каждом $\varepsilon>0$. Это включённое семейство свидетелей, а не параметризация всего класса с допуском.}
+\end{proof}
+
+\Lang{Next keep exact responses but let the independently supplied cap belong to a closed interval $N=[\nu_-,\nu_+]$. With $\mathcal C_\nu=\mathcal C_{\nu,0}(q^*)$, define two different classes:}
+{Теперь сохраним точные отклики, но предположим независимо заданную границу принадлежащей замкнутому интервалу $N=[\nu_-,\nu_+]$. При $\mathcal C_\nu=\mathcal C_{\nu,0}(q^*)$ определим два разных класса:}
+\begin{equation}\label{eq:quantifiers}
+ \mathcal C_{\forall}(N)=\bigcap_{\nu\in N}\mathcal C_\nu,
+ \qquad \mathcal C_{\exists}(N)=\bigcup_{\nu\in N}\mathcal C_\nu.
+\end{equation}
+\Lang{The first imposes admissibility for every possible cap, a robust design requirement. The second retains a candidate if at least one cap permits it. For inference when the actual cap is one unknown member of $N$, its joint feasible set is $\{(P,\nu):\nu\in N,P\in\mathcal C_\nu\}$, whose projection onto $P$ is the union, not the intersection. These are hard-set statements, not Bayesian averaging.}
+{Первый класс требует допустимости для каждой возможной границы и соответствует робастному проектному требованию. Второй сохраняет кандидата, если его допускает хотя бы одна граница. При выводе, когда фактическая граница является одним неизвестным элементом $N$, совместное допустимое множество равно $\{(P,\nu):\nu\in N,P\in\mathcal C_\nu\}$; его проекция на $P$ является объединением, а не пересечением. Это утверждения о жёстких множествах, а не байесовское усреднение.}
+
+\begin{proposition}[\Lang{A unique robust candidate need not be uniquely inferred}{Единственный робастный кандидат может не быть единственным выводом}]\label{prop:quantifiers}
+\Lang{For nested scalar upper caps with attained endpoints, $\mathcal C_\forall(N)=\mathcal C_{\nu_-}$ and $\mathcal C_\exists(N)=\mathcal C_{\nu_+}$. In the benchmark, take $\nu_-=1/6$ and $\nu_+=1/6+\delta$ for any $\delta>0$. The first class is $\{P_*\}$; the second is nonunique.}
+{Для вложенных скалярных верхних границ с достигнутыми концами $\mathcal C_\forall(N)=\mathcal C_{\nu_-}$ и $\mathcal C_\exists(N)=\mathcal C_{\nu_+}$. В примере положим $\nu_-=1/6$ и $\nu_+=1/6+\delta$ для любого $\delta>0$. Первый класс равен $\{P_*\}$, второй неоднозначен.}
+\end{proposition}
+\begin{proof}
+\Lang{Increasing the cap enlarges the class and both endpoints belong to $N$. The intersection is its smallest member and the union its largest. Apply Theorem~\ref{thm:threshold}.}
+{Увеличение границы расширяет класс, а оба конца принадлежат $N$. Пересечение равно наименьшему члену, объединение --- наибольшему. Применим теорему~\ref{thm:threshold}.}
+\end{proof}
+
+\Lang{For a concrete comparison, set $\delta=1/12$, so $N=[1/6,1/4]$, and impose no irreducibility requirement. Then $\mathcal C_\forall(N)=\{P_*\}$, whereas $\mathcal C_\exists(N)$ has $t\in[-1/12,-1/24]$, an interval of length $1/24$. Its right endpoint has $(a,b,c)=(1/12,5/24,1/12)$ and $\alpha=1/4$; its left endpoint is $P_*$. Both have exactly the same $q^*$.}
+{Для конкретного сравнения положим $\delta=1/12$, так что $N=[1/6,1/4]$, и не будем требовать неприводимости. Тогда $\mathcal C_\forall(N)=\{P_*\}$, а $\mathcal C_\exists(N)$ задаётся $t\in[-1/12,-1/24]$, интервалом длины $1/24$. На его правом конце $(a,b,c)=(1/12,5/24,1/12)$ и $\alpha=1/4$; левый конец --- $P_*$. Оба дают в точности те же $q^*$.}
+
+\Lang{For $\nu_-<1/6<\nu_+$, robust feasibility fails but possible feasibility remains. That failure does not prove that the unknown actual cap is inconsistent. More generally, simultaneous uncertainty in energies, support graphs, $\pi$ or calibration matrices need not form a nested family; the endpoint reduction above must not be carried over without proof. Deterministic $\varepsilon$ and $N$ have no statistical coverage guarantee until a sampling and calibration model is supplied.}
+{При $\nu_-<1/6<\nu_+$ робастная допустимость отсутствует, но возможная допустимость сохраняется. Такая неудача не доказывает несовместимости фактической неизвестной границы. В общем случае совместная неопределённость энергий, графов носителя, $\pi$ или калибровочных матриц не обязана задавать вложенное семейство; предыдущее сведение к концам нельзя переносить без доказательства. Детерминированные $\varepsilon$ и $N$ не имеют статистической гарантии покрытия без модели выборки и калибровки.}
+
+\section{\Lang{From a transition boundary to a physical boundary}{От границы переходов к физической границе}}
+\label{sec:physical}
+\Lang{The benchmark establishes a boundary of one declared feasibility problem. At $\nu<1/6$ its exact data cannot be generated by an admissible symmetric matrix with that cap. It does not establish absence of a physical system, because a wrong calibration, a driven nonreversible process, a hidden environment or an inaccurate bound may invalidate the adopted assumptions. Relaxations must be named; they cannot silently count as solutions of the original problem.}
+{Пример устанавливает границу одной заданной задачи допустимости. При $\nu<1/6$ её точные данные не могут порождаться допустимой симметричной матрицей с такой границей. Отсутствие физической системы не устанавливается: ошибочная калибровка, управляемый необратимый процесс, скрытая среда или неточная граница могут опровергнуть исходные предположения. Ослабления требуется называть; они не могут незаметно считаться решениями исходной задачи.}
+
+\Lang{The programme's physical categories remain distinct obligations. The following table classifies interfaces to be built, not physical walls already certified here.}
+{Физические категории программы остаются разными задачами. Следующая таблица классифицирует схемы, которые нужно построить, а не физические стены, уже удостоверенные здесь.}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}YY@{}}\toprule
+\Lang{Category}{Категория}&\Lang{Required bridge}{Необходимое обоснование}&\Lang{Status in this draft}{Статус в этой редакции}\\\midrule
+\Lang{Conservation}{Сохранение}&\Lang{Complete conserved quantity and closed-system step.}{Полная сохраняемая величина и шаг замкнутой системы.}&\Lang{Conditional finite support rule; not derived from mean balance.}{Условное конечное правило носителя; не выведено из среднего баланса.}\\
+\Lang{Equilibrium}{Равновесие}&\Lang{Known $\pi$ and independently justified detailed balance.}{Известное $\pi$ и независимое обоснование детального баланса.}&\Lang{Classical reversible model; no entropy or dissipation theorem.}{Классическая обратимая модель; теоремы об энтропии и диссипации нет.}\\
+\Lang{Causal}{Причинная}&\Lang{Spacetime/events, durations and operational influence relation.}{Пространство-время/события, длительности и операционное влияние.}&\Lang{Open; no speed bound proved.}{Открытая задача; предел скорости не доказан.}\\
+\Lang{Quantum}{Квантовая}&\Lang{Hilbert spaces, admissible instruments and measured responses.}{Гильбертовы пространства, допустимые инструменты и измеренные отклики.}&\Lang{Open; classical positivity is not complete positivity.}{Открытая задача; классическая положительность не является полной положительностью.}\\
+\Lang{Gravitational}{Гравитационная}&\Lang{Declared field equations, global conditions and data map.}{Заданные уравнения поля, глобальные условия и отображение данных.}&\Lang{Open; no cosmological boundary.}{Открытая задача; космологической границы нет.}\\
+\Lang{Model closure}{Замкнутость модели}&\Lang{Audit hidden carriers and allowed relaxations.}{Проверка скрытых носителей и допустимых ослаблений.}&\Lang{Explicit failure diagnostics; no claim of an exhaustive world class.}{Явная диагностика неудач; полнота класса миров не заявлена.}\\\bottomrule
+\end{tabularx}\end{center}
+
+\Lang{Even $P_*$ is not a unique complete world. If a declared full carrier is $\mathcal W=\{(P,h):h\in\{0,1\}\}$ and all present responses and restrictions ignore $h$, the surviving transition singleton lifts to two full candidates. This is the inherited WR-I/IV projection distinction, not a new hidden-world theorem. A physical extension must define the full carrier, projection, existence conditions and observational meaning of $h$.}
+{Даже $P_*$ не является единственным полным миром. Если задан полный носитель $\mathcal W=\{(P,h):h\in\{0,1\}\}$, а все нынешние отклики и ограничения игнорируют $h$, одноэлементный класс переходов поднимается к двум полным кандидатам. Это наследуемое различие проекции WR-I/IV, а не новая теорема о скрытых мирах. Физическое расширение должно определить полный носитель, проекцию, условия существования и наблюдательный смысл $h$.}
+
+\section{\Lang{Provenance, failure criteria and programme handoff}{Происхождение, критерии неудачи и передача следующему этапу}}
+\label{sec:handoff}
+\Lang{The proofs use finite positivity, affine elimination, interval intersections and monotonicity of a scalar cap. These established tools have no priority claim. Reversible chains are standard \cite{LP}, and linear certificate methods are standard \cite{BV}. The contribution is an explicit constraint record and a worked transition-completion benchmark that separates observational identification, externally conditioned selection and uncertain-constraint inference. Exhaustive originality of this framework is not certified.}
+{Доказательства используют конечную положительность, аффинное исключение, пересечения интервалов и монотонность скалярной границы. Приоритет этих известных инструментов не заявляется. Обратимые цепи стандартны \cite{LP}, как и методы линейных сертификатов \cite{BV}. Вклад состоит в явном паспорте ограничений и полностью вычисленном примере достраивания переходов, который разделяет наблюдательную идентификацию, отбор с внешними условиями и вывод при неопределённых ограничениях. Исчерпывающая оригинальность этой схемы не удостоверяется.}
+
+\Lang{A scientific application must fail its claim gate if an asserted conserved label omits exchanged energy, detailed balance is assumed from stationarity alone, an activity preference is called a measured hard bound, strict constraints are treated as closed, or a robust intersection is confused with projection over an unknown cap. The benchmark can be falsified as a model of an apparatus by independently measured transition probabilities violating its structural assumptions. Such a failure rejects that model, not physical existence.}
+{Научное приложение не проходит проверку утверждений, если заявленная сохраняемая метка не учитывает обмен энергией, детальный баланс предполагается из одной стационарности, предпочтение активности называется измеренной жёсткой границей, строгие ограничения считаются замкнутыми либо робастное пересечение смешивается с проекцией по неизвестной границе. Пример может быть опровергнут как модель прибора независимо измеренными вероятностями переходов, нарушающими его структурные предположения. Такая неудача отвергает модель, а не физическое существование.}
+
+\Lang{The next work packages are: (i) independently calibrate a real transition system and justify its constraint record; (ii) build deterministic or statistical uncertainty sets with stated coverage; (iii) construct one additional causal, quantum or gravitational interface without importing local labels as full worlds. They depend on the declared carrier and evidence, not on numbering alone.}
+{Следующие пакеты работ: (i) независимо откалибровать реальную систему переходов и обосновать паспорт её ограничений; (ii) построить детерминированные или статистические множества неопределённости с указанным покрытием; (iii) построить одну дополнительную причинную, квантовую или гравитационную схему без превращения локальных меток в полные миры. Они зависят от заданного носителя и свидетельств, а не от одного номера статьи.}
+
+\begingroup\raggedright
+\Lang{WR-VII may inherit explicitly justified constrained classes to study energy--time frontiers, after assigning physical units and protocols. The dimensionless $\nu$ here is not such a frontier. WR-VIII requires real cosmological response maps; WR-IX requires accessible protocol and resource classes. Neither branch is opened or solved by the present finite calculation. WREH remains its own programme and community, distinct from Boundary Compensation.}
+{WR-VII может наследовать явно обоснованные классы ограничений для исследования энергетико-временных рубежей после задания физических единиц и протоколов. Безразмерное $\nu$ здесь не является таким рубежом. WR-VIII требует реальных космологических отображений отклика; WR-IX --- классов доступных протоколов и ресурсов. Настоящее конечное вычисление не открывает и не решает эти ветви. WREH остаётся самостоятельной программой и сообществом, отдельным от Boundary Compensation.}
+\par\endgroup
+
+\Lang{The supplied exact-arithmetic script verifies matrices, means, activity, threshold cases, irreducibility and tolerance witnesses. The offline bilingual HTML displays the exact-response interval and uncertain-cap quantifiers. Computation illustrates and checks finite witnesses; no theorem uses numerical output as a premise. This v0.2 is REVIEWABLE\_DRAFT, with no deposit, DOI, external peer review or journal-readiness claim.}
+{Приложенный скрипт точной арифметики проверяет матрицы, средние, активность, пороговые случаи, неприводимость и свидетелей допуска. Автономный двуязычный HTML показывает интервал точных откликов и кванторы неопределённой границы. Вычисление иллюстрирует и проверяет конечные свидетельства; ни одна теорема не использует численный результат как предпосылку. Статус v0.2 --- REVIEWABLE\_DRAFT, без депозита, DOI, внешнего рецензирования или заявления о журнальной готовности.}
+
+\begingroup\raggedright
+\begin{thebibliography}{9}
+\bibitem{WRI} A. A. Malachevsky. \emph{Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations}. WR-I, WREH, v0.3 (2026). \href{https://doi.org/10.5281/zenodo.23210258}{doi:10.5281/zenodo.23210258}.
+\bibitem{WRII} A. A. Malachevsky. \emph{Finite Consistency and Global World Realizability}. WR-II, WREH, v0.5 (2026). \href{https://doi.org/10.5281/zenodo.23224154}{doi:10.5281/zenodo.23224154}.
+\bibitem{WRIII} A. A. Malachevsky. \emph{Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls}. WR-III, WREH, v0.6 (2026). \href{https://doi.org/10.5281/zenodo.23228682}{doi:10.5281/zenodo.23228682}.
+\bibitem{WRIV} A. A. Malachevsky. \emph{Response-Conditioned Global Completion and the Status of the Past}. WR-IV, WREH, v0.6 (2026). \href{https://doi.org/10.5281/zenodo.23248138}{doi:10.5281/zenodo.23248138}.
+\bibitem{WRV} A. A. Malachevsky. \emph{Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class}. WR-V, WREH, mathematical draft v0.3 (2026), commit \texttt{d0afad6}. \href{https://github.com/AIDevelopersMonster/WREH/tree/d0afad65108abee8b561e02af6fe3392c6057487/papers/WR-V/draft-v0.3}{Repository snapshot}. No DOI.
+\bibitem{LP} D. A. Levin and Y. Peres, with contributions by E. L. Wilmer. \emph{Markov Chains and Mixing Times}, second edition. American Mathematical Society (2017). Section 1.6. \href{https://pages.uoregon.edu/dlevin/MARKOV/}{Author's official book page}.
+\bibitem{BV} S. Boyd and L. Vandenberghe. \emph{Convex Optimization}. Cambridge University Press (2004). Sections 2.2.4, 4.3, 5.8.3. \href{https://web.stanford.edu/~boyd/cvxbook/}{Authors' official book page}.
+\end{thebibliography}\endgroup

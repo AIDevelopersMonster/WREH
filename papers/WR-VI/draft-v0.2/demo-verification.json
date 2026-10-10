@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "constraint_cases": 192,
+  "concrete_quantifier_preset": "PASS",
+  "preset_expected_interval": [
+    "1/6",
+    "1/4"
+  ],
+  "languages": [
+    "ru",
+    "en"
+  ],
+  "viewport_checks": [
+    "desktop 1360px",
+    "mobile 390px"
+  ],
+  "keyboard": "PASS",
+  "javascript_errors": [],
+  "external_page_requests": [],
+  "browser": "155.0.8059.39",
+  "visual_review": "PASS",
+  "visually_inspected_views": [
+    "desktop EN",
+    "desktop RU",
+    "mobile EN",
+    "mobile RU"
+  ]
+}

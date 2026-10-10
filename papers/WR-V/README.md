@@ -49,6 +49,8 @@ WR-V inherits response/compatibility discipline and adds experimental transition
 
 The next scientific gate is review of this new interface and proofs, with a problem-specific novelty audit before making a stronger research claim. REVIEWABLE_DRAFT does not mean publication-ready.
 
+On 9 October 2026 the author separately instructed opening [WR-VI](../WR-VI/README.md). It is a stacked successor draft; this instruction leaves WR-V v0.3 and its publication/review status unchanged.
+
 ## Revision history
 
 v0.3 (9 October 2026) distinguishes a finite probe obstruction from the full-finite WR-II defect, uses checked WR-IV references, and separates instrument support from global trajectory lifts. It adds a provenance table and explicit sampling/quantum/decision obligations. Review response and source checks are recorded in the new audit.

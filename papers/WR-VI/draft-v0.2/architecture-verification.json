@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "baseline_commit": "5c579262b9d1e99b6f93c0d8122a33ed1ae63d26",
+  "upstream_scientific_files_byte_comparison": 144,
+  "historical_WR_VI_v01_files_byte_comparison": 21,
+  "unchanged_proof_blocks": 7,
+  "unchanged_numbered_equations": 12,
+  "unchanged_bibliographic_entries": 7,
+  "canonical_title_preserved": true,
+  "WR_V_status": "unchanged review draft; no merge or DOI",
+  "stacked_PR_base": "paper-wr-v-v0.1-spine",
+  "WREH_programme_and_community": true,
+  "downstream_WR_VII_IX": "planned; not opened",
+  "scope": "review clarifications only; no claim expansion"
+}
