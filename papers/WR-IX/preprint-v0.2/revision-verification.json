@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "unchanged_environments": {
+    "proof": 8,
+    "equation": 12,
+    "proposition": 5,
+    "theorem": 2,
+    "corollary": 1,
+    "example": 2
+  },
+  "original_body_sha256": "f3dcc00e9936228a0e8d972162ac0a4e3efa974575f3112c44edd9941a7bdedc",
+  "new_body_sha256": "f4ddda19fcc7a7f38b6a768cdb6c0843651ba236519ffce827217e3411b1e646",
+  "resource_infima": "Both attained at n=2: E=2Ed, T=2log(2)/H0; derivative (n-1-log n)/(n-1)^2 >0 for n>1",
+  "unattained_infimum": "inf_n S_infinity(n)=L",
+  "uniform_obstruction": "Resource suprema are infinite",
+  "review_source_status": "Supplied text; reviewer independence unverified",
+  "claim_set_change": "clarifies, no expansion",
+  "canonical_title_unchanged": true,
+  "publication_metadata_update": "WR-V and WR-VII deposits directly verified on 10 October; bibliography/status corrected; immutable math blocks unchanged"
+}

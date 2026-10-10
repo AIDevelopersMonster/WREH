@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scenarios": 505,
+  "languages": [
+    "EN",
+    "RU"
+  ],
+  "viewports": [
+    "1360x1024",
+    "390x844"
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "horizontal_overflow": false,
+  "independent_span_check": "Simpson integration, 800 intervals",
+  "visual_review": "PASS",
+  "visual_review_scope": "Assistant inspection of both languages and all page/viewport renders; not independent external scientific review",
+  "visual_render_sha256": {
+    "desktop-en.png": "e495605a66fadbf65f7c713741cc443a51708bdaa336a04f75431c05a7352079",
+    "desktop-ru.png": "ce7e432bb356adf39b2ae397555efd7d9e0ba238c79e8eedc65cd4a84217d30f",
+    "mobile-en.png": "3aa4808c4f7daa15c4380c751ebfeff7c8518cc595320e80e8ca37003638274a",
+    "mobile-ru.png": "bea6ffe06ff47fa74dea694ade4bf07bf959a59aaa78b5a46937282ed19d5d2f"
+  }
+}

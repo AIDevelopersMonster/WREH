@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scenarios": 505,
+  "languages": [
+    "EN",
+    "RU"
+  ],
+  "viewports": [
+    "1360x1024",
+    "390x844"
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "horizontal_overflow": false,
+  "independent_span_check": "Simpson integration, 800 intervals",
+  "visual_review": "PASS",
+  "screenshots_inspected": [
+    "desktop-ru",
+    "desktop-en",
+    "mobile-ru",
+    "mobile-en"
+  ]
+}

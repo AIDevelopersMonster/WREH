@@ -1,0 +1,28 @@
+{
+  "paper": "WR-IX",
+  "version": "0.2",
+  "date": "2026-10-10",
+  "source_base_commit": "3963c3b71f464b7de85750fd4a51d680943d5162",
+  "base_branch": "paper-wr-viii-v0.2-spine",
+  "upstream_pr": 9,
+  "upstream_status": "open draft, stacked on PR #8",
+  "wr_viii_version_doi": "10.5281/zenodo.23266980",
+  "wr_viii_deposit_verified": true,
+  "wr_vii_doi": "10.5281/zenodo.23264253",
+  "wr_vii_deposit_status": "author-reported; version/files pending direct verification",
+  "review_type": "AI-assisted automated technical audit; independent external scientific peer review not established",
+  "frozen_upstream_sources_modified": false,
+  "first_cycle": "final technical draft; not certification that all nine are published",
+  "revision_base_commit": "ab79c05433dd50a6a51385709492e26e6e9a3cfc",
+  "revision_source_ref": "ab79c05433dd50a6a51385709492e26e6e9a3cfc",
+  "prior_version": "papers/WR-IX/draft-v0.1",
+  "review_input": "User-supplied reviewer text; authorship, independence and method not independently verified",
+  "release_status": "PUBLICATION_READY",
+  "release_meaning": "Technical preprint package; no established independent external peer review or deposit",
+  "upstream_publication_reconciliation": {
+    "WR-V": "10.5281/zenodo.23251956 / v0.3: archive, file hashes, PDF text/rasters verified",
+    "WR-VII": "10.5281/zenodo.23264253 / v0.2: archive and separate PDFs byte-verified",
+    "checked_at": "2026-10-10",
+    "reference_commit": "b413956ea8932b662cdb37c2af9ac4c7615bde7b"
+  }
+}

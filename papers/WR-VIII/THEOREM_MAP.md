@@ -1,3 +1,5 @@
+> Current publication identity: WR-VIII v0.2 is PUBLISHED / FROZEN, DOI 10.5281/zenodo.23266980; see the post-publication verification under reviews/WR-VIII/. The source-map text below retains the release-preparation context; the seven proofs and all equation/result numbers are unchanged.
+
 # WR-VIII v0.2 — result and dependency map
 
 Canonical title: **The Cosmological Fibre: Universes Compatible with Our Universe Today**. Status PREPRINT_READY (technical package); external scientific peer review is not established. Kinematic background, finite synthetic model and explicit restricted global lifts; no actual survey fit or full-world identification.

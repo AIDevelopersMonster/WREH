@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-10",
+  "record_id": 23264253,
+  "version_doi": "10.5281/zenodo.23264253",
+  "publication_date": "2026-10-09",
+  "source_version": "0.2",
+  "version_basis": "Versioned file names and archive sources; explicit version field missing from public metadata",
+  "source_reference": "b413956ea8932b662cdb37c2af9ac4c7615bde7b",
+  "archive_repository_blob_matches": 34,
+  "archive_files": 34,
+  "archive_manifest_sha256": "PASS",
+  "all_advertised_file_checksums": "PASS",
+  "files": [
+    {
+      "file": "WREH_WR-VII_Review_Package_v0.2_EN-RU.zip",
+      "bytes": 406125,
+      "md5": "bb06407984bad659ee77558ff2e73d3b",
+      "sha256": "faafb889c47608e9636e0bfe781972ba8cab520911a5cea5be0edf4e8c7eb402"
+    },
+    {
+      "file": "WREH_WR-VII_Draft_v0.2_EN.pdf",
+      "bytes": 106699,
+      "md5": "8191a547cd7e5db4fa431ef95b150dcf",
+      "sha256": "f67385143b66b4e89e0b172042b5163b44c2a56d08994c20be3fa571e4f1d203"
+    },
+    {
+      "file": "WREH_WR-VII_Draft_v0.2_RU.pdf",
+      "bytes": 116201,
+      "md5": "8813d8d8f9844751586052b0f4badce4",
+      "sha256": "042d8b08a7888ea369403c6437d4c4399acaae35c1b3d16e92c7d107f850b79f"
+    }
+  ],
+  "standalone_vs_archive": [
+    {
+      "file": "WREH_WR-VII_Draft_v0.2_EN.pdf",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "WREH_WR-VII_Draft_v0.2_RU.pdf",
+      "byte_identical_to_archive": true
+    }
+  ],
+  "external_peer_review": "Not established by deposit",
+  "frozen_sources": "Unchanged"
+}

@@ -1,0 +1,49 @@
+{
+  "record": 23266980,
+  "doi": "10.5281/zenodo.23266980",
+  "file_checks": [
+    {
+      "file": "WREH_WR-VIII_Preprint_v0.2_EN.pdf",
+      "bytes": 177582,
+      "md5_ok": true,
+      "sha256": "93afb887be5c814b190f2efbdabe0e4b45b0a4d2077decf28ded1240a32c2612"
+    },
+    {
+      "file": "WREH_WR-VIII_Preprint_v0.2_RU.pdf",
+      "bytes": 186720,
+      "md5_ok": true,
+      "sha256": "e27de86ab10c77bbf6b7bf262aa9388b3fdd3a0d6a5943c542fb2420ec6208a8"
+    },
+    {
+      "file": "WREH_WR-VIII_Publication_Package_v0.2_EN-RU.zip",
+      "bytes": 665163,
+      "md5_ok": true,
+      "sha256": "455b998f251f42b9f3c69f4dcefa604a02270c52e671c7c65632c22fc73a039e"
+    }
+  ],
+  "pdf_comparison": {
+    "EN": {
+      "pages": 9,
+      "scientific_text_identical": true,
+      "all_page_rasters_700px_identical": true,
+      "bytes_identical": false,
+      "c2pa_marker": true
+    },
+    "RU": {
+      "pages": 10,
+      "scientific_text_identical": true,
+      "all_page_rasters_700px_identical": true,
+      "bytes_identical": false,
+      "c2pa_marker": true
+    }
+  },
+  "archive_byte_identical": true,
+  "checked_at_utc": "2026-10-09T22:12:32.330066+00:00",
+  "frozen_source_commit": "3963c3b71f464b7de85750fd4a51d680943d5162",
+  "metadata_followups": [
+    "Title has missing initial letters in The and World",
+    "Keyword starts LRW instead of FLRW",
+    "Explicit metadata.version absent; version identified by file names and exact prepared archive",
+    "Record CC BY 4.0; archive explicitly distinguishes research content CC BY 4.0 and executable code MIT"
+  ]
+}

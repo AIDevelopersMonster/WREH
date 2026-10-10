@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checks": [
+    "finite double equality",
+    "no positive period with Emax=Ed",
+    "no positive period at zero deadline",
+    "causal endpoint strictly unreached at t=0",
+    "causal endpoint strictly unreached at t=1",
+    "causal endpoint strictly unreached at t=2",
+    "causal endpoint strictly unreached at t=10",
+    "causal endpoint strictly unreached at t=20",
+    "endpoint residual at t=100",
+    "bounded-error equality overlaps",
+    "strictly larger bounded-error gap disjoint",
+    "tolerance nontransitivity",
+    "fair isolated marginal 0,0",
+    "fair isolated marginal 0,1",
+    "fair isolated marginal 1,0",
+    "fair isolated marginal 1,1",
+    "transcript detects dependence",
+    "different latent mechanisms, common adaptive transcript",
+    "two actions exceed individual-only energy certificate",
+    "noncompact unresolved tail T=0",
+    "noncompact unresolved tail T=1",
+    "noncompact unresolved tail T=100",
+    "infimum equality is compatible with every return",
+    "common exclusion uses supremum",
+    "same compact tail changes finite span value"
+  ],
+  "count": 25,
+  "review_type": "AI-assisted adversarial technical audit; not independent external peer review",
+  "infinite_tail_claims": "Analytic manuscript proofs, not sampling."
+}

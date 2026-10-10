@@ -11,10 +11,10 @@ WREH develops a mathematically explicit language for response-defined world spac
 - **Programme:** ACTIVE
 - **Repository:** public programme repository
 - **Founding document:** WREH-00 — *Manifesto and Research Programme*
-- **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6, WR-VI v0.2
-- **Latest author-reported publication:** WR-VII, DOI [10.5281/zenodo.23264253](https://doi.org/10.5281/zenodo.23264253); deposited record/version/files pending direct verification
-- **Current technical work:** WR-VIII v0.2 — **PREPRINT_READY (technical package)**; bilingual publication files prepared, no VIII DOI yet; upstream WR-V v0.3 remains a separate review draft
-- **Next scientific gate:** external scientific review of the explicit FLRW distance/rate completion, calibration and restricted global lifts; real catalogue/covariance, matter and perturbation inputs are needed for observational inference
+- **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6, WR-V v0.3, WR-VI v0.2, WR-VII v0.2, WR-VIII v0.2
+- **Latest verified publication:** WR-VIII v0.2, DOI [10.5281/zenodo.23266980](https://doi.org/10.5281/zenodo.23266980); public API and all three file checksums verified. WR-V v0.3 and WR-VII v0.2 deposits also directly verified on 10 October
+- **Current technical work:** WR-IX v0.2 — **PUBLICATION_READY (technical preprint package)**; final technical article of the first cycle, bilingual LaTeX/PDF, proofs and offline demonstration; [saved Zenodo draft](https://zenodo.org/records/23272637?preview=1), reserved DOI 10.5281/zenodo.23272637, publication pending author confirmation; V/VII deposited packages directly verified
+- **Next scientific gate:** external scientific review of the explicit observer access record, winding protocol, time--energy frontier and future-tail construction; real apparatus/matter inputs are required for physical application
 
 ## Quick navigation
 
@@ -39,16 +39,20 @@ WREH develops a mathematically explicit language for response-defined world spac
 
 - [WR-IV — published bilingual preprint](papers/WR-IV/README.md)
 - [WR-IV publication identity and metadata check](reviews/WR-IV/WREH_WR-IV_Post_Publication_Check_v0.6.md)
-- [WR-V — experimental transition draft](papers/WR-V/README.md)
+- [WR-V — published experimental transition preprint](papers/WR-V/README.md)
 - [WR-V result/dependency map](papers/WR-V/THEOREM_MAP.md)
 - [WR-VI — The Aquarium Bounds](papers/WR-VI/README.md)
 - [WR-VI result/dependency map](papers/WR-VI/THEOREM_MAP.md)
 - [WR-VI publication identity check](reviews/WR-VI/WREH_WR-VI_Post_Publication_Check_v0.2.md)
 - [WR-VII — Energy-Time Frontiers](papers/WR-VII/README.md)
 - [WR-VII result/dependency map](papers/WR-VII/THEOREM_MAP.md)
-- [WR-VII publication check status](reviews/WR-VII/WREH_WR-VII_Post_Publication_Check_2026-10-09.md)
+- [WR-VII completed deposited-file check](reviews/WR-VII/WREH_WR-VII_Post_Publication_Check_v0.2_2026-10-10.md)
 - [WR-VIII — The Cosmological Fibre](papers/WR-VIII/README.md)
 - [WR-VIII result/dependency map](papers/WR-VIII/THEOREM_MAP.md)
+- [WR-VIII deposited-file verification](reviews/WR-VIII/WREH_WR-VIII_Post_Publication_Check_v0.2.md)
+- [WR-IX — Epistemic Horizons](papers/WR-IX/README.md)
+- [WR-IX result/dependency map](papers/WR-IX/THEOREM_MAP.md)
+- [WR-IX v0.2 reviewer response](reviews/WR-IX/WREH_WR-IX_Reviewer_Response_v0.2_EN-RU.md)
 
 ## Core mathematical idea
 
@@ -91,7 +95,7 @@ hidden structures
 
 Boundary Compensation (BC) and WREH remain distinct programmes. No finite-dimensional BC gap, wall, fibre, atlas, or parameter flow is automatically interpreted as physical energy, spacetime, cosmological structure, time, or dynamics.
 
-## Planned technical sequence
+## First technical sequence
 
 1. **WR-I** — Response-Defined World Spaces
 2. **WR-II** — Finite Consistency and Global World Realizability
@@ -103,7 +107,7 @@ Boundary Compensation (BC) and WREH remain distinct programmes. No finite-dimens
 8. **WR-VIII** — The Cosmological Fibre
 9. **WR-IX** — Epistemic Horizons
 
-The sequence is obligation-driven. Numbering does not by itself authorize a new paper or claim.
+Technical drafting of the nine-article first cycle is complete. Publication, independent review and PR integration remain separate gates: V and VII deposited files are now directly verified; all open PR dependencies remain separate. The sequence is obligation-driven; numbering does not authorize a new claim.
 
 ## Contribution discipline
 
@@ -134,4 +138,4 @@ Research content is [CC BY 4.0](LICENSE-CONTENT.md); executable scripts and HTML
 ---
 
 **Repository:** https://github.com/AIDevelopersMonster/WREH  
-**State:** ACTIVE — 2026-10-09
+**State:** ACTIVE — 2026-10-10

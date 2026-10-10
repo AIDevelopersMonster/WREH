@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "wreh-wrix-verification",
+  "version": "0.1.0",
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "scripts": {
+    "verify": "node scripts/verify_demo.cjs"
+  }
+}

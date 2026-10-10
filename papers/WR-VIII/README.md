@@ -1,3 +1,5 @@
+> Publication update (9 October 2026): **PUBLISHED / FROZEN v0.2**, DOI [10.5281/zenodo.23266980](https://doi.org/10.5281/zenodo.23266980). API, three deposited MD5 hashes, archive identity and all EN/RU scientific text/page rasters verified. [Post-publication report](../../reviews/WR-VIII/WREH_WR-VIII_Post_Publication_Check_v0.2.md). Historical pre-deposit descriptions below are retained. PR #9 is still open; external peer review is not established.
+
 # WR-VIII — The Cosmological Fibre
 
 **Universes Compatible with Our Universe Today**  

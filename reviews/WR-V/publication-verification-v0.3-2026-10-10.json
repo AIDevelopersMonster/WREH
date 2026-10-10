@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-10",
+  "record_id": 23251956,
+  "version_doi": "10.5281/zenodo.23251956",
+  "publication_date": "2026-10-09",
+  "source_version": "0.3",
+  "version_basis": "Versioned file names and archive sources; explicit version field missing from public metadata",
+  "source_reference": "b413956ea8932b662cdb37c2af9ac4c7615bde7b",
+  "archive_repository_blob_matches": 28,
+  "archive_files": 28,
+  "archive_manifest_sha256": "PASS",
+  "all_advertised_file_checksums": "PASS",
+  "files": [
+    {
+      "file": "WREH_WR-V_Review_Package_v0.3_EN-RU.zip",
+      "bytes": 268112,
+      "md5": "c8f76406253b2ffb18403fdd943e925f",
+      "sha256": "bb13dab98191d831dfff81d24dc7d452f89df4d390ebb62369cd0f51a7b93b81"
+    },
+    {
+      "file": "WREH_WR-V_Demo_v0.3_EN-RU.html",
+      "bytes": 13660,
+      "md5": "cc6f82f51ee8716d42075f5e32e225cc",
+      "sha256": "bc33382fc0b2f47e6cf5dbbb3ef462ed8889c237f3ebcaac0c4a4038ed0cb29a"
+    },
+    {
+      "file": "WREH_WR-V_Draft_v0.3_RU.pdf",
+      "bytes": 156916,
+      "md5": "8f3c8e44f48b662586766c7442961619",
+      "sha256": "78bf7d02ae930c6f008f4a0eb48510c8dcf1f0c8d9930867907b8fe3e63e3017"
+    },
+    {
+      "file": "WREH_WR-V_Draft_v0.3_EN.pdf",
+      "bytes": 145659,
+      "md5": "7a638619c7952d3a5fc1bc676157369b",
+      "sha256": "17ad186cbc7ec042bf48389567731071154b5e977071e81e02913fc47c24bcec"
+    }
+  ],
+  "standalone_vs_archive": [
+    {
+      "file": "WREH_WR-V_Demo_v0.3_EN-RU.html",
+      "byte_identical_to_archive": true
+    },
+    {
+      "file": "WREH_WR-V_Draft_v0.3_EN.pdf",
+      "byte_identical_to_archive": false
+    },
+    {
+      "file": "WREH_WR-V_Draft_v0.3_RU.pdf",
+      "byte_identical_to_archive": false
+    }
+  ],
+  "external_peer_review": "Not established by deposit",
+  "frozen_sources": "Unchanged",
+  "pdf_scientific_identity": [
+    {
+      "language": "EN",
+      "scientific_text_equal": true,
+      "pages": 10,
+      "all_700px_rasters_equal": true,
+      "c2pa_markers_in_deposited": true
+    },
+    {
+      "language": "RU",
+      "scientific_text_equal": true,
+      "pages": 11,
+      "all_700px_rasters_equal": true,
+      "c2pa_markers_in_deposited": true
+    }
+  ]
+}
