@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "scope": "Three synthetic state-dependent positioning witnesses in natural units; no new theorem or apparatus data. Static formulas only.",
+  "cases": [
+    {
+      "case": "transverse frontier equivalent energy statistics",
+      "levels": [
+        -0.5,
+        0.5
+      ],
+      "hbar": 1,
+      "diameter": 1.0,
+      "spread": 0.49999999999999994,
+      "mean_above_ground": 0.5,
+      "lower_times": {
+        "diameter": 3.141592653589793,
+        "Mandelstam_Tamm": 3.1415926535897936,
+        "Margolus_Levitin": 3.141592653589793
+      },
+      "orthogonalization_time": 3.141592653589793
+    },
+    {
+      "case": "unused high level makes diameter certificate loose",
+      "levels": [
+        0,
+        0.1,
+        1
+      ],
+      "hbar": 1,
+      "diameter": 1,
+      "spread": 0.05000000000000002,
+      "mean_above_ground": 0.04999999999999999,
+      "lower_times": {
+        "diameter": 3.141592653589793,
+        "Mandelstam_Tamm": 31.41592653589792,
+        "Margolus_Levitin": 31.41592653589794
+      },
+      "orthogonalization_time": 31.41592653589793
+    },
+    {
+      "case": "mean energy does not uniformly improve diameter",
+      "levels": [
+        0,
+        1,
+        2
+      ],
+      "hbar": 1,
+      "diameter": 2,
+      "spread": 0.5000000000000009,
+      "mean_above_ground": 1.4999999999999996,
+      "lower_times": {
+        "diameter": 1.5707963267948966,
+        "Mandelstam_Tamm": 3.1415926535897873,
+        "Margolus_Levitin": 1.047197551196598
+      },
+      "orthogonalization_time": 3.141592653589793
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "baseline_commit": "2865474c79a120f29cda754d1137cb3939adadfa",
+  "upstream_scientific_files_byte_comparison": 186,
+  "historical_WR_VI_v01_files": 21,
+  "historical_WR_VI_v02_files": 21,
+  "canonical_title_preserved": true,
+  "WR_V_status": "unchanged review draft; no merge, publication or DOI established",
+  "WR_VI_status": "published v0.2; assigned DOI verified separately; PR7 remains draft",
+  "stacked_PR_base": "paper-wr-vi-v0.1-spine",
+  "WREH_programme_and_community": true,
+  "downstream_WR_VIII_IX": "planned; not opened",
+  "scope": "new declared quantum response carrier; no full-world or universal physical boundary inference"
+}

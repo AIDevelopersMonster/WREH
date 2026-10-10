@@ -1,0 +1,50 @@
+{
+  "record": 23254619,
+  "doi": "10.5281/zenodo.23254619",
+  "files": [
+    {
+      "file": "WREH_WR-VI_Draft_v0.2_EN.pdf",
+      "published_bytes": 124503,
+      "published_checksum": "md5:74a982b328a38ed172b821a39e742065",
+      "published_sha256": "42431e01c373413da498cfdbf99c8258016dddfda0570fb89d00ae29eee8801e",
+      "repository_bytes": 80246,
+      "byte_identical": false,
+      "status": "PASS",
+      "pages": 8,
+      "page_text_identical": true,
+      "has_c2pa_marker": true,
+      "checksum_valid": true,
+      "render_scale_px": 700,
+      "all_page_renders_identical": true
+    },
+    {
+      "file": "WREH_WR-VI_Demo_v0.2_EN-RU.html",
+      "published_bytes": 14178,
+      "published_checksum": "md5:41b7ba17e96e6b2182ae0651bcb77b78",
+      "checksum_valid": true,
+      "published_sha256": "887dcc7c409edcf95f03825b0f5ca94f61437cbc4a48ac42ef1e8f9a6f0919b6",
+      "repository_bytes": 14178,
+      "byte_identical": true,
+      "status": "PASS"
+    },
+    {
+      "file": "WREH_WR-VI_Draft_v0.2_RU.pdf",
+      "published_bytes": 134497,
+      "published_checksum": "md5:c273bbdb18c108d1868e91aa79aa9390",
+      "checksum_valid": true,
+      "published_sha256": "dad53986e53b510b01ce68274d5c834b50f93a4ea51933a412a315ea8999edf6",
+      "repository_bytes": 89856,
+      "byte_identical": false,
+      "status": "PASS",
+      "pages": 9,
+      "page_text_identical": true,
+      "has_c2pa_marker": true,
+      "render_scale_px": 700,
+      "all_page_renders_identical": true
+    }
+  ],
+  "status": "PASS",
+  "verification_date": "2026-10-09",
+  "repository_snapshot": "2865474c79a120f29cda754d1137cb3939adadfa",
+  "signature_verification": "Not performed; C2PA markers observed, no cryptographic authenticity claim."
+}

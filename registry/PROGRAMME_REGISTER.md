@@ -16,19 +16,20 @@
 3. **WR-III** — *Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23228682`.
 4. **WR-IV** — *Response-Conditioned Global Completion and the Status of the Past* — **PUBLISHED / FROZEN v0.6** — DOI: `10.5281/zenodo.23248138`.
 5. **WR-V** — *Experiment and Realization Selection: Branch, Contextualize, Select, or Remain a Class* — **ACTIVE / MATHEMATICAL DRAFT v0.3 / REVIEWABLE_DRAFT**.
-6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — **ACTIVE / MATHEMATICAL DRAFT v0.2 / REVIEWABLE_DRAFT**.
-7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — PLANNED.
+6. **WR-VI** — *The Aquarium Bounds: Physical Constraints as Boundaries of World Space* — **PUBLISHED / FROZEN v0.2** — DOI: `10.5281/zenodo.23254619`.
+7. **WR-VII** — *Energy-Time Frontiers of World Realizability* — **ACTIVE / MATHEMATICAL DRAFT v0.2 / REVIEWABLE_DRAFT**.
 8. **WR-VIII** — *The Cosmological Fibre: Universes Compatible with Our Universe Today* — PLANNED.
 9. **WR-IX** — *Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?* — PLANNED.
 
 ## Current publication gate
 
-WR-I–IV are published and frozen. WR-V remains an unmerged review draft after the author's explicit transition instruction on 8 October 2026. The author's separate instruction “Делаем 6 статью” on 9 October 2026 opens WR-VI; it does not publish or certify WR-V.
+WR-I–IV and WR-VI v0.2 are published and frozen. WR-V remains an unmerged review draft after the author's explicit transition instruction on 8 October 2026. The author's separate instruction “Делаем 6 статью” on 9 October 2026 opens WR-VI; it does not publish or certify WR-V.
 
 - WR-I DOI: `10.5281/zenodo.23210258`
 - WR-II DOI: `10.5281/zenodo.23224154`
 - WR-III DOI: `10.5281/zenodo.23228682`
 - WR-IV DOI: `10.5281/zenodo.23248138`
+- WR-VI DOI: `10.5281/zenodo.23254619`
 
 WR-IV PR #5 is merged into `main` at `a82ca16675a6b3f358d800963fa7ff0c4e5385bb`. The published PDFs/HTML match the merged source snapshot by size and published MD5. See `reviews/WR-IV/WREH_WR-IV_Post_Publication_Check_v0.6.md` for the separate metadata/archive follow-ups. WR-V requires review of its newly declared experimental transition interface; no WR-V publication readiness or DOI is asserted.
 
@@ -194,12 +195,28 @@ Revision v0.3 checks the WR-II finite-obstruction/full-finite-defect boundary an
 
 WR-VI opens on 9 October 2026 under its canonical title, *The Aquarium Bounds: Physical Constraints as Boundaries of World Space*. It constructs an explicit constraint record for the instrument-completion class: observed responses, row-coupling structural assumptions, externally supplied hard bounds, their uncertainty and allowed relaxations remain separate.
 
-Active source: `papers/WR-VI/draft-v0.2/wrvi-body.tex`; parallel English/Russian PDFs. Status: **REVIEWABLE_DRAFT**. The first benchmark is a finite classical reversible three-state transition model. Known detailed balance and all prepared-input means still leave a transition interval. A stationary activity cap creates an empty/singleton/nonunique threshold. Requiring irreducibility excludes the threshold singleton; response tolerance and cap uncertainty change inference in separately proved ways.
+Frozen pre-deposit source: `papers/WR-VI/draft-v0.2/wrvi-body.tex`; parallel English/Russian PDFs. Published on 9 October 2026: **10.5281/zenodo.23254619**. Historical draft status **REVIEWABLE_DRAFT** is retained in the source; no external peer review is thereby certified. The first benchmark is a finite classical reversible three-state transition model. Known detailed balance and all prepared-input means still leave a transition interval. A stationary activity cap creates an empty/singleton/nonunique threshold. Requiring irreducibility excludes the threshold singleton; response tolerance and cap uncertainty change inference in separately proved ways.
 
 The new obligation is coupled admissibility, not a new quotient, general wall geometry, global completion theorem or smoothing method. The seven proofs are finite elementary/classical arguments with no priority claim. Activity is dimensionless, not energy, entropy production or a rate. No real physical cap, causal speed limit, quantum or gravitational result is certified. Complete-world uniqueness requires a further declared lift.
 
 WR-V v0.3 remains unchanged at `d0afad65108abee8b561e02af6fe3392c6057487`. The branch `paper-wr-vi-v0.1-spine` is stacked on `paper-wr-v-v0.1-spine`; no merge, publication or DOI follows from opening the next paper. WR-VI must be retargeted and its inherited dependency audited after the upstream PR is resolved.
 
-WR-VII may inherit independently justified constraint classes only after physical units and protocols are constructed. WR-VII–IX remain planned. WREH is both the programme and community and remains distinct from Boundary Compensation.
+WR-VII may inherit independently justified constraint classes only after physical units and protocols are constructed. WR-VII is now separately open; WR-VIII and WR-IX remain planned. WREH is both the programme and community and remains distinct from Boundary Compensation.
 
 WR-VI v0.2 responds to the supplied v0.1 review: unchanged seven proof blocks; explicit WR-II v0.5 Example 10.19 nonattainment analogy and WR-V v0.3 §9 handoff; concrete cap interval N=[1/6,1/4]. The matrix concern is checked against rendered 3×3 arrays, not PDF extraction alone. WR-VI v0.1 remains an immutable historical draft. The supplied review does not establish reviewer identity, independence or external peer-review status.
+
+## WR-VI -> WR-VII handoff
+
+The author reported DOI `10.5281/zenodo.23254619` and explicitly instructed opening the seventh article on 9 October 2026. The public record and all deposited MD5 checksums were verified. HTML is byte-identical; both PDFs agree in extracted scientific text and every page raster at 700 px, while their C2PA-bearing containers differ in bytes. The post-publication check records remaining archive/version/licence-description follow-ups. Publishing WR-VI does not merge draft PR #7 or publish WR-V.
+
+WR-VII preserves the canonical title *Energy-Time Frontiers of World Realizability*. Active source: `papers/WR-VII/draft-v0.2/wrvii-body.tex`; parallel EN/RU, analytic figure and offline HTML. Status: **REVIEWABLE_DRAFT**; no WR-VII DOI, external peer review or deposit.
+
+New obligation: construct a calibrated unit-bearing quantum response and energy-duration feasibility frontier. The closed pure finite-dimensional unitary carrier, prepared state, projector, clock and hard spectral-diameter cap are explicit assumptions. This is a new carrier, not a silent quantum reduction of the classical WR-V/VI transition kernels. D is in joules, τ in seconds; dimensionless activity remains unchanged upstream.
+
+The action certificate has an endpoint-safe proof and a sharp freely controlled qubit witness. The full constant-qubit generator fibre has separated revival windows. The exact resource frontier fixes the diameter but leaves a circle of generators. Final tomography identifies that circle for a nonorthogonal final state; complete transfer retains generator ambiguity until calibrated intermediate-time probes on fresh preparations are supplied. Closed response intervals and fixed iid repetitions have separate deterministic and confidence-qualified certificates.
+
+Claim ceiling: established quantum speed-limit, Pauli and concentration tools with self-contained proofs, no priority certification, apparatus experiment, global maximum energy, universal lifetime, gravitational/cosmological wall or unique complete-world lift. Targeted sources and inaccessible full texts are recorded honestly. Earlier audits do not certify these new proofs. WR-VIII and WR-IX remain planned; WREH and BC remain distinct.
+
+The WR-VII branch `paper-wr-vii-v0.1-spine` is stacked on `paper-wr-vi-v0.1-spine` at `2865474c79a120f29cda754d1137cb3939adadfa`. Retargeting/merging waits for explicit upstream resolution and renewed dependency audit; opening this article does not merge or certify earlier PRs.
+
+WR-VII v0.2 addresses one distinct supplied review in two byte-identical attachments. All seven proof blocks, numbered statements, thirteen equations and original reference texts are unchanged. New positioning concerns static orthogonalization only; diameter constancy is pointwise on the constrained frontier fibre. The WR-III response boundary uses fixed E,τ, 0<C<π/2 and M=(0,1), without claiming a structural wall. The attained minimum circle differs from the excluded minimizers of WR-II Example 10.19 and WR-VI v0.2 Corollary 5.3. Added primary references and three synthetic resource-comparison witnesses do not certify independent peer review, priority or publication. Historical v0.1 is frozen.
