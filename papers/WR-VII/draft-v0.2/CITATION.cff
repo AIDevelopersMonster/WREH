@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the version reviewed. This is an unpublished mathematical draft."
+type: article
+title: "WR-VII: Energy-Time Frontiers of World Realizability"
+version: "0.2"
+date-released: "2026-10-09"
+authors:
+  - family-names: Malachevsky
+    given-names: A. A.
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+repository-code: "https://github.com/AIDevelopersMonster/WREH"
+license: CC-BY-4.0
+keywords:
+  - quantum speed limits
+  - Hamiltonian identification
+  - spectral diameter
+  - response completion

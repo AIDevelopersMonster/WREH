@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the published WR-VI v0.2 preprint."
+type: article
+title: "WR-VI: The Aquarium Bounds: Physical Constraints as Boundaries of World Space"
+version: "0.2"
+date-released: "2026-10-09"
+doi: "10.5281/zenodo.23254619"
+url: "https://zenodo.org/records/23254619"
+authors:
+  - family-names: Malachevsky
+    given-names: A. A.
+    orcid: "https://orcid.org/0009-0008-6009-3196"
+license: CC-BY-4.0

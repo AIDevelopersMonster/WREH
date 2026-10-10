@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "WR-VII: Energy-Time Frontiers of World Realizability — Calibrated quantum responses, action bounds and generator ambiguity (v0.1)",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "publication_date": "2026-10-09",
+    "version": "0.1",
+    "creators": [
+      {
+        "name": "Malachevsky, A. A.",
+        "orcid": "0009-0008-6009-3196"
+      }
+    ],
+    "description": "<p>English mathematical draft and complete Russian translation. WREH studies calibrated response completion. This finite closed-unitary model proves a spectral-diameter action certificate and a sharp qubit energy-duration frontier, enumerates compatible constant generators and separates final-state identification from generator identification. Deterministic intervals and fixed iid repetitions have distinct feasibility and coverage certificates.</p><p>Полный русский перевод включён в ту же запись. Работа рассматривает калиброванный конечномерный квантовый носитель, спектральный диаметр в джоулях, длительность в секундах и неоднозначность генератора на точном ресурсном рубеже.</p><p>REVIEWABLE_DRAFT. Not externally peer reviewed; no priority or universal cosmological-boundary claim. Content and analytic figures: CC BY 4.0. Executable scripts and HTML code: MIT. Prepared description only; this version has not been deposited.</p>",
+    "license": "cc-by-4.0",
+    "keywords": [
+      "WREH",
+      "quantum speed limits",
+      "Hamiltonian identification",
+      "spectral diameter",
+      "response completion",
+      "finite confidence"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23254619",
+        "relation": "references",
+        "resource_type": "publication-preprint"
+      }
+    ]
+  },
+  "prepared_only": true,
+  "doi_assigned": false
+}

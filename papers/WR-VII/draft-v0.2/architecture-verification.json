@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "baseline_commit": "c9988c3332cb50e9c2837af82eb50f89d98e9ca8",
+  "frozen_papers_files_byte_comparison": 220,
+  "upstream_papers_files": 193,
+  "WR_VII_v01_frozen_files": 27,
+  "unchanged_blocks": {
+    "proof": 7,
+    "definition": 1,
+    "theorem": 3,
+    "corollary": 2,
+    "proposition": 2,
+    "equation": 13
+  },
+  "labels_unchanged": 31,
+  "original_bibliography_entries_unchanged": 10,
+  "appended_bibliography_entries": 2,
+  "figures_byte_identical": [
+    "frontiers.pdf",
+    "frontiers.png"
+  ],
+  "input_files": 2,
+  "distinct_review_texts": 1,
+  "reviewer_identity_and_independence": "not established",
+  "assigned_DOI_WR_VII": null,
+  "scope": "clarifying prose and static comparison witnesses; no changed numbered result or proof; REVIEWABLE_DRAFT",
+  "stacked_PR_base": "paper-wr-vi-v0.1-spine",
+  "canonical_title_preserved": true,
+  "WREH_programme_and_community": true,
+  "downstream_WR_VIII_IX": "planned; not opened"
+}

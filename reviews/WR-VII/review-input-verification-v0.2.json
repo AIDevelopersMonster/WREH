@@ -1,0 +1,18 @@
+{
+  "supplied_files": [
+    {
+      "filename": "Вставленный текст(20261009-121452).txt",
+      "bytes": 16271,
+      "sha256": "7214c23cc0a6ff6bb5c6faf443a53bb35b05b0b16554870ff6a5873467462d03"
+    },
+    {
+      "filename": "Вставленный текст (2).txt",
+      "bytes": 16271,
+      "sha256": "7214c23cc0a6ff6bb5c6faf443a53bb35b05b0b16554870ff6a5873467462d03"
+    }
+  ],
+  "byte_identical": true,
+  "distinct_review_texts": 1,
+  "reviewer_identity_independence_external_peer_review": "not verified",
+  "treatment": "all points addressed once; original attachments remain unchanged"
+}

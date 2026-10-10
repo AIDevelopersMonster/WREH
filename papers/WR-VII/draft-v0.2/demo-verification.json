@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scenarios": 64,
+  "languages": [
+    "EN",
+    "RU"
+  ],
+  "viewports": [
+    "1360x1024",
+    "390x844"
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "horizontal_overflow": false,
+  "visual_review": "PASS",
+  "visually_reviewed_views": 4
+}

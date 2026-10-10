@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "seed": 20261009,
+  "checks": [
+    {
+      "check": "symbolic Pauli witnesses and complete-transfer density",
+      "cases": 10,
+      "status": "PASS"
+    },
+    {
+      "check": "phase-window count, endpoints and matrix-exponential responses",
+      "cases": 1470,
+      "max_error": 4.014150123410332e-15,
+      "status": "PASS"
+    },
+    {
+      "check": "final versus intermediate probes and scalar phase gauge",
+      "cases": 102,
+      "status": "PASS"
+    },
+    {
+      "check": "noncommuting higher-dimensional action certificate",
+      "cases": 320,
+      "max_probability_excess": -0.011337043576146026,
+      "status": "PASS"
+    },
+    {
+      "check": "exact binomial coverage for fixed independent repetitions",
+      "cases": 48,
+      "minimum_coverage": 0.9918530977713016,
+      "status": "PASS"
+    }
+  ],
+  "benchmark": {
+    "energy_J": 6.62607015e-27,
+    "p_quarter_min_ns": 16.666666666666668,
+    "p_one_min_ns": 50.0,
+    "N": 512,
+    "successes": 128,
+    "alpha": 0.05,
+    "delta": 0.01,
+    "radius": 0.060020174457495044,
+    "lower_probability": 0.17997982554250494,
+    "certified_time_ns": 13.945881032718482
+  },
+  "scope": "Synthetic finite witnesses. General statements are proved in the manuscript; no apparatus data or novelty certification."
+}
