@@ -11,9 +11,10 @@ WREH develops a mathematically explicit language for response-defined world spac
 - **Programme:** ACTIVE
 - **Repository:** public programme repository
 - **Founding document:** WREH-00 — *Manifesto and Research Programme*
-- **Current technical work:** WR-I v0.2 — **REVIEWED_CLEAN**
-- **Next publication gate:** final novelty/bibliography audit, render audit, licence decision, and release metadata
-- **WR-II:** downstream; not opened automatically as a publication until the WR-I handoff is frozen
+- **Published and frozen:** WR-I v0.3, WR-II v0.5, WR-III v0.6, WR-IV v0.6
+- **Latest publication:** WR-IV, DOI [10.5281/zenodo.23248138](https://doi.org/10.5281/zenodo.23248138)
+- **Current technical work:** WR-V v0.3 — **REVIEWABLE_DRAFT**
+- **Next scientific gate:** review of the experimental transition interface, proof audit and a tailored novelty assessment before any stronger research/publication claim
 
 ## Quick navigation
 
@@ -25,14 +26,21 @@ WREH develops a mathematically explicit language for response-defined world spac
 
 ### WR-I — Response-Defined World Spaces
 
-**Full title:** *Response-Defined World Spaces: Finite-Resolution Equivalence and Identifiability of Global Realizations*
+**Full title:** *Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations*
 
 - [WR-I project page](papers/WR-I/README.md)
-- [LaTeX source v0.2](papers/WR-I/WREH_WR-I_Preprint_Draft_v0.2.tex)
-- [PDF draft v0.2](papers/WR-I/WREH_WR-I_Preprint_Draft_v0.2.pdf)
+- [LaTeX source v0.3](papers/WR-I/WREH_WR-I_Preprint_Candidate_v0.3.tex)
+- [PDF v0.3](papers/WR-I/WREH_WR-I_Preprint_Candidate_v0.3.pdf)
 - [WR-I changelog](papers/WR-I/CHANGELOG.md)
 - [Publication metadata](papers/WR-I/metadata/publication_metadata.yaml)
 - [Interactive demo](demos/WR-I/WREH_WR-I_Response_Defined_Worlds_Demo_v0.1.html)
+
+### Latest work
+
+- [WR-IV — published bilingual preprint](papers/WR-IV/README.md)
+- [WR-IV publication identity and metadata check](reviews/WR-IV/WREH_WR-IV_Post_Publication_Check_v0.6.md)
+- [WR-V — experimental transition draft](papers/WR-V/README.md)
+- [WR-V result/dependency map](papers/WR-V/THEOREM_MAP.md)
 
 ## Core mathematical idea
 
@@ -113,9 +121,9 @@ Repository-level citation metadata are provided in [CITATION.cff](CITATION.cff).
 
 ## Licence status
 
-No software or content licence has yet been assigned. Public repository visibility does **not** imply permission to reuse, modify, or redistribute the contents beyond rights provided by applicable law.
+Research content is [CC BY 4.0](LICENSE-CONTENT.md); executable scripts and HTML are [MIT](LICENSE-CODE.txt), subject to the stated scopes and third-party exclusions. See [LICENSES.md](LICENSES.md).
 
 ---
 
 **Repository:** https://github.com/AIDevelopersMonster/WREH  
-**State:** ACTIVE — 2026-10-07
+**State:** ACTIVE — 2026-10-09

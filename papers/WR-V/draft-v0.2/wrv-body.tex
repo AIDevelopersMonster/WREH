@@ -1,0 +1,304 @@
+\maketitle
+\begin{abstract}
+\Lang{A new experimental outcome restricts compatible descriptions, but its distribution need not identify how a declared state changes. WR-V adds an experimental transition layer to the response and completion interfaces of WR-I--IV. In a finite classical model, a stochastic instrument specifies an outcome and a successor label jointly. Outcome likelihoods identify only its marginal; the unobserved transition remains a product of simplices. Calibrated successor probes turn this ambiguity into a nonnegative linear inverse problem. We give elementary proofs of a uniform rank criterion, a support-sensitive pointwise uniqueness criterion and a criterion for identifiable linear functionals. A three-state benchmark distinguishes exact boundary uniqueness from ambiguity at interior data and from stability at finite resolution. A contextual parity example and a sequential positive-likelihood lemma delimit two additional uses of the programme's four scenario labels. The four labels address different mathematical objects and can coexist; they are neither a disjoint partition of one completion fibre nor physical ontologies inferred from an outcome. The results are finite-model constructions and standard linear/probabilistic arguments, with no theorem-priority claim or physical branching conclusion.}
+{Новый исход эксперимента ограничивает совместимые описания, однако его распределение не обязано определять изменение заданного состояния. WR-V добавляет экспериментальный слой переходов к схемам отклика и достраивания WR-I--IV. В конечной классической модели стохастический инструмент совместно задаёт исход и метку состояния после эксперимента. Правдоподобия исходов определяют только маргиналь; ненаблюдаемый переход остаётся произведением симплексов. Калиброванные последующие измерения превращают эту неоднозначность в линейную обратную задачу с неотрицательными неизвестными. Даны элементарные доказательства общего рангового критерия, зависящего от носителя критерия точечной единственности и критерия идентифицируемых линейных функционалов. Пример с тремя состояниями различает точную единственность на границе, неоднозначность при внутренних данных и устойчивость при конечном разрешении. Контекстуальный пример чётности и лемма о последовательных положительных правдоподобиях ограничивают два других употребления четырёх программных сценариев. Четыре сценария относятся к разным математическим объектам и могут сосуществовать; они не являются ни непересекающимся разбиением одного слоя достраивания, ни физическими онтологиями, выводимыми из исхода. Результаты представляют собой конечные модельные конструкции и стандартные линейные и вероятностные аргументы; приоритет теорем и физическое ветвление не заявляются.}
+\end{abstract}
+\begingroup\raggedright
+\noindent\textbf{\Lang{Keywords}{Ключевые слова}:}
+\Lang{experimental update; stochastic instrument; successor-state identification; nonnegative inverse problem; contextuality; exact selection.}{экспериментальное обновление; стохастический инструмент; идентификация последующего состояния; неотрицательная обратная задача; контекстуальность; точный отбор.}
+
+\smallskip
+\noindent\small\Lang{Parallel English and Russian texts share all equations and result numbers. REVIEWABLE\_DRAFT; not externally peer reviewed; no WR-V DOI. Content: CC BY 4.0. Code: MIT.}{Параллельные английский и русский тексты имеют общие формулы и номера результатов. REVIEWABLE\_DRAFT; внешнего рецензирования нет; DOI WR-V не присвоен. Текст: CC BY 4.0. Код: MIT.}\par\endgroup\normalsize
+\newpage
+\tableofcontents
+\newpage
+
+\section{\Lang{Question, interface and claim ceiling}{Вопрос, схема и предел утверждений}}
+\label{sec:scope}
+\begingroup\raggedright
+\Lang{The founding WREH programme proposes four realization scenarios: BRANCH, CONTEXTUALIZE, SELECT and REMAIN A CLASS. Their mathematical types differ. Selecting a compatible hypothesis is an inference operation. An experimental transition is part of a dynamical model. A family of context-indexed descriptions concerns how variables are identified across protocols. A tree of possible records is not automatically a tree of physical worlds. WR-V therefore formalizes the objects on which these labels act before comparing them.}
+{Учредительная программа WREH предлагает четыре сценария реализации: BRANCH, CONTEXTUALIZE, SELECT и REMAIN A CLASS. Они относятся к разным математическим типам. Отбор совместимой гипотезы является операцией вывода. Экспериментальный переход входит в динамическую модель. Семейство контекстных описаний относится к отождествлению переменных разных протоколов. Дерево возможных записей не является автоматически деревом физических миров. Поэтому WR-V сначала определяет объекты, к которым относятся эти сценарии, а затем сравнивает их.}\par\endgroup
+
+\Lang{WR-I owns response equivalence and identifiable quantities \cite{WRI}; WR-II owns the finite/global realizability distinction \cite{WRII}; WR-III owns response-fibre geometry \cite{WRIII}; WR-IV owns the additional history-projection layer and its distinction between compatibility and probabilistic conditioning \cite{WRIV}. The new obligation here is to separate an outcome marginal from a declared experimental transition and to state which extra observations identify that transition. Re-proving a generic quotient, gluing or smoothing theorem would not meet this obligation.}
+{WR-I вводит эквивалентность по откликам и идентифицируемые величины \cite{WRI}; WR-II исследует различие конечной и глобальной реализуемости \cite{WRII}; WR-III изучает геометрию слоёв отклика \cite{WRIII}; WR-IV вводит дополнительный слой исторических проекций и различает совместимость и вероятностное условливание \cite{WRIV}. Новая задача здесь состоит в разделении маргинали исхода и заданного экспериментального перехода и в указании дополнительных наблюдений, идентифицирующих этот переход. Повторное доказательство общей теоремы о факторах, склейке или сглаживании не решало бы эту задачу.}
+
+\Lang{All main constructions are finite and classical. Probability is supplied as model structure. The contribution is a typed interface and an auditable transition-completion problem, not discovery of stochastic instruments, null-space criteria or contextuality. No result identifies Bayesian concentration with physical collapse, support multiplicity with physical branching, or a failed global-variable model with absence of reality. A label of a local state must not silently become a complete cosmological world.}
+{Все основные конструкции конечны и классичны. Вероятность задаётся как часть модели. Вклад состоит в типизированной схеме и проверяемой задаче достраивания переходов, а не в открытии стохастических инструментов, критериев ядра или контекстуальности. Ни один результат не отождествляет байесовскую концентрацию с физическим коллапсом, множественность носителя с физическим ветвлением либо несостоятельность модели глобальных переменных с отсутствием реальности. Метка локального состояния не должна незаметно превращаться в полную космологическую Вселенную.}
+
+\begingroup\raggedright
+\Lang{Within a fixed nonempty compatible class, SELECT means a singleton and REMAIN A CLASS means more than one candidate. BRANCH describes a declared record tree or successor support; CONTEXTUALIZE concerns cross-context identity constraints. The transition/support and context labels can coexist with either cardinality alternative. Full rank certifies selection uniformly, but a deficient-rank probe can still select at particular boundary data, as in Section~\ref{sec:benchmark}.}{В фиксированном непустом классе совместимости SELECT означает одноэлементность, а REMAIN A CLASS --- наличие более одного кандидата. BRANCH описывает заданное дерево записей либо последующий носитель; CONTEXTUALIZE относится к межконтекстным ограничениям тождества. Сценарии перехода/носителя и контекстного отождествления могут сосуществовать с каждым из двух вариантов мощности. Полный ранг удостоверяет отбор для всех данных, но измеритель недостаточного ранга может давать отбор при отдельных граничных данных, как в разделе~\ref{sec:benchmark}.}\par\endgroup
+
+\section{\Lang{Global compatibility and finite experimental labels}{Глобальная совместимость и конечные экспериментальные метки}}
+\label{sec:instrument}
+\Lang{Start with a nonempty globally compatible class $\Ccal(D)$ as in WR-II--IV. Declare a finite set $X$ of input labels and a total map $\rho_-:\Ccal(D)\to X$, with $X=\rho_-(\Ccal(D))$. A label can be a finite hypothesis or a projected state at a supplied temporal cut. It is not necessarily a full realization. Declare a finite nonempty set $S$ of successor labels, a finite protocol set $E$ and finite nonempty outcome sets $R_e$. These carriers and all identifications are fixed within an experiment.}
+{Начнём с непустого глобально совместимого класса $\Ccal(D)$ из WR-II--IV. Зададим конечное множество входных меток $X$ и всюду определённое отображение $\rho_-:\Ccal(D)\to X$, причём $X=\rho_-(\Ccal(D))$. Метка может обозначать конечную гипотезу или проекцию состояния на заданный временной срез. Она не обязана быть полной реализацией. Зададим конечное непустое множество последующих меток $S$, конечное множество протоколов $E$ и конечные непустые множества исходов $R_e$. Внутри эксперимента эти носители и все отождествления фиксированы.}
+
+\begin{definition}[\Lang{Finite stochastic instrument}{Конечный стохастический инструмент}]
+\label{def:instrument}
+\Lang{For each $e\in E$, an instrument is an array $I_e(r,s\mid x)$ satisfying}{Для каждого $e\in E$ инструментом называется массив $I_e(r,s\mid x)$, удовлетворяющий условиям}
+\begin{equation}\label{eq:normalization}
+ I_e(r,s\mid x)\geq0,\qquad
+ \sum_{r\in R_e}\sum_{s\in S}I_e(r,s\mid x)=1\quad(x\in X).
+\end{equation}
+\Lang{Its outcome likelihood and conditional successor distribution are}{Его правдоподобие исхода и условное распределение последующей метки равны}
+\begin{equation}\label{eq:factorization}
+ L_e(r\mid x)=\sum_s I_e(r,s\mid x),\qquad
+ K_e(s\mid x,r)=\frac{I_e(r,s\mid x)}{L_e(r\mid x)}\quad\text{if }L_e(r\mid x)>0.
+\end{equation}
+\end{definition}
+\Lang{When $L_e(r\mid x)=0$, the entire corresponding instrument row is zero; a conditional $K_e$ there has no observational meaning and is not an identifiable parameter. The outcome-plus-state distinction is classical measurement theory; the general instrument concept predates WREH \cite{DaviesLewis}. This finite classical definition is not asserted to capture every quantum instrument.}
+{Если $L_e(r\mid x)=0$, вся соответствующая строка инструмента нулевая; условное $K_e$ в ней не имеет наблюдательного смысла и не является идентифицируемым параметром. Различие исхода и состояния относится к классической теории измерений; общий объект инструмента появился до WREH \cite{DaviesLewis}. Это конечное классическое определение не объявляется описанием любого квантового инструмента.}
+
+\Lang{The support relation is $\Gamma_e=\{(x,r,s):I_e(r,s\mid x)>0\}$. It can also be declared directly without probabilities; the stochastic model then refines it. With prior $p(x)>0$ on $X$, an outcome of positive probability $Z_e(r)=\sum_xp(x)L_e(r\mid x)$ gives two different laws:}
+{Отношение носителя равно $\Gamma_e=\{(x,r,s):I_e(r,s\mid x)>0\}$. Его можно задать непосредственно без вероятностей; стохастическая модель тогда уточняет его. При априорном $p(x)>0$ на $X$ исход положительной вероятности $Z_e(r)=\sum_xp(x)L_e(r\mid x)$ задаёт два разных закона:}
+\begin{equation}\label{eq:posterior}
+ p_e^-(x\mid r)=\frac{p(x)L_e(r\mid x)}{Z_e(r)},\qquad
+ p_e^+(s\mid r)=\frac{\sum_x p(x)I_e(r,s\mid x)}{Z_e(r)}.
+\end{equation}
+\Lang{The first is posterior uncertainty about an input label; the second describes the successor label in the supplied instrument model. Their domains can differ. A prior with zeros would replace $X$ by its support in these probability statements; it would not prove model-level impossibility of omitted labels.}
+{Первый закон задаёт апостериорную неопределённость входной метки; второй описывает последующую метку в заданной модели инструмента. Их области могут различаться. При наличии нулей в априорном законе в вероятностных утверждениях пришлось бы заменить $X$ его носителем; это не доказывало бы модельную невозможность исключённых меток.}
+
+\begin{definition}[\Lang{Two compatibility images}{Два образа совместимости}]
+\label{def:images}
+\begin{equation}\label{eq:images}
+ X_e(r)=\{x:L_e(r\mid x)>0\},\qquad
+ S_e(r)=\{s:\exists x\in X,\ I_e(r,s\mid x)>0\}.
+\end{equation}
+\Lang{Input selection means $|X_e(r)|=1$. Successor selection means $|S_e(r)|=1$. Selection of a projected label is not selection of a unique full realization unless the relevant projection is injective on the surviving global class.}{Отбор входной метки означает $|X_e(r)|=1$. Отбор последующей метки означает $|S_e(r)|=1$. Отбор проекции не означает отбор единственной полной реализации, если соответствующая проекция не инъективна на сохранившемся глобальном классе.}
+\end{definition}
+
+\section{\Lang{Four scenario labels and their different domains}{Четыре сценария и их разные области}}
+\label{sec:scenarios}
+\Lang{The programme labels become questions about specified objects, as follows. They are not four disjoint events. CONTEXTUALIZE addresses a model's cross-context identifications, whereas SELECT and REMAIN A CLASS describe cardinality relative to an identified carrier. BRANCH requires specifying which mathematical branching is meant, and physical branching needs an additional physical model.}
+{Программные сценарии становятся следующими вопросами о заданных объектах. Они не являются четырьмя непересекающимися событиями. CONTEXTUALIZE относится к межконтекстным отождествлениям модели, тогда как SELECT и REMAIN A CLASS описывают мощность относительно выбранного носителя. Для BRANCH необходимо указать математический тип ветвления; физическое ветвление требует дополнительной физической модели.}
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}lYY@{}}\toprule
+\Lang{Label}{Сценарий}&\Lang{Declared mathematical object}{Заданный математический объект}&\Lang{What is not implied}{Что не следует}\\\midrule
+BRANCH&\Lang{Outcome tree, or more than one successor in $\supp K_e(\cdot\mid x,r)$.}{Дерево исходов либо более одной последующей метки в $\supp K_e(\cdot\mid x,r)$.}&\Lang{Multiple physically coexisting worlds.}{Несколько физически сосуществующих миров.}\\
+CONTEXTUALIZE&\Lang{Context-indexed variables with stated overlap identifications.}{Контекстные переменные с заданными отождествлениями на пересечениях.}&\Lang{Automatic absence of a global model, or a quantum implementation.}{Автоматическое отсутствие глобальной модели или квантовая реализация.}\\
+SELECT&\Lang{A singleton input, successor, global or instrument-completion class; specify which.}{Одноэлементный входной, последующий, глобальный класс или класс достраиваний инструмента; требуется указать какой.}&\Lang{Ontology inferred from posterior concentration.}{Онтология, выведенная из концентрации апостериорного закона.}\\
+REMAIN A CLASS&\Lang{More than one candidate remains in that same specified class.}{В том же заданном классе остаётся более одного кандидата.}&\Lang{Permanent impossibility of every future distinction.}{Постоянная невозможность любого будущего различения.}\\\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{example}[\Lang{Local-state change does not violate global refinement}{Изменение локального состояния не нарушает глобального уточнения}]
+\label{ex:swap}
+\Lang{Let the input class be $\{0\}$, the successor carrier be $S=\{0,1\}$ and the instrument have one outcome with $I(r,1\mid0)=1$. The successor class is $\{1\}$; it is not a subset of the input class. However, in the fixed global trajectory carrier $\Omega_e\subseteq X\times R_e\times S$, observation still selects the subset $\{\omega:r(\omega)=r\}$. The two statements concern different carriers. The nested-set result of WR-IV is preserved for full trajectories; it was never a claim that projected local states cannot change.}
+{Пусть входной класс равен $\{0\}$, последующий носитель $S=\{0,1\}$, а инструмент имеет один исход с $I(r,1\mid0)=1$. Последующий класс равен $\{1\}$ и не входит во входной класс. Однако в фиксированном глобальном носителе траекторий $\Omega_e\subseteq X\times R_e\times S$ наблюдение по-прежнему отбирает подмножество $\{\omega:r(\omega)=r\}$. Два утверждения относятся к разным носителям. Результат WR-IV о вложенности сохраняется для полных траекторий; он никогда не означал невозможности изменения проецируемого локального состояния.}
+\end{example}
+
+\Lang{A stochastic successor law can represent unresolved dynamics or unrecorded classical variables. Calling its support ``branches'' is a model convention, not evidence that all alternatives physically occur. A deterministic transition can preserve an ambiguous input class, while a unique input can have a non-singleton successor support. Thus even within one context, selection and successor multiplicity can coexist.}
+{Стохастический последующий закон может описывать неразрешённую динамику или незаписанные классические переменные. Название его носителя «ветвями» является модельным соглашением, а не доказательством физического осуществления всех альтернатив. Детерминированный переход может сохранять неоднозначный входной класс, а единственная входная метка может иметь неодноэлементный последующий носитель. Поэтому даже в одном контексте отбор и множественность последующих меток могут сосуществовать.}
+
+\section{\Lang{What outcome likelihoods leave undetermined}{Что остаётся неопределённым при известных правдоподобиях исходов}}
+\label{sec:marginal}
+\begin{theorem}[\Lang{Outcome-marginal completion class}{Класс достраиваний маргинали исходов}]
+\label{thm:marginal}
+\Lang{Fix normalized likelihoods $L_e(r\mid x)$ and impose no further constraints on the successor distributions. The class of instruments with these likelihoods is affinely isomorphic to}
+{Зафиксируем нормированные правдоподобия $L_e(r\mid x)$ без дополнительных ограничений на последующие распределения. Класс инструментов с этими правдоподобиями аффинно изоморфен}
+\begin{equation}\label{eq:product}
+ \Ical(L)\cong\prod_{(e,x,r):L_e(r\mid x)>0}\Delta(S),
+ \qquad \dim\Ical(L)=N_+(|S|-1),
+\end{equation}
+\Lang{where $N_+$ counts the positive likelihood rows. In particular, knowing all these outcome likelihoods need not identify a successor distribution, even when the input label is known.}{где $N_+$ обозначает число строк положительного правдоподобия. В частности, знание всех этих правдоподобий не обязано идентифицировать последующее распределение даже при известной входной метке.}
+\end{theorem}
+\begin{proof}
+\Lang{For each positive row choose any $k_{e,x,r}\in\Delta(S)$ and define $I_e(r,s\mid x)=L_e(r\mid x)k_{e,x,r}(s)$. Set every zero-likelihood row to zero. This gives every admissible instrument once, by~\eqref{eq:factorization}. Each positive-row scaling is a bijective affine map of a simplex. The product has the displayed dimension. Coupling, conservation or dynamical restrictions would change this class and are excluded from the statement.}
+{Для каждой положительной строки выберем произвольное $k_{e,x,r}\in\Delta(S)$ и положим $I_e(r,s\mid x)=L_e(r\mid x)k_{e,x,r}(s)$. Строки нулевого правдоподобия положим равными нулю. По~\eqref{eq:factorization} так получается каждый допустимый инструмент ровно один раз. Масштабирование каждой положительной строки является биективным аффинным отображением симплекса. Произведение имеет указанную размерность. Ограничения связи, сохранения или динамики меняли бы этот класс и исключены из утверждения.}
+\end{proof}
+
+\begin{example}[\Lang{The same outcomes, different successors}{Одинаковые исходы, разные последующие состояния}]
+\label{ex:same-outcome}
+\Lang{Take $X=\{x_0\}$, $R=\{0,1\}$, $S=\{s_0,s_1,s_2\}$ and $L(r\mid x_0)=1/2$. For both outcomes, choose respectively $K^A=\delta_{s_0}$, $K^B=\delta_{s_1}$ or $K^C=(1/2,0,1/2)$. All three instruments give exactly the same outcome distribution. Input selection already holds, but successor supports are respectively $\{s_0\}$, $\{s_1\}$ and $\{s_0,s_2\}$. No statistic of those immediate outcomes can distinguish these declared instruments. A calibrated later probe can, if its response differs on the relevant successors.}
+{Возьмём $X=\{x_0\}$, $R=\{0,1\}$, $S=\{s_0,s_1,s_2\}$ и $L(r\mid x_0)=1/2$. Для обоих исходов выберем соответственно $K^A=\delta_{s_0}$, $K^B=\delta_{s_1}$ или $K^C=(1/2,0,1/2)$. Все три инструмента дают одно и то же распределение исходов. Отбор входа уже выполнен, но последующие носители равны $\{s_0\}$, $\{s_1\}$ и $\{s_0,s_2\}$. Никакая статистика этих непосредственных исходов не различает заданные инструменты. Калиброванное последующее измерение может различить их, если его отклик различается на соответствующих последующих метках.}
+\end{example}
+
+\Lang{This is a deliberately strong non-identification statement: it grants exact knowledge of likelihoods for every calibrated input. In an actual unknown-input experiment, only prior-averaged or otherwise accessible responses may be known, and the ambiguity can be larger. Calibrated probes are one way to provide additional information; independently justified restrictions can also reduce the transition class. The theorem assumes no such restrictions. It is an elementary marginalization result, not a universal necessity theorem for extra probes or an impossibility theorem for all future physical experiments.}
+{Это намеренно сильное утверждение о неидентифицируемости: оно допускает точное знание правдоподобий для каждого калиброванного входа. В реальном эксперименте с неизвестным входом могут быть известны только усреднённые по априорному закону или иные доступные отклики, и неоднозначность может быть больше. Калиброванные последующие измерения являются одним из способов получить дополнительную информацию; независимо обоснованные ограничения также могут сокращать класс переходов. Теорема таких ограничений не предполагает. Это элементарный результат маргинализации, а не универсальная теорема необходимости дополнительных измерений или невозможности для всех будущих физических экспериментов.}
+
+\section{\Lang{Successor probes and transition-completion certificates}{Последующие измерения и сертификаты достраивания переходов}}
+\label{sec:certificates}
+\Lang{Fix one positive row $(e,x,r)$ and write $k(s)=K_e(s\mid x,r)$, with $n=|S|$. A calibrated probe $j$ has a selected recorded event whose probability on successor $s$ is $a_j(s)\in[0,1]$. The conditional event frequency in ideal repeated preparations is $m_j=\sum_s a_j(s)k(s)$. The model assumes that this response depends only on $s$ and that the calibration remains valid after the first experiment. A hidden dependence on $x$, $r$ or unrepresented degrees of freedom must be included in the carrier or calibration.}
+{Зафиксируем одну положительную строку $(e,x,r)$ и обозначим $k(s)=K_e(s\mid x,r)$, $n=|S|$. Калиброванное измерение $j$ имеет выбранное записываемое событие, вероятность которого на последующей метке $s$ равна $a_j(s)\in[0,1]$. Его условная частота при идеальных повторных приготовлениях равна $m_j=\sum_s a_j(s)k(s)$. Модель предполагает зависимость отклика только от $s$ и сохранение калибровки после первого эксперимента. Скрытую зависимость от $x$, $r$ или непредставленных степеней свободы необходимо включить в носитель либо калибровку.}
+
+\Lang{Different probes are measured on separate repeat preparations. We do not assume joint measurability or nondisturbance of several probes on one run. The exact $m_j$ below are ideal model-level probabilities; finite counts provide uncertainty regions, not exact equalities.}
+{Разные последующие измерения проводятся на отдельных повторных приготовлениях. Совместная измеримость или отсутствие возмущения нескольких измерений в одном запуске не предполагаются. Точные $m_j$ ниже являются идеальными модельными вероятностями; конечные числа наблюдений дают области неопределённости, а не точные равенства.}
+
+\begin{definition}[\Lang{Probe completion fibre}{Слой достраивания по последующим измерениям}]
+\label{def:fibre}
+\begin{equation}\label{eq:probe-fibre}
+ \begin{aligned}
+ B&=\begin{pmatrix}\mathbf{1}^{T}\\a_1^T\\\vdots\\a_q^T\end{pmatrix},\qquad b=(1,m_1,\ldots,m_q)^T,\\[3pt]
+ \Fcal(B,b)&=\{k\in\mathbb R^n:k\geq0,\ Bk=b\}.
+ \end{aligned}
+\end{equation}
+\Lang{Here $\mathbf{1}=(1,\ldots,1)^T\in\mathbb R^n$, so $B$ has $q+1$ rows and $n$ columns; its first row imposes normalization.}{Здесь $\mathbf{1}=(1,\ldots,1)^T\in\mathbb R^n$, поэтому $B$ имеет $q+1$ строк и $n$ столбцов; первая строка задаёт нормировку.}
+\Lang{Assume this fibre is nonempty before discussing its uniqueness. It is a compact convex subset of $\Delta(S)$. Instrument selection means that every relevant positive row is uniquely determined, with any cross-row constraints also enforced.}{Прежде чем обсуждать единственность, предположим непустоту слоя. Он является компактным выпуклым подмножеством $\Delta(S)$. Отбор инструмента означает единственность каждой существенной положительной строки с соблюдением всех дополнительных межстрочных ограничений.}
+\end{definition}
+
+\Lang{Write $\Ical(L,m)$ for the subset of $\Ical(L)$ satisfying all declared calibrated positive-row probe constraints. Rows with no probes retain their unconstrained conditional laws.}{Обозначим через $\Ical(L,m)$ подмножество $\Ical(L)$, удовлетворяющее всем заданным калиброванным ограничениям последующих измерений на положительных строках. Строки без последующих измерений сохраняют свободные условные законы.}
+
+\begin{theorem}[\Lang{Uniform identification}{Единственность для всех данных}]
+\label{thm:rank}
+\Lang{The map $k\mapsto Bk$ is injective on $\Delta(S)$ if and only if $\rank B=n$. If the rank is deficient, every strictly positive $k\in\Delta(S)$ belongs to a non-singleton fibre.}{Отображение $k\mapsto Bk$ инъективно на $\Delta(S)$ тогда и только тогда, когда $\rank B=n$. При недостаточном ранге каждое строго положительное $k\in\Delta(S)$ принадлежит неодноэлементному слою.}
+\end{theorem}
+\begin{proof}
+\Lang{Full column rank gives $B(k-k')=0\Rightarrow k=k'$. Conversely, choose $0\ne v\in\ker B$. The first row gives $\one^Tv=0$. For strictly positive $k$, both $k+\varepsilon v$ and $k-\varepsilon v$ are nonnegative for sufficiently small $\varepsilon>0$, remain normalized and have the same image. They are distinct. Thus failure of full rank defeats uniform injectivity and also uniqueness at every interior point.}
+{Полный столбцовый ранг даёт $B(k-k')=0\Rightarrow k=k'$. Обратно, выберем $0\ne v\in\ker B$. Первая строка даёт $\one^Tv=0$. Для строго положительного $k$ обе точки $k+\varepsilon v$ и $k-\varepsilon v$ неотрицательны при достаточно малом $\varepsilon>0$, нормированы и имеют тот же образ. Они различны. Следовательно, недостаточный ранг исключает общую инъективность и единственность в каждой внутренней точке.}
+\end{proof}
+
+\begin{theorem}[\Lang{Pointwise uniqueness at a support boundary}{Точечная единственность на границе носителя}]
+\label{thm:cone}
+\Lang{For a feasible $k$, let $Z(k)=\{s:k(s)=0\}$ and $T_k=\{v\in\mathbb R^n:v(s)\geq0\text{ for }s\in Z(k)\}$. Then}
+{Для допустимого $k$ положим $Z(k)=\{s:k(s)=0\}$ и $T_k=\{v\in\mathbb R^n:v(s)\geq0\text{ при }s\in Z(k)\}$. Тогда}
+\begin{equation}\label{eq:cone}
+ \Fcal(B,Bk)=\{k\}\quad\Longleftrightarrow\quad
+ \ker B\cap T_k=\{0\}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+\Lang{A distinct feasible $k'$ gives $v=k'-k\ne0$, $Bv=0$, and $v(s)=k'(s)\geq0$ wherever $k(s)=0$. Conversely, suppose $0\ne v\in\ker B\cap T_k$. For coordinates with $k(s)=0$, $k(s)+\varepsilon v(s)\geq0$ for every $\varepsilon\geq0$. At each remaining coordinate choose $\varepsilon>0$ sufficiently small to preserve nonnegativity; finiteness permits one common choice. Then $k+\varepsilon v$ is normalized because $\one^Tv=0$, is distinct from $k$ and has the same response.}
+{Иная допустимая точка $k'$ даёт $v=k'-k\ne0$, $Bv=0$ и $v(s)=k'(s)\geq0$ там, где $k(s)=0$. Обратно, пусть $0\ne v\in\ker B\cap T_k$. В координатах с $k(s)=0$ выполняется $k(s)+\varepsilon v(s)\geq0$ для всех $\varepsilon\geq0$. В каждой оставшейся координате выберем $\varepsilon>0$ достаточно малым для сохранения неотрицательности; конечность позволяет общий выбор. Тогда $k+\varepsilon v$ нормирован благодаря $\one^Tv=0$, отличен от $k$ и имеет тот же отклик.}
+\end{proof}
+
+\Lang{Since the normalization row $\mathbf{1}^T$ is included in $B$, every $v\in\ker B$ automatically satisfies $\mathbf{1}^Tv=0$. The cone $T_k$ records the one-sided nonnegativity conditions; its intersection with $\ker B$ therefore captures directions preserving both the probability simplex and the probe responses. The cone alone does not impose normalization. This is a standard feasible-direction criterion. Nonnegative uniqueness at deficient rank is established prior art \cite{DonohoTanner}; no priority for~\eqref{eq:cone} is claimed. Merely testing linear independence of columns on the positive support is insufficient: another feasible point can introduce new nonzero coordinates outside that support.}
+{Поскольку строка нормировки $\mathbf{1}^T$ входит в $B$, каждый $v\in\ker B$ автоматически удовлетворяет $\mathbf{1}^Tv=0$. Конус $T_k$ фиксирует односторонние условия неотрицательности; его пересечение с $\ker B$ поэтому задаёт направления, сохраняющие и вероятностный симплекс, и отклики измерений. Сам конус нормировку не задаёт. Это стандартный критерий допустимых направлений. Единственность неотрицательного решения при недостаточном ранге относится к предшествующей теории \cite{DonohoTanner}; приоритет~\eqref{eq:cone} не заявляется. Одной проверки линейной независимости столбцов на положительном носителе недостаточно: другая допустимая точка может вводить новые ненулевые координаты вне этого носителя.}
+
+\begin{proposition}[\Lang{Identifiable linear quantities}{Идентифицируемые линейные величины}]
+\label{prop:functional}
+\Lang{For $c\in\mathbb R^n$, the quantity $c^Tk$ is constant on every nonempty probe fibre if and only if $c\in\row B$.}{Для $c\in\mathbb R^n$ величина $c^Tk$ постоянна на каждом непустом слое последующих измерений тогда и только тогда, когда $c\in\row B$.}
+\end{proposition}
+\begin{proof}
+\Lang{If $c^T=u^TB$, then $c^Tk=u^Tb$ on each fibre. If $c\notin\row B$, orthogonal decomposition gives some $v\in\ker B$ with $c^Tv\ne0$. Perturb a strictly positive normalized $k$ by $\pm\varepsilon v$ as above. The two feasible points have equal responses but different $c^Tk$.}
+{Если $c^T=u^TB$, то $c^Tk=u^Tb$ на каждом слое. Если $c\notin\row B$, ортогональное разложение даёт некоторое $v\in\ker B$ с $c^Tv\ne0$. Возмутим строго положительное нормированное $k$ на $\pm\varepsilon v$, как выше. Две допустимые точки имеют одинаковые отклики, но разные $c^Tk$.}
+\end{proof}
+\Lang{This is a uniform criterion. A particular singleton or boundary fibre can identify additional quantities. An identifiable mean does not imply an identifiable successor law. This is the WR-I identifiable-quantity distinction applied to a new transition carrier, not a replacement theorem for WR-I.}
+{Это общий критерий. Конкретный одноэлементный или граничный слой может определять дополнительные величины. Идентифицируемое среднее не означает идентифицируемого последующего закона. Здесь различие идентифицируемой величины из WR-I применяется к новому носителю переходов и не заменяет результат WR-I.}
+
+\section{\Lang{A three-state experiment and finite resolution}{Эксперимент с тремя состояниями и конечное разрешение}}
+\label{sec:benchmark}
+\Lang{Let $S=\{s_0,s_1,s_2\}$, with $k=(k_0,k_1,k_2)$ and $k_j=k(s_j)$ for $j=0,1,2$, and let a calibrated binary detector have click probabilities $a=(0,1/2,1)$. For one fixed conditional instrument row, the exact click probability $m$ gives}
+{Пусть $S=\{s_0,s_1,s_2\}$, $k=(k_0,k_1,k_2)$ и $k_j=k(s_j)$ для $j=0,1,2$, а калиброванный бинарный детектор имеет вероятности срабатывания $a=(0,1/2,1)$. Для одной фиксированной условной строки инструмента точная вероятность срабатывания $m$ даёт}
+\begin{equation}\label{eq:interval}
+ \begin{aligned}
+ B&=\begin{pmatrix}1&1&1\\0&1/2&1\end{pmatrix},\\
+ k(t)&=(1-2m+t,\ 2m-2t,\ t),\\
+ \max(0,2m-1)&\leq t\leq m,\qquad 0\leq m\leq1.
+ \end{aligned}
+\end{equation}
+\Lang{The formula follows by setting $t=k_2$, solving the two equations and imposing nonnegativity. Data outside $[0,1]$ have an empty fibre. At $m=0$ and $m=1$ the interval collapses and the successor distribution is unique despite rank two. At every $0<m<1$ the interval has positive length.}
+{Формула получается подстановкой $t=k_2$, решением двух уравнений и требованием неотрицательности. Данные вне $[0,1]$ дают пустой слой. При $m=0$ и $m=1$ интервал вырождается, и последующее распределение единственно несмотря на ранг два. При каждом $0<m<1$ интервал имеет положительную длину.}
+
+\begin{example}[\Lang{A deterministic candidate is not a certificate}{Детерминированный кандидат не является сертификатом}]
+\label{ex:midpoint}
+\Lang{At $m=1/2$, the entire fibre is $(t,1-2t,t)$, $0\leq t\leq1/2$. It includes both the deterministic middle state $(0,1,0)$ and the equally weighted endpoint mixture $(1/2,0,1/2)$. The three columns of $B$ are distinct, so exact responses distinguish the three pure states if purity is imposed in advance. They do not distinguish all mixtures. Choosing the deterministic candidate by a simplicity rule adds a selection convention; the data alone do not certify it.}
+{При $m=1/2$ весь слой равен $(t,1-2t,t)$, $0\leq t\leq1/2$. Он содержит и детерминированное среднее состояние $(0,1,0)$, и равновесную смесь крайних состояний $(1/2,0,1/2)$. Три столбца $B$ различны, поэтому точные отклики различают три чистых состояния, если чистота заранее задана. Но они не различают все смеси. Выбор детерминированного кандидата по правилу простоты добавляет соглашение отбора; сами данные его не удостоверяют.}
+\end{example}
+
+\Lang{A second independently calibrated detector with click probabilities $d=(0,0,1)$ measures $n_2=k_2$. The combined matrix and inverse are}
+{Второй независимо калиброванный детектор с вероятностями срабатывания $d=(0,0,1)$ измеряет $n_2=k_2$. Объединённая матрица и обратная формула равны}
+\begin{equation}\label{eq:second}
+ \widetilde B=\begin{pmatrix}1&1&1\\0&1/2&1\\0&0&1\end{pmatrix},\quad
+ \det\widetilde B=1/2,\quad
+ k=(1-2m+n_2,\ 2m-2n_2,\ n_2).
+\end{equation}
+\Lang{Feasibility is exactly $0\leq m\leq1$ and $\max(0,2m-1)\leq n_2\leq m$. Thus two calibrated probabilities select every feasible successor law in this finite model. They still do not select a microscopic lift of the labels or a complete world without an injective bridge.}
+{Допустимость в точности означает $0\leq m\leq1$ и $\max(0,2m-1)\leq n_2\leq m$. Поэтому две калиброванные вероятности определяют каждый допустимый последующий закон этой конечной модели. Они всё ещё не определяют микроскопическое поднятие меток или полный мир без инъективной связи.}
+
+\subsection{\Lang{Exact uniqueness and uncertainty regions}{Точная единственность и области неопределённости}}
+\Lang{At finite resolution replace an equality by a declared error bound:}
+{При конечном разрешении заменим равенство заданной границей ошибки:}
+\begin{equation}\label{eq:resolution}
+ \Fcal_\varepsilon(m)=\{k\in\Delta(S):|a^Tk-m|\leq\varepsilon\}.
+\end{equation}
+\Lang{For every $\varepsilon>0$, the exact boundary certificate at $m=0$ loses uniqueness: both $(1,0,0)$ and $(1-\delta,\delta,0)$ are feasible for $0<\delta\leq\min(1,2\varepsilon)$. An analogous perturbation applies at $m=1$. This is not a false exact theorem; it is a change of data semantics.}
+{При каждом $\varepsilon>0$ точный граничный сертификат при $m=0$ теряет единственность: и $(1,0,0)$, и $(1-\delta,\delta,0)$ допустимы при $0<\delta\leq\min(1,2\varepsilon)$. Аналогичное возмущение возможно при $m=1$. Это не опровержение точной теоремы, а изменение смысла данных.}
+
+\Lang{With two probes, if measured values $\widehat m,\widehat n_2$ satisfy $|m-\widehat m|\leq\eta_m$ and $|n_2-\widehat n_2|\leq\eta_n$, the affine reconstruction $\widehat k$ from~\eqref{eq:second} obeys the following scalar component bounds}
+{При двух измерениях, если измеренные значения $\widehat m,\widehat n_2$ удовлетворяют $|m-\widehat m|\leq\eta_m$ и $|n_2-\widehat n_2|\leq\eta_n$, аффинная реконструкция $\widehat k$ по~\eqref{eq:second} удовлетворяет следующим оценкам скалярных компонентов}
+\begin{equation}\label{eq:error}
+ |k_0-\widehat k_0|\leq2\eta_m+\eta_n,\quad
+ |k_1-\widehat k_1|\leq2\eta_m+2\eta_n,\quad
+ |k_2-\widehat k_2|\leq\eta_n.
+\end{equation}
+\Lang{The reconstructed $\widehat k$ need not itself be feasible; one should retain the nonnegative uncertainty fibre instead of silently clipping coordinates. Calibration error in the detector matrices needs its own bounds and is not included in~\eqref{eq:error}. Finite counts also need a specified statistical coverage statement. No experiment has been performed for this benchmark.}
+{Реконструированное $\widehat k$ само может быть недопустимым; следует сохранять неотрицательный слой неопределённости вместо незаявленного обрезания координат. Ошибка калибровки матриц детекторов требует отдельных границ и не включена в~\eqref{eq:error}. Для конечных выборок также необходим явно заданный статистический уровень покрытия. Реальный эксперимент в этом примере не проводился.}
+
+\section{\Lang{Contextualization changes an identification obligation}{Контекстуализация меняет требование отождествления}}
+\label{sec:context}
+\Lang{Indexing a response by a protocol does not by itself establish contextuality in the sense of a no-global-model result. A contextuality test must declare variables, contexts, outcome sets, overlap identifications and an empirical model. This distinction is explicit in the global-section approach of Abramsky and Brandenburger \cite{AB}. The following abstract example uses that established language only to test the meaning of CONTEXTUALIZE; it is not a new WR-II existence theorem.}
+{Индексация отклика протоколом сама по себе не устанавливает контекстуальность в смысле отсутствия глобальной модели. Её проверка требует заданных переменных, контекстов, множеств исходов, отождествлений на пересечениях и эмпирической модели. Это различие явно присутствует в подходе глобальных сечений Абрамского и Бранденбургера \cite{AB}. Следующий абстрактный пример использует известный язык только для проверки смысла CONTEXTUALIZE и не является новой теоремой существования WR-II.}
+
+\begin{example}[\Lang{An abstract anti-correlation triangle}{Абстрактный треугольник антикорреляций}]
+\label{ex:triangle}
+\Lang{Let $A,B,C$ be binary labels and the measured contexts be $AB$, $BC$, $AC$. In each context put probability $1/2$ on each of the two opposite-bit outcomes and zero on equal bits. Every single-variable marginal is uniform, so the overlaps agree. A context-independent global assignment would have to satisfy}
+{Пусть $A,B,C$ являются бинарными метками, а измеряемые контексты равны $AB$, $BC$, $AC$. В каждом контексте зададим вероятность $1/2$ каждому из двух исходов с противоположными битами и ноль одинаковым битам. Все одномерные маргинали равномерны, поэтому пересечения согласованы. Контекстно-независимое глобальное присваивание должно было бы удовлетворять}
+\begin{equation}\label{eq:parity}
+ A\oplus B=1,\qquad B\oplus C=1,\qquad A\oplus C=1.
+\end{equation}
+\Lang{XOR of the three equations gives $0=1$, so there is no such assignment. Nor is there a probability law on global assignments with the given marginals: each constraint would hold almost surely, hence their finite intersection would hold almost surely, although it is empty.}
+{Сложение трёх уравнений по XOR даёт $0=1$, поэтому такого присваивания нет. Не существует и закона на глобальных присваиваниях с заданными маргиналями: каждое ограничение выполнялось бы почти наверное, следовательно, их конечное пересечение также выполнялось бы почти наверное, хотя оно пусто.}
+\end{example}
+
+\Lang{Replacing $A$ by separate $A_{AB},A_{AC}$, and similarly for $B,C$, removes the overlap identities. Each of the three disconnected pairs can then choose either opposite-bit assignment; their product has eight global assignments and a product probability law. This is a different variable model, not a solution of the original identified-variable model. Contextualization can therefore be a declared relaxation of identity constraints. It does not follow that an experiment creates context-specific reality.}
+{Замена $A$ отдельными $A_{AB},A_{AC}$ и аналогичное разделение $B,C$ снимают отождествления на пересечениях. Каждая из трёх несвязанных пар тогда выбирает одно из двух противоположных присваиваний; их произведение содержит восемь глобальных присваиваний и допускает произведение вероятностных законов. Это другая модель переменных, а не решение исходной модели отождествлённых переменных. Поэтому контекстуализация может означать явное ослабление ограничений тождества. Из этого не следует создание экспериментом контекстной реальности.}
+
+\Lang{The triangle is an abstract overlap-compatible empirical model. No physical, quantum or nondisturbing implementation is asserted. If the real apparatus perturbs a variable between contexts, the overlap identities themselves need an independent operational justification. Selection of one context's outcome can coexist with failure of global extension across all contexts. Thus SELECT and CONTEXTUALIZE do not form mutually exclusive ontological alternatives.}
+{Треугольник является абстрактной эмпирической моделью с согласованными пересечениями. Физическая, квантовая реализация или отсутствие возмущения не заявляются. Если реальный прибор изменяет переменную между контекстами, сами отождествления на пересечениях нуждаются в независимом операционном обосновании. Отбор исхода одного контекста может сосуществовать с невозможностью глобального продолжения по всем контекстам. Поэтому SELECT и CONTEXTUALIZE не образуют взаимоисключающих онтологических альтернатив.}
+
+\section{\Lang{Sequential evidence and exact selection}{Последовательные данные и точный отбор}}
+\label{sec:sequential}
+\Lang{We distinguish hard selection, where the exact compatibility class becomes a singleton, from soft statistical concentration, where a posterior weight can be close to one while the other weights remain positive. These are different criteria.}{Различим жёсткий отбор, при котором точный класс совместимости становится одноэлементным, и мягкую статистическую концентрацию, при которой апостериорный вес может быть близок к единице, а остальные веса остаются положительными. Это разные критерии.}
+
+\Lang{For this section only, let $X$ be a persistent finite latent-hypothesis set with full-support prior $p_0$. It is not a changing state carrier. An adaptive policy chooses $e_t$ from the observed past record $h_{t-1}$. The model supplies the likelihood $L_{e_t}(r_t\mid x,h_{t-1})$, including any history dependence. The policy cannot access the unknown $x$ except through the record.}
+{Только в этом разделе пусть $X$ обозначает сохраняющееся конечное множество скрытых гипотез с априорным законом $p_0$ полного носителя. Это не носитель изменяющегося состояния. Адаптивная стратегия выбирает $e_t$ по наблюдаемой предшествующей записи $h_{t-1}$. Модель задаёт правдоподобие $L_{e_t}(r_t\mid x,h_{t-1})$ с учётом любой зависимости от истории. Стратегия не может получать неизвестное $x$ иначе, чем через запись.}
+
+\begin{proposition}[\Lang{Positive likelihood blocks finite hard selection}{Положительное правдоподобие исключает конечный жёсткий отбор}]
+\label{prop:positive}
+\Lang{For a finite realized record $h_N$, assume each realized conditional likelihood is positive for every $x\in X$. Then the posterior has full support on $X$ and the hard compatibility class remains $X$. In particular, if $|X|>1$, no such record selects a unique latent hypothesis.}{Для конечной реализованной записи $h_N$ предположим положительность каждого реализованного условного правдоподобия для всех $x\in X$. Тогда апостериорный закон имеет полный носитель $X$, а класс жёсткой совместимости остаётся равным $X$. В частности, при $|X|>1$ такая запись не отбирает единственную скрытую гипотезу.}
+\end{proposition}
+\begin{proof}
+\Lang{The policy is fixed by the record. Bayes' formula gives}
+{Стратегия фиксирована записью. Формула Байеса даёт}
+\begin{equation}\label{eq:sequential}
+ p_N(x\mid h_N)=
+ \frac{p_0(x)\prod_{t=1}^N L_{e_t}(r_t\mid x,h_{t-1})}
+ {\sum_{x'}p_0(x')\prod_{t=1}^N L_{e_t}(r_t\mid x',h_{t-1})}>0.
+\end{equation}
+\Lang{Every hypothesis has positive likelihood, so none is removed by the finite record. This argument requires neither independence of outcomes nor a nonadaptive protocol sequence.}
+{Каждая гипотеза имеет положительное правдоподобие, поэтому конечная запись не исключает ни одну из них. Аргумент не требует ни независимости исходов, ни неадаптивной последовательности протоколов.}
+\end{proof}
+
+\Lang{For example, two equally weighted persistent hypotheses can have independent binary outcomes with probabilities of one equal to $0.9$ and $0.1$. After three ones, the first posterior probability is $0.9^3/(0.9^3+0.1^3)=729/730$, while both hypotheses remain compatible. A confidence threshold or MAP estimate chooses an action or estimator; it is not a proof that the remaining compatibility set is a singleton. The statement concerns finite records; it does not preclude asymptotic identification under additional assumptions.}
+{Например, две равновесные сохраняющиеся гипотезы могут давать независимые бинарные исходы с вероятностями единицы $0.9$ и $0.1$. После трёх единиц апостериорная вероятность первой равна $0.9^3/(0.9^3+0.1^3)=729/730$, хотя обе гипотезы совместимы с данными. Порог доверия или MAP-оценка выбирает действие либо оценку, но не доказывает одноэлементности оставшегося класса совместимости. Утверждение относится к конечным записям и не исключает асимптотическую идентификацию при дополнительных условиях.}
+
+\Lang{Comparison of statistical experiments by their decision value is classical \cite{Blackwell}. A protocol that improves a chosen risk is not thereby a protocol that selects a unique realization. Conversely, an exact deterministic response can isolate a label without identifying every hidden microscopic representative. The decision criterion, compatibility criterion and transition criterion must be stated separately.}
+{Сравнение статистических экспериментов по их ценности для решения является классическим \cite{Blackwell}. Протокол, улучшающий выбранный риск, тем самым ещё не отбирает единственную реализацию. Обратно, точный детерминированный отклик может выделить метку, не идентифицируя все скрытые микроскопические представители. Критерии решения, совместимости и перехода необходимо задавать отдельно.}
+
+\section{\Lang{Provenance, failure criteria and downstream handoff}{Происхождение, критерии неудачи и передача следующему этапу}}
+\label{sec:prior}
+\Lang{Theorems~\ref{thm:marginal}--\ref{thm:cone} are self-contained elementary results about marginalization, kernels and nonnegative linear systems. Proposition~\ref{prop:functional} is row-space factorization. Proposition~\ref{prop:positive} is positivity under finite Bayesian conditioning. They are not presented as discoveries of new mathematical principles. Davies--Lewis provides the pre-existing outcome/state instrument distinction; Donoho--Tanner supplies adjacent nonnegative inverse-problem prior art; Abramsky--Brandenburger supplies the global-section contextuality language; Blackwell supplies the classical comparison-of-experiments setting. None is claimed to have established the entire WREH architecture.}
+{Теоремы~\ref{thm:marginal}--\ref{thm:cone} являются самодостаточными элементарными результатами о маргинализации, ядрах и неотрицательных линейных системах. Утверждение~\ref{prop:functional} выражает факторизацию через пространство строк. Утверждение~\ref{prop:positive} описывает положительность при конечном байесовском условливании. Они не представлены открытиями новых математических принципов. Davies--Lewis задаёт ранее известное различие исхода и состояния в инструменте; Donoho--Tanner представляет смежную предшествующую теорию неотрицательных обратных задач; Abramsky--Brandenburger задаёт язык глобальных сечений для контекстуальности; Blackwell представляет классическую постановку сравнения экспериментов. Ни одному из источников не приписывается построение всей архитектуры WREH.}
+
+\Lang{The new carrier is the class of admissible experimental transition descriptions. Once declared, its response fibres can use the inherited WR-I--III language. WR-V does not reopen generic fibre geometry or claim that a simplex boundary is a physical boundary of the Universe. Its negative result is acceptable: immediate outcome data need not determine a successor model. Its positive certificate is deliberately conditional: calibrated post-experiment responses and stated admissibility assumptions can determine a finite transition law.}
+{Новым носителем является класс допустимых описаний экспериментального перехода. После его задания слои откликов используют наследуемый язык WR-I--III. WR-V не переоткрывает общую геометрию слоёв и не объявляет границу симплекса физической границей Вселенной. Отрицательный результат допустим: непосредственные данные исходов могут не определять последующую модель. Положительный сертификат намеренно условен: калиброванные отклики после эксперимента и заданные предположения допустимости могут определять конечный закон перехода.}
+
+\Lang{A stronger research claim would require a problem-specific new result and a tailored literature audit. In particular, operational calibration, finite-sample confidence, restrictions coupling instrument rows, inaccessible inputs and quantum instruments remain separate obligations. This draft neither certifies exhaustive originality nor claims publication readiness. Its first benchmark is analytically reproducible and is supplied with exact rational checks; computation does not replace the proofs.}
+{Более сильная исследовательская заявка потребовала бы нового результата для конкретной задачи и соответствующего обзора литературы. В частности, операционная калибровка, доверительные области конечных выборок, ограничения связи строк инструмента, недоступные входы и квантовые инструменты остаются отдельными задачами. Этот draft не удостоверяет исчерпывающую оригинальность и не заявляет готовности к публикации. Первый пример аналитически воспроизводим и снабжён точными рациональными проверками; вычисление не заменяет доказательств.}
+
+\Lang{For WR-VI the interface is a declared physical admissibility subset $\mathcal A_{\mathrm{phys}}$ of instrument completions. One may then ask whether $\Ical(L,m)\cap\mathcal A_{\mathrm{phys}}$ is empty, unique or nonunique. Conservation, causal, energetic or thermodynamic conditions must be independently specified and justified. Empty intersection means failure of the declared model-and-data combination; it is not automatically a wall of physical existence. For WR-IX, indistinguishability is always relative to the admissible protocol family and resource regime; an untested future probe can invalidate an outcome-only equivalence.}
+{Для WR-VI передаётся объявленное подмножество физической допустимости $\mathcal A_{\mathrm{phys}}$ внутри класса достраиваний инструмента. Затем можно выяснять, пусто ли $\Ical(L,m)\cap\mathcal A_{\mathrm{phys}}$, единственно ли оно или неоднозначно. Ограничения сохранения, причинности, энергии либо термодинамики должны быть независимо заданы и обоснованы. Пустое пересечение означает несостоятельность заданной комбинации модели и данных и не является автоматически стеной физического существования. Для WR-IX неразличимость всегда относится к допустимому семейству протоколов и ресурсному режиму; непроверенное последующее измерение может нарушить эквивалентность по одним лишь непосредственным исходам.}
+
+\begingroup\raggedright
+\begin{thebibliography}{9}
+\bibitem{WRI} A. A. Malachevsky. \emph{Response-Defined World Spaces: Response Equivalence, Finite-Resolution Separation, and Identifiability of Global Realizations}. WR-I, WREH, v0.3 (2026). \href{https://doi.org/10.5281/zenodo.23210258}{doi:10.5281/zenodo.23210258}.
+\bibitem{WRII} A. A. Malachevsky. \emph{Finite Consistency and Global World Realizability}. WR-II, WREH, v0.5 (2026). \href{https://doi.org/10.5281/zenodo.23224154}{doi:10.5281/zenodo.23224154}.
+\bibitem{WRIII} A. A. Malachevsky. \emph{Geometry of Admissible World Fibres: Refinement, Rigidity and Realizability Walls}. WR-III, WREH, v0.6 (2026). \href{https://doi.org/10.5281/zenodo.23228682}{doi:10.5281/zenodo.23228682}.
+\bibitem{WRIV} A. A. Malachevsky. \emph{Response-Conditioned Global Completion and the Status of the Past}. WR-IV, WREH, v0.6 (2026). \href{https://doi.org/10.5281/zenodo.23248138}{doi:10.5281/zenodo.23248138}.
+\bibitem{DaviesLewis} E. B. Davies and J. T. Lewis. An operational approach to quantum probability. \emph{Communications in Mathematical Physics} \textbf{17}(3) (1970), 239--260. \href{https://doi.org/10.1007/BF01647093}{doi:10.1007/BF01647093}.
+\bibitem{DonohoTanner} D. L. Donoho and J. Tanner. Sparse nonnegative solution of underdetermined linear equations by linear programming. \emph{Proceedings of the National Academy of Sciences} \textbf{102}(27) (2005), 9446--9451. \href{https://doi.org/10.1073/pnas.0502269102}{doi:10.1073/pnas.0502269102}.
+\bibitem{AB} S. Abramsky and A. Brandenburger. The sheaf-theoretic structure of non-locality and contextuality. \emph{New Journal of Physics} \textbf{13} (2011), 113036. \href{https://doi.org/10.1088/1367-2630/13/11/113036}{doi:10.1088/1367-2630/13/11/113036}. Author manuscript: \href{https://arxiv.org/abs/1102.0264v7}{arXiv:1102.0264v7}.
+\bibitem{Blackwell} D. Blackwell. Equivalent comparisons of experiments. \emph{The Annals of Mathematical Statistics} \textbf{24}(2) (1953), 265--272. \href{https://doi.org/10.1214/aoms/1177729032}{doi:10.1214/aoms/1177729032}.
+\end{thebibliography}
+\endgroup

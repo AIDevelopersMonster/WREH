@@ -59,4 +59,4 @@ When a WREH result depends materially on a prior WREH or Boundary Compensation r
 
 ## Licence
 
-No repository-wide content or software licence has yet been assigned. Until an explicit licence is added, do not infer reuse rights from public repository visibility.
+Research content is governed by [LICENSE-CONTENT.md](LICENSE-CONTENT.md), CC BY 4.0; software, scripts and executable HTML by [LICENSE-CODE.txt](LICENSE-CODE.txt), MIT. Preserve their scope statements and third-party exclusions; public visibility alone does not determine reuse rights.

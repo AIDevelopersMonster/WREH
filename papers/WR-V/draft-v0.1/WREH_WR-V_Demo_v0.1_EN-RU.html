@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- Standalone licence notice: executable code is MIT; research text is CC BY 4.0.
+MIT License
+
+Copyright (c) 2026 A. A. Malachevsky
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Scope in WREH: software, scripts, and executable HTML demonstrations, unless a
+file states otherwise.
+
+Research text and original visualization content: CC BY 4.0.
+Copyright (c) 2026 A. A. Malachevsky.
+https://creativecommons.org/licenses/by/4.0/
+-->
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WR-V · Transition completion / Достраивание перехода</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,sans-serif;color:#17334b;background:#edf2f5}*{box-sizing:border-box}body{margin:0}main{max-width:1060px;margin:auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:clamp(23px,4vw,36px);margin:15px 0}h2{font-size:19px}button,input{font:inherit}button{border:1px solid #829aaa;background:white;border-radius:6px;padding:8px 14px;color:#17334b}.subtitle{line-height:1.6;max-width:850px}.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;margin-top:20px}.card{border:1px solid #d0dde4;border-radius:12px;padding:22px;background:white}label{display:block;margin:18px 0 6px}input[type=range]{width:100%;accent-color:#256889}output{font-variant-numeric:tabular-nums;font-weight:650}svg{width:100%;height:auto;display:block}svg text{font-size:13px;fill:#17334b}.status{padding:13px;border-left:4px solid #256889;background:#eef5f8;line-height:1.5}.weights{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0}.weights div{background:#edf3f6;padding:12px;text-align:center;border-radius:6px}.equation{font-family:ui-monospace,monospace;font-size:14px;line-height:1.7;overflow-wrap:anywhere}p{line-height:1.65}footer{font-size:13px;line-height:1.65;margin-top:20px;color:#516574}.toggle{display:flex;align-items:center;gap:10px;line-height:1.4}.toggle input{width:19px;height:19px}a{color:#256889}@media(max-width:730px){main{padding:15px}.grid{grid-template-columns:1fr}.card{padding:17px}header{align-items:flex-start}button{white-space:nowrap}}
+</style></head><body><main>
+<header><div><strong>WREH · WR-V v0.1</strong><h1 id="title"></h1></div><button id="lang" type="button">English</button></header>
+<p class="subtitle" id="intro"></p>
+<div class="grid"><section class="card"><h2 id="geometryTitle"></h2>
+<svg viewBox="0 0 440 320" role="img" aria-labelledby="svgTitle svgDesc"><title id="svgTitle"></title><desc id="svgDesc"></desc>
+<path d="M45 280 L390 280 L218 38 Z" fill="#f0f5f7" stroke="#9bb0bd" stroke-width="2"/>
+<polygon id="region" fill="#9ac9dc" fill-opacity=".55" stroke="#6aaac5"/>
+<path id="fibre" fill="none" stroke="#24688c" stroke-width="5"/>
+<circle id="point" r="7" fill="#e3953b" stroke="#713f08"/>
+<text x="26" y="308">k₀ = 1</text><text x="365" y="308">k₂ = 1</text><text x="194" y="22">k₁ = 1</text>
+</svg><p id="legend"></p><div class="status" id="status" aria-live="polite"></div>
+</section><section class="card"><h2 id="controlTitle"></h2>
+<label for="m"><span id="mLabel"></span> <output id="mValue"></output></label><input id="m" type="range" min="0" max="1" step="0.01" value="0.5">
+<label for="position"><span id="positionLabel"></span> <output id="positionValue"></output></label><input id="position" type="range" min="0" max="1" step="0.01" value="0">
+<label for="epsilon"><span id="epsilonLabel"></span> <output id="epsilonValue"></output></label><input id="epsilon" type="range" min="0" max="0.2" step="0.01" value="0">
+<label class="toggle" for="second"><input id="second" type="checkbox"><span id="secondLabel"></span></label>
+<div class="weights"><div>k₀<br><output id="k0"></output></div><div>k₁<br><output id="k1"></output></div><div>k₂<br><output id="k2"></output></div></div>
+<p class="equation" id="formula"></p><p class="equation" id="probe"></p><p id="interpretation"></p>
+</section></div><section class="card" style="margin-top:18px"><h2 id="compareTitle"></h2><p id="compare"></p><p id="limit"></p></section>
+<footer id="footer"></footer></main>
+<script>
+'use strict';
+const words={ru:{title:'Что определяет эксперимент?',intro:'Один детектор измеряет m = ½k₁ + k₂. Он может оставить целый класс распределений состояния после эксперимента. Второй калиброванный детектор измеряет k₂ и завершает идентификацию в этой конечной модели.',geometryTitle:'Симплекс распределений',controlTitle:'Данные и кандидат',mLabel:'Вероятность первого срабатывания m =',positionLabel:'Положение кандидата в точном слое =',epsilonLabel:'Граница ошибки первого измерения ε =',secondLabel:'Добавить второе точное измерение n₂ = k₂ кандидата',legend:'Синяя линия — точный слой первого измерения. Голубая область — допустимость при ошибке ε. Оранжевая точка — выбранный кандидат; выбор точки сам по себе не является свидетельством.',compareTitle:'Одинаковое среднее — разные переходы',compare:'При m = 0.5 кандидат (0, 1, 0) и смесь (0.5, 0, 0.5) дают один и тот же первый отклик. Второй детектор различает их: n₂ = 0 и n₂ = 0.5. Различимость чистых состояний не гарантирует различимости всех смесей.',limit:'Точные вероятности — идеальные данные повторных приготовлений, а не результат одного запуска. При ε > 0 первое измерение оставляет область; единственность с учётом второго измерения определяется пересечением ограничений. Здесь нет физического эксперимента, квантовой реализации или вывода об онтологическом ветвлении.',footer:'REVIEWABLE_DRAFT · Не прошёл внешнее рецензирование · DOI WR-V не присвоен. Текст: CC BY 4.0; код: MIT. Автономный файл без внешних запросов.',single:'Единственный точный последующий закон.',multiple:'Остаётся класс точных последующих законов.',uncertain:'При заданной ошибке остаётся класс законов.',secondExact:'Два точных калиброванных отклика определяют выбранный закон.',boundedUnique:'Совместные ограничения определяют один закон даже при заданной ошибке первого отклика.',secondUncertain:'Второй отклик точен, но первый имеет ошибку: уникальность не гарантирована.',interpretation:'Метка состояния после эксперимента не является полной реализацией мира. Отбор закона перехода не доказывает физический коллапс.',svgTitle:'Треугольник вероятностных распределений',svgDesc:'Вершины — чистые состояния. Линия и область показывают распределения, совместимые с одним измерением.'},en:{title:'What does an experiment identify?',intro:'One detector measures m = ½k₁ + k₂. It can leave a whole class of successor-state distributions. A second calibrated detector measures k₂ and completes identification in this finite model.',geometryTitle:'Distribution simplex',controlTitle:'Data and candidate',mLabel:'First click probability m =',positionLabel:'Candidate position in the exact fibre =',epsilonLabel:'First measurement error bound ε =',secondLabel:'Add a second exact measurement n₂ = the candidate k₂',legend:'Blue line: exact first-probe fibre. Blue region: compatibility with error ε. Orange point: chosen candidate; choosing a point is not evidence.',compareTitle:'Same mean, different transitions',compare:'At m = 0.5, the candidate (0, 1, 0) and mixture (0.5, 0, 0.5) give the same first response. The second detector distinguishes them: n₂ = 0 and n₂ = 0.5. Distinguishing pure states need not distinguish every mixture.',limit:'Exact probabilities are ideal repeated-preparation data, not a single-run outcome. With ε > 0 the first probe leaves a region; uniqueness with the second probe depends on the intersection of constraints. No physical experiment, quantum implementation or ontological branching conclusion is supplied.',footer:'REVIEWABLE_DRAFT · Not externally peer reviewed · No WR-V DOI. Text: CC BY 4.0; code: MIT. Standalone file; no external requests.',single:'The exact successor law is unique.',multiple:'A class of exact successor laws remains.',uncertain:'An uncertainty class of laws remains.',secondExact:'Two exact calibrated responses identify the selected law.',boundedUnique:'The combined constraints identify one law even with the specified first-response error.',secondUncertain:'The second response is exact, but the first has error: uniqueness is not guaranteed.',interpretation:'A successor-state label is not a complete world realization. Selecting a transition law does not establish physical collapse.',svgTitle:'Triangle of probability distributions',svgDesc:'Vertices represent pure states. The line and region show distributions compatible with one measurement.'}};
+let language='ru';const $=id=>document.getElementById(id);const num=x=>Math.abs(x)<1e-12?'0.000':x.toFixed(3);
+function xy(k){return[45*k[0]+218*k[1]+390*k[2],280*k[0]+38*k[1]+280*k[2]];}
+function clip(poly,normal,bound){const out=[];for(let i=0;i<poly.length;i++){let p=poly[i],q=poly[(i+1)%poly.length];const dp=p.reduce((s,v,j)=>s+v*normal[j],0)-bound,dq=q.reduce((s,v,j)=>s+v*normal[j],0)-bound;const pin=dp<=1e-10,qin=dq<=1e-10;if(pin)out.push(p);if(pin!==qin){const t=dp/(dp-dq);out.push(p.map((v,j)=>v+t*(q[j]-v)));}}return out;}
+function getModel(){const m=+$('m').value,u=+$('position').value,epsilon=+$('epsilon').value;const lo=Math.max(0,2*m-1),hi=m,t=lo+u*(hi-lo);return{m,u,epsilon,lo,hi,t,k:[1-2*m+t,2*m-2*t,t],second:$('second').checked};}
+function render(){const w=words[language],z=getModel();document.documentElement.lang=language;$('lang').textContent=language==='ru'?'English':'Русский';for(const id of ['title','intro','geometryTitle','controlTitle','mLabel','positionLabel','epsilonLabel','secondLabel','legend','compareTitle','compare','limit','footer','interpretation','svgTitle','svgDesc'])$(id).textContent=w[id];$('mValue').textContent=num(z.m);$('positionValue').textContent=num(z.u);$('epsilonValue').textContent=num(z.epsilon);z.k.forEach((v,i)=>$('k'+i).textContent=num(v));$('formula').textContent=`k = (1 − 2m + t, 2m − 2t, t);  ${num(z.lo)} ≤ t ≤ ${num(z.hi)}`;$('probe').textContent=`m = ${num(z.m)}; n₂ = ${num(z.t)}`;const left=xy([1-2*z.m+z.lo,2*z.m-2*z.lo,z.lo]),right=xy([1-2*z.m+z.hi,2*z.m-2*z.hi,z.hi]);$('fibre').setAttribute('d',`M${left} L${right}`);const [x,y]=xy(z.k);$('point').setAttribute('cx',x);$('point').setAttribute('cy',y);let poly=[[1,0,0],[0,1,0],[0,0,1]];poly=clip(poly,[0,.5,1],z.m+z.epsilon);poly=clip(poly,[0,-.5,-1],-z.m+z.epsilon);if(z.second){poly=clip(poly,[0,0,1],z.t);poly=clip(poly,[0,0,-1],-z.t);}$('region').setAttribute('points',poly.map(k=>xy(k).join(',')).join(' '));const unique=poly.length>0&&poly.every(p=>p.every((v,j)=>Math.abs(v-poly[0][j])<1e-8));let status=z.second?(z.epsilon===0?w.secondExact:(unique?w.boundedUnique:w.secondUncertain)):(z.epsilon>0?w.uncertain:(z.hi-z.lo<1e-12?w.single:w.multiple));$('status').textContent=status;$('status').dataset.kind=unique?'unique':'class';}
+['m','position','epsilon','second'].forEach(id=>$(id).addEventListener('input',render));$('lang').addEventListener('click',()=>{language=language==='ru'?'en':'ru';render();});window.wrehModel={getModel,clip,xy};render();
+</script></body></html>

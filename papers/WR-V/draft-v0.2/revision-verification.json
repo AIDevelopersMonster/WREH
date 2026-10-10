@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "baseline_commit": "61b1a9613b745deebcb46e493e8372dbb3ae19a5",
+  "proof_blocks_unchanged": 5,
+  "numbered_labels_unchanged": 34,
+  "numbered_equations_unchanged": 13,
+  "bibliography_entries_unchanged": 8,
+  "actual_EN_RU_numbering_matches_v0_1": "PASS",
+  "frozen_scientific_files_byte_comparison": 64,
+  "scope": "version diff and numbering; not independent external peer review"
+}
