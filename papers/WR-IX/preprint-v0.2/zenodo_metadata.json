@@ -1,0 +1,39 @@
+{
+  "title": "WR-IX: Epistemic Horizons: What Can an Observer Inside a World Ever Distinguish?",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-10-10",
+  "version": "0.2",
+  "creators": [
+    {
+      "name": "Malachevsky, A. A.",
+      "orcid": "0009-0008-6009-3196",
+      "affiliation": "World Realizability & Epistemic Horizons (WREH)"
+    }
+  ],
+  "description": "Bilingual mathematical preprint v0.2. Explicit observer access records and certified budgets; strict first null-ray return on a prescribed flat cubic torus; an ideal launch-energy/detection frontier; smooth future tails agreeing on the entire supplied past but with finite versus infinite comoving reach; and pointwise versus uniform future certificates. Revision clarifies WR-II v0.5 Example 10.19 and WR-VI v0.2 Corollary 5.3 without identifying their results, and fixes the figure distance/time interpretation. Model- and protocol-relative: no survey fit, complete physical observer class, prescribed matter-law realization, realizable detector or universal knowledge bound. AI-assisted drafting and automated technical audit are disclosed. A user-supplied reviewer text is answered; its authorship, independence and method were not independently verified. Technical preprint package ready; independent external scientific peer review is not established. Research content/figures CC BY 4.0; executable code and HTML MIT.",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "epistemic horizons",
+    "observer access",
+    "resource certificates",
+    "FLRW",
+    "cosmic topology",
+    "future histories",
+    "order of quantifiers",
+    "uniform certification"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23266980",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/AIDevelopersMonster/WREH/pull/10",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

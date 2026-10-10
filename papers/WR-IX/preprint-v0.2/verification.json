@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "symbolic_identities": 3,
+  "frontier_cases": 6400,
+  "inverse_quad_root_cases": 160,
+  "max_relative_root_error": 4.437903804679953e-12,
+  "tail_ode_points": 251,
+  "max_tail_ode_error": 2.4347102112187713e-10,
+  "tail_constants": {
+    "A": 2.7983223295482955,
+    "S_at_join": 0.77883734631663
+  },
+  "smooth_tail_return_L_1.2": {
+    "time": 4.874482603890898,
+    "energy_in_Ed": 13.640373515462619
+  },
+  "proof_limit": "Finite computations do not establish infinite-tail convergence or scientific priority."
+}

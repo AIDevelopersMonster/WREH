@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{fontspec,polyglossia}
+\defaultfontfeatures{Extension=.otf}
+\setmainfont{NimbusRoman}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic]
+\setsansfont{NimbusSans}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic]
+\setmonofont{NimbusMonoPS}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.85]
+\newfontfamily\cyrillicfont{NimbusRoman}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Script=Cyrillic]
+\newfontfamily\cyrillicfontsf{NimbusSans}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Script=Cyrillic]
+\newfontfamily\cyrillicfonttt{NimbusMonoPS}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Script=Cyrillic,Scale=0.85]
+\def\ruCode{ru}
+\ifx\wrehLang\ruCode
+ \def\wrehFigureSuffix{-ru}
+ \setdefaultlanguage{russian}\setotherlanguage{english}
+ \newcommand{\Lang}[2]{#2}
+\else
+ \def\wrehFigureSuffix{}
+ \setdefaultlanguage{english}\setotherlanguage{russian}
+ \newcommand{\Lang}[2]{#1}
+\fi
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,tabularx,array,enumitem,xcolor}
+\usepackage[hidelinks,unicode]{hyperref}
+\urlstyle{same}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newtheorem{definition}{\Lang{Definition}{Определение}}[section]
+\newtheorem{proposition}[definition]{\Lang{Proposition}{Утверждение}}
+\newtheorem{theorem}[definition]{\Lang{Theorem}{Теорема}}
+\newtheorem{corollary}[definition]{\Lang{Corollary}{Следствие}}
+\theoremstyle{definition}
+\newtheorem{example}[definition]{\Lang{Example}{Пример}}
+\newtheorem{remark}[definition]{\Lang{Remark}{Замечание}}
+\newcommand{\Ccal}{\mathfrak C}
+\newcommand{\Fcal}{\mathfrak F}
+\newcommand{\Ical}{\mathfrak I}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\row}{\operatorname{row}}
+\newcommand{\one}{\mathbf{1}}
+\definecolor{wrehblue}{RGB}{22,71,105}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\setlist{itemsep=3pt,topsep=4pt}
+\usepackage{graphicx,placeins}
+\newcommand{\diamH}{\operatorname{diam}_{\mathrm{sp}}}
+
+\hypersetup{pdftitle={\Lang{WR-IX: Epistemic Horizons}{WR-IX: Эпистемические горизонты}},pdfauthor={A. A. Malachevsky},pdfsubject={WREH; mathematical draft v0.2; external peer review not established},pdfkeywords={epistemic horizon, observer, resources, cosmic topology, conformal reach}}
+\title{\color{wrehblue}\textbf{WR-IX}\\[6pt]
+\Lang{Epistemic Horizons:\\What Can an Observer Inside\\a World Ever Distinguish?}{Эпистемические горизонты:\\что наблюдатель внутри мира\\вообще может различить?}\\[9pt]
+\large\Lang{Accessible protocols, resource certificates\\and future-dependent causal reach\\Mathematical preprint v0.2}{Доступные протоколы, ресурсные сертификаты\\и причинная доступность, зависящая от будущего\\Математический препринт v0.2}}
+\author{A. A. Malachevsky\\\small\href{https://orcid.org/0009-0008-6009-3196}{ORCID: 0009-0008-6009-3196}\\\small World Realizability \& Epistemic Horizons (WREH)}
+\date{\Lang{10 October 2026}{10 октября 2026 года}}
