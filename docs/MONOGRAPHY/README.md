@@ -41,13 +41,13 @@ The monograph can be a synthesis only after it keeps theorem hypotheses, carrier
 
 | Layer | Preferred monograph notation | Owned by | Meaning | Transfer rule |
 |---|---|---|---|---|
-| World class | `mathcal W` | WR-I | Declared admissible global realizations | Model-relative; not physical reality itself |
-| Protocol family | `mathcal P`, `mathcal A subset mathcal P` | WR-I | Declared admissible observation protocols | Refinement is logical/protocol refinement, not time by default |
-| Response maps | `R_P: mathcal W -> mathcal Y_P` | WR-I | Protocol response of a world | Response equality is operational/model-relative |
-| Response quotient | `mathcal Q_A = mathcal W / sim_A` | WR-I | Classes indistinguishable by `A` | Not ontological identity |
+| World class | `\mathcal W` | WR-I | Declared admissible global realizations | Model-relative; not physical reality itself |
+| Protocol family | `\mathcal P`, `\mathcal A \subset \mathcal P` | WR-I | Declared admissible observation protocols | Refinement is logical/protocol refinement, not time by default |
+| Response maps | `R_P: \mathcal W \to \mathcal Y_P` | WR-I | Protocol response of a world | Response equality is operational/model-relative |
+| Response quotient | `\mathcal Q_{\mathcal A}=\mathcal W/\!\sim_{\mathcal A}` | WR-I | Classes indistinguishable by `A` | Not ontological identity |
 | Finite consistency | `C_fin`, finite images `E_A` | WR-II | Profiles whose every finite restriction is realizable | Does not imply global realization without compactness/attainment hypotheses |
 | Global defect | `D_fin` or explicit defect set | WR-II | Finite-consistent but globally unrealized profile class | Requires infinite or context-restricted structure; not a physical impossibility by itself |
-| Response fibre | `Phi_A(e)=R_A^{-1}(e)` | WR-III | Nonempty inverse response set | Set-theoretic fibre unless bundle/triviality assumptions are declared |
+| Response fibre | `\Phi_{\mathcal A}(e)=R_{\mathcal A}^{-1}(e)` | WR-III | Nonempty inverse response set | Set-theoretic fibre unless bundle/triviality assumptions are declared |
 | Fibre diameter | `D_A(e)` | WR-III | Metric spread of compatible realizations | Metric/model dependent; not universal information measure |
 | Structural wall | local-triviality failure | WR-III | Change in fibre structure for a response map | Not automatically a physical wall, phase transition or spacetime boundary |
 | History-compatible set | `mathfrak C(D)` | WR-IV | Worlds compatible with a data profile under fixed carrier/cut/projection | A historical projection, not time reversal or past rewriting |
@@ -81,14 +81,14 @@ The diagram is a documentation spine, not a theorem. Some later papers reuse ear
 
 | Owner | Results safe to synthesize | Main assumptions to preserve | Do not transfer as |
 |---|---|---|---|
-| WR-I | Exact response equivalence, quotient, identifiable quantities, refinement, finite-resolution separation on compact admissible domains | Declared `mathcal W`, `mathcal P`, response maps, compactness where used | Ontological identity or physical existence |
+| WR-I | Exact response equivalence, quotient, identifiable quantities, refinement, finite-resolution separation on compact admissible domains | Declared `\mathcal W`, `mathcal P`, response maps, compactness where used | Ontological identity or physical existence |
 | WR-II | Finite inverse systems, finite/global trichotomy, compact and closed-image globalization, residual identities, explicit defects/nonattainment | Infinite protocol/context structure for defects; compactness/closedness/attainment for positive results | Proof that every finitely consistent physical profile is realized |
 | WR-III | Refinement inclusion, fibre-diameter monotonicity, rigidity gain, conditional rank, local triviality/wall examples, localization ladder | Nonempty fibres; declared metric/topology/smoothness; properness/open/closed map hypotheses as stated | Universal spacetime geometry or physical walls |
 | WR-IV | History projections, nested hard constraints, past/observable rigidity, wall transfer/erasure, classical Gaussian/Brownian/RTS benchmarks | Fixed carrier, temporal cut, projection, law/image distinction | Past rewriting, retrocausality, strict set contraction from covariance alone |
 | WR-V | Finite instruments, product-of-simplex completion, rank/cone criteria, identifiable functionals, finite adaptive positivity | Finite carriers, calibrated probes, positive likelihood conditions, exact response matrices | Physical branching/collapse or quantum measurement theory |
 | WR-VI | Constraint record, detailed-balance benchmark, exact interval, activity threshold, irreducibility/tolerance/cap-uncertainty audits | Finite reversible model, externally supplied cap, exact intervals | Energy, entropy, rate, or universal physical bound |
 | WR-VII | Unit-bearing quantum speed-limit style inequality, sharp qubit frontier, generator fibre, tomography with added probes, interval/sample certificates | Closed pure finite-dimensional unitary carrier, spectral diameter in joules, time in seconds, fixed projector/preparation | Cosmological energy budget, gravity bound or unique Hamiltonian/world |
-| WR-VIII | FLRW distance-rate inverse family, scale ambiguity, finite inverse benchmark, interval intersection, local torus patch equivalence, future bumps | Exact calibrated `D in C^2`, `D(0)=0`, `D'>0`, positive rate intervals, closed local path patch, extra `C^infty` baseline for bumps | Full Universe identification, global topology access, matter-law realization |
+| WR-VIII | FLRW distance-rate inverse family, scale ambiguity, finite inverse benchmark, interval intersection, local torus patch equivalence, future bumps | Exact calibrated `D\in C^2`, `D(0)=0`, `D'>0`, positive rate intervals, closed local path patch, extra `C^\infty` baseline for bumps | Full Universe identification, global topology access, matter-law realization |
 | WR-IX | Access gap, finite witness criteria, adaptive equality of finite transcripts, finite winding return iff `L<S_infty`, detector time-energy frontier, tail convergence examples, robust/nonuniform access | Declared observer protocols, common finite resources, positive future scale factor, calibrated lattice axis, ideal null tagged ray/detector | Universal observer horizon, apparatus feasibility, automatic result of WR-VIII topology |
 
 ## 6. Known mathematical results vs WREH-owned contributions
@@ -105,7 +105,7 @@ The diagram is a documentation spine, not a theorem. Some later papers reuse ear
 | ID | Finding | Severity | Required monograph control |
 |---|---|---:|---|
 | A1 | WR-I lacks a `THEOREM_MAP.md` on `main`; its monograph map must be reconstructed from the v0.3 source/README and checked manually against the deposited PDF/source. | Medium | Add a WR-I theorem map before final monograph drafting, or mark reconstruction basis explicitly. |
-| A2 | `D` is overloaded: distance profile in WR-VIII, fibre diameter in WR-III, spectral diameter/resource `D` in WR-VII contexts, data profile in WR-IV prose. | High | Use chapter-local notation or prefixes: `D_cos(z)`, `diam_A(e)`, `Delta_H(t)`, `Data`. |
+| A2 | `D` is overloaded: distance profile in WR-VIII, fibre diameter in WR-III, spectral diameter/resource `D` in WR-VII contexts, data profile in WR-IV prose. | High | Use chapter-local notation or prefixes: `D_{cos}(z)`, `\operatorname{diam}_{\mathcal A}(e)`, `\Delta_H(t)`, `Data`. |
 | A3 | `H` is overloaded: Hubble rate in WR-VIII/IX, Hamiltonian in WR-VII, history notation in WR-IV. | High | Reserve `Hubble(z)` or `mathcal H(z)` for cosmology, `K(t)` or `H_op(t)` for Hamiltonians, `Hist_-` for histories. |
 | A4 | WR-III structural walls and WR-VIII branch endpoints/topological patch boundaries are different notions. | High | Never call a cosmological branch endpoint a structural wall unless local-triviality hypotheses are proved. |
 | A5 | WR-VI activity cap and WR-VII spectral energy cap are not the same physical quantity. | High | Keep dimensionless activity, joule spectral diameter and cosmological photon launch energy in separate units tables. |
@@ -256,7 +256,7 @@ Appendices: DOI registry; theorem crosswalk; notation glossary; provenance/sourc
 | response equivalence | эквивалентность по отклику | Operational equivalence, not ontology |
 | response-defined world space | пространство миров, заданное откликом | Quotient by declared protocols |
 | finite consistency | конечная согласованность | WR-II finite restrictions |
-| global realizability | глобальная реализуемость | Realization inside declared `mathcal W` |
+| global realizability | глобальная реализуемость | Realization inside declared `\mathcal W` |
 | fibre | слой | Set-theoretic preimage unless stronger structure is proved |
 | rigidity | жёсткость | Singleton/small-diameter fibre property |
 | structural wall | структурная стена | Local-triviality/bifurcation notion, not physical wall |
